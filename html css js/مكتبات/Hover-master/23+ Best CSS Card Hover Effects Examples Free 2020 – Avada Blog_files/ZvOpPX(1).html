@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/saelsa/fullembedgrid/ZvOpPX?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Portfolio card: Hover effect</title>
+  
+  
+  
+  
+<style>
+/* GENERAl */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: 300;
+    color: #505050;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(237, 215, 215, 0.24),rgba(0, 0, 0, 0.49)), url(https://static.pexels.com/photos/734004/pexels-photo-734004.jpeg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* REUSABLE COMPONENTS */
+
+h2 {
+    color: #fff;
+    font-family: 'Playfair Display', Serif;
+    font-size: 180%;
+    font-weight: 300;
+    
+}
+
+p {
+    color: #fff;
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 120%;
+}
+
+/* MAIN */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.section-content {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 75%;
+    max-width: 500px;
+    margin: 5px auto;
+    padding: 10px 10px;
+}
+
+.content-wrapper {
+    display: inline-block;
+    width: 100%;
+    margin: ;
+    text-align: center;
+}
+
+
+.box {
+    width: 100%;
+    margin: 10;
+    padding: 10%;
+    border: 1px hidden;
+    position: relative;
+}
+
+.box-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)),url(https://images.pexels.com/photos/545331/pexels-photo-545331.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.box-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)),url(https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?w=940&h=650&auto=compress&cs=tinysrgb) no-repeat center;
+    background-size: cover; 
+    border-radius: 0 0 10px 10px
+}
+
+.first {
+    display: block;
+    position: relative;
+    max-width: 100%;
+}
+
+.second {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #fff;
+}
+
+.box-1 .second {
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.box-2 .second {
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.box-1:hover {
+    background-image: linear-gradient(rgba(134, 89, 89, 0.88),rgba(134, 89, 89, 0.74)),url(https://images.pexels.com/photos/545331/pexels-photo-545331.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+    transition: background-image 0.3s;
+
+}
+.box-1:hover .second {
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+
+.box-1:hover .first {
+    opacity: 0;
+}
+
+
+.box-2:hover {
+    background: linear-gradient(rgba(134, 89, 89, 0.88),rgba(134, 89, 89, 0.74)), url(https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?w=940&h=650&auto=compress&cs=tinysrgb) no-repeat center; 
+    transition: background 2s;
+}
+
+.box-2:hover .second {
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+
+.box-2:hover .first {
+    opacity: 0;
+}
+
+
+/* Media queries */ 
+
+
+@media screen and (max-width: 500px) {
+    body {
+        height: auto;
+    }
+    p {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+  body {
+    height: auto;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>19.12. Responsive contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300,400&amp;subset=latin-ext" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdpn.io/saelsa/fullembedgrid/style.css">
+
+
+  <div class="main">
+   <div class="section-content">
+       <div class="content-wrapper">          
+           <div class="box box-1">
+                <div class="first">
+                    <h2>Web development</h2>
+                </div>
+                <div class="second">
+                  <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+                   <p><a href="https://cdpn.io/saelsa/fullembedgrid/ZvOpPX?animations=run&amp;type=embed#">Find out more</a></p>           
+                </div>
+            </div>
+              <div class="box box-2">
+                <div class="first">
+                   <h2>Data analysis</h2>
+                </div>
+               <div class="second">
+                  <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+                   <p><a href="https://cdpn.io/saelsa/fullembedgrid/ZvOpPX?animations=run&amp;type=embed#">Find out more</a></p>
+               </div>
+           </div>
+       </div>
+   </div>
+  </div>
+
+
+  
+  
+  
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
+
+
+ 
+</body></html>

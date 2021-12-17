@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://learnjavascript.online/app.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Intro | Learn JavaScript</title><meta name="theme-color" content="#212424"><script type="module" src="./java script_files/app.58552791dda12ef99413.js.download"></script><link rel="stylesheet" as="style" href="./java script_files/app.68d8cc30a674e15750c6.css" onload="this.onload=null,this.rel=&quot;stylesheet&quot;"><script>/*! csspreload rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout((function(){t.rel="stylesheet",t.media="only x"})),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",(function(){e.poly(),t.clearInterval(a)})):t.attachEvent&&t.attachEvent("onload",(function(){e.poly(),t.clearInterval(a)}))}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this)</script><noscript><link rel="stylesheet" href="app.68d8cc30a674e15750c6.css"></noscript><link rel="preconnect" href="https://api.learnjavascript.online/"><link rel="dns-prefetch" href="https://api.learnjavascript.online/"><link rel="manifest" href="https://learnjavascript.online/assets/favicons/manifest.json"><style>:root{--primary:#03cbaf;--original-primary:#03cbaf;--secondary:#fbbb19;--text-color:#25272a;--text-secondary-color:#777;--p-color:#45494f;--bg-white-1:white;--bg-white-2:#f0f0f0;--bg-white-3:white;--bg-white-4:white;--border-color:#e7e7e7;--light-icon-color:#919191;--dark-icon-color:#222;--dark-1:#212121;--dark-2:#303030;--dark-25:#383838;--dark-3:#424242;--dark-when-light:#222;--light-when-dark:white;--navbar-height:50px;--action-bar-height:var(--navbar-height);--mobile-tab-bar-height:62px;--total-bars-height:calc(
+          var(--navbar-height) + var(--action-bar-height)
+        );--console-height:25vh;--tests-height:40vh;--info-height:35vh;--ipad-bottom-offset:0px;--font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;--font-code:"Fira Code",monospace;--dropdown-layer:85;--dropdown-trigger-layer:100;--action-bar-layer:900;--mobile-tab-bar-layer:1000;--overlay-layer:980;--sidebar-layer:1010;--dialog-layer:2000;--notes-layer:3000;--tooltip-layer:5000;--fullscreen-editor-layer:950;--mdc-theme-primary:var(--primary);--mdc-theme-secondary:var(--secondary);--outline-btn-border-color:rgba(0, 0, 0, 0.12)}html.dark{background-color:var(--dark-2);--primary:#00f2dc;--bg-white-1:var(--dark-3);--bg-white-2:var(--dark-3);--bg-white-3:var(--dark-25);--bg-white-4:var(--dark-1);--text-color:white;--text-secondary-color:white;--p-color:white;--dark-when-light:white;--light-when-dark:var(--dark-1);--border-color:var(--dark-2);--light-icon-color:#e7e7e7;--dark-icon-color:#e7e7e7;--outline-btn-border-color:#777;--toast-background-color:var(--dark-3);color:#fff}html.dark app-console{--app-console-border:#555;--app-console-p-color:white;--app-console-number:#009fff;--app-console-boolean:#fb90e8;--app-console-string:#ff302c;--app-console-null:#fd35dc}body{margin:0;font-family:var(--font-family);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.hidden{display:none!important}.navbar{height:var(--navbar-height);background-color:#212424;height:50px;padding-left:25px;position:fixed;left:0;right:0;top:0;z-index:10;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center}#app-shell{z-index:200;position:absolute;left:0;right:0;top:0}#app-shell-loader{height:100vh;width:100vw;display:flex;align-items:center;justify-content:center;position:absolute}#lazy-css{visibility:hidden}.logo-text{font-weight:700;color:#fff;padding-left:10px;font-size:16px!important}@media (max-width:1100px){.logo-text{font-size:14px!important}}@media (min-width:700px) and (max-width:900px){.logo-text{font-size:12px!important}}@media (max-width:700px){.navbar .logo-text{display:none}}.v-center{display:flex;align-items:center}.h-center{display:flex;justify-content:center}</style><link rel="prerender" href="https://learnjavascript.online/app.html"><link rel="apple-touch-icon" sizes="180x180" href="https://learnjavascript.online/assets/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://learnjavascript.online/assets/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://learnjavascript.online/assets/favicons/favicon-16x16.png"><link rel="shortcut icon" href="https://learnjavascript.online/assets/favicons/favicon.ico"><meta name="msvalidate.01" content="3BD9278535ABE0574373B8017C1A0787"><meta name="google-site-verification" content="TxqIlUS8qKYhUraP7gy9zjOhKrgwgBmiMkQipR5b-bc"><meta name="description" content="Learn JavaScript Online: The easiest way to learn &amp; practice modern JavaScript."><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Learn JavaScript"><meta name="twitter:description" content="Learn JavaScript Online: The easiest way to learn &amp; practice modern JavaScript."><meta name="twitter:image" content="https://learnjavascript.online/assets/twitter-preview.png"><meta name="og:title" content="Learn JavaScript"><meta name="og:type" content="article"><meta name="og:image" content="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1609767296/share3_aopoiq.png"><meta name="og:description" content="Learn JavaScript Online: The easiest way to learn &amp; practice modern JavaScript"><meta name="og:site_name" content="Learn JavaScript"><link rel="stylesheet" type="text/css" href="./java script_files/share-this-css.3e26312c70930c9cba8e.css"><link rel="stylesheet" type="text/css" href="./java script_files/lazy-high.b887ee0f3eee97ecab40.css"><link rel="preload" href="./java script_files/monaco-editor.9451221040c0ac4c32ee.css" as="style" importance="low"><link rel="preload" href="https://learnjavascript.online/monaco-editor.9bed2220e4557b143455.js" as="script" importance="low"><link rel="stylesheet" type="text/css" href="./java script_files/highlight-suggestions.6b765b045521d557b4da.css"><link rel="stylesheet" type="text/css" href="./java script_files/monaco-editor.9451221040c0ac4c32ee.css"><style type="text/css" media="screen" class="monaco-colors">.codicon-add:before { content: '\ea60'; }
+.codicon-plus:before { content: '\ea60'; }
+.codicon-gist-new:before { content: '\ea60'; }
+.codicon-repo-create:before { content: '\ea60'; }
+.codicon-lightbulb:before { content: '\ea61'; }
+.codicon-light-bulb:before { content: '\ea61'; }
+.codicon-repo:before { content: '\ea62'; }
+.codicon-repo-delete:before { content: '\ea62'; }
+.codicon-gist-fork:before { content: '\ea63'; }
+.codicon-repo-forked:before { content: '\ea63'; }
+.codicon-git-pull-request:before { content: '\ea64'; }
+.codicon-git-pull-request-abandoned:before { content: '\ea64'; }
+.codicon-record-keys:before { content: '\ea65'; }
+.codicon-keyboard:before { content: '\ea65'; }
+.codicon-tag:before { content: '\ea66'; }
+.codicon-tag-add:before { content: '\ea66'; }
+.codicon-tag-remove:before { content: '\ea66'; }
+.codicon-person:before { content: '\ea67'; }
+.codicon-person-add:before { content: '\ea67'; }
+.codicon-person-follow:before { content: '\ea67'; }
+.codicon-person-outline:before { content: '\ea67'; }
+.codicon-person-filled:before { content: '\ea67'; }
+.codicon-git-branch:before { content: '\ea68'; }
+.codicon-git-branch-create:before { content: '\ea68'; }
+.codicon-git-branch-delete:before { content: '\ea68'; }
+.codicon-source-control:before { content: '\ea68'; }
+.codicon-mirror:before { content: '\ea69'; }
+.codicon-mirror-public:before { content: '\ea69'; }
+.codicon-star:before { content: '\ea6a'; }
+.codicon-star-add:before { content: '\ea6a'; }
+.codicon-star-delete:before { content: '\ea6a'; }
+.codicon-star-empty:before { content: '\ea6a'; }
+.codicon-comment:before { content: '\ea6b'; }
+.codicon-comment-add:before { content: '\ea6b'; }
+.codicon-alert:before { content: '\ea6c'; }
+.codicon-warning:before { content: '\ea6c'; }
+.codicon-search:before { content: '\ea6d'; }
+.codicon-search-save:before { content: '\ea6d'; }
+.codicon-log-out:before { content: '\ea6e'; }
+.codicon-sign-out:before { content: '\ea6e'; }
+.codicon-log-in:before { content: '\ea6f'; }
+.codicon-sign-in:before { content: '\ea6f'; }
+.codicon-eye:before { content: '\ea70'; }
+.codicon-eye-unwatch:before { content: '\ea70'; }
+.codicon-eye-watch:before { content: '\ea70'; }
+.codicon-circle-filled:before { content: '\ea71'; }
+.codicon-primitive-dot:before { content: '\ea71'; }
+.codicon-close-dirty:before { content: '\ea71'; }
+.codicon-debug-breakpoint:before { content: '\ea71'; }
+.codicon-debug-breakpoint-disabled:before { content: '\ea71'; }
+.codicon-debug-hint:before { content: '\ea71'; }
+.codicon-primitive-square:before { content: '\ea72'; }
+.codicon-edit:before { content: '\ea73'; }
+.codicon-pencil:before { content: '\ea73'; }
+.codicon-info:before { content: '\ea74'; }
+.codicon-issue-opened:before { content: '\ea74'; }
+.codicon-gist-private:before { content: '\ea75'; }
+.codicon-git-fork-private:before { content: '\ea75'; }
+.codicon-lock:before { content: '\ea75'; }
+.codicon-mirror-private:before { content: '\ea75'; }
+.codicon-close:before { content: '\ea76'; }
+.codicon-remove-close:before { content: '\ea76'; }
+.codicon-x:before { content: '\ea76'; }
+.codicon-repo-sync:before { content: '\ea77'; }
+.codicon-sync:before { content: '\ea77'; }
+.codicon-clone:before { content: '\ea78'; }
+.codicon-desktop-download:before { content: '\ea78'; }
+.codicon-beaker:before { content: '\ea79'; }
+.codicon-microscope:before { content: '\ea79'; }
+.codicon-vm:before { content: '\ea7a'; }
+.codicon-device-desktop:before { content: '\ea7a'; }
+.codicon-file:before { content: '\ea7b'; }
+.codicon-file-text:before { content: '\ea7b'; }
+.codicon-more:before { content: '\ea7c'; }
+.codicon-ellipsis:before { content: '\ea7c'; }
+.codicon-kebab-horizontal:before { content: '\ea7c'; }
+.codicon-mail-reply:before { content: '\ea7d'; }
+.codicon-reply:before { content: '\ea7d'; }
+.codicon-organization:before { content: '\ea7e'; }
+.codicon-organization-filled:before { content: '\ea7e'; }
+.codicon-organization-outline:before { content: '\ea7e'; }
+.codicon-new-file:before { content: '\ea7f'; }
+.codicon-file-add:before { content: '\ea7f'; }
+.codicon-new-folder:before { content: '\ea80'; }
+.codicon-file-directory-create:before { content: '\ea80'; }
+.codicon-trash:before { content: '\ea81'; }
+.codicon-trashcan:before { content: '\ea81'; }
+.codicon-history:before { content: '\ea82'; }
+.codicon-clock:before { content: '\ea82'; }
+.codicon-folder:before { content: '\ea83'; }
+.codicon-file-directory:before { content: '\ea83'; }
+.codicon-symbol-folder:before { content: '\ea83'; }
+.codicon-logo-github:before { content: '\ea84'; }
+.codicon-mark-github:before { content: '\ea84'; }
+.codicon-github:before { content: '\ea84'; }
+.codicon-terminal:before { content: '\ea85'; }
+.codicon-console:before { content: '\ea85'; }
+.codicon-repl:before { content: '\ea85'; }
+.codicon-zap:before { content: '\ea86'; }
+.codicon-symbol-event:before { content: '\ea86'; }
+.codicon-error:before { content: '\ea87'; }
+.codicon-stop:before { content: '\ea87'; }
+.codicon-variable:before { content: '\ea88'; }
+.codicon-symbol-variable:before { content: '\ea88'; }
+.codicon-array:before { content: '\ea8a'; }
+.codicon-symbol-array:before { content: '\ea8a'; }
+.codicon-symbol-module:before { content: '\ea8b'; }
+.codicon-symbol-package:before { content: '\ea8b'; }
+.codicon-symbol-namespace:before { content: '\ea8b'; }
+.codicon-symbol-object:before { content: '\ea8b'; }
+.codicon-symbol-method:before { content: '\ea8c'; }
+.codicon-symbol-function:before { content: '\ea8c'; }
+.codicon-symbol-constructor:before { content: '\ea8c'; }
+.codicon-symbol-boolean:before { content: '\ea8f'; }
+.codicon-symbol-null:before { content: '\ea8f'; }
+.codicon-symbol-numeric:before { content: '\ea90'; }
+.codicon-symbol-number:before { content: '\ea90'; }
+.codicon-symbol-structure:before { content: '\ea91'; }
+.codicon-symbol-struct:before { content: '\ea91'; }
+.codicon-symbol-parameter:before { content: '\ea92'; }
+.codicon-symbol-type-parameter:before { content: '\ea92'; }
+.codicon-symbol-key:before { content: '\ea93'; }
+.codicon-symbol-text:before { content: '\ea93'; }
+.codicon-symbol-reference:before { content: '\ea94'; }
+.codicon-go-to-file:before { content: '\ea94'; }
+.codicon-symbol-enum:before { content: '\ea95'; }
+.codicon-symbol-value:before { content: '\ea95'; }
+.codicon-symbol-ruler:before { content: '\ea96'; }
+.codicon-symbol-unit:before { content: '\ea96'; }
+.codicon-activate-breakpoints:before { content: '\ea97'; }
+.codicon-archive:before { content: '\ea98'; }
+.codicon-arrow-both:before { content: '\ea99'; }
+.codicon-arrow-down:before { content: '\ea9a'; }
+.codicon-arrow-left:before { content: '\ea9b'; }
+.codicon-arrow-right:before { content: '\ea9c'; }
+.codicon-arrow-small-down:before { content: '\ea9d'; }
+.codicon-arrow-small-left:before { content: '\ea9e'; }
+.codicon-arrow-small-right:before { content: '\ea9f'; }
+.codicon-arrow-small-up:before { content: '\eaa0'; }
+.codicon-arrow-up:before { content: '\eaa1'; }
+.codicon-bell:before { content: '\eaa2'; }
+.codicon-bold:before { content: '\eaa3'; }
+.codicon-book:before { content: '\eaa4'; }
+.codicon-bookmark:before { content: '\eaa5'; }
+.codicon-debug-breakpoint-conditional-unverified:before { content: '\eaa6'; }
+.codicon-debug-breakpoint-conditional:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-conditional-disabled:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-data-unverified:before { content: '\eaa8'; }
+.codicon-debug-breakpoint-data:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-data-disabled:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-log-unverified:before { content: '\eaaa'; }
+.codicon-debug-breakpoint-log:before { content: '\eaab'; }
+.codicon-debug-breakpoint-log-disabled:before { content: '\eaab'; }
+.codicon-briefcase:before { content: '\eaac'; }
+.codicon-broadcast:before { content: '\eaad'; }
+.codicon-browser:before { content: '\eaae'; }
+.codicon-bug:before { content: '\eaaf'; }
+.codicon-calendar:before { content: '\eab0'; }
+.codicon-case-sensitive:before { content: '\eab1'; }
+.codicon-check:before { content: '\eab2'; }
+.codicon-checklist:before { content: '\eab3'; }
+.codicon-chevron-down:before { content: '\eab4'; }
+.codicon-chevron-left:before { content: '\eab5'; }
+.codicon-chevron-right:before { content: '\eab6'; }
+.codicon-chevron-up:before { content: '\eab7'; }
+.codicon-chrome-close:before { content: '\eab8'; }
+.codicon-chrome-maximize:before { content: '\eab9'; }
+.codicon-chrome-minimize:before { content: '\eaba'; }
+.codicon-chrome-restore:before { content: '\eabb'; }
+.codicon-circle-outline:before { content: '\eabc'; }
+.codicon-debug-breakpoint-unverified:before { content: '\eabc'; }
+.codicon-circle-slash:before { content: '\eabd'; }
+.codicon-circuit-board:before { content: '\eabe'; }
+.codicon-clear-all:before { content: '\eabf'; }
+.codicon-clippy:before { content: '\eac0'; }
+.codicon-close-all:before { content: '\eac1'; }
+.codicon-cloud-download:before { content: '\eac2'; }
+.codicon-cloud-upload:before { content: '\eac3'; }
+.codicon-code:before { content: '\eac4'; }
+.codicon-collapse-all:before { content: '\eac5'; }
+.codicon-color-mode:before { content: '\eac6'; }
+.codicon-comment-discussion:before { content: '\eac7'; }
+.codicon-compare-changes:before { content: '\eafd'; }
+.codicon-credit-card:before { content: '\eac9'; }
+.codicon-dash:before { content: '\eacc'; }
+.codicon-dashboard:before { content: '\eacd'; }
+.codicon-database:before { content: '\eace'; }
+.codicon-debug-continue:before { content: '\eacf'; }
+.codicon-debug-disconnect:before { content: '\ead0'; }
+.codicon-debug-pause:before { content: '\ead1'; }
+.codicon-debug-restart:before { content: '\ead2'; }
+.codicon-debug-start:before { content: '\ead3'; }
+.codicon-debug-step-into:before { content: '\ead4'; }
+.codicon-debug-step-out:before { content: '\ead5'; }
+.codicon-debug-step-over:before { content: '\ead6'; }
+.codicon-debug-stop:before { content: '\ead7'; }
+.codicon-debug:before { content: '\ead8'; }
+.codicon-device-camera-video:before { content: '\ead9'; }
+.codicon-device-camera:before { content: '\eada'; }
+.codicon-device-mobile:before { content: '\eadb'; }
+.codicon-diff-added:before { content: '\eadc'; }
+.codicon-diff-ignored:before { content: '\eadd'; }
+.codicon-diff-modified:before { content: '\eade'; }
+.codicon-diff-removed:before { content: '\eadf'; }
+.codicon-diff-renamed:before { content: '\eae0'; }
+.codicon-diff:before { content: '\eae1'; }
+.codicon-discard:before { content: '\eae2'; }
+.codicon-editor-layout:before { content: '\eae3'; }
+.codicon-empty-window:before { content: '\eae4'; }
+.codicon-exclude:before { content: '\eae5'; }
+.codicon-extensions:before { content: '\eae6'; }
+.codicon-eye-closed:before { content: '\eae7'; }
+.codicon-file-binary:before { content: '\eae8'; }
+.codicon-file-code:before { content: '\eae9'; }
+.codicon-file-media:before { content: '\eaea'; }
+.codicon-file-pdf:before { content: '\eaeb'; }
+.codicon-file-submodule:before { content: '\eaec'; }
+.codicon-file-symlink-directory:before { content: '\eaed'; }
+.codicon-file-symlink-file:before { content: '\eaee'; }
+.codicon-file-zip:before { content: '\eaef'; }
+.codicon-files:before { content: '\eaf0'; }
+.codicon-filter:before { content: '\eaf1'; }
+.codicon-flame:before { content: '\eaf2'; }
+.codicon-fold-down:before { content: '\eaf3'; }
+.codicon-fold-up:before { content: '\eaf4'; }
+.codicon-fold:before { content: '\eaf5'; }
+.codicon-folder-active:before { content: '\eaf6'; }
+.codicon-folder-opened:before { content: '\eaf7'; }
+.codicon-gear:before { content: '\eaf8'; }
+.codicon-gift:before { content: '\eaf9'; }
+.codicon-gist-secret:before { content: '\eafa'; }
+.codicon-gist:before { content: '\eafb'; }
+.codicon-git-commit:before { content: '\eafc'; }
+.codicon-git-compare:before { content: '\eafd'; }
+.codicon-git-merge:before { content: '\eafe'; }
+.codicon-github-action:before { content: '\eaff'; }
+.codicon-github-alt:before { content: '\eb00'; }
+.codicon-globe:before { content: '\eb01'; }
+.codicon-grabber:before { content: '\eb02'; }
+.codicon-graph:before { content: '\eb03'; }
+.codicon-gripper:before { content: '\eb04'; }
+.codicon-heart:before { content: '\eb05'; }
+.codicon-home:before { content: '\eb06'; }
+.codicon-horizontal-rule:before { content: '\eb07'; }
+.codicon-hubot:before { content: '\eb08'; }
+.codicon-inbox:before { content: '\eb09'; }
+.codicon-issue-closed:before { content: '\eb0a'; }
+.codicon-issue-reopened:before { content: '\eb0b'; }
+.codicon-issues:before { content: '\eb0c'; }
+.codicon-italic:before { content: '\eb0d'; }
+.codicon-jersey:before { content: '\eb0e'; }
+.codicon-json:before { content: '\eb0f'; }
+.codicon-kebab-vertical:before { content: '\eb10'; }
+.codicon-key:before { content: '\eb11'; }
+.codicon-law:before { content: '\eb12'; }
+.codicon-lightbulb-autofix:before { content: '\eb13'; }
+.codicon-link-external:before { content: '\eb14'; }
+.codicon-link:before { content: '\eb15'; }
+.codicon-list-ordered:before { content: '\eb16'; }
+.codicon-list-unordered:before { content: '\eb17'; }
+.codicon-live-share:before { content: '\eb18'; }
+.codicon-loading:before { content: '\eb19'; }
+.codicon-location:before { content: '\eb1a'; }
+.codicon-mail-read:before { content: '\eb1b'; }
+.codicon-mail:before { content: '\eb1c'; }
+.codicon-markdown:before { content: '\eb1d'; }
+.codicon-megaphone:before { content: '\eb1e'; }
+.codicon-mention:before { content: '\eb1f'; }
+.codicon-milestone:before { content: '\eb20'; }
+.codicon-mortar-board:before { content: '\eb21'; }
+.codicon-move:before { content: '\eb22'; }
+.codicon-multiple-windows:before { content: '\eb23'; }
+.codicon-mute:before { content: '\eb24'; }
+.codicon-no-newline:before { content: '\eb25'; }
+.codicon-note:before { content: '\eb26'; }
+.codicon-octoface:before { content: '\eb27'; }
+.codicon-open-preview:before { content: '\eb28'; }
+.codicon-package:before { content: '\eb29'; }
+.codicon-paintcan:before { content: '\eb2a'; }
+.codicon-pin:before { content: '\eb2b'; }
+.codicon-play:before { content: '\eb2c'; }
+.codicon-run:before { content: '\eb2c'; }
+.codicon-plug:before { content: '\eb2d'; }
+.codicon-preserve-case:before { content: '\eb2e'; }
+.codicon-preview:before { content: '\eb2f'; }
+.codicon-project:before { content: '\eb30'; }
+.codicon-pulse:before { content: '\eb31'; }
+.codicon-question:before { content: '\eb32'; }
+.codicon-quote:before { content: '\eb33'; }
+.codicon-radio-tower:before { content: '\eb34'; }
+.codicon-reactions:before { content: '\eb35'; }
+.codicon-references:before { content: '\eb36'; }
+.codicon-refresh:before { content: '\eb37'; }
+.codicon-regex:before { content: '\eb38'; }
+.codicon-remote-explorer:before { content: '\eb39'; }
+.codicon-remote:before { content: '\eb3a'; }
+.codicon-remove:before { content: '\eb3b'; }
+.codicon-replace-all:before { content: '\eb3c'; }
+.codicon-replace:before { content: '\eb3d'; }
+.codicon-repo-clone:before { content: '\eb3e'; }
+.codicon-repo-force-push:before { content: '\eb3f'; }
+.codicon-repo-pull:before { content: '\eb40'; }
+.codicon-repo-push:before { content: '\eb41'; }
+.codicon-report:before { content: '\eb42'; }
+.codicon-request-changes:before { content: '\eb43'; }
+.codicon-rocket:before { content: '\eb44'; }
+.codicon-root-folder-opened:before { content: '\eb45'; }
+.codicon-root-folder:before { content: '\eb46'; }
+.codicon-rss:before { content: '\eb47'; }
+.codicon-ruby:before { content: '\eb48'; }
+.codicon-save-all:before { content: '\eb49'; }
+.codicon-save-as:before { content: '\eb4a'; }
+.codicon-save:before { content: '\eb4b'; }
+.codicon-screen-full:before { content: '\eb4c'; }
+.codicon-screen-normal:before { content: '\eb4d'; }
+.codicon-search-stop:before { content: '\eb4e'; }
+.codicon-server:before { content: '\eb50'; }
+.codicon-settings-gear:before { content: '\eb51'; }
+.codicon-settings:before { content: '\eb52'; }
+.codicon-shield:before { content: '\eb53'; }
+.codicon-smiley:before { content: '\eb54'; }
+.codicon-sort-precedence:before { content: '\eb55'; }
+.codicon-split-horizontal:before { content: '\eb56'; }
+.codicon-split-vertical:before { content: '\eb57'; }
+.codicon-squirrel:before { content: '\eb58'; }
+.codicon-star-full:before { content: '\eb59'; }
+.codicon-star-half:before { content: '\eb5a'; }
+.codicon-symbol-class:before { content: '\eb5b'; }
+.codicon-symbol-color:before { content: '\eb5c'; }
+.codicon-symbol-constant:before { content: '\eb5d'; }
+.codicon-symbol-enum-member:before { content: '\eb5e'; }
+.codicon-symbol-field:before { content: '\eb5f'; }
+.codicon-symbol-file:before { content: '\eb60'; }
+.codicon-symbol-interface:before { content: '\eb61'; }
+.codicon-symbol-keyword:before { content: '\eb62'; }
+.codicon-symbol-misc:before { content: '\eb63'; }
+.codicon-symbol-operator:before { content: '\eb64'; }
+.codicon-symbol-property:before { content: '\eb65'; }
+.codicon-wrench:before { content: '\eb65'; }
+.codicon-wrench-subaction:before { content: '\eb65'; }
+.codicon-symbol-snippet:before { content: '\eb66'; }
+.codicon-tasklist:before { content: '\eb67'; }
+.codicon-telescope:before { content: '\eb68'; }
+.codicon-text-size:before { content: '\eb69'; }
+.codicon-three-bars:before { content: '\eb6a'; }
+.codicon-thumbsdown:before { content: '\eb6b'; }
+.codicon-thumbsup:before { content: '\eb6c'; }
+.codicon-tools:before { content: '\eb6d'; }
+.codicon-triangle-down:before { content: '\eb6e'; }
+.codicon-triangle-left:before { content: '\eb6f'; }
+.codicon-triangle-right:before { content: '\eb70'; }
+.codicon-triangle-up:before { content: '\eb71'; }
+.codicon-twitter:before { content: '\eb72'; }
+.codicon-unfold:before { content: '\eb73'; }
+.codicon-unlock:before { content: '\eb74'; }
+.codicon-unmute:before { content: '\eb75'; }
+.codicon-unverified:before { content: '\eb76'; }
+.codicon-verified:before { content: '\eb77'; }
+.codicon-versions:before { content: '\eb78'; }
+.codicon-vm-active:before { content: '\eb79'; }
+.codicon-vm-outline:before { content: '\eb7a'; }
+.codicon-vm-running:before { content: '\eb7b'; }
+.codicon-watch:before { content: '\eb7c'; }
+.codicon-whitespace:before { content: '\eb7d'; }
+.codicon-whole-word:before { content: '\eb7e'; }
+.codicon-window:before { content: '\eb7f'; }
+.codicon-word-wrap:before { content: '\eb80'; }
+.codicon-zoom-in:before { content: '\eb81'; }
+.codicon-zoom-out:before { content: '\eb82'; }
+.codicon-list-filter:before { content: '\eb83'; }
+.codicon-list-flat:before { content: '\eb84'; }
+.codicon-list-selection:before { content: '\eb85'; }
+.codicon-selection:before { content: '\eb85'; }
+.codicon-list-tree:before { content: '\eb86'; }
+.codicon-debug-breakpoint-function-unverified:before { content: '\eb87'; }
+.codicon-debug-breakpoint-function:before { content: '\eb88'; }
+.codicon-debug-breakpoint-function-disabled:before { content: '\eb88'; }
+.codicon-debug-stackframe-active:before { content: '\eb89'; }
+.codicon-debug-stackframe-dot:before { content: '\eb8a'; }
+.codicon-debug-stackframe:before { content: '\eb8b'; }
+.codicon-debug-stackframe-focused:before { content: '\eb8b'; }
+.codicon-debug-breakpoint-unsupported:before { content: '\eb8c'; }
+.codicon-symbol-string:before { content: '\eb8d'; }
+.codicon-debug-reverse-continue:before { content: '\eb8e'; }
+.codicon-debug-step-back:before { content: '\eb8f'; }
+.codicon-debug-restart-frame:before { content: '\eb90'; }
+.codicon-call-incoming:before { content: '\eb92'; }
+.codicon-call-outgoing:before { content: '\eb93'; }
+.codicon-menu:before { content: '\eb94'; }
+.codicon-expand-all:before { content: '\eb95'; }
+.codicon-feedback:before { content: '\eb96'; }
+.codicon-group-by-ref-type:before { content: '\eb97'; }
+.codicon-ungroup-by-ref-type:before { content: '\eb98'; }
+.codicon-account:before { content: '\eb99'; }
+.codicon-bell-dot:before { content: '\eb9a'; }
+.codicon-debug-console:before { content: '\eb9b'; }
+.codicon-library:before { content: '\eb9c'; }
+.codicon-output:before { content: '\eb9d'; }
+.codicon-run-all:before { content: '\eb9e'; }
+.codicon-sync-ignored:before { content: '\eb9f'; }
+.codicon-pinned:before { content: '\eba0'; }
+.codicon-github-inverted:before { content: '\eba1'; }
+.codicon-debug-alt:before { content: '\eb91'; }
+.codicon-server-process:before { content: '\eba2'; }
+.codicon-server-environment:before { content: '\eba3'; }
+.codicon-pass:before { content: '\eba4'; }
+.codicon-stop-circle:before { content: '\eba5'; }
+.codicon-play-circle:before { content: '\eba6'; }
+.codicon-record:before { content: '\eba7'; }
+.codicon-debug-alt-small:before { content: '\eba8'; }
+.codicon-vm-connect:before { content: '\eba9'; }
+.codicon-cloud:before { content: '\ebaa'; }
+.codicon-merge:before { content: '\ebab'; }
+.codicon-export:before { content: '\ebac'; }
+.codicon-graph-left:before { content: '\ebad'; }
+.codicon-magnet:before { content: '\ebae'; }
+.codicon-notebook:before { content: '\ebaf'; }
+.codicon-redo:before { content: '\ebb0'; }
+.codicon-check-all:before { content: '\ebb1'; }
+.codicon-pinned-dirty:before { content: '\ebb2'; }
+.codicon-pass-filled:before { content: '\ebb3'; }
+.codicon-circle-large-filled:before { content: '\ebb4'; }
+.codicon-circle-large-outline:before { content: '\ebb5'; }
+.codicon-combine:before { content: '\ebb6'; }
+.codicon-gather:before { content: '\ebb6'; }
+.codicon-drop-down-button:before { content: '\eab4'; }
+.codicon-scrollbar-button-left:before { content: '\eb6f'; }
+.codicon-scrollbar-button-right:before { content: '\eb70'; }
+.codicon-scrollbar-button-up:before { content: '\eb71'; }
+.codicon-scrollbar-button-down:before { content: '\eb6e'; }
+.codicon-widget-close:before { content: '\ea76'; }
+.codicon-marker-navigation-next:before { content: '\eab4'; }
+.codicon-marker-navigation-previous:before { content: '\eab7'; }
+.codicon-tree-item-expanded:before { content: '\eab4'; }
+.codicon-tree-filter-on-type-on:before { content: '\eb83'; }
+.codicon-tree-filter-on-type-off:before { content: '\eb85'; }
+.codicon-tree-filter-clear:before { content: '\ea76'; }
+.codicon-tree-item-loading:before { content: '\eb19'; }
+.codicon-parameter-hints-next:before { content: '\eab4'; }
+.codicon-parameter-hints-previous:before { content: '\eab7'; }
+.codicon-suggest-more-info:before { content: '\eab6'; }
+.codicon-find-selection:before { content: '\eb85'; }
+.codicon-find-collapsed:before { content: '\eab6'; }
+.codicon-find-expanded:before { content: '\eab4'; }
+.codicon-find-replace:before { content: '\eb3d'; }
+.codicon-find-replace-all:before { content: '\eb3c'; }
+.codicon-find-previous-match:before { content: '\eaa1'; }
+.codicon-find-next-match:before { content: '\ea9a'; }
+.codicon-diff-review-insert:before { content: '\ea60'; }
+.codicon-diff-review-remove:before { content: '\eb3b'; }
+.codicon-diff-review-close:before { content: '\ea76'; }
+.codicon-diff-insert:before { content: '\ea60'; }
+.codicon-diff-remove:before { content: '\eb3b'; }
+.codicon-menu-selection:before { content: '\eab2'; }
+.codicon-menu-submenu:before { content: '\eab6'; }
+.codicon-quick-input-back:before { content: '\ea9b'; }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { color: #cccccc; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.36); }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #1e1e1e; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #1e1e1e; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.monaco-editor .symbolHighlight { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .mtkw { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .mtkz { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .current-line ~ .line-numbers { color: #c6c6c6; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor .cursors-layer .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23f48771'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23cca700'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%2375beff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.monaco-editor.showUnused .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor.showDeprecated .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #d4d4d4}
+
+			.monaco-editor .zone-widget .codicon.codicon-error,
+			.markers-panel .marker-icon.codicon.codicon-error,
+			.extensions-viewlet > .extensions .codicon.codicon-error {
+				color: #f48771;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-warning,
+			.markers-panel .marker-icon.codicon.codicon-warning,
+			.extensions-viewlet > .extensions .codicon.codicon-warning,
+			.extension-editor .codicon.codicon-warning {
+				color: #cca700;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-info,
+			.markers-panel .marker-icon.codicon.codicon-info,
+			.extensions-viewlet > .extensions .codicon.codicon-info,
+			.extension-editor .codicon.codicon-info {
+				color: #75beff;
+			}
+		
+.monaco-editor .marker-widget a { color: #3794ff; }
+.monaco-editor .marker-widget a.code-link span:hover { color: #3794ff; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.below { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.top { border-bottom-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #063b49; }
+
+		.monaco-editor .contentWidgets .codicon.codicon-light-bulb {
+			color: #ffcc00;
+			background-color: rgba(30, 30, 30, 0.7);
+		}
+
+		.monaco-editor .contentWidgets .codicon.codicon-lightbulb-autofix {
+			color: #75beff;
+			background-color: rgba(30, 30, 30, 0.7);
+		}
+.monaco-hover .hover-contents a.code-link span:hover { color: #3794ff; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(255, 143, 0, 0.6); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #bbbbbb; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #ffffff; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #ffffff !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #001f33;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #001f33;}
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-hover { background-color: #252526; }
+.monaco-editor .monaco-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover a { color: #3794ff; }
+.monaco-editor .monaco-hover { color: #cccccc; }
+.monaco-editor .monaco-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-hover code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget { color: #cccccc; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(124, 124, 124, 0.3); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: #525252; }
+.codicon.codicon-symbol-array { color: #cccccc; }
+.codicon.codicon-symbol-boolean { color: #cccccc; }
+.codicon.codicon-symbol-class { color: #ee9d28; }
+.codicon.codicon-symbol-method { color: #b180d7; }
+.codicon.codicon-symbol-color { color: #cccccc; }
+.codicon.codicon-symbol-constant { color: #cccccc; }
+.codicon.codicon-symbol-constructor { color: #b180d7; }
+
+			.codicon.codicon-symbol-value,.codicon.codicon-symbol-enum { color: #ee9d28; }
+.codicon.codicon-symbol-enum-member { color: #75beff; }
+.codicon.codicon-symbol-event { color: #ee9d28; }
+.codicon.codicon-symbol-field { color: #75beff; }
+.codicon.codicon-symbol-file { color: #cccccc; }
+.codicon.codicon-symbol-folder { color: #cccccc; }
+.codicon.codicon-symbol-function { color: #b180d7; }
+.codicon.codicon-symbol-interface { color: #75beff; }
+.codicon.codicon-symbol-key { color: #cccccc; }
+.codicon.codicon-symbol-keyword { color: #cccccc; }
+.codicon.codicon-symbol-module { color: #cccccc; }
+.codicon.codicon-symbol-namespace { color: #cccccc; }
+.codicon.codicon-symbol-null { color: #cccccc; }
+.codicon.codicon-symbol-number { color: #cccccc; }
+.codicon.codicon-symbol-object { color: #cccccc; }
+.codicon.codicon-symbol-operator { color: #cccccc; }
+.codicon.codicon-symbol-package { color: #cccccc; }
+.codicon.codicon-symbol-property { color: #cccccc; }
+.codicon.codicon-symbol-reference { color: #cccccc; }
+.codicon.codicon-symbol-snippet { color: #cccccc; }
+.codicon.codicon-symbol-string { color: #cccccc; }
+.codicon.codicon-symbol-struct { color: #cccccc; }
+.codicon.codicon-symbol-text { color: #cccccc; }
+.codicon.codicon-symbol-type-parameter { color: #cccccc; }
+.codicon.codicon-symbol-unit { color: #cccccc; }
+.codicon.codicon-symbol-variable { color: #75beff; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0097fb; }
+.monaco-editor .suggest-widget, .monaco-editor .suggest-details { color: #d4d4d4; }
+.monaco-editor .suggest-details a { color: #3794ff; }
+.monaco-editor .suggest-details code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { color: #cccccc; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.monaco-editor .find-widget { color: #cccccc; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; }
+.monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: #007fd4; }
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+
+			.monaco-diff-editor .diffViewport {
+				background: rgba(121, 121, 121, 0.4);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:hover {
+				background: rgba(100, 100, 100, 0.7);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:active {
+				background: rgba(191, 191, 191, 0.4);
+			}
+		
+
+	.monaco-editor .diagonal-fill {
+		background-image: linear-gradient(
+			-45deg,
+			rgba(204, 204, 204, 0.2) 12.5%,
+			#0000 12.5%, #0000 50%,
+			rgba(204, 204, 204, 0.2) 50%, rgba(204, 204, 204, 0.2) 62.5%,
+			#0000 62.5%, #0000 100%
+		);
+		background-size: 8px 8px;
+	}
+	
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #1e1e1e; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #9cdcfe; }
+.mtk5 { color: #ce9178; }
+.mtk6 { color: #b5cea8; }
+.mtk7 { color: #608b4e; }
+.mtk8 { color: #569cd6; }
+.mtk9 { color: #dcdcdc; }
+.mtk10 { color: #808080; }
+.mtk11 { color: #f44747; }
+.mtk12 { color: #c586c0; }
+.mtk13 { color: #a79873; }
+.mtk14 { color: #dd6a6f; }
+.mtk15 { color: #5bb498; }
+.mtk16 { color: #909090; }
+.mtk17 { color: #778899; }
+.mtk18 { color: #ff00ff; }
+.mtk19 { color: #b46695; }
+.mtk20 { color: #ff0000; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #3dc9b0; }
+.mtk23 { color: #74b0df; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><link rel="stylesheet" type="text/css" href="./java script_files/mdc-tab-bar-css.ac175b6922597462319f.css"><link rel="stylesheet" type="text/css" href="./java script_files/mdc-tab-scroller-css.33e1f77677d3027b307c.css"><link rel="stylesheet" type="text/css" href="./java script_files/mdc-tab-indicator-css.9286156a5326839b16c3.css"><link rel="stylesheet" type="text/css" href="./java script_files/mdc-tab-css.407e18db53900968fcc4.css"><link rel="stylesheet" type="text/css" href="./java script_files/first-time.475d04a1ed23b756afe0.css"></head><body><script>var prefersDarkMode=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,setDarkMode=window.localStorage.getItem("darkTheme");("true"===setDarkMode||null===setDarkMode&&prefersDarkMode)&&document.documentElement.classList.add("dark")</script><script>!function(){var t=localStorage.token;if(t){var e=new URL(document.location).searchParams.get("id")||"",a=document.createElement("link");a.rel="preload",a.as="fetch",a.type="application/json",a.setAttribute("crossorigin",""),a.setAttribute("importance","high");var i=window.location.href.startsWith("https://localhost")?"https://learn-javascript-api.test/api/steps/":"https://api.learnjavascript.online/api/steps/";a.href=i+e+"?token="+t+"&course=javascript",document.head.appendChild(a)}}()</script><header class="navbar"><div class="v-center"><track-preview mobilemode="" class="mobile-track-preview visible-mobile"></track-preview><svg id="logo" width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="25" rx="12.5" fill="#FBBB19"></rect><mask id="mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25"><rect width="25" height="25" rx="12.5" fill="#F9BA34"></rect></mask><g mask="url(#mask)"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5388 25.9568L23.9377 29.3557L32.9166 21.4417L19.5 8.0251L13.9414 9.41185L13.9414 10.9412L10.5 7.49979L8.49999 17.4998H3.49999L15.3717 29.3715L20.15 26.4162L20.5388 25.9568ZM19.0163 16.0161L19.0902 15.9674L18.6438 15.6436L19.0163 16.0161Z" fill="#DB9E00"></path><path d="M14.1557 15.3976C14.7059 16.2411 15.4217 16.861 16.6876 16.861C17.7511 16.861 18.4304 16.362 18.4304 15.6724C18.4304 14.8461 17.7324 14.5534 16.5619 14.0726L15.9202 13.8141C14.0682 13.0733 12.8378 12.1451 12.8378 10.1831C12.8378 8.37568 14.3044 6.99979 16.5966 6.99979C18.2284 6.99979 19.4015 7.53305 20.2469 8.9293L18.2483 10.1342C17.8083 9.39335 17.3336 9.10149 16.5966 9.10149C15.8448 9.10149 15.3683 9.54926 15.3683 10.1342C15.3683 10.8572 15.8452 11.1499 16.9464 11.5976L17.5881 11.8557C19.7687 12.7338 21 13.6289 21 15.6415C21 17.8111 19.1848 18.9998 16.747 18.9998C14.3634 18.9998 12.8235 17.9333 12.07 16.5354L14.1557 15.3976ZM5.0892 15.6065C5.49239 16.2781 5.85916 16.846 6.74097 16.846C7.5842 16.846 8.11615 16.5362 8.11615 15.3317V7.13737H10.6827V15.3642C10.6827 17.8596 9.12456 18.9953 6.85022 18.9953C4.79526 18.9953 3.6052 17.9968 2.99999 16.7941L5.0892 15.6065Z" fill="#121212"></path></g></svg><h1 class="logo-text">Learn JavaScript</h1></div><get-hint course="javascript" hidden=""><!---->
+      <style>
+        #get-hint-container{float:right}#get-hint-container.disabled #get-hint{opacity:.7;cursor:default}#hint-modal-container{font-size:16px}#hint-modal code:not([class]){background-color:rgba(96,125,139,.2);padding:3px 0;border-radius:3px;font-family:var(--font-code)}#hint-modal-surface{min-width:600px;min-height:250px}@media (max-width:700px){#hint-modal-surface{min-width:90vw}}#get-hint{font-size:12px;font-weight:550;color:#aaa;float:right;transition:opacity .2s ease-out,transform .2s ease-out;-ms-user-select:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;cursor:pointer}#get-hint:hover{opacity:.8}#get-hint:active{transform:translate(.5px,.5px)}
+      </style>
+
+      <div id="get-hint-container">
+        <div id="get-hint" class="">
+          Get a hint
+        </div>
+      </div>
+      <div id="hint-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface" id="hint-modal-surface">
+            <h2 class="mdc-dialog__title" id="my-dialog-title"><!---->Hint (0/1)<!----></h2>
+            <div class="mdc-dialog__content">
+              <div tabindex="1" class="data-mdc-dialog-initial-focus"></div>
+              <div id="hint-modal-container">
+                undefined
+              </div>
+            </div>
+            <footer class="mdc-dialog__actions">
+              <app-button dimmed="">
+                Previous
+              </app-button>
+              <app-button dimmed="" style="">
+                Next
+              </app-button>
+              <app-button raised="" data-mdc-dialog-action="dismiss">
+                Let me try
+              </app-button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+    <!----></get-hint><action-icons course="javascript" lessonmode=""></action-icons></header><div id="lesson" class=""><div class="container lesson-container"><course-lesson course="javascript"><!---->  <style>course-lesson{display:block}#course-lesson-description{color:var(--p-color);font-size:16px;line-height:30px;margin-bottom:90px;margin-top:25px}.course-lesson-blurred{filter:blur(2px);pointer-events:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}#course-lesson-description code:not([class]){font-family:var(--font-code)!important;white-space:pre-wrap!important;word-break:keep-all!important;background-color:rgba(96,125,139,.2);padding:3px 0;border-radius:3px}#course-lesson-description p,#course-lesson-description ul{color:var(--p-color)}#course-lesson-description hr{border-color:transparent;height:1px;background-color:var(--p-color);margin:40px 0;transform:scaleY(.3)}#course-lesson-description a{color:var(--primary);font-weight:550}#course-lesson-description table td{padding:5px 15px}#course-lesson-description img{max-width:100%}#course-lesson-description h2{font-size:22px}#course-lesson-description h3{font-size:18px}#course-lesson-description h1,#course-lesson-description h2{margin-top:50px}#course-lesson-description h3,#course-lesson-description h4,#course-lesson-description h5,#course-lesson-description h6{margin-top:30px}#course-lesson-description iframe{max-width:100%}#course-lesson-description code{font-family:var(--font-code)!important;white-space:pre-wrap!important;word-break:keep-all!important}#course-lesson-title{margin-top:0;margin-bottom:0}#course-lesson-description .lesson-recap{border:2px solid var(--primary);letter-spacing:.05px;padding:15px;border-radius:3px;margin-top:30px}#course-lesson-description .lesson-recap h2{margin-top:10px;color:var(--primary)}#course-lesson-last-updated{color:var(--p-color);font-size:12px;opacity:.8;margin-top:15px}#course-lesson-skip-container{float:right}.already-user-container{display:flex;margin-bottom:10px}.already-user-login{margin-left:10px;position:relative;top:10px;--app-button-height:34px}</style>   <div class="already-user-container"> <p>Already a user?</p> <app-button class="already-user-login" outlined="" link="" href="https://api.learnjavascript.online/redirect/github/javascript">Login</app-button> </div>  <h2 id="course-lesson-title"> Intro <step-bookmark trackstepid="1435" course="javascript"></step-bookmark>  </h2>  <div class=" "> <div id="course-lesson-last-updated"> Last updated August 2021 </div> <p id="course-lesson-description"><!----><p>Welcome to Learn JavaScript!</p>
+<p>This course will teach you JavaScript in the context of building web applications.</p>
+<p>You will learn &amp; practice new syntax, functions, and concepts <strong>step-by-step</strong> in lessons, and have direct application in challenges and projects.</p>
+<p>The first 77 lessons, challenges, and projects (first 7 chapters) are totally free, after that, you will be asked to upgrade (one-time payment that gives you access for 5 years) if you'd like to get access to the full course. You can check out the payment page by clicking on the <strong>Trial</strong> icon in the top-right corner. We recommend that you complete the free trial before upgrading.</p>
+<p>This course works on your mobile, tablet &amp; desktop devices.</p>
+<h3>Prerequisites</h3>
+<p>The course assumes you know the <strong>basics</strong> of programming. It's important that you're familiar with the following concepts:</p>
+<ul>
+<li>Variables</li>
+<li>Arrays and array iteration (loop)</li>
+<li>Conditions</li>
+<li>Objects</li>
+<li>Basics of Classes</li>
+</ul>
+<p>If you're not familiar with these concepts, then <a href="https://learnprogramming.online/?utm_source=learnjavascript.online" target="_blank" rel="noopener">Learn Programming</a> will teach you exactly that (also in JavaScript)!</p>
+<p>It also helps to know a bit of HTML/CSS.</p>
+<h3>Mobile flashcards</h3>
+<p>Every time you complete a challenge, you unlock a new set of flashcards that help you recap and persist new concepts.<br>
+Flashcard instructions will show up once you complete the first two challenges.</p>
+<h3>What if I get stuck?</h3>
+<p>Every challenge has several hints that you can check. Some hints depend on the code you entered, whereas others are generic. Furthermore, the answer unlocks automatically 5 minutes after your first attempt.</p>
+<h3>Learning = making mistakes</h3>
+<p>I want to say this loud and clear, learning JavaScript (or any programming language) is a process of <strong>making mistakes and learning from them</strong>. Do NOT get discouraged when you can't solve a challenge.</p>
+<h3>Are you ready?</h3>
+<p>Click next when you're done, or simply press <code>cmd+enter</code> (on mac) or <code>ctrl+enter</code> (on Windows/Linux) to proceed to the next lesson.</p>
+<!----></p> </div> <lesson-feedback lesson_id="669" course="javascript"></lesson-feedback> <!----></course-lesson></div></div><div id="challenge" class="hidden" data-monaco-editor="[&quot;monaco-editor.9451221040c0ac4c32ee.css&quot;,&quot;monaco-editor.9bed2220e4557b143455.js&quot;]" data-codemirror-editor="[&quot;codemirror.adb5e455adeb3853ff6c.js&quot;,&quot;codemirror-javascript.4442cf7d73571e703641.js&quot;,&quot;codemirror-xml.57e42ce4149092c9140c.js&quot;,&quot;material.d576bf0bc03b3dc29f6c.css&quot;,&quot;material.b2fa85267de5209b4f5d.js&quot;,&quot;codemirror-css.f40de198ac6cfe27bc7c.css&quot;,&quot;codemirror-css.243fb363b7111703470c.js&quot;]"><div id="challenge-layout"><div class="snap-child"><div id="text-editor-container" class="notranslate"><editor-tabs course="javascript"></editor-tabs><div id="editor-container" collapsed=""><div id="editor" data-keybinding-context="1"></div></div></div></div><div class="snap-child" id="snap-child-instructions"><div class="mdc-tab-bar show" role="tablist" id="right-tabs"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" id="mdc-tab-1"><span class="mdc-tab__content"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24" class="mdc-tab__icon material-icons" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> <span class="mdc-tab__text-label">Instructions</span> </span><span class="mdc-tab-indicator mdc-tab-indicator--active"><span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span> </span><span class="mdc-tab__ripple mdc-ripple-upgraded"></span></button> <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0" id="mdc-tab-2"><span class="mdc-tab__content"><svg class="mdc-tab__icon material-icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg> <span class="mdc-tab__text-label">Browser</span> </span><span class="mdc-tab-indicator"><span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span> </span><span class="mdc-tab__ripple mdc-ripple-upgraded"></span></button></div></div></div></div><div id="right-tabs-content" collapsed=""><div id="right-tab-instructions" class="content content--active"><h2 id="instructions-title">Basic sum<step-bookmark trackstepid="1437" course="programming"></step-bookmark></h2><p id="instructions-description" title=""><p>Complete the function <strong>sum</strong> such that it returns the sum of <strong>a</strong> and <strong>b</strong>.</p>
+<p>Consider <a href="https://learnprogramming.online/?utm_source=learnjavascript.online" class="no-close" target="_blank" rel="noopener">Learn Programming</a> if you're stuck.</p>
+</p></div><div class="content"><javascript-live-reload javascripttesting="javascript-testing.2d7efc54518051af85ee.js"></javascript-live-reload></div></div></div><div class="snap-child"><javascript-test-panel><!---->
+      <style>
+        javascript-test-panel{transform-origin:bottom;transition:transform 180ms ease-out;--height:200px;height:var(--height)}javascript-test-panel[collapsed]{transform:translateY(calc(var(--height) - 41px))}[hidden]{display:none}#run-tests,#view-solution{--app-button-min-width:auto;--app-button-height:30px}#view-solution{margin-right:5px}#test-panel-caret{transition:opacity 180ms ease-out,transform 250ms;transform:rotateZ(180deg);cursor:pointer;padding:10px 15px;box-sizing:content-box}#test-panel-caret:hover{opacity:.6}javascript-test-panel[collapsed] #test-panel-caret{transform:rotateZ(0)}#test-panel-header{display:grid;grid-template-columns:1fr auto auto auto auto auto;grid-gap:5px;align-items:center;border-bottom:1px solid var(--border-color)}.test-panel-title{font-size:14px;color:var(--p-color);font-weight:700;padding:10px 15px;height:100%;display:flex;align-items:center}#test-results{overflow-y:hidden;word-wrap:break-word;height:100%;box-shadow:0 -1px 3px rgba(0,0,0,.1)}.test-panel-title-error{color:#f44336}spinner-circle{margin-right:15px}#test-results h3{font-size:16px;font-weight:800}#test-results ul{height:155px;overflow-y:scroll;margin-top:0;margin-bottom:0;padding-left:20px;padding-top:16px;padding-bottom:16px}#test-results li{list-style:none;padding-left:0;padding-right:15px;margin-bottom:15px;min-height:25px}#test-results .test-name-container{font-weight:500;padding-top:2px;color:var(--p-color);display:flex}#test-results .test-name{margin-left:10px}#test-results .error-message{padding-top:10px;line-height:20px;font-size:14px;color:var(--p-color)}#test-results table{padding-top:5px}#test-results th{padding-right:10px}#test-count{font-size:14px}#test-panel-container{position:relative}#mobile-complete-step{--app-button-fab-size:50px;position:fixed;bottom:170px;right:38px;transition:transform 150ms ease-out;transform:scale(0);pointer-events:none;margin-left:21px;opacity:0;pointer-events:none}#mobile-test-count{position:absolute;font-size:10px;border-radius:50%;background-color:#666;color:#fff;padding:4px;opacity:.8;top:4px;margin-left:-3px}#mobile-test-count:empty{visibility:hidden}.pointer{cursor:pointer}.mdc-button--contextual-hint{color:var(--dark-when-light)!important}#contextual-hint{color:var(--p-color)!important;cursor:default}@media (max-width:700px){#run-tests-container{position:fixed!important;bottom:80px!important;right:25px!important;z-index:999}#test-results ul{height:auto}#run-tests{--app-button-fab-size:75px;margin-left:10px}#mobile-complete-step{opacity:1}#mobile-complete-step.show{transform:scale(1);pointer-events:auto}#toggle-collapsed{display:none}}
+      </style>
+      <div id="test-results">
+        <!-- reflect in test-panel-factory -->
+        <div id="test-panel-header">
+          <app-ripple>
+            <div class="test-panel-title pointer">
+              Tests
+               (0 / 3) 
+            </div>
+          </app-ripple>
+          <div>
+            <div hidden="">
+              <app-tooltip position="down" length="medium" id="contextual-hint-container" text="Personalized hint: undefined">
+                <div id="contextual-hint">Hint ✨</div>
+              </app-tooltip>
+            </div>
+          </div>
+          <spinner-circle dark="" mini=""></spinner-circle>
+          <div>
+            <app-tooltip position="down" id="view-solution-container" length="medium" text="Solution will unlock in less than a minute">
+              <app-button outlined="" id="view-solution" disabled="" style="pointer-events: none;">
+                Solution
+              </app-button>
+            </app-tooltip>
+          </div>
+          <div id="run-tests-container">
+            <app-tooltip position="down" text="Hot key: ctrl + enter">
+              <app-button raised="" fab="" id="run-tests" style="">
+                RUN
+              </app-button>
+            </app-tooltip>
+            <app-button fab="" raised="" secondary="" id="mobile-complete-step" class="">Next</app-button>
+          </div>
+          <app-ripple>
+            <div id="toggle-collapsed">
+              <button class="all-unset">
+                <img src="./java script_files/caret-up.svg" width="20" height="20" id="test-panel-caret">
+              </button>
+            </div>
+          </app-ripple>
+        </div>
+        <div id="test-panel-container">
+          <ul>
+            
+          </ul>
+          <syntax-error></syntax-error>
+        </div>
+      </div>
+    <!----></javascript-test-panel></div><div class="snap-child" id="console-container"><app-console></app-console></div></div><mobile-tab-bar><mobile-tab id="tab-instructions" selected="" icon="instructions">Instructions</mobile-tab><mobile-tab id="tab-code" icon="code">Code</mobile-tab><mobile-tab id="tab-tests" icon="tests">Tests<span id="mobile-test-count">0/3</span></mobile-tab><mobile-tab id="tab-console" icon="console">Console</mobile-tab></mobile-tab-bar></div><!-- #lazy-css is only shown when CSS has finished loading because it's async now  --><div id="lazy-css"><div id="action-bar-container"><div id="action-bar-tutorial-restart" title=""></div><action-bar course="javascript"></action-bar></div><div id="course-dropdown"><app-menu topright=""><app-ripple slot="trigger"><svg class="dropdown-overflow-trigger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="gray"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></app-ripple><dropdown-restart course="javascript" hidden=""></dropdown-restart><dropdown-random course="javascript" hidden=""></dropdown-random><dropdown-highlights course="javascript"></dropdown-highlights><dropdown-ligatures course="javascript"></dropdown-ligatures><dropdown-theme course="javascript"></dropdown-theme><dropdown-install course="javascript"></dropdown-install><app-menu-item separator=""></app-menu-item><dropdown-features-faq course="javascript"></dropdown-features-faq><app-menu-item separator=""></app-menu-item><dropdown-achievements course="javascript"></dropdown-achievements><dropdown-update course="javascript" hidden=""></dropdown-update></app-menu></div><notes-overlay course="javascript" position="right"><!---->
+      <style>
+        #notes-overlay{position:fixed;top:50px;left:0;width:36vw;bottom:50px;color:var(--text-color);background-color:var(--bg-white-1);padding:20px;opacity:0;transform:scaleY(0);transform-origin:top;transition:opacity .2s ease-out,transform .2s ease-out;overflow-y:auto}#notes-overlay.right{right:0;left:auto;width:50vw}#notes-overlay.show{opacity:1;transform:none}#notes-overlay.full{width:100vw;left:0;right:0;z-index:100}#notes-overlay code,#notes-overlay pre{word-wrap:break-word;font-family:var(--font-code)!important}.notes-overlay-content{margin-top:40px;color:var(--p-color);font-size:16px;line-height:30px}.notes-overlay-content h3{color:var(--text-color)}.notes-overlay-content a{color:var(--primary)}.notes-overlay-actions{position:absolute;top:15px;right:15px;display:flex;align-items:center}.notes-overlay-action{cursor:pointer;margin-right:12px}#notes-overlay-show-prev-notes{margin:20px auto}.notes-overlay-notes .personal-note{font-size:14px;font-style:italic;padding-left:25px;line-height:28px;white-space:pre-wrap}.notes-overlay-notes .notes-overlay-delete{background-image:url(/assets/trash.svg);background-repeat:no-repeat;background-size:24px 24px;background-position:center;width:30px;height:30px;cursor:pointer;float:right;opacity:0;transition:opacity .2s ease-out;margin-right:-5px;margin-left:5px;background-color:#fff;border-radius:6px}.notes-overlay-notes>div[data-note-id]:hover .notes-overlay-delete{opacity:.65}.notes-overlay-notes .notes-overlay-delete:hover{opacity:1!important}.notes-overlay-separator{margin-top:30px;margin-bottom:20px;border-top:1px solid #d3d3d3}@media (max-width:700px){#notes-overlay{width:100%!important;overscroll-behavior:contain;z-index:var(--notes-layer);top:0!important;bottom:0!important}}
+      </style>
+      <div id="notes-overlay" class="right full">
+        <div class="notes-overlay-content">
+          <div class="container">
+             <div>  <div class="notes-overlay-lesson"> undefined </div>  </div> 
+            <app-button outlined="" id="notes-overlay-show-prev-notes" tabindex="-1" class=" ">
+              Show previous notes
+            </app-button>
+          </div>
+          <div class="notes-overlay-actions">
+            <app-tooltip text="Print or Export PDF" position="down" class="notes-overlay-action">
+              <svg fill="var(--dark-icon-color)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+            </app-tooltip>
+            <app-tooltip class="notes-overlay-action" text="Hide" position="down">
+              <svg fill="var(--dark-icon-color)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+            </app-tooltip>
+          </div>
+        </div>
+      </div>
+    <!----></notes-overlay><course-sidebar course="javascript"></course-sidebar><app-toast course="javascript"></app-toast></div><achievements-modal course="javascript"><!---->
+      <style>
+        #achievements-modal-container{min-height:400px}#achievements-modal .mdc-dialog__surface{min-width:70vw}#achievements-modal-list{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-auto-rows:160px;padding-top:40px}#achievements-modal-attribution{color:gray;font-size:11px;margin-top:20px;margin-bottom:10px}#achievements-modal-attribution a{text-decoration:none;color:gray}#achievements-modal-attribution a:hover{text-decoration:underline}@media (max-width:500px){#achievements-modal-list{display:block}}
+      </style>
+      <div id="achievements-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            <h2 class="mdc-dialog__title" id="my-dialog-title">
+              My Achievements
+              
+            </h2>
+            <div class="mdc-dialog__content">
+              <div tabindex="1" class="data-mdc-dialog-initial-focus"></div>
+              <div id="achievements-modal-container">
+                
+                
+              </div>
+            </div>
+            <footer class="mdc-dialog__actions">
+              <app-button dimmed="" data-mdc-dialog-action="dismiss">
+                Dismiss
+              </app-button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+    <!----></achievements-modal><solution-modal course="javascript"><!---->
+      <style>
+        #solution-modal .mdc-dialog__surface{min-width:90vw}#solution-modal-container code,#solution-modal-user-answer code{font-family:var(--font-code);word-break:break-all!important}#solution-modal-container{color:var(--p-color);line-height:30px}.solution-modal-col{overflow-y:scroll}.solution-modal-official>p{position:sticky;z-index:1;top:0;background-color:var(--bg-white-3);display:block;text-align:center;border-radius:0 0 4px 4px}.solution-modal-warning{--warning-color:#a98332;display:block;border:1px solid var(--warning-color);border-radius:6px;padding:10px;line-height:24px}@media (min-width:900px){.solution-modal-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:calc(100vh - 200px);grid-gap:30px}}
+      </style>
+      <div id="solution-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            <h2 class="mdc-dialog__title">Challenge solution</h2>
+            <div class="mdc-dialog__content">
+              <!-- due to different styling -->
+              <div class="solution-modal-grid">
+                <div class="solution-modal-col">
+                  <h2 class="mdc-typography mdc-typography--headline5">
+                    Solution
+                  </h2>
+                  <div id="solution-modal-container">
+                    
+                    
+                    
+                  </div>
+                </div>
+
+                <div class="solution-modal-col" hidden="">
+                  <h2 class="mdc-typography mdc-typography--headline5">
+                    Your answer
+                  </h2>
+                  <div id="solution-modal-user-answer">
+                    undefined
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="mdc-dialog__actions">
+              <app-button tabindex="1" dimmed="" data-mdc-dialog-action="dismiss">
+                Dismiss
+              </app-button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+    <!----></solution-modal><help-modal course="javascript"><!---->
+      <style>
+        #help-modal a{color:var(--primary)}.help-modal-select{padding:10px 15px;border-radius:3px}.help-modal-checkbox-container{margin:8px 0}.help-modal-contact-container{margin-top:20px;display:flex;align-items:center;justify-content:space-between}#help-modal-container{margin-bottom:40px}.help-modal-discussions-textarea{width:100%;min-height:200px;border-radius:4px;padding:5px}
+      </style>
+      <div id="help-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            <h2 class="mdc-dialog__title" id="my-dialog-title">Get Help</h2>
+            <div class="mdc-dialog__content">
+              <div tabindex="1" class="data-mdc-dialog-initial-focus"></div>
+              <div id="help-modal-container">
+                <div><!----><!----></div>
+                <div><!----><!----></div>
+                <strong style="margin:15px 0;display:inline-block;color: #f44336"><!----><!----></strong>
+                <p>To contact Jad, please select a category:</p>
+                <select class="help-modal-select">
+                  <option value="">Select a category</option>
+                  
+                </select>
+
+                
+                
+                
+                
+              </div>
+            </div>
+            <footer class="mdc-dialog__actions">
+              <app-button dimmed="" data-mdc-dialog-action="dismiss">
+                Dismiss
+              </app-button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+    <!----></help-modal><other-courses-modal course="javascript"><!---->
+      <style>
+        .other-courses-course{margin:10px 0}.other-courses-course-details{display:grid;grid-template-columns:100px 1fr;align-items:center}.other-courses-link{color:var(--text-color);text-decoration:none;display:inline-block;padding:15px 10px;border-radius:4px;transition:background-color .2s}.other-courses-link h3{margin-top:0;font-size:18px}.other-courses-link:hover{background-color:rgba(0,0,0,.1)}
+      </style>
+      <div id="other-courses-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            <h2 class="mdc-dialog__title" id="my-dialog-title">
+              Other courses by Jad
+            </h2>
+            <div class="mdc-dialog__content">
+              <div tabindex="1" class="data-mdc-dialog-initial-focus"></div>
+              <div>
+                <!----><div class="other-courses-course"> <a target="_blank" rel="noopener" class="other-courses-link" href="https://learnprogramming.online/?utm_source=othercourses"><h3><!---->Learn Programming<!----></h3> <div class="other-courses-course-details"> <img width="75" height="75" src="./java script_files/logo.png" alt="Learn Programming logo"> <p><!---->Learn Programming teaches the basics of programming from scratch (no prior experience necessary).<!----></p> </div> </a> </div><!----><div class="other-courses-course"> <a target="_blank" rel="noopener" class="other-courses-link" href="https://react-tutorial.app/?utm_source=othercourses"><h3><!---->React Tutorial<!----></h3> <div class="other-courses-course-details"> <img width="75" height="75" src="./java script_files/react-tutorial.svg" alt="React Tutorial logo"> <p><!---->React Tutorial teaches React (hooks) from scratch (requires intermediate JavaScript experience)<!----></p> </div> </a> </div><!---->
+              </div>
+            </div>
+            <footer class="mdc-dialog__actions">
+              <app-button dimmed="" data-mdc-dialog-action="dismiss">
+                Dismiss
+              </app-button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+    <!----></other-courses-modal><features-faq course="javascript"><!----><style><!---->#features-faq-content a{color:var(--primary)}#features-faq-content h3{margin-top:50px;margin-bottom:5px}#features-faq-content h4{margin-bottom:5px}#features-faq-content p{margin-top:10px}.features-faq-faq{margin-top:70px}<!----></style><div id="features-faq-modal" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="features-faq-dialog-title" aria-describedby="features-faq-content">
+      <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface" style="min-width: 70vw;">
+          <h2 class="mdc-dialog__title" id="features-faq-dialog-title">
+            Features &amp; FAQ
+          </h2>
+          <div class="mdc-dialog__content">
+            <div tabindex="1" class="data-mdc-dialog-initial-focus"></div>
+            <div id="features-faq-content">
+              <h1>Features</h1>
+
+              <h3>Taking notes</h3>
+              <p>
+                In lesson pages, you can take notes by highlighting a short
+                piece of text and then clicking on
+                <strong>Save to my notes</strong>. You can see these notes (per
+                chapter) by clicking on the view my notes icon, next to the
+                <em>TRIAL/PRO</em> icon in the top menu.<br>
+                This page will show all your notes from the current chapter. To see notes from all remaining chapters, click on the <em>Show previous notes</em> button.
+              </p>
+              <h4>Taking notes with a personal comment</h4>
+              <p>
+              Similarly to the above, you can choose
+              <strong>Save &amp; add a personal comment</strong>. The comment will
+              show up in addition to your notes. This comment is not visible
+              to other users.
+              </p>
+              <h4>Save recap to notes</h4>
+              <p>Lesson recaps can be saved with a single click by clicking on the <em>Save recap to your notes ✨</em> icon.</p>
+              <h3>Flashcards</h3>
+              <p>
+                The flashcard app is on a separate domain. You can navigate to
+                the flashcards app by clicking on the flashcards icon in the top
+                bar. Try reloading the page if the icon is not visible.
+              </p>
+              <h3>Bookmarks</h3>
+              <p>
+                You can bookmark lessons &amp; challenges by clicking on the bookmark icon. <br>
+                You will then be able to filter your bookmarks in the sidebar and come back to the important concepts that you bookmarked.
+              </p>
+              <h3>Pairing mode (coming soon)</h3>
+              <p>2 PRO users can follow each other's progress and view each other's solutions. This feature is coming soon. Are you interested in giving it a try? Then message me on the chat! Note that this feature will launch free and then might become paid as we collect feedback.</p>
+              <h3>Popular highlights</h3>
+              <p>Most commonly saved notes are displayed as popular highlights which you can save with a single click.<br>
+              Code snippets can also be popular highlights. These have an icon in the top-right corner.<br>
+              You can toggle this feature from the top-right menu. However, disabling this feature will also disable the next one.</p>
+              <h3>Font ligatures</h3>
+              <p>When font ligatures are enabled, the following character <code>===</code> will show up as 1 character instead of 3. This can be toggled from the top-right menu.</p>
+              <h3>Achievements</h3>
+              <p>There are 2 types of achievements. Feature-related achievements that you unlock using various features of the course (for example taking notes) and content-related achievements. Content-related achievements are unlocked automatically when you complete certain lessons.</p>
+              <h3>Install app</h3>
+              <p>This website is a Progressive Web App. You can install it for easy access using the <em>install</em> button from the top-right menu. The app does not have full offline support. However, you will often be able to continue reading the current lesson that you visited before getting disconnected.</p>
+              <h3>Light/dark theme</h3>
+              <p>The app has a light and a dark theme. By default, we follow your Operating System preferences.<br>
+                You can override that by selecting your theme from the top-right menu.</p>
+              <h3>Review previous lesson</h3>
+              <p>On challenge pages, you can review the previous lesson by clicking on the review previous lesson icon in the top menu next to the notes icon.</p>
+              <h3>App works everywhere</h3>
+              <p>The app works on all devices with an evergreen browser (Desktop, mobile, tablet), Android, Windows, Linux, macOS &amp; iOS. We support Chrome (and chromium alternatives such as Edge), Firefox &amp; Safari.</p>
+              <h3>Suggest improvement</h3>
+              <p>Found a typo or incorrect information? You can suggest an improvement by selecting a short piece of text and then clicking on <em>Suggest improvement</em>. This will show an anonymous Google forms prefilled with the piece of text you selected and the lesson id.</p>
+              <h3>Get a hint</h3>
+              <p>Challenges have hints that you can go through one by one. The <strong>Get a hint</strong> button is at the top of the page.</p>
+              <h3>Maximize editor</h3>
+              <p>You can maximize the editor by clicking on the arrow icon next to the editor tabs and then selecting <em>Maximize</em>.</p>
+              <h3>Maximize browser</h3>
+              <p>You can maximize the browser by clicking on the green circle. </p>
+              <h3>Remind me</h3>
+              <p>A good night's sleep helps you persist the content that you just acquired (more on that in the FAQ below). This button shows up on desktop after your first incorrect attempt. Click on it to get an email the next day so that you jump right back into learning!</p>
+              <h3>App updates</h3>
+              <p>The app is updated frequently with fixes, performance improvements, and new features. If you haven't updated the app in a long time, then there's a chance that some challenges won't work. <br>
+              App updates will show up as a dot in the top-right menu. You may need to reload the page first for the update to show up.</p>
+              <h1 class="features-faq-faq">Frequently Asked Questions</h1>
+              <h3>What is the teaching methodology that this course follows?</h3>
+              <p>The instructor (and creator of this app) has more than 5 years of experience in teaching and public speaking. Teaching is done through empathy. I try to put myself in your shoes. I also use data from research with regards to education and memory retention to help you learn more efficiently.</p>
+              <h3>Importance of sleep</h3>
+              <p>This is a <em>very important topic</em> when it comes to learning new topics and <em>retaining</em> knowledge.<br>
+              Sleeping is a very important part of the learning process. You should not go through the course in one day because when you sleep, your brain helps you move the knowledge that you acquired from short-term memory into long-term memory. Moreover, the REM phase will help you augment your existing knowledge with the new one that you acquired.<br>
+              So, instead of learning for 10 hours for 5 days, we recommend sessions of approximately 2 hours (or shorter) for several days. Take breaks, whenever you feel like it.<br>
+            When you get stuck for too long, consider trying again the next day. You can use the <strong>Remind me</strong> button.</p>
+              <h3>What kind of 'company' is this?</h3>
+              <p>The company is a one-person business registered in the Netherlands. The company does not have investors and generally does things differently. It's a one person company. So, I am the developer of the platform that you're using (that also uses open source software), I'm the writer of the chapters/challenges and the person answering support questions.</p>
+              <h3>Who is behind this company?</h3>
+              <p>Hey 👋, I'm <a href="https://jadjoubran.io/" target="_blank" rel="noopener">Jad Joubran</a>. I'm an independent consultant based in the Netherlands. I have more than 12 years of experience in programming and have received awards from Google &amp; Microsoft (Google Developer Expert &amp; Microsoft Most Valuable Professional in web technologies). I'm passionate about education and I love cycling &amp; cats (and cycling with my cat 😁).<br>
+              You can also check out <a href="https://www.youtube.com/jadjoubran" target="_blank" rel="noopener">my YouTube channel</a>.</p>
+              <h3>Do flashcards work?</h3>
+              <p>Flashcards help you persist your newly acquired knowledge. You can answer the flashcard questions anywhere! <br>
+              I personally saw a great value with flashcards when I was learning the Dutch language, which is why I have integrated flashcards into my courses.
+              </p>
+              <h3>Why can I only add one paragraph to my notes at a time?</h3>
+              <p>This increases your focus while reading and selecting what goes into your notes. This feature mimics how we take notes with a pen and paper. Adding several paragraphs at a time is a sign of a lack of focus.</p>
+              <h3>Why does the solution unlock after ~5 minutes?</h3>
+              <p>This is also based on data from research with regard to acquiring new knowledge. This helps you make more mistakes that end up benefiting you before giving up.</p>
+              <h3>Why do they have to go through content step by step?</h3>
+              <p>That's because content builds on top of each other. <br>If for some reason this does not work for you, you can message me on the chat and tell me which chapters you'd like to jump to (maximum 10).</p>
+              <h3>Why do I see values in the console that are not in the
+                sample usage?</h3>
+              <p>When you run the tests, we call your functions with extra values that are not visible in the sample usage. This is to make sure that you're not hardcoding your answer.</p>
+            </div>
+          </div>
+          <footer class="mdc-dialog__actions">
+            <app-button dimmed="" data-mdc-dialog-action="dismiss">
+              Dismiss
+            </app-button>
+          </footer>
+        </div>
+      </div>
+      <div class="mdc-dialog__scrim"></div>
+    </div><!----></features-faq><chat-sdk course="javascript"></chat-sdk><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-K822X1GYKW",{anonymize_ip:!0}),window.ga=gtag</script><script src="./java script_files/js" defer="" async=""></script><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true" style="visibility: visible;">b: number, hint</div><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div></div></body></html>

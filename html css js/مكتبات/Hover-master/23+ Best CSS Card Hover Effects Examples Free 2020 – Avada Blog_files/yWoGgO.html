@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Card hover effects</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="DzIQe6vUYWVwcDIlR9f+ywgSgkRM5BCTpijkf0K530mvmpvawLOS/lhZDQRVfpXCQIUfvgiW7WNbKsD5ZUVqow==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/KPRAVEEN/pen/yWoGgO" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"grid"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card card__one"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">figure</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__img"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"340"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"280"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">figure</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__desc"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>love and marriage problems<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card card__one"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">figure</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__img"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"340"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"280"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">figure</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__desc"</span><span class="cm-tag cm-bracket">&gt;</span>
+      
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>love and marriage problems<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card card__one"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">figure</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__img"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"340"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"280"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">figure</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card__desc"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>love and marriage problems<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  
+
+  
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-variable-2">$color-bg</span>: <span class="cm-atom">#f8f8f8</span>;
+<span class="cm-variable-2">$card-padding</span>: <span class="cm-number">20px</span>;
+<span class="cm-variable-2">$grid-gutter</span>: <span class="cm-number">31px</span>;
+
+<span class="cm-comment">// Media Queries breakpoints</span>
+<span class="cm-variable-2">$small</span>: <span class="cm-number">480px</span>;
+<span class="cm-variable-2">$medium</span>: <span class="cm-number">768px</span>;
+<span class="cm-variable-2">$large</span>: <span class="cm-number">992px</span>;
+<span class="cm-variable-2">$x-large</span>: <span class="cm-number">1200px</span>;
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$color-bg</span>;
+}
+
+<span class="cm-qualifier">.grid</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">340px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+
+  <span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">min-width</span>: <span class="cm-variable-2">$medium</span>) {
+    <span class="cm-property">max-width</span>: <span class="cm-number">1200px</span>;
+  }
+}
+
+<span class="cm-qualifier">.card</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">flex</span>: <span class="cm-number">1</span> <span class="cm-number">1</span> <span class="cm-number">100%</span>;
+  <span class="cm-property">margin</span>: <span class="cm-variable-2">$grid-gutter</span> <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-variable-2">$card-padding</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">lighten</span>(<span class="cm-variable-2">$color-bg</span>, <span class="cm-number">3%</span>);
+
+  <span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">min-width</span>: <span class="cm-variable-2">$medium</span>) {
+    <span class="cm-property">flex-basis</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">33.33%</span> - (#{<span class="cm-variable-2">$grid-gutter</span> <span class="cm-error">*</span> <span class="cm-error">2</span>} + #{<span class="cm-variable-2">$card-padding</span> <span class="cm-error">*</span> <span class="cm-error">2</span>}));
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-variable-2">$grid-gutter</span>;
+  }
+}
+
+<span class="cm-qualifier">.card__thumb</span> {
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+}
+
+<span class="cm-qualifier">.card__img</span> {
+  <span class="cm-property">margin</span>: (-<span class="cm-variable-2">$card-padding</span>) (-<span class="cm-variable-2">$card-padding</span>) <span class="cm-number">0</span>;
+
+  <span class="cm-variable">img</span> {
+    <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">height</span>: <span class="cm-atom">auto</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">vertical-align</span>: <span class="cm-atom">middle</span>;
+    <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  }
+}
+
+<span class="cm-qualifier">.card__desc</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-variable-2">$card-padding</span>;
+}
+
+<span class="cm-qualifier">.card__two</span> <span class="cm-qualifier">.card__img</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">20px</span>;
+}
+
+<span class="cm-qualifier">.card__one</span> {
+  <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">.5s</span>;
+
+  &amp;::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">opacity</span> <span class="cm-number">2s</span> <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">.165</span>, <span class="cm-number">.84</span>, <span class="cm-number">.44</span>, <span class="cm-number">1</span>);
+    <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">8px</span> <span class="cm-number">17px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">.2</span>), <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-number">20px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">.15</span>);
+    <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">-1</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span>,
+  &amp;:<span class="cm-variable-3">focus</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">1.006</span>, <span class="cm-number">1.006</span>, <span class="cm-number">1</span>);
+
+    &amp;::<span class="cm-variable-3">after</span> {
+      <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.card__two</span> {
+  &amp;::<span class="cm-variable-3">before</span>,
+  &amp;::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">opacity</span> <span class="cm-number">.38s</span> <span class="cm-atom">ease-in-out</span>, <span class="cm-atom">transform</span> <span class="cm-number">.35s</span> <span class="cm-atom">ease-in-out</span>;
+    <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">pointer-events</span>: <span class="cm-atom">none</span>;
+  }
+
+  &amp;::<span class="cm-variable-3">before</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">0</span>, <span class="cm-number">1</span>, <span class="cm-number">1</span>);
+    <span class="cm-property">transform-origin</span>: <span class="cm-atom">left</span> <span class="cm-atom">top</span>;
+    <span class="cm-property">border-top</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#acacac</span>;
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#acacac</span>;
+  }
+
+  &amp;::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">1</span>, <span class="cm-number">0</span>, <span class="cm-number">1</span>);
+    <span class="cm-property">transform-origin</span>: <span class="cm-atom">right</span> <span class="cm-atom">top</span>;
+    <span class="cm-property">border-right</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#acacac</span>;
+    <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#acacac</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span>,
+  &amp;:<span class="cm-variable-3">focus</span> {
+    &amp;::<span class="cm-variable-3">before</span>,
+    &amp;::<span class="cm-variable-3">after</span> {
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">1</span>, <span class="cm-number">1</span>, <span class="cm-number">1</span>);
+      <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.card__three</span> {
+  &amp;::<span class="cm-variable-3">before</span>,
+  &amp;::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">1</span>);
+    <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">.3s</span> <span class="cm-atom">ease-out</span> <span class="cm-number">0s</span>;
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">.1</span>);
+    <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+    <span class="cm-property">pointer-events</span>: <span class="cm-atom">none</span>;
+  }
+
+  &amp;::<span class="cm-variable-3">before</span> {
+    <span class="cm-property">transform-origin</span>: <span class="cm-atom">left</span> <span class="cm-atom">top</span>;
+  }
+
+  &amp;::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">transform-origin</span>: <span class="cm-atom">right</span> <span class="cm-atom">bottom</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span>,
+  &amp;:<span class="cm-variable-3">focus</span> {
+    &amp;::<span class="cm-variable-3">before</span>,
+    &amp;::<span class="cm-variable-3">after</span> {
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale3d</span>(<span class="cm-number">1</span>, <span class="cm-number">1</span>, <span class="cm-number">1</span>);
+    }
+  }
+}
+</code></pre>
+<a href="https://codepen.io/KPRAVEEN/embed/yWoGgO?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Card hover effects" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Card hover effects" data-src="https://cdpn.io/KPRAVEEN/fullembedgrid/yWoGgO?animations=run&amp;type=embed" src="./yWoGgO(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/KPRAVEEN" target="_blank" rel="noopener"><img src="./00c5f5ade09350bb44127041c4868873" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/KPRAVEEN" target="_blank" rel="noopener">PRAVEEN</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/jasonheecs/fullpage/GNNwpZ?default-tab=result&amp;height=316&amp;theme-id=0">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/KPRAVEEN" target="_blank" rel="noopener" class="about-user-more">
+See more by @KPRAVEEN on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;grid&quot;&gt;\n\t&lt;div class=&quot;card card__one&quot;&gt;\n\t\t&lt;figure class=&quot;card__img&quot;&gt;\n\t\t\t&lt;img src=&quot;https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg&quot; width=&quot;340&quot; height=&quot;280&quot; /&gt;\n\t\t&lt;/figure&gt;\n\t\t&lt;div class=&quot;card__desc&quot;&gt;\n\t\t\t&lt;h1&gt;love and marriage problems&lt;/h1&gt;\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t &lt;div class=&quot;card card__one&quot;&gt;\n\t\t&lt;figure class=&quot;card__img&quot;&gt;\n\t\t\t&lt;img src=&quot;https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg&quot; width=&quot;340&quot; height=&quot;280&quot; /&gt;\n\t\t&lt;/figure&gt;\n\t\t&lt;div class=&quot;card__desc&quot;&gt;\n\t\t\t\n\t\t\t&lt;h1&gt;love and marriage problems&lt;/h1&gt;\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t &lt;div class=&quot;card card__one&quot;&gt;\n\t\t&lt;figure class=&quot;card__img&quot;&gt;\n\t\t\t&lt;img src=&quot;https://res.cloudinary.com/jasonheecs/image/upload/v1479748567/card-hover/photo-1.jpg&quot; width=&quot;340&quot; height=&quot;280&quot; /&gt;\n\t\t&lt;/figure&gt;\n\t\t&lt;div class=&quot;card__desc&quot;&gt;\n\t\t\t&lt;h1&gt;love and marriage problems&lt;/h1&gt;\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, tempora.\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\n\t\n\n\t\n&lt;/div&gt;","css":"body {\n  display: flex;\n  align-items: center;\n  min-height: 100vh;\n  background: #f8f8f8;\n}\n\n.grid {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  max-width: 340px;\n  margin: 0 auto;\n}\n@media screen and (min-width: 768px) {\n  .grid {\n    max-width: 1200px;\n  }\n}\n\n.card {\n  position: relative;\n  flex: 1 1 100%;\n  margin: 31px 0;\n  padding: 20px;\n  background: white;\n}\n@media screen and (min-width: 768px) {\n  .card {\n    flex-basis: calc(33.33% - (62px + 40px));\n    margin: 0 31px;\n  }\n}\n\n.card__thumb {\n  overflow: hidden;\n}\n\n.card__img {\n  margin: -20px -20px 0;\n}\n.card__img img {\n  max-width: 100%;\n  height: auto;\n  border: 0;\n  vertical-align: middle;\n  box-sizing: border-box;\n}\n\n.card__desc {\n  margin-top: 20px;\n}\n\n.card__two .card__img {\n  padding: 20px;\n}\n\n.card__one {\n  transition: transform 0.5s;\n}\n.card__one::after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);\n  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);\n  content: &quot;&quot;;\n  opacity: 0;\n  z-index: -1;\n}\n.card__one:hover, .card__one:focus {\n  transform: scale3d(1.006, 1.006, 1);\n}\n.card__one:hover::after, .card__one:focus::after {\n  opacity: 1;\n}\n\n.card__two::before, .card__two::after {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  transition: opacity 0.38s ease-in-out, transform 0.35s ease-in-out;\n  content: &quot;&quot;;\n  opacity: 0;\n  pointer-events: none;\n}\n.card__two::before {\n  transform: scale3d(0, 1, 1);\n  transform-origin: left top;\n  border-top: 1px solid #acacac;\n  border-bottom: 1px solid #acacac;\n}\n.card__two::after {\n  transform: scale3d(1, 0, 1);\n  transform-origin: right top;\n  border-right: 1px solid #acacac;\n  border-left: 1px solid #acacac;\n}\n.card__two:hover::before, .card__two:hover::after, .card__two:focus::before, .card__two:focus::after {\n  transform: scale3d(1, 1, 1);\n  opacity: 1;\n}\n\n.card__three::before, .card__three::after {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  transform: scale3d(0, 0, 1);\n  transition: transform 0.3s ease-out 0s;\n  background: rgba(255, 255, 255, 0.1);\n  content: &quot;&quot;;\n  pointer-events: none;\n}\n.card__three::before {\n  transform-origin: left top;\n}\n.card__three::after {\n  transform-origin: right bottom;\n}\n.card__three:hover::before, .card__three:hover::after, .card__three:focus::before, .card__three:focus::after {\n  transform: scale3d(1, 1, 1);\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

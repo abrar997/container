@@ -1,0 +1,33 @@
+body{background-image:url(https://mickeyblog.com/wp-content/uploads/2018/01/Walt-DIsney-inspiring-quotes.jpg) ;
+background-repeat:no-repeat;
+background-size:100%  ;
+
+;background-color:black
+}
+.grid-container {
+  display:grid;
+ grid-column-gap: 80px;
+   grid-template-columns: auto  auto auto auto;
+
+ }
+
+.grid-container{background-color:black;
+width: 62%;
+height: 600px;
+border:2px solid #D6DBDF;
+border-radius:20px;
+}
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+h1{color:#EDF2F7 ;
+font-family:Perpetua;
+text-align:left;
+; font-size: 30px;
+margin-left:30px;}
+
+q{font-size:20px;
+font-family: cursive;
+color:white;}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://cdpn.io/197384265/fullembedgrid/LoBjGB?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - 2D Card Hover Effect II -- Flat</title>
+  
+  
+  
+  
+<style>
+*{margin:0;padding:0;}
+
+body {
+  background:#05070b;
+  overflow: hidden:
+}
+.content{ 
+  display: flex;
+  margin-top: 10vh;
+  justify-content: space-around;
+}
+svg{  
+  height:400px;
+  width:400px;
+}
+circle {
+  stroke: #ff002b;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.equator {
+  -webkit-transform: rotateZ(-20deg) rotateX(125deg);
+          transform: rotateZ(-20deg) rotateX(125deg);
+}
+
+.meridian {
+  -webkit-animation: turn 0.5s infinite linear;
+          animation: turn 0.5s infinite linear;
+}
+.meridian:nth-child(1) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(15deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(15deg);
+}
+.meridian:nth-child(2) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(30deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(30deg);
+}
+.meridian:nth-child(3) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(45deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(45deg);
+}
+.meridian:nth-child(4) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(60deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(60deg);
+}
+.meridian:nth-child(5) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(75deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(75deg);
+}
+.meridian:nth-child(6) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(90deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(90deg);
+}
+.meridian:nth-child(7) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(105deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(105deg);
+}
+.meridian:nth-child(8) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(120deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(120deg);
+}
+.meridian:nth-child(9) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(135deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(135deg);
+}
+.meridian:nth-child(10) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(150deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(150deg);
+}
+.meridian:nth-child(11) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(165deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(165deg);
+}
+.meridian:nth-child(12) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(180deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(180deg);
+}
+.meridian:nth-child(13) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(195deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(195deg);
+}
+.meridian:nth-child(14) {
+  --target: 180deg / $count * ($i + 1);
+  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(210deg);
+          transform: rotateZ(-20deg) rotateX(35deg) rotateY(210deg);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="card">
+  <div class="content" style="transform: perspective(400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(40px); transition: all 2s linear 0s;">
+    <svg viewBox="-500 -500 1000 1000">
+      <circle r="450"></circle>
+      <circle class="equator" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+      <circle class="meridian" r="450"></circle>
+    </svg>
+  </div>
+</div>
+    <script src="./stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js.download"></script>
+
+  
+      <script id="rendered-js">
+// Thanks to Pavel Dobryakov //
+
+const ANGLE = 40;
+
+let card = document.querySelectorAll(".card");
+
+card.forEach((element, i) => {
+  floatable(element);
+});
+
+function floatable(panel) {
+  let content = panel.querySelector(".content");
+  panel.addEventListener('mouseout', e => {
+    content.style.transform = `perspective(400px)
+								   rotateX(0deg)
+								   rotateY(0deg)
+								   rotateZ(0deg)
+                    translateZ(40px)`;
+    content.style.transition = `all 2s linear`;
+  });
+
+  panel.addEventListener('mousemove', e => {
+    let w = panel.clientWidth;
+    let h = panel.clientHeight;
+    let y = (e.offsetX - w * 0.5) / w * ANGLE;
+    let x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
+
+    content.style.transform = `perspective(400px)
+								   rotateX(${x}deg)
+								   rotateY(${y}deg)`;
+  });
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js.download"></script>
+
+
+
+ 
+</body></html>

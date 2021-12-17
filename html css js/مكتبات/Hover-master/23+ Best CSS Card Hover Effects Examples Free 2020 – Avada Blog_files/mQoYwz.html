@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://codepen.io/andrewsims/embed/mQoYwz?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Card hover effect experiments</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="vMgaMUV8R72YnzVS2bH4T/ms31tlYF4KuuMiogNBSaci7C9g/1/2r80yavPWFoIuTP0WiCXc/f2O3IuZ0xVHmw==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/andrewsims/embed/mQoYwz?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/andrewsims/embed/mQoYwz?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/andrewsims/embed/mQoYwz?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/andrewsims/embed/mQoYwz?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/andrewsims/pen/mQoYwz" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card1"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>This is option 1<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"small"</span><span class="cm-tag cm-bracket">&gt;</span>Card description with lots of great facts and interesting details.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-corner"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-arrow"</span><span class="cm-tag cm-bracket">&gt;</span>
+        →
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card2"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>This is option 2<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"small"</span><span class="cm-tag cm-bracket">&gt;</span>Card description with lots of great facts and interesting details.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-corner"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-arrow"</span><span class="cm-tag cm-bracket">&gt;</span>
+        →
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card3"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>This is option 3<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"small"</span><span class="cm-tag cm-bracket">&gt;</span>Card description with lots of great facts and interesting details.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dimmer"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-corner"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-arrow"</span><span class="cm-tag cm-bracket">&gt;</span>
+        →
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card4"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"32px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"32px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 32 32"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">xmlns:xlink</span>=<span class="cm-string">"http://www.w3.org/1999/xlink"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch --&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>Created with Sketch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Page-1"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">fill-rule</span>=<span class="cm-string">"evenodd"</span> <span class="cm-attribute">stroke-linecap</span>=<span class="cm-string">"round"</span> <span class="cm-attribute">stroke-linejoin</span>=<span class="cm-string">"round"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Artboard-Copy-19"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(-874.000000, -1729.000000)"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1.5"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-22"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(0.000000, 1672.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-46"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(688.000000, 33.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-42"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(166.000000, 0.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-25"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(21.000000, 25.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-9"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(0.000000, 17.666667)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M14,8.33306667 L14,12.3330667"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-3"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polyline</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-1"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"18 4.33306667 18 12.3330667 10 12.3330667"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polyline</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polyline</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-5"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"10 5.1332 10 12.3332 2 12.3332 2 6.3332"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polyline</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-7"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"9 6.33306667 14 0.333066667 5 0.333066667 0 6.33306667"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M20,23.9997333 L14,17.9997333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-10"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-15"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(5.666667, 0.000000)"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-11"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"9.28906667 7.99973333 16.3330667 -0.000266666667 7.33306667 -0.000266666667 0.289066667 7.99973333"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+                                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M24.3333333,7.99973333 L16.3333333,-0.000266666667"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-13"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M16,6.8148 L16,14.0001333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-16"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polyline</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-17"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"28 5.99973333 28 23.9997333 24 23.9997333"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polyline</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M8,13.9997333 L8,7.99973333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-19"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#666666"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M20,8.99973333 L20,9.99973333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-20"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M24,8.99973333 L24,9.99973333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-21"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M20,13.9997333 L20,14.9997333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-22"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M24,13.9997333 L24,14.9997333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-23"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M24,18.9997333 L24,19.9997333"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Stroke-24"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#CD3D73"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+                    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>This is option 4<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"small"</span><span class="cm-tag cm-bracket">&gt;</span>Card description with lots of great facts and interesting details.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dimmer"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-corner"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"go-arrow"</span><span class="cm-tag cm-bracket">&gt;</span>
+        →
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://fonts.googleapis.com/css?family=Nunito:400,700'</span>);
+
+
+* {
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+}
+
+<span class="cm-tag">html</span>,
+<span class="cm-tag">body</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Nunito"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">16px</span>;
+}
+
+<span class="cm-qualifier">.container</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+}
+
+<span class="cm-tag">h3</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#262626</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">17px</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">24px</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">700</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">4px</span>;
+}
+
+<span class="cm-tag">p</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">17px</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">400</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#666666</span>;
+
+  &amp;<span class="cm-qualifier">.small</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">14px</span>;
+  }
+}
+
+<span class="cm-qualifier">.go-corner</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">32px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">32px</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#00838d</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0</span> <span class="cm-number">4px</span> <span class="cm-number">0</span> <span class="cm-number">32px</span>;
+}
+
+<span class="cm-qualifier">.go-arrow</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">-4px</span>;
+  <span class="cm-property">margin-right</span>: <span class="cm-number">-4px</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-variable">courier</span>, <span class="cm-variable">sans</span>;
+}
+
+<span class="cm-qualifier">.card1</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">262px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f2f8f9</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">32px</span> <span class="cm-number">24px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">12px</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+
+  &amp;:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">-1</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">-16px</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">-16px</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#00838d</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">1</span>);
+    <span class="cm-property">transform-origin</span>: <span class="cm-number">50%</span> <span class="cm-number">50%</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">0.25s</span> <span class="cm-atom">ease-out</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">21</span>);
+  }
+}
+
+<span class="cm-qualifier">.card1</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-tag">p</span> {
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">0.8</span>);
+  }
+  <span class="cm-tag">h3</span> {
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#ffffff</span>;
+  }
+}
+
+<span class="cm-qualifier">.card2</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">262px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f2f8f9</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">32px</span> <span class="cm-number">24px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">12px</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#f2f8f9</span>;
+
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease-out</span>;
+    <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">4px</span> <span class="cm-number">8px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">38</span>, <span class="cm-number">38</span>, <span class="cm-number">38</span>, <span class="cm-number">0.2</span>);
+    <span class="cm-property">top</span>: <span class="cm-number">-4px</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#cccccc</span>;
+    <span class="cm-property">background-color</span>: <span class="cm-keyword">white</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">-1</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">-16px</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">-16px</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#00838d</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">32px</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">2</span>);
+    <span class="cm-property">transform-origin</span>: <span class="cm-number">50%</span> <span class="cm-number">50%</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">0.15s</span> <span class="cm-atom">ease-out</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">2.15</span>);
+  }
+}
+
+<span class="cm-qualifier">.card3</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">262px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#f2f8f9</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">32px</span> <span class="cm-number">24px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">12px</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#f2f8f9</span>;
+  
+  <span class="cm-qualifier">.go-corner</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">0.7</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#00838d</span>;
+    <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">0px</span> <span class="cm-number">999px</span> <span class="cm-number">999px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">0.5</span>);
+    <span class="cm-property">z-index</span>: <span class="cm-number">500</span>;
+  }
+}
+
+<span class="cm-qualifier">.card3</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-tag">p</span>{<span class="cm-property">color</span>: <span class="cm-atom">#00838d</span>}
+  <span class="cm-qualifier">.go-corner</span> {
+    <span class="cm-property">transition</span>: <span class="cm-variable">opactiy</span> <span class="cm-number">0.3s</span> <span class="cm-atom">linear</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+  }
+}
+
+<span class="cm-qualifier">.card4</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">262px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#ffffff</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">32px</span> <span class="cm-number">24px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">12px</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#cccccc</span>;
+  
+  <span class="cm-qualifier">.go-corner</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#00838d</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">16px</span>;
+    <span class="cm-property">padding-right</span>: <span class="cm-number">9px</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">skew</span>(<span class="cm-number">6deg</span>);
+    <span class="cm-property">margin-right</span>: <span class="cm-number">-36px</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">start</span>;
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">-45deg</span>, <span class="cm-atom">#8F479A</span> <span class="cm-number">1%</span>, <span class="cm-atom">#DC2A74</span> <span class="cm-number">100%</span>);
+  }
+  
+  <span class="cm-qualifier">.go-arrow</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">skew</span>(<span class="cm-number">-6deg</span>);
+    <span class="cm-property">margin-left</span>: <span class="cm-number">-2px</span>;
+    <span class="cm-property">margin-top</span>: <span class="cm-number">9px</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  }
+
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#CD3D73</span>;
+  }
+  
+  <span class="cm-tag">h3</span> {<span class="cm-property">margin-top</span>: <span class="cm-number">8px</span>;}
+}
+
+<span class="cm-qualifier">.card4</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-qualifier">.go-corner</span> {
+    <span class="cm-property">margin-right</span>: <span class="cm-number">-12px</span>;
+  }
+  <span class="cm-qualifier">.go-arrow</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+  }
+}</code></pre>
+<a href="https://codepen.io/andrewsims/embed/mQoYwz?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Card hover effect experiments" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Card hover effect experiments" data-src="https://cdpn.io/andrewsims/fullembedgrid/mQoYwz?animations=run&amp;type=embed" src="./mQoYwz(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/andrewsims" target="_blank" rel="noopener"><img src="./default(13).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/andrewsims" target="_blank" rel="noopener">Andrew Sims</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/andrewsims" target="_blank" rel="noopener" class="about-user-more">
+See more by @andrewsims on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;container&quot;&gt;\n  &lt;a class=&quot;card1&quot; href=&quot;#&quot;&gt;\n    &lt;h3&gt;This is option 1&lt;/h3&gt;\n    &lt;p class=&quot;small&quot;&gt;Card description with lots of great facts and interesting details.&lt;/p&gt;\n    &lt;div class=&quot;go-corner&quot; href=&quot;#&quot;&gt;\n      &lt;div class=&quot;go-arrow&quot;&gt;\n        →\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/a&gt;\n  \n  &lt;a class=&quot;card2&quot; href=&quot;#&quot;&gt;\n    &lt;h3&gt;This is option 2&lt;/h3&gt;\n    &lt;p class=&quot;small&quot;&gt;Card description with lots of great facts and interesting details.&lt;/p&gt;\n    \n    &lt;div class=&quot;go-corner&quot; href=&quot;#&quot;&gt;\n      &lt;div class=&quot;go-arrow&quot;&gt;\n        →\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/a&gt;\n  \n  &lt;a class=&quot;card3&quot; href=&quot;#&quot;&gt;\n    &lt;h3&gt;This is option 3&lt;/h3&gt;\n    &lt;p class=&quot;small&quot;&gt;Card description with lots of great facts and interesting details.&lt;/p&gt;\n    &lt;div class=&quot;dimmer&quot;&gt;&lt;/div&gt;\n    &lt;div class=&quot;go-corner&quot; href=&quot;#&quot;&gt;\n      &lt;div class=&quot;go-arrow&quot;&gt;\n        →\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/a&gt;\n  \n  &lt;a class=&quot;card4&quot; href=&quot;#&quot;&gt;\n    \n&lt;svg width=&quot;32px&quot; height=&quot;32px&quot; viewBox=&quot;0 0 32 32&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n    &lt;!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch --&gt;\n    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;\n    &lt;defs&gt;&lt;/defs&gt;\n    &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;\n        &lt;g id=&quot;Artboard-Copy-19&quot; transform=&quot;translate(-874.000000, -1729.000000)&quot; stroke-width=&quot;1.5&quot;&gt;\n            &lt;g id=&quot;Group-22&quot; transform=&quot;translate(0.000000, 1672.000000)&quot;&gt;\n                &lt;g id=&quot;Group-46&quot; transform=&quot;translate(688.000000, 33.000000)&quot;&gt;\n                    &lt;g id=&quot;Group-42&quot; transform=&quot;translate(166.000000, 0.000000)&quot;&gt;\n                        &lt;g id=&quot;Group-25&quot; transform=&quot;translate(21.000000, 25.000000)&quot;&gt;\n                            &lt;g id=&quot;Group-9&quot; transform=&quot;translate(0.000000, 17.666667)&quot;&gt;\n                                &lt;path d=&quot;M14,8.33306667 L14,12.3330667&quot; id=&quot;Stroke-3&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                                &lt;polyline id=&quot;Stroke-1&quot; stroke=&quot;#666666&quot; points=&quot;18 4.33306667 18 12.3330667 10 12.3330667&quot;&gt;&lt;/polyline&gt;\n                                &lt;polyline id=&quot;Stroke-5&quot; stroke=&quot;#666666&quot; points=&quot;10 5.1332 10 12.3332 2 12.3332 2 6.3332&quot;&gt;&lt;/polyline&gt;\n                                &lt;polygon id=&quot;Stroke-7&quot; stroke=&quot;#666666&quot; points=&quot;9 6.33306667 14 0.333066667 5 0.333066667 0 6.33306667&quot;&gt;&lt;/polygon&gt;\n                            &lt;/g&gt;\n                            &lt;path d=&quot;M20,23.9997333 L14,17.9997333&quot; id=&quot;Stroke-10&quot; stroke=&quot;#666666&quot;&gt;&lt;/path&gt;\n                            &lt;g id=&quot;Group-15&quot; transform=&quot;translate(5.666667, 0.000000)&quot; stroke=&quot;#666666&quot;&gt;\n                                &lt;polygon id=&quot;Stroke-11&quot; points=&quot;9.28906667 7.99973333 16.3330667 -0.000266666667 7.33306667 -0.000266666667 0.289066667 7.99973333&quot;&gt;&lt;/polygon&gt;\n                                &lt;path d=&quot;M24.3333333,7.99973333 L16.3333333,-0.000266666667&quot; id=&quot;Stroke-13&quot;&gt;&lt;/path&gt;\n                            &lt;/g&gt;\n                            &lt;path d=&quot;M16,6.8148 L16,14.0001333&quot; id=&quot;Stroke-16&quot; stroke=&quot;#666666&quot;&gt;&lt;/path&gt;\n                            &lt;polyline id=&quot;Stroke-17&quot; stroke=&quot;#666666&quot; points=&quot;28 5.99973333 28 23.9997333 24 23.9997333&quot;&gt;&lt;/polyline&gt;\n                            &lt;path d=&quot;M8,13.9997333 L8,7.99973333&quot; id=&quot;Stroke-19&quot; stroke=&quot;#666666&quot;&gt;&lt;/path&gt;\n                            &lt;path d=&quot;M20,8.99973333 L20,9.99973333&quot; id=&quot;Stroke-20&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                            &lt;path d=&quot;M24,8.99973333 L24,9.99973333&quot; id=&quot;Stroke-21&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                            &lt;path d=&quot;M20,13.9997333 L20,14.9997333&quot; id=&quot;Stroke-22&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                            &lt;path d=&quot;M24,13.9997333 L24,14.9997333&quot; id=&quot;Stroke-23&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                            &lt;path d=&quot;M24,18.9997333 L24,19.9997333&quot; id=&quot;Stroke-24&quot; stroke=&quot;#CD3D73&quot;&gt;&lt;/path&gt;\n                        &lt;/g&gt;\n                    &lt;/g&gt;\n                &lt;/g&gt;\n            &lt;/g&gt;\n        &lt;/g&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;\n    &lt;h3&gt;This is option 4&lt;/h3&gt;\n    &lt;p class=&quot;small&quot;&gt;Card description with lots of great facts and interesting details.&lt;/p&gt;\n    &lt;div class=&quot;dimmer&quot;&gt;&lt;/div&gt;\n    &lt;div class=&quot;go-corner&quot; href=&quot;#&quot;&gt;\n      &lt;div class=&quot;go-arrow&quot;&gt;\n        →\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/a&gt;\n  \n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css?family=Nunito:400,700&quot;);\n* {\n  transition: all 0.3s ease-out;\n}\n\nhtml,\nbody {\n  height: 100%;\n  font-family: &quot;Nunito&quot;, sans-serif;\n  font-size: 16px;\n}\n\n.container {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n}\n\nh3 {\n  color: #262626;\n  font-size: 17px;\n  line-height: 24px;\n  font-weight: 700;\n  margin-bottom: 4px;\n}\n\np {\n  font-size: 17px;\n  font-weight: 400;\n  line-height: 20px;\n  color: #666666;\n}\np.small {\n  font-size: 14px;\n}\n\n.go-corner {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  width: 32px;\n  height: 32px;\n  overflow: hidden;\n  top: 0;\n  right: 0;\n  background-color: #00838d;\n  border-radius: 0 4px 0 32px;\n}\n\n.go-arrow {\n  margin-top: -4px;\n  margin-right: -4px;\n  color: white;\n  font-family: courier, sans;\n}\n\n.card1 {\n  display: block;\n  position: relative;\n  max-width: 262px;\n  background-color: #f2f8f9;\n  border-radius: 4px;\n  padding: 32px 24px;\n  margin: 12px;\n  text-decoration: none;\n  z-index: 0;\n  overflow: hidden;\n}\n.card1:before {\n  content: &quot;&quot;;\n  position: absolute;\n  z-index: -1;\n  top: -16px;\n  right: -16px;\n  background: #00838d;\n  height: 32px;\n  width: 32px;\n  border-radius: 32px;\n  transform: scale(1);\n  transform-origin: 50% 50%;\n  transition: transform 0.25s ease-out;\n}\n.card1:hover:before {\n  transform: scale(21);\n}\n\n.card1:hover p {\n  transition: all 0.3s ease-out;\n  color: rgba(255, 255, 255, 0.8);\n}\n.card1:hover h3 {\n  transition: all 0.3s ease-out;\n  color: #ffffff;\n}\n\n.card2 {\n  display: block;\n  top: 0px;\n  position: relative;\n  max-width: 262px;\n  background-color: #f2f8f9;\n  border-radius: 4px;\n  padding: 32px 24px;\n  margin: 12px;\n  text-decoration: none;\n  z-index: 0;\n  overflow: hidden;\n  border: 1px solid #f2f8f9;\n}\n.card2:hover {\n  transition: all 0.2s ease-out;\n  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);\n  top: -4px;\n  border: 1px solid #cccccc;\n  background-color: white;\n}\n.card2:before {\n  content: &quot;&quot;;\n  position: absolute;\n  z-index: -1;\n  top: -16px;\n  right: -16px;\n  background: #00838d;\n  height: 32px;\n  width: 32px;\n  border-radius: 32px;\n  transform: scale(2);\n  transform-origin: 50% 50%;\n  transition: transform 0.15s ease-out;\n}\n.card2:hover:before {\n  transform: scale(2.15);\n}\n\n.card3 {\n  display: block;\n  top: 0px;\n  position: relative;\n  max-width: 262px;\n  background-color: #f2f8f9;\n  border-radius: 4px;\n  padding: 32px 24px;\n  margin: 12px;\n  text-decoration: none;\n  overflow: hidden;\n  border: 1px solid #f2f8f9;\n}\n.card3 .go-corner {\n  opacity: 0.7;\n}\n.card3:hover {\n  border: 1px solid #00838d;\n  box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);\n  z-index: 500;\n}\n\n.card3:hover p {\n  color: #00838d;\n}\n.card3:hover .go-corner {\n  transition: opactiy 0.3s linear;\n  opacity: 1;\n}\n\n.card4 {\n  display: block;\n  top: 0px;\n  position: relative;\n  max-width: 262px;\n  background-color: #ffffff;\n  border-radius: 4px;\n  padding: 32px 24px;\n  margin: 12px;\n  text-decoration: none;\n  overflow: hidden;\n  border: 1px solid #cccccc;\n}\n.card4 .go-corner {\n  background-color: #00838d;\n  height: 100%;\n  width: 16px;\n  padding-right: 9px;\n  border-radius: 0;\n  transform: skew(6deg);\n  margin-right: -36px;\n  align-items: start;\n  background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%);\n}\n.card4 .go-arrow {\n  transform: skew(-6deg);\n  margin-left: -2px;\n  margin-top: 9px;\n  opacity: 0;\n}\n.card4:hover {\n  border: 1px solid #CD3D73;\n}\n.card4 h3 {\n  margin-top: 8px;\n}\n\n.card4:hover .go-corner {\n  margin-right: -12px;\n}\n.card4:hover .go-arrow {\n  opacity: 1;\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

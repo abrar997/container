@@ -1,0 +1,15 @@
+/* feedback */
+.feedback {
+  display: none;
+}
+.loader {
+  display: none;
+}
+
+.results {
+  display: none;
+}
+
+.showItem {
+  display: block;
+}

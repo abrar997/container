@@ -1,0 +1,8 @@
+header .container .row .nav ul li  {background-color: rgb(235, 201, 235);
+display: block;
+list-style: none;
+color: purple;
+
+}
+
+body{background-color: var(--bg-overlay-color);}

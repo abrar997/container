@@ -1,0 +1,13 @@
+.black{background-color: rgb(230, 207, 230);
+}
+
+button {padding: 15px;
+font-size: 25px;
+margin: auto;
+}
+
+ul{list-style-type: none ;}
+li{font-size: 25px;
+text-align: center;
+font-weight: 600;
+}

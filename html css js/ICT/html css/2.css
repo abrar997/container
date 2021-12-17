@@ -1,0 +1,34 @@
+/*color is used for give a style for pargraph */
+p{
+
+  font-size:30pt;
+  font-family:serif;
+}
+h2{
+font-size:30pt;
+font-family:monospace;}
+#phoneid{
+font-size:40pt;
+font-family: fantasy;}
+.classone{
+font-size: 40pt;
+font-family:inherit;
+text-decoration: underline;
+text-align: center;}
+h1   {
+ margin-left: 20px;
+}
+body{/*background-color:RGB(125, 215, 161);
+color:#CDE8D7 ;}*/
+background-image:url("th.jpg") ;
+background-repeat: no-repeat ;
+/* background-repeat: repeat-x*/;
+/* background-repeat: repeat-y*/;
+background-position: center;
+/*background-position: top right;*/
+/*background-position: bottom right;*/
+/*background-position:bottom center;*/
+/*background-position: top left;*/
+
+background-color:#CDE8D7;
+background -attachment:fixed}

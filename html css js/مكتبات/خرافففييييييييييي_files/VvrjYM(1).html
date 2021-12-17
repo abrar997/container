@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://codepen.io/LegendAF/embed/VvrjYM?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Week #2 :: Movie Card :: RV Code Challenge</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="TfAhJQ8huaoODpVKMrrw8JBX9qhHFIr3SA9PYdbwbdEG/7PE6cGqMtOb+B07lUDxK4kO4BCjc10GJvZoHljUBw==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/LegendAF/pen/VvrjYM" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie-wrapper card-movie-wrapper--centered"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie-carousel"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--light card-movie--looper card-movie--active"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Looper<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2012<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>119 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Action<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Crime<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Sci-fi<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits<span class="cm-atom">&amp;nbsp;</span>-<span class="cm-atom">&amp;nbsp;</span>someone like Joe.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>7.5<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"5kGFyVKmqA0"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--looper --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--dark card-movie--tron"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Tron: Legacy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2010<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>125 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Action<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Adventure<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Fantasy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Sci-fi<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>The son of a virtual world designer goes looking for his father and ends up inside the digital world that his father designed. He meets his father's corrupted creation and a unique ally who was born inside the digital world.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>6.8<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"L9szn1QQfas"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--tron --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--light card-movie--garden-state"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Garden State<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2004<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>102 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Comedy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Drama<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Romance<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>A quietly troubled young man returns home for his mother's funeral after being estranged from his family for a decade.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>7.6<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"u82n0e1mgmQ"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--garden-state --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--light card-movie--interstellar"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Interstellar<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2014<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>169 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Adventure<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Drama<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Sci-fi<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>With our time on Earth coming to an end, a team of explorers undertakes the most important mission in human history; traveling beyond this galaxy to discover whether mankind has a future among the stars.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>8.7<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"3WzHXI5HizQ"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--interstellar --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--light card-movie--walter-mitty"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Walter Mitty<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2013<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>114 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Adventure<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Comedy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Drama<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>When his job along with that of his co-worker are threatened, Walter takes action in the real world embarking on a global journey that turns into an adventure more extraordinary than anything he could have ever imagined.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>7.4<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"QD6cy4PBQPI"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--walter-mitty --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie card-movie--dark card-movie--cloud-atlas"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__title"</span><span class="cm-tag cm-bracket">&gt;</span>Cloud Atlas<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>2012<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item"</span><span class="cm-tag cm-bracket">&gt;</span>172 mins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__details-item card-movie__details-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Drama<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Sci-Fi<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__details --&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__description"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-comment">&lt;!-- /.card-movie__description --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__content --&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__rating"</span><span class="cm-tag cm-bracket">&gt;</span>7.5<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie__player"</span> <span class="cm-attribute">data-trailer</span>=<span class="cm-string">"hWnAqFyaQ5s"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- /.card-movie__player --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie card-movie--cloud-atlas --&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-comment">&lt;!-- /.card-movie-carousel --&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie-navigation"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-movie-navigation__list"</span> <span class="cm-attribute">data-navigation</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"is-active"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- /.card-movie-navigation__list --&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">data-play</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-comment">&lt;!-- /.card-movie-navigation --&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-comment">&lt;!-- /.card-movie-wrapper --&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-variable-2">$color-white</span>: <span class="cm-atom">#fff</span>;
+<span class="cm-variable-2">$color-black</span>: <span class="cm-atom">#000</span>;
+
+<span class="cm-variable-2">$transition-time</span>: <span class="cm-number">250ms</span>;
+<span class="cm-variable-2">$transition-method</span>: <span class="cm-atom">ease-in-out</span>;
+
+<span class="cm-variable-2">$card-height</span>: <span class="cm-number">440px</span>;
+<span class="cm-variable-2">$card-width</span>: <span class="cm-number">840px</span>;
+<span class="cm-variable-2">$card-hover-offset-x</span>: <span class="cm-number">40px</span>;
+<span class="cm-variable-2">$card-hover-offset-y</span>: <span class="cm-number">60px</span>;
+
+<span class="cm-tag">html</span> {
+    <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+<span class="cm-comment">// html</span>
+
+<span class="cm-tag">body</span> {
+    <span class="cm-property">color</span>: <span class="cm-atom">#676767</span>;
+    <span class="cm-property">font-family</span>: <span class="cm-string">"Helvetica Neue"</span>, <span class="cm-variable">Helvetica</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">12px</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1.5</span>;
+}
+<span class="cm-comment">// body</span>
+
+*, 
+*:<span class="cm-variable-3">before</span>, 
+*:<span class="cm-variable-3">after</span> {
+    <span class="cm-property">box-sizing</span>: <span class="cm-atom">inherit</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-atom">inherit</span>;
+}
+<span class="cm-comment">// *, *:before, *:after</span>
+
+%<span class="cm-tag">clearfix</span> {
+
+    &amp;:<span class="cm-variable-3">after</span> {
+        <span class="cm-property">clear</span>: <span class="cm-atom">both</span>;
+        <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+        <span class="cm-property">display</span>: <span class="cm-atom">table</span>;
+    }
+    <span class="cm-comment">// &amp;:after</span>
+
+}
+<span class="cm-comment">// %clearfix</span>
+
+<span class="cm-qualifier">.card-movie-wrapper</span> {
+    <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">0px</span> <span class="cm-number">100px</span> <span class="cm-number">25px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-variable-2">$color-black</span>, <span class="cm-number">0.2</span>);
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$card-height</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+    <span class="cm-property">width</span>: <span class="cm-variable-2">$card-width</span>;
+
+    &amp;:<span class="cm-variable-3">hover</span> {
+
+        <span class="cm-qualifier">.card-movie-carousel</span> {
+            <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+               <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+                    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+            <span class="cm-property">bottom</span>: <span class="cm-variable-2">$card-hover-offset-y</span>;
+            <span class="cm-property">right</span>: <span class="cm-variable-2">$card-hover-offset-x</span>;
+        }
+        <span class="cm-comment">// .card-movie-carousel</span>
+
+    }
+    <span class="cm-comment">// &amp;:hover</span>
+
+}
+<span class="cm-comment">// .card-movie-wrapper</span>
+
+<span class="cm-qualifier">.card-movie-wrapper--centered</span> { 
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+       <span class="cm-meta">-moz-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+        <span class="cm-meta">-ms-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+         <span class="cm-meta">-o-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+            <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+    <span class="cm-property">left</span>: <span class="cm-number">50%</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">50%</span>;
+}
+<span class="cm-comment">// .card-movie-wrapper--centered</span>
+
+<span class="cm-qualifier">.card-movie-carousel</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span> <span class="cm-number">250ms</span>;
+       <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span> <span class="cm-number">250ms</span>;
+            <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span> <span class="cm-number">250ms</span>;
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$card-height</span>;
+    <span class="cm-property">width</span>: <span class="cm-variable-2">$card-width</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+}
+
+<span class="cm-qualifier">.card-movie-navigation</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-variable-2">$color-white</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">15</span>;
+
+    &amp;<span class="cm-tag">__list</span> {
+        <span class="cm-variable-2">$item-size</span>: <span class="cm-number">12px</span>;
+        <span class="cm-variable-2">$item-size-active</span>: <span class="cm-variable-2">$item-size</span> * <span class="cm-number">1.5</span>;
+        <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+           <span class="cm-meta">-moz-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+            <span class="cm-meta">-ms-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+             <span class="cm-meta">-o-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+                <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">right</span>: (<span class="cm-variable-2">$card-hover-offset-x</span> - <span class="cm-variable-2">$item-size</span>) <span class="cm-operator">/</span> <span class="cm-number">2</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">50%</span>;
+        <span class="cm-property">width</span>: <span class="cm-variable-2">$item-size-active</span>;
+
+        <span class="cm-tag">li</span> {
+            <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+               <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+                    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition-time</span> <span class="cm-variable-2">$transition-method</span>;
+            <span class="cm-property">background-color</span>: <span class="cm-atom">#ccc</span>;
+            <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+            <span class="cm-property">height</span>: <span class="cm-variable-2">$item-size</span>;
+            <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span> <span class="cm-variable-2">$item-size</span><span class="cm-operator">/</span><span class="cm-number">2</span>;
+            <span class="cm-property">width</span>: <span class="cm-variable-2">$item-size</span>;
+
+            &amp;:<span class="cm-variable-3">last-child</span> {
+                <span class="cm-property">margin-bottom</span>: <span class="cm-number">0</span>;
+            }
+            <span class="cm-comment">// &amp;:last-child</span>
+
+            &amp;<span class="cm-qualifier">.is-active</span> {
+                <span class="cm-property">height</span>: <span class="cm-variable-2">$item-size-active</span>;
+                <span class="cm-property">width</span>: <span class="cm-variable-2">$item-size-active</span>;
+            }
+            <span class="cm-comment">// &amp;.is-active</span>
+      
+            &amp;:<span class="cm-variable-3">hover</span> {
+                <span class="cm-property">background-color</span>: <span class="cm-atom">#bbb</span>;
+            }
+            <span class="cm-comment">// &amp;:hover</span>
+
+        }
+        <span class="cm-comment">// li</span>
+
+    }
+    <span class="cm-comment">// &amp;__list</span>
+  
+    <span class="cm-tag">button</span> {
+        <span class="cm-variable-2">$arrow-size</span>: <span class="cm-number">6px</span>;
+        <span class="cm-meta">-webkit-</span><span class="cm-property">appearance</span>: <span class="cm-atom">none</span>;
+           <span class="cm-meta">-moz-</span><span class="cm-property">appearance</span>: <span class="cm-atom">none</span>;
+                <span class="cm-property">appearance</span>: <span class="cm-atom">none</span>;
+        <span class="cm-property">background-color</span>: <span class="cm-atom">transparent</span>;
+        <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+        <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">color</span>: <span class="cm-atom">#aac8ca</span>;
+        <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+        <span class="cm-property">font-size</span>: <span class="cm-number">14px</span>;
+        <span class="cm-property">line-height</span>: <span class="cm-variable-2">$card-hover-offset-y</span>;
+        <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">outline</span>: <span class="cm-atom">none</span>;
+        <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">right</span>: <span class="cm-variable-2">$card-hover-offset-x</span>;
+
+        &amp;:<span class="cm-variable-3">before</span> {
+            <span class="cm-property">content</span>: <span class="cm-string">'Watch Trailer'</span>;
+        }
+        <span class="cm-comment">// &amp;:before </span>
+
+        &amp;:<span class="cm-variable-3">after</span> {
+            <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+               <span class="cm-meta">-moz-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+                <span class="cm-meta">-ms-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+                 <span class="cm-meta">-o-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+                    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+            <span class="cm-property">border-bottom</span>: <span class="cm-variable-2">$arrow-size</span> <span class="cm-atom">solid</span> <span class="cm-atom">transparent</span>;
+            <span class="cm-property">border-left</span>: <span class="cm-variable-2">$arrow-size</span> <span class="cm-atom">solid</span> <span class="cm-atom">#dce9e9</span>;
+            <span class="cm-property">border-top</span>: <span class="cm-variable-2">$arrow-size</span> <span class="cm-atom">solid</span> <span class="cm-atom">transparent</span>;
+            <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+            <span class="cm-property">height</span>: <span class="cm-number">0</span>; 
+            <span class="cm-property">margin-right</span>: <span class="cm-variable-2">$arrow-size</span>;
+            <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+            <span class="cm-property">right</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">top</span>: <span class="cm-number">50%</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">0</span>; 
+        }
+        <span class="cm-comment">// &amp;:after </span>
+
+        &amp;<span class="cm-qualifier">.is-playing</span> {
+
+      &amp;:<span class="cm-variable-3">before</span> {
+        <span class="cm-property">content</span>: <span class="cm-string">'Hide Trailer'</span>;
+      }
+      <span class="cm-comment">// &amp;:before </span>
+
+            &amp;:<span class="cm-variable-3">after</span> {
+                <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+                   <span class="cm-meta">-moz-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+                    <span class="cm-meta">-ms-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+                     <span class="cm-meta">-o-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+                        <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-90deg</span>);
+                <span class="cm-property">margin-top</span>: -<span class="cm-variable-2">$arrow-size</span>;
+            }
+            <span class="cm-comment">// &amp;:after </span>
+
+        }
+        <span class="cm-comment">// &amp;.is-playing </span>
+
+    }
+    <span class="cm-comment">// button</span>
+    
+}
+<span class="cm-comment">// .card-movie-navigation</span>
+
+<span class="cm-qualifier">.card-movie</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+       <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+            <span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+    <span class="cm-property">background-size</span>: <span class="cm-atom">cover</span>;
+    <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">20</span>;
+
+    &amp;<span class="cm-tag">__content</span> {
+        <span class="cm-property">left</span>: <span class="cm-number">330px</span>;    
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">150px</span>;
+    }
+    <span class="cm-comment">// &amp;__content</span>
+
+    &amp;<span class="cm-tag">__title</span> {
+        <span class="cm-property">font-size</span>: <span class="cm-number">60px</span>;
+        <span class="cm-property">font-weight</span>: <span class="cm-number">700</span>;
+        <span class="cm-property">line-height</span>: <span class="cm-number">1</span>;
+        <span class="cm-property">margin-left</span>: <span class="cm-number">-4px</span>;
+        <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+    }
+    <span class="cm-comment">// &amp;__title</span>
+
+    &amp;<span class="cm-tag">__details</span> {
+        <span class="cm-def">@extend</span> %<span class="cm-tag">clearfix</span>;
+        <span class="cm-property">margin-bottom</span>: <span class="cm-number">30px</span>;
+        <span class="cm-property">margin-top</span>: <span class="cm-number">15px</span>;
+
+        &amp;-<span class="cm-tag">item</span> {
+            <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+            <span class="cm-property">float</span>: <span class="cm-atom">left</span>;
+            <span class="cm-property">margin-right</span>: <span class="cm-number">20px</span>;
+        }
+        <span class="cm-comment">// &amp;-item</span>
+
+        &amp;-<span class="cm-tag">list</span> {
+            <span class="cm-def">@extend</span> %<span class="cm-tag">clearfix</span>;
+
+            <span class="cm-tag">li</span> {
+                <span class="cm-property">float</span>: <span class="cm-atom">left</span>;
+                <span class="cm-property">margin-right</span>: <span class="cm-number">5px</span>;
+                <span class="cm-property">padding-right</span>: <span class="cm-number">6px</span>;
+                <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+
+                &amp;:<span class="cm-variable-3">after</span> {
+                    <span class="cm-property">content</span>: <span class="cm-string">'|'</span>;
+                    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+                    <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+                }
+                <span class="cm-comment">// &amp;:after</span>
+
+                &amp;:<span class="cm-variable-3">last-child</span> {
+                    <span class="cm-property">margin-right</span>: <span class="cm-number">0</span>;
+
+                    &amp;:<span class="cm-variable-3">after</span> {
+                        <span class="cm-property">display</span>: <span class="cm-atom">none</span>;
+                    }
+                    <span class="cm-comment">// &amp;:after</span>
+
+                }
+                <span class="cm-comment">// &amp;:last-child</span>
+
+            }
+            <span class="cm-comment">// li</span>
+
+        }
+        <span class="cm-comment">// &amp;-list</span>
+
+    }
+    <span class="cm-comment">// &amp;__details</span>
+
+    &amp;<span class="cm-tag">__description</span> {
+        <span class="cm-property">font-size</span>: <span class="cm-number">14px</span>;
+        <span class="cm-property">max-width</span>: <span class="cm-number">390px</span>;
+    }
+    <span class="cm-comment">// &amp;__description</span>
+
+    &amp;<span class="cm-tag">__rating</span> {
+        <span class="cm-variable-2">$size</span>: <span class="cm-number">50px</span>;
+        <span class="cm-property">bottom</span>: <span class="cm-variable-2">$size</span><span class="cm-operator">/</span><span class="cm-number">3</span>;
+        <span class="cm-property">font-size</span>: <span class="cm-number">18px</span>;
+        <span class="cm-property">font-weight</span>: <span class="cm-number">700</span>;
+        <span class="cm-property">line-height</span>: <span class="cm-variable-2">$size</span>;
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">right</span>: <span class="cm-variable-2">$size</span><span class="cm-operator">/</span><span class="cm-number">3</span>;
+        <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+        <span class="cm-property">width</span>: <span class="cm-variable-2">$size</span>;
+
+        &amp;:<span class="cm-variable-3">after</span> {
+            <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">border</span>: <span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#ee927b</span>;
+            <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+            <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+            <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+        }
+        <span class="cm-comment">// &amp;:after</span>
+
+    }
+    <span class="cm-comment">// &amp;__rating</span>
+
+    &amp;<span class="cm-tag">__player</span> {
+       <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+           <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+                <span class="cm-property">transition</span>: <span class="cm-atom">all</span> (<span class="cm-variable-2">$transition-time</span> * <span class="cm-number">2</span>) <span class="cm-variable-2">$transition-method</span>;
+        <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+           <span class="cm-meta">-moz-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+            <span class="cm-meta">-ms-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+             <span class="cm-meta">-o-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+                <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translate</span>(<span class="cm-number">-50%</span>, <span class="cm-number">-50%</span>);
+        <span class="cm-property">height</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">left</span>: <span class="cm-number">50%</span>;
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">50%</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">0</span>;
+        <span class="cm-property">z-index</span>: <span class="cm-number">20</span>;
+    
+        <span class="cm-qualifier">.card-movie--playing</span> &amp; {
+            <span class="cm-property">height</span>: <span class="cm-variable-2">$card-height</span>;
+            <span class="cm-property">width</span>: <span class="cm-variable-2">$card-width</span>;
+        }
+        <span class="cm-comment">// .card-movie--playing &amp;</span>
+
+        <span class="cm-tag">iframe</span> {
+            <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+            <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+        }
+        <span class="cm-comment">// iframe</span>
+
+    }
+    <span class="cm-comment">// &amp;__player</span>
+
+}
+<span class="cm-comment">// .card-movie </span>
+
+<span class="cm-qualifier">.card-movie--active</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">25</span>;
+}
+<span class="cm-comment">// .card-movie--active</span>
+
+<span class="cm-qualifier">.card-movie--light</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#effdfd</span>;
+
+    [<span class="cm-tag">class</span>*=<span class="cm-string">'__title'</span>] {
+        <span class="cm-property">color</span>: <span class="cm-variable-2">$color-black</span>;
+    }
+    <span class="cm-comment">// [class*='__title'] </span>
+
+}
+<span class="cm-comment">// .card-movie--light</span>
+
+<span class="cm-qualifier">.card-movie--dark</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-variable-2">$color-black</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+
+    [<span class="cm-tag">class</span>*=<span class="cm-string">'__title'</span>] {
+        <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+    }
+    <span class="cm-comment">// [class*='__title'] </span>
+
+}
+<span class="cm-comment">// .card-movie--dark</span>
+
+<span class="cm-qualifier">.card-movie--looper</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/looper.png'</span>);
+}
+<span class="cm-comment">// .card-movie--looper</span>
+
+<span class="cm-qualifier">.card-movie--tron</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/tron.png'</span>);
+}
+<span class="cm-comment">// .card-movie--tron</span>
+
+<span class="cm-qualifier">.card-movie--interstellar</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/interstellar.png'</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fffffa</span>;
+}
+<span class="cm-comment">// .card-movie--interstellar</span>
+
+<span class="cm-qualifier">.card-movie--garden-state</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/garden-state.png'</span>);
+}
+<span class="cm-comment">// .card-movie--garden-state</span>
+
+<span class="cm-qualifier">.card-movie--walter-mitty</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/walter-mitty.png'</span>);
+}
+<span class="cm-comment">// .card-movie--walter-mitty</span>
+
+<span class="cm-qualifier">.card-movie--cloud-atlas</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/cloud-atlas.png'</span>);
+}
+<span class="cm-comment">// .card-movie--cloud-atlas</span></code></pre>
+<a href="https://codepen.io/LegendAF/embed/VvrjYM?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">// global vars</span>
+<span class="cm-keyword">var</span> <span class="cm-def">players</span> <span class="cm-operator">=</span> [],
+    <span class="cm-def">current</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+
+<span class="cm-comment">// YouTube iFrame API Ready</span>
+<span class="cm-keyword">function</span> <span class="cm-def">onYouTubeIframeAPIReady</span>() {
+
+    <span class="cm-variable">$</span>(<span class="cm-string">'[data-trailer]'</span>).<span class="cm-property">each</span>(<span class="cm-keyword">function</span>() {
+
+        <span class="cm-keyword">var</span> <span class="cm-def">player</span>,
+        <span class="cm-def">id</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">data</span>(<span class="cm-string">'trailer'</span>);
+
+        <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">html</span>(<span class="cm-string">'&lt;iframe id="player_'</span> <span class="cm-operator">+</span> <span class="cm-variable-2">id</span> <span class="cm-operator">+</span> <span class="cm-string">'" src="https://www.youtube.com/embed/'</span> <span class="cm-operator">+</span> <span class="cm-variable-2">id</span> <span class="cm-operator">+</span> <span class="cm-string">'?enablejsapi=1&amp;autohide=1&amp;showinfo=0&amp;theme=light" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;'</span>);
+
+        <span class="cm-variable-2">player</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">YT</span>.<span class="cm-property">Player</span>(<span class="cm-string">'player_'</span> <span class="cm-operator">+</span> <span class="cm-variable-2">id</span>, {
+            <span class="cm-property">events</span>: {
+                <span class="cm-string cm-property">'onStateChange'</span>: <span class="cm-variable">onPlayerStateChange</span>
+            }
+        });
+
+        <span class="cm-variable">players</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">player</span>);
+
+    });
+
+}
+
+<span class="cm-comment">// YouTube On Player State Change</span>
+<span class="cm-keyword">function</span> <span class="cm-def">onPlayerStateChange</span>(<span class="cm-def">event</span>) {
+
+    <span class="cm-keyword">var</span> <span class="cm-def">player</span> <span class="cm-operator">=</span> <span class="cm-variable">players</span>[<span class="cm-variable">current</span>];
+
+    <span class="cm-keyword">switch</span>(<span class="cm-variable-2">event</span>.<span class="cm-property">data</span>) {
+
+        <span class="cm-keyword">case</span> <span class="cm-variable">YT</span>.<span class="cm-property">PlayerState</span>.<span class="cm-property">ENDED</span>:
+            <span class="cm-variable-2">player</span>.<span class="cm-property">stopVideo</span>();
+            <span class="cm-variable-2">player</span>.<span class="cm-property">seekTo</span>(<span class="cm-number">0</span>);
+      <span class="cm-variable">$</span>(<span class="cm-string">'.card-movie--playing'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'card-movie--playing'</span>);
+      <span class="cm-variable">$</span>(<span class="cm-string">'[data-play]'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'is-playing'</span>);
+;        <span class="cm-keyword">break</span>;
+
+    }
+
+}
+
+<span class="cm-variable">$</span>(<span class="cm-keyword">function</span>() {
+
+    <span class="cm-variable">$</span>(<span class="cm-string">'[data-play]'</span>).<span class="cm-property">on</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span>() {
+
+        <span class="cm-keyword">var</span> <span class="cm-def">$card</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'.card-movie--active'</span>),
+            <span class="cm-def">player</span> <span class="cm-operator">=</span> <span class="cm-variable">players</span>[<span class="cm-variable-2">$card</span>.<span class="cm-property">index</span>()];
+
+        <span class="cm-keyword">if</span> (<span class="cm-variable-2">$card</span>.<span class="cm-property">hasClass</span>(<span class="cm-string">'card-movie--playing'</span>)) {
+            <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">toggleClass</span>(<span class="cm-string">'is-playing'</span>);
+            <span class="cm-variable-2">player</span>.<span class="cm-property">pauseVideo</span>();
+        } <span class="cm-keyword">else</span> {
+            <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">toggleClass</span>(<span class="cm-string">'is-playing'</span>);
+            <span class="cm-variable-2">player</span>.<span class="cm-property">playVideo</span>();
+        }
+
+        <span class="cm-variable-2">$card</span>.<span class="cm-property">toggleClass</span>(<span class="cm-string">'card-movie--playing'</span>);
+
+    });
+
+    <span class="cm-variable">$</span>(<span class="cm-string">'[data-navigation] li'</span>).<span class="cm-property">on</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span>() {
+
+        <span class="cm-comment">// remove current stuff</span>
+        <span class="cm-variable">players</span>[<span class="cm-variable">current</span>].<span class="cm-property">pauseVideo</span>();
+        <span class="cm-variable">$</span>(<span class="cm-string">'.card-movie:eq('</span> <span class="cm-operator">+</span> <span class="cm-variable">current</span> <span class="cm-operator">+</span> <span class="cm-string">')'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'card-movie--playing card-movie--active'</span>);
+        <span class="cm-variable">$</span>(<span class="cm-string">'[data-play]'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'is-playing'</span>);
+         <span class="cm-comment">// assign new current</span>
+        <span class="cm-variable">current</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">index</span>();
+        <span class="cm-variable">$</span>(<span class="cm-keyword">this</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'is-active'</span>).<span class="cm-property">siblings</span>().<span class="cm-property">removeClass</span>(<span class="cm-string">'is-active'</span>);
+        <span class="cm-variable">$</span>(<span class="cm-string">'.card-movie:eq('</span> <span class="cm-operator">+</span> <span class="cm-variable">current</span> <span class="cm-operator">+</span> <span class="cm-string">')'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'card-movie--active'</span>);
+
+    });
+
+});</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Week #2 :: Movie Card :: RV Code Challenge" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Week #2 :: Movie Card :: RV Code Challenge" data-src="https://cdpn.io/LegendAF/fullembedgrid/VvrjYM?animations=run&amp;type=embed" src="./VvrjYM.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/LegendAF" target="_blank" rel="noopener"><img src="./default(10).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/LegendAF" target="_blank" rel="noopener">Alex Fernandez</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/LegendAF" target="_blank" rel="noopener" class="about-user-more">
+See more by @LegendAF on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;card-movie-wrapper card-movie-wrapper--centered&quot;&gt;\n\n  &lt;div class=&quot;card-movie-carousel&quot;&gt;\n\n    &lt;div class=&quot;card-movie card-movie--light card-movie--looper card-movie--active&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Looper&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2012&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;119 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Action&lt;/li&gt;\n            &lt;li&gt;Crime&lt;/li&gt;\n            &lt;li&gt;Sci-fi&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits&amp;nbsp;-&amp;nbsp;someone like Joe.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;7.5&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;5kGFyVKmqA0&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--looper --&gt;\n\n    &lt;div class=&quot;card-movie card-movie--dark card-movie--tron&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Tron: Legacy&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2010&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;125 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Action&lt;/li&gt;\n            &lt;li&gt;Adventure&lt;/li&gt;\n            &lt;li&gt;Fantasy&lt;/li&gt;\n            &lt;li&gt;Sci-fi&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;The son of a virtual world designer goes looking for his father and ends up inside the digital world that his father designed. He meets his father&#39;s corrupted creation and a unique ally who was born inside the digital world.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;6.8&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;L9szn1QQfas&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--tron --&gt;\n\n    &lt;div class=&quot;card-movie card-movie--light card-movie--garden-state&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Garden State&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2004&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;102 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Comedy&lt;/li&gt;\n            &lt;li&gt;Drama&lt;/li&gt;\n            &lt;li&gt;Romance&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;A quietly troubled young man returns home for his mother&#39;s funeral after being estranged from his family for a decade.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;7.6&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;u82n0e1mgmQ&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--garden-state --&gt;\n\n    &lt;div class=&quot;card-movie card-movie--light card-movie--interstellar&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Interstellar&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2014&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;169 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Adventure&lt;/li&gt;\n            &lt;li&gt;Drama&lt;/li&gt;\n            &lt;li&gt;Sci-fi&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;With our time on Earth coming to an end, a team of explorers undertakes the most important mission in human history; traveling beyond this galaxy to discover whether mankind has a future among the stars.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;8.7&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;3WzHXI5HizQ&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--interstellar --&gt;\n\n    &lt;div class=&quot;card-movie card-movie--light card-movie--walter-mitty&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Walter Mitty&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2013&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;114 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Adventure&lt;/li&gt;\n            &lt;li&gt;Comedy&lt;/li&gt;\n            &lt;li&gt;Drama&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;When his job along with that of his co-worker are threatened, Walter takes action in the real world embarking on a global journey that turns into an adventure more extraordinary than anything he could have ever imagined.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;7.4&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;QD6cy4PBQPI&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--walter-mitty --&gt;\n\n    &lt;div class=&quot;card-movie card-movie--dark card-movie--cloud-atlas&quot;&gt;\n\n      &lt;div class=&quot;card-movie__content&quot;&gt;\n\n        &lt;div class=&quot;card-movie__title&quot;&gt;Cloud Atlas&lt;/div&gt;\n\n        &lt;div class=&quot;card-movie__details&quot;&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;2012&lt;/span&gt;\n\n          &lt;span class=&quot;card-movie__details-item&quot;&gt;172 mins&lt;/span&gt;\n\n          &lt;ul class=&quot;card-movie__details-item card-movie__details-list&quot;&gt;\n            &lt;li&gt;Drama&lt;/li&gt;\n            &lt;li&gt;Sci-Fi&lt;/li&gt;\n          &lt;/ul&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__details --&gt;\n\n        &lt;div class=&quot;card-movie__description&quot;&gt;\n\n          &lt;p&gt;An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.&lt;/p&gt;\n\n        &lt;/div&gt;\n        &lt;!-- /.card-movie__description --&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__content --&gt;\n\n      &lt;div class=&quot;card-movie__rating&quot;&gt;7.5&lt;/div&gt;\n\n      &lt;div class=&quot;card-movie__player&quot; data-trailer=&quot;hWnAqFyaQ5s&quot;&gt;\n\n      &lt;/div&gt;\n      &lt;!-- /.card-movie__player --&gt;\n\n    &lt;/div&gt;\n    &lt;!-- /.card-movie card-movie--cloud-atlas --&gt;\n\n  &lt;/div&gt;\n  &lt;!-- /.card-movie-carousel --&gt;\n\n  &lt;div class=&quot;card-movie-navigation&quot;&gt;\n\n    &lt;ul class=&quot;card-movie-navigation__list&quot; data-navigation&gt;\n      &lt;li class=&quot;is-active&quot;&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n    &lt;!-- /.card-movie-navigation__list --&gt;\n\n    &lt;button type=&quot;button&quot; data-play&gt;&lt;/button&gt;\n\n  &lt;/div&gt;\n  &lt;!-- /.card-movie-navigation --&gt;\n\n&lt;/div&gt;\n&lt;!-- /.card-movie-wrapper --&gt;","css":"html {\n  box-sizing: border-box;\n}\n\nbody {\n  color: #676767;\n  font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\n  font-size: 12px;\n  line-height: 1.5;\n}\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n  line-height: inherit;\n}\n\n.card-movie__details-list:after, .card-movie__details:after {\n  clear: both;\n  content: &quot;&quot;;\n  display: table;\n}\n\n.card-movie-wrapper {\n  box-shadow: 0px 0px 100px 25px rgba(0, 0, 0, 0.2);\n  height: 440px;\n  position: relative;\n  width: 840px;\n}\n.card-movie-wrapper:hover .card-movie-carousel {\n  -webkit-transition: all 250ms ease-in-out;\n  -moz-transition: all 250ms ease-in-out;\n  transition: all 250ms ease-in-out;\n  bottom: 60px;\n  right: 40px;\n}\n\n.card-movie-wrapper--centered {\n  -webkit-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  left: 50%;\n  position: absolute;\n  top: 50%;\n}\n\n.card-movie-carousel {\n  -webkit-transition: all 250ms ease-in-out 250ms;\n  -moz-transition: all 250ms ease-in-out 250ms;\n  transition: all 250ms ease-in-out 250ms;\n  height: 440px;\n  width: 840px;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  overflow: hidden;\n}\n\n.card-movie-navigation {\n  background-color: #fff;\n  bottom: 0;\n  height: 100%;\n  overflow: hidden;\n  position: absolute;\n  right: 0;\n  width: 100%;\n  z-index: 15;\n}\n.card-movie-navigation__list {\n  -webkit-transform: translateY(-50%);\n  -moz-transform: translateY(-50%);\n  -ms-transform: translateY(-50%);\n  -o-transform: translateY(-50%);\n  transform: translateY(-50%);\n  position: absolute;\n  right: 14px;\n  top: 50%;\n  width: 18px;\n}\n.card-movie-navigation__list li {\n  -webkit-transition: all 250ms ease-in-out;\n  -moz-transition: all 250ms ease-in-out;\n  transition: all 250ms ease-in-out;\n  background-color: #ccc;\n  border-radius: 100%;\n  cursor: pointer;\n  height: 12px;\n  margin: 0 auto 6px;\n  width: 12px;\n}\n.card-movie-navigation__list li:last-child {\n  margin-bottom: 0;\n}\n.card-movie-navigation__list li.is-active {\n  height: 18px;\n  width: 18px;\n}\n.card-movie-navigation__list li:hover {\n  background-color: #bbb;\n}\n.card-movie-navigation button {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  background-color: transparent;\n  border: none;\n  bottom: 0;\n  color: #aac8ca;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 60px;\n  margin: 0;\n  outline: none;\n  padding: 0;\n  position: absolute;\n  right: 40px;\n}\n.card-movie-navigation button:before {\n  content: &quot;Watch Trailer&quot;;\n}\n.card-movie-navigation button:after {\n  -webkit-transform: translateY(-50%);\n  -moz-transform: translateY(-50%);\n  -ms-transform: translateY(-50%);\n  -o-transform: translateY(-50%);\n  transform: translateY(-50%);\n  border-bottom: 6px solid transparent;\n  border-left: 6px solid #dce9e9;\n  border-top: 6px solid transparent;\n  content: &quot;&quot;;\n  height: 0;\n  margin-right: 6px;\n  position: absolute;\n  right: 100%;\n  top: 50%;\n  width: 0;\n}\n.card-movie-navigation button.is-playing:before {\n  content: &quot;Hide Trailer&quot;;\n}\n.card-movie-navigation button.is-playing:after {\n  -webkit-transform: rotate(-90deg);\n  -moz-transform: rotate(-90deg);\n  -ms-transform: rotate(-90deg);\n  -o-transform: rotate(-90deg);\n  transform: rotate(-90deg);\n  margin-top: -6px;\n}\n\n.card-movie {\n  -webkit-transition: all 500ms ease-in-out;\n  -moz-transition: all 500ms ease-in-out;\n  transition: all 500ms ease-in-out;\n  background-size: cover;\n  bottom: 0;\n  height: 100%;\n  overflow: hidden;\n  position: absolute;\n  right: 0;\n  opacity: 0;\n  width: 100%;\n  z-index: 20;\n}\n.card-movie__content {\n  left: 330px;\n  position: absolute;\n  top: 150px;\n}\n.card-movie__title {\n  font-size: 60px;\n  font-weight: 700;\n  line-height: 1;\n  margin-left: -4px;\n  text-transform: uppercase;\n}\n.card-movie__details {\n  margin-bottom: 30px;\n  margin-top: 15px;\n}\n.card-movie__details-item {\n  display: block;\n  float: left;\n  margin-right: 20px;\n}\n.card-movie__details-list li {\n  float: left;\n  margin-right: 5px;\n  padding-right: 6px;\n  position: relative;\n}\n.card-movie__details-list li:after {\n  content: &quot;|&quot;;\n  position: absolute;\n  right: 0;\n}\n.card-movie__details-list li:last-child {\n  margin-right: 0;\n}\n.card-movie__details-list li:last-child:after {\n  display: none;\n}\n.card-movie__description {\n  font-size: 14px;\n  max-width: 390px;\n}\n.card-movie__rating {\n  bottom: 16.6666666667px;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 50px;\n  position: absolute;\n  right: 16.6666666667px;\n  text-align: center;\n  width: 50px;\n}\n.card-movie__rating:after {\n  border-radius: 100%;\n  border: 2px solid #ee927b;\n  content: &quot;&quot;;\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.card-movie__player {\n  -webkit-transition: all 500ms ease-in-out;\n  -moz-transition: all 500ms ease-in-out;\n  transition: all 500ms ease-in-out;\n  -webkit-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  height: 0;\n  left: 50%;\n  position: absolute;\n  top: 50%;\n  width: 0;\n  z-index: 20;\n}\n.card-movie--playing .card-movie__player {\n  height: 440px;\n  width: 840px;\n}\n.card-movie__player iframe {\n  height: 100%;\n  width: 100%;\n}\n\n.card-movie--active {\n  opacity: 1;\n  z-index: 25;\n}\n\n.card-movie--light {\n  background-color: #effdfd;\n}\n.card-movie--light [class*=__title] {\n  color: #000;\n}\n\n.card-movie--dark {\n  background-color: #000;\n  color: #fff;\n}\n.card-movie--dark [class*=__title] {\n  color: #fff;\n}\n\n.card-movie--looper {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/looper.png&quot;);\n}\n\n.card-movie--tron {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/tron.png&quot;);\n}\n\n.card-movie--interstellar {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/interstellar.png&quot;);\n  background-color: #fffffa;\n}\n\n.card-movie--garden-state {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/garden-state.png&quot;);\n}\n\n.card-movie--walter-mitty {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/walter-mitty.png&quot;);\n}\n\n.card-movie--cloud-atlas {\n  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/cloud-atlas.png&quot;);\n}","js":"// global vars\nvar players = [],\ncurrent = 0;\n\n// YouTube iFrame API Ready\nfunction onYouTubeIframeAPIReady() {\n\n  $(&#39;[data-trailer]&#39;).each(function () {\n\n    var player,\n    id = $(this).data(&#39;trailer&#39;);\n\n    $(this).html(&#39;&lt;iframe id=&quot;player_&#39; + id + &#39;&quot; src=&quot;https://www.youtube.com/embed/&#39; + id + &#39;?enablejsapi=1&amp;autohide=1&amp;showinfo=0&amp;theme=light&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;);\n\n    player = new YT.Player(&#39;player_&#39; + id, {\n      events: {\n        &#39;onStateChange&#39;: onPlayerStateChange } });\n\n\n\n    players.push(player);\n\n  });\n\n}\n\n// YouTube On Player State Change\nfunction onPlayerStateChange(event) {\n\n  var player = players[current];\n\n  switch (event.data) {\n\n    case YT.PlayerState.ENDED:\n      player.stopVideo();\n      player.seekTo(0);\n      $(&#39;.card-movie--playing&#39;).removeClass(&#39;card-movie--playing&#39;);\n      $(&#39;[data-play]&#39;).removeClass(&#39;is-playing&#39;);\n      ;break;}\n\n\n\n}\n\n$(function () {\n\n  $(&#39;[data-play]&#39;).on(&#39;click&#39;, function () {\n\n    var $card = $(&#39;.card-movie--active&#39;),\n    player = players[$card.index()];\n\n    if ($card.hasClass(&#39;card-movie--playing&#39;)) {\n      $(this).toggleClass(&#39;is-playing&#39;);\n      player.pauseVideo();\n    } else {\n      $(this).toggleClass(&#39;is-playing&#39;);\n      player.playVideo();\n    }\n\n    $card.toggleClass(&#39;card-movie--playing&#39;);\n\n  });\n\n  $(&#39;[data-navigation] li&#39;).on(&#39;click&#39;, function () {\n\n    // remove current stuff\n    players[current].pauseVideo();\n    $(&#39;.card-movie:eq(&#39; + current + &#39;)&#39;).removeClass(&#39;card-movie--playing card-movie--active&#39;);\n    $(&#39;[data-play]&#39;).removeClass(&#39;is-playing&#39;);\n    // assign new current\n    current = $(this).index();\n    $(this).addClass(&#39;is-active&#39;).siblings().removeClass(&#39;is-active&#39;);\n    $(&#39;.card-movie:eq(&#39; + current + &#39;)&#39;).addClass(&#39;card-movie--active&#39;);\n\n  });\n\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

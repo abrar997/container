@@ -1,0 +1,22 @@
+p{
+color:powderblue;
+font-size:50;
+font-family:inherit;
+}
+.classone{color:violet;
+font-size:50pt;
+text-align:center;}
+#pID{color:pink;
+font-size:30pt;}
+h2{color:grey;
+fron-size:30pt;
+text-align: center;}
+a{color:green;}
+#linkid{color:red;
+ text-align: center;}
+ .myclass{text-decoration:none;
+  background-color:purple;color:black}
+  <!أكدر ادخل هذي لخواص بال html تحت head بنفس الطرقة -->
+h4,a,p{color;pink;
+font-size:40pt;
+text-align:center}

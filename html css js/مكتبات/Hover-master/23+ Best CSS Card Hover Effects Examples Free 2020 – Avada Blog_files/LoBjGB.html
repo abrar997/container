@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://codepen.io/semicorpus/embed/LoBjGB?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - 2D Card Hover Effect II -- Flat</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="vzm7ACcVqEuzmoFrsHUoKywr1RUxrG8L2Jn6sCzZR35Ix6o6bzQBnwriS18qitpKhqLIGEu6iHBx9Or7r8NERg==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/semicorpus/embed/LoBjGB?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/semicorpus/embed/LoBjGB?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/semicorpus/embed/LoBjGB?height=316&amp;theme-id=0&amp;default-tab=result#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/semicorpus/embed/LoBjGB?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/semicorpus/embed/LoBjGB?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/197384265/pen/LoBjGB" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"content"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"-500 -500 1000 1000"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"equator"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">circle</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meridian"</span> <span class="cm-attribute">r</span>=<span class="cm-string">"450"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">circle</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default">*{<span class="cm-property">margin</span>:<span class="cm-number">0</span>;<span class="cm-property">padding</span>:<span class="cm-number">0</span>;}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>:<span class="cm-atom">#05070b</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>:
+}
+<span class="cm-qualifier">.content</span>{ 
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">10vh</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">space-around</span>;
+}
+<span class="cm-tag">svg</span>{  
+  <span class="cm-property">height</span>:<span class="cm-number">400px</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">400px</span>;
+}
+<span class="cm-tag">circle</span> {
+  <span class="cm-property">stroke</span>: <span class="cm-atom">#ff002b</span>;
+  <span class="cm-property">stroke-width</span>: <span class="cm-number">2px</span>;
+  <span class="cm-property">fill</span>: <span class="cm-atom">none</span>;
+}
+
+<span class="cm-qualifier">.equator</span> {
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">125deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">125deg</span>);
+}
+
+<span class="cm-qualifier">.meridian</span> {
+  <span class="cm-meta">-webkit-</span><span class="cm-property">animation</span>: <span class="cm-variable">turn</span> <span class="cm-number">0.5s</span> <span class="cm-atom">infinite</span> <span class="cm-atom">linear</span>;
+          <span class="cm-property">animation</span>: <span class="cm-variable">turn</span> <span class="cm-number">0.5s</span> <span class="cm-atom">infinite</span> <span class="cm-atom">linear</span>;
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">1</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">15deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">15deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">30deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">30deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">3</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">45deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">45deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">4</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">60deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">60deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">5</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">75deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">75deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">6</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">90deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">90deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">7</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">105deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">105deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">8</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">120deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">120deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">9</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">135deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">135deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">10</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">150deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">150deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">11</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">165deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">165deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">12</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">180deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">180deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">13</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">195deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">195deg</span>);
+}
+<span class="cm-qualifier">.meridian</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">14</span>) {
+  <span class="cm-variable-2">--target</span>: <span class="cm-number">180deg</span> / $<span class="cm-variable">count</span> * ($<span class="cm-variable">i</span> + <span class="cm-number">1</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">210deg</span>);
+          <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">rotateZ</span>(<span class="cm-number">-20deg</span>) <span class="cm-variable cm-callee">rotateX</span>(<span class="cm-number">35deg</span>) <span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">210deg</span>);
+}</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">// Thanks to Pavel Dobryakov //</span>
+
+<span class="cm-keyword">const</span> <span class="cm-def">ANGLE</span> <span class="cm-operator">=</span> <span class="cm-number">40</span>;
+
+<span class="cm-keyword">let</span> <span class="cm-def">card</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">".card"</span>);
+
+<span class="cm-variable">card</span>.<span class="cm-property">forEach</span>((<span class="cm-def">element</span>, <span class="cm-def">i</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">floatable</span>(<span class="cm-variable-2">element</span>);
+});
+
+<span class="cm-keyword">function</span> <span class="cm-def">floatable</span> (<span class="cm-def">panel</span>) {
+  <span class="cm-keyword">let</span> <span class="cm-def">content</span> <span class="cm-operator">=</span> <span class="cm-variable-2">panel</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">".content"</span>);
+  <span class="cm-variable-2">panel</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'mouseout'</span>, <span class="cm-def">e</span> <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">content</span>.<span class="cm-property">style</span>.<span class="cm-property">transform</span> <span class="cm-operator">=</span> <span class="cm-string-2">`perspective(400px)</span>
+                   <span class="cm-string-2">rotateX(0deg)</span>
+                   <span class="cm-string-2">rotateY(0deg)</span>
+                   <span class="cm-string-2">rotateZ(0deg)</span>
+                    <span class="cm-string-2">translateZ(40px)`</span>;
+    <span class="cm-variable-2">content</span>.<span class="cm-property">style</span>.<span class="cm-property">transition</span> <span class="cm-operator">=</span> <span class="cm-string-2">`all 2s linear`</span>;
+  });
+
+  <span class="cm-variable-2">panel</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'mousemove'</span>, <span class="cm-def">e</span> <span class="cm-operator">=&gt;</span> {
+    <span class="cm-keyword">let</span> <span class="cm-def">w</span> <span class="cm-operator">=</span> <span class="cm-variable-2">panel</span>.<span class="cm-property">clientWidth</span>;
+    <span class="cm-keyword">let</span> <span class="cm-def">h</span> <span class="cm-operator">=</span> <span class="cm-variable-2">panel</span>.<span class="cm-property">clientHeight</span>;
+    <span class="cm-keyword">let</span> <span class="cm-def">y</span> <span class="cm-operator">=</span> (<span class="cm-variable-2">e</span>.<span class="cm-property">offsetX</span> <span class="cm-operator">-</span> <span class="cm-variable-2">w</span> <span class="cm-operator">*</span> <span class="cm-number">0.5</span>) <span class="cm-operator">/</span> <span class="cm-variable-2">w</span> <span class="cm-operator">*</span> <span class="cm-variable">ANGLE</span>;
+    <span class="cm-keyword">let</span> <span class="cm-def">x</span> <span class="cm-operator">=</span> (<span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable-2">e</span>.<span class="cm-property">offsetY</span> <span class="cm-operator">-</span> <span class="cm-variable-2">h</span> <span class="cm-operator">*</span> <span class="cm-number">0.5</span>)) <span class="cm-operator">/</span> <span class="cm-variable-2">h</span> <span class="cm-operator">*</span> <span class="cm-variable">ANGLE</span>;
+
+    <span class="cm-variable-2">content</span>.<span class="cm-property">style</span>.<span class="cm-property">transform</span> <span class="cm-operator">=</span> <span class="cm-string-2">`perspective(400px)</span>
+                   <span class="cm-string-2">rotateX(${</span><span class="cm-variable-2">x</span><span class="cm-string-2">}</span><span class="cm-string-2">deg)</span>
+                   <span class="cm-string-2">rotateY(${</span><span class="cm-variable-2">y</span><span class="cm-string-2">}</span><span class="cm-string-2">deg)`</span>;
+  });
+}</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for 2D Card Hover Effect II -- Flat" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for 2D Card Hover Effect II -- Flat" data-src="https://cdpn.io/197384265/fullembedgrid/LoBjGB?animations=run&amp;type=embed" src="./LoBjGB(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/197384265" target="_blank" rel="noopener"><img src="./default(2).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/197384265" target="_blank" rel="noopener">semicorpus</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/197384265" target="_blank" rel="noopener" class="about-user-more">
+See more by @197384265 on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;card&quot;&gt;\n  &lt;div class=&quot;content&quot;&gt;\n    &lt;svg viewBox=&quot;-500 -500 1000 1000&quot;&gt;\n      &lt;circle r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;equator&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n      &lt;circle class=&quot;meridian&quot; r=&quot;450&quot;&gt;&lt;/circle&gt;\n    &lt;/svg&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"*{margin:0;padding:0;}\n\nbody {\n  background:#05070b;\n  overflow: hidden:\n}\n.content{ \n  display: flex;\n  margin-top: 10vh;\n  justify-content: space-around;\n}\nsvg{  \n  height:400px;\n  width:400px;\n}\ncircle {\n  stroke: #ff002b;\n  stroke-width: 2px;\n  fill: none;\n}\n\n.equator {\n  -webkit-transform: rotateZ(-20deg) rotateX(125deg);\n          transform: rotateZ(-20deg) rotateX(125deg);\n}\n\n.meridian {\n  -webkit-animation: turn 0.5s infinite linear;\n          animation: turn 0.5s infinite linear;\n}\n.meridian:nth-child(1) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(15deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(15deg);\n}\n.meridian:nth-child(2) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(30deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(30deg);\n}\n.meridian:nth-child(3) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(45deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(45deg);\n}\n.meridian:nth-child(4) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(60deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(60deg);\n}\n.meridian:nth-child(5) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(75deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(75deg);\n}\n.meridian:nth-child(6) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(90deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(90deg);\n}\n.meridian:nth-child(7) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(105deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(105deg);\n}\n.meridian:nth-child(8) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(120deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(120deg);\n}\n.meridian:nth-child(9) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(135deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(135deg);\n}\n.meridian:nth-child(10) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(150deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(150deg);\n}\n.meridian:nth-child(11) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(165deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(165deg);\n}\n.meridian:nth-child(12) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(180deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(180deg);\n}\n.meridian:nth-child(13) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(195deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(195deg);\n}\n.meridian:nth-child(14) {\n  --target: 180deg / $count * ($i + 1);\n  -webkit-transform: rotateZ(-20deg) rotateX(35deg) rotateY(210deg);\n          transform: rotateZ(-20deg) rotateX(35deg) rotateY(210deg);\n}","js":"// Thanks to Pavel Dobryakov //\n\nconst ANGLE = 40;\n\nlet card = document.querySelectorAll(&quot;.card&quot;);\n\ncard.forEach((element, i) =&gt; {\n  floatable(element);\n});\n\nfunction floatable(panel) {\n  let content = panel.querySelector(&quot;.content&quot;);\n  panel.addEventListener(&#39;mouseout&#39;, e =&gt; {\n    content.style.transform = `perspective(400px)\n\t\t\t\t\t\t\t\t   rotateX(0deg)\n\t\t\t\t\t\t\t\t   rotateY(0deg)\n\t\t\t\t\t\t\t\t   rotateZ(0deg)\n                    translateZ(40px)`;\n    content.style.transition = `all 2s linear`;\n  });\n\n  panel.addEventListener(&#39;mousemove&#39;, e =&gt; {\n    let w = panel.clientWidth;\n    let h = panel.clientHeight;\n    let y = (e.offsetX - w * 0.5) / w * ANGLE;\n    let x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;\n\n    content.style.transform = `perspective(400px)\n\t\t\t\t\t\t\t\t   rotateX(${x}deg)\n\t\t\t\t\t\t\t\t   rotateY(${y}deg)`;\n  });\n}"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

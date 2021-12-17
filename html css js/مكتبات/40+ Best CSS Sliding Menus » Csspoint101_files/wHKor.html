@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- saved from url=(0176)https://codepen.io/Huskie/embed/wHKor?height=505&theme-id=dark&default-tab=css%2Cresult&user=Huskie&slug-hash=wHKor&pen-title=CSS3%20side%20panel%20with%20menu&name=cp_embed_14 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - CSS3 side panel with menu</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="hOI1hy53ZH+2HU6hcQoqhSD5A+IDv0YcyYxiZEhvoNNatdFPcZleu34c4qOohWh/lMwykI1EwAeG5XCVWOJghA==">
+<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/embed/embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/editor/themes/twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#css-box" role="button" class="active" aria-pressed="true">
+Sass
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/Huskie/pen/wHKor" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://fonts.googleapis.com/css?family=Dancing+Script"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://fonts.googleapis.com/css?family=Roboto"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"menu-toggle"</span> <span class="cm-attribute">data-js</span>=<span class="cm-string">"menu-toggle"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"menu-toggle-grippy"</span><span class="cm-tag cm-bracket">&gt;</span>Toggle<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"menu-toggle-label"</span><span class="cm-tag cm-bracket">&gt;</span>Menu<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+      
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"banner"</span> <span class="cm-attribute">role</span>=<span class="cm-string">"banner"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>Hello there<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>This is an experimental CodePen which utilises an absolutely positioned hidden panel which can be triggered by clicking a toggle.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel"</span><span class="cm-tag cm-bracket">&gt;</span>
+      
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel-close"</span> <span class="cm-attribute">data-js</span>=<span class="cm-string">"hidden-panel-close"</span><span class="cm-tag cm-bracket">&gt;</span>Close<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+      
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel-content"</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">nav</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel-nav"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Quick Look<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"Home"</span><span class="cm-tag cm-bracket">&gt;</span>Home<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"About"</span><span class="cm-tag cm-bracket">&gt;</span>About<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"Blog"</span><span class="cm-tag cm-bracket">&gt;</span>Blog<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"Work"</span><span class="cm-tag cm-bracket">&gt;</span>Work<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"Contact"</span><span class="cm-tag cm-bracket">&gt;</span>Contact<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">nav</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel-text"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>This is an experimental CodePen which utilises an absolutely positioned hidden panel which can be triggered by clicking a toggle.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"hidden-panel-credits"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Coded by <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://twitter.com/darrenhuskie"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"Darren Huskie"</span><span class="cm-tag cm-bracket">&gt;</span>Darren Huskie<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Powered by <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"some framework"</span><span class="cm-tag cm-bracket">&gt;</span>some framework<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Hosted by a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"web host"</span><span class="cm-tag cm-bracket">&gt;</span>web host<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box active" role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-sass" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#878787</span>
+  <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-tag">Roboto</span>, <span class="cm-atom">sans-serif</span>
+  <span class="cm-property">left</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">1.35</span>
+  <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">overflow</span><span class="cm-operator">:</span> <span class="cm-atom">hidden</span>
+  <span class="cm-property">position</span><span class="cm-operator">:</span> <span class="cm-atom">relative</span>
+  <span class="cm-property">text-rendering</span><span class="cm-operator">:</span> <span class="cm-atom">optimizeLegibility</span>
+  <span class="cm-meta">-webkit-</span><span class="cm-tag">font-smoothing</span><span class="cm-operator">:</span> <span class="cm-atom">antialiased</span>
+  <span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-atom">left</span> <span class="cm-number">0.3</span><span class="cm-tag">s</span> <span class="cm-atom">ease-in-out</span>
+  &amp;<span class="cm-qualifier">.panel-open</span>
+    <span class="cm-property">left</span><span class="cm-operator">:</span> <span class="cm-number">-250</span><span class="cm-unit">px</span>
+
+<span class="cm-qualifier">.container</span>
+  <span class="cm-def">@extend </span><span class="cm-operator">%</span><span class="cm-tag">cf</span>
+  <span class="cm-property">min-height</span><span class="cm-operator">:</span> <span class="cm-number">1000</span><span class="cm-unit">px</span>
+
+<span class="cm-tag">a</span>
+  <span class="cm-property">outline</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">text-decoration</span><span class="cm-operator">:</span> <span class="cm-atom">none</span> 
+
+<span class="cm-tag">h1</span>, <span class="cm-tag">h2</span>, <span class="cm-tag">h3</span>, <span class="cm-tag">h4</span>, <span class="cm-tag">h5</span>, <span class="cm-tag">h6</span>
+  <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+
+<span class="cm-tag">header</span>
+  <span class="cm-def">@extend </span><span class="cm-operator">%</span><span class="cm-tag">cf</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">3</span><span class="cm-unit">em</span> <span class="cm-number">5</span><span class="cm-operator">%</span>
+  <span class="cm-property">position</span><span class="cm-operator">:</span> <span class="cm-atom">relative</span>
+  <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">90</span><span class="cm-operator">%</span>
+  <span class="cm-property">z-index</span><span class="cm-operator">:</span> <span class="cm-number">2</span>
+
+<span class="cm-qualifier">.menu-toggle</span>
+  <span class="cm-def">@extend </span><span class="cm-operator">%</span><span class="cm-tag">cf</span>
+  <span class="cm-property">cursor</span><span class="cm-operator">:</span> <span class="cm-atom">pointer</span>
+  <span class="cm-property">float</span><span class="cm-operator">:</span> <span class="cm-atom">right</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">0.875</span><span class="cm-tag">rem</span>
+  <span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-atom">all</span> <span class="cm-number">0.3</span><span class="cm-tag">s</span> <span class="cm-atom">ease-in-out</span>
+  &amp;<span class="cm-qualifier">.open</span>
+    <span class="cm-property">opacity</span><span class="cm-operator">:</span> <span class="cm-number">0.5</span>
+
+<span class="cm-qualifier">.menu-toggle-grippy</span>
+  <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-number">#fff</span>
+  <span class="cm-property">border-top</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-number">#fff</span>
+  <span class="cm-property">float</span><span class="cm-operator">:</span> <span class="cm-atom">left</span>
+  <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">margin-right</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span> <span class="cm-number">0</span>
+  <span class="cm-property">text-indent</span><span class="cm-operator">:</span> <span class="cm-number">-999</span><span class="cm-unit">em</span>
+  <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">35</span><span class="cm-unit">px</span>
+  &amp;<span class="cm-variable-3">:after</span>
+    <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+    <span class="cm-property">content</span><span class="cm-operator">:</span> <span class="cm-string">'</span><span class="cm-string">'</span>
+    <span class="cm-property">display</span><span class="cm-operator">:</span> <span class="cm-atom">block</span>
+    <span class="cm-property">height</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span>
+
+<span class="cm-qualifier">.menu-toggle-label</span>
+  <span class="cm-property">float</span><span class="cm-operator">:</span> <span class="cm-atom">left</span>
+  <span class="cm-property">font-weight</span><span class="cm-operator">:</span> <span class="cm-number">700</span>
+  <span class="cm-property">height</span><span class="cm-operator">:</span> <span class="cm-number">25</span><span class="cm-unit">px</span>
+  <span class="cm-property">letter-spacing</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">px</span>
+  <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">25</span><span class="cm-unit">px</span>
+  <span class="cm-property">text-transform</span><span class="cm-operator">:</span> <span class="cm-atom">uppercase</span>
+
+<span class="cm-qualifier">.hidden-panel</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-number">#333</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#666</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">0.875</span><span class="cm-tag">rem</span>
+  <span class="cm-property">height</span><span class="cm-operator">:</span> <span class="cm-number">100</span><span class="cm-operator">%</span>
+  <span class="cm-property">position</span><span class="cm-operator">:</span> <span class="cm-atom">absolute</span>
+  <span class="cm-property">right</span><span class="cm-operator">:</span> <span class="cm-number">-250</span><span class="cm-unit">px</span>
+  <span class="cm-property">top</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">250</span><span class="cm-unit">px</span>
+  <span class="cm-tag">a</span>
+    <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#999</span>
+    <span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-atom">color</span> <span class="cm-number">0.3</span><span class="cm-tag">s</span> <span class="cm-atom">ease-out</span>
+    &amp;<span class="cm-variable-3">:hover</span>
+      <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+
+<span class="cm-qualifier">.hidden-panel-close</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#666</span>
+  <span class="cm-property">cursor</span><span class="cm-operator">:</span> <span class="cm-atom">pointer</span>
+  <span class="cm-property">position</span><span class="cm-operator">:</span> <span class="cm-atom">absolute</span>
+  <span class="cm-property">right</span><span class="cm-operator">:</span> <span class="cm-number">20</span><span class="cm-unit">px</span>
+  <span class="cm-property">top</span><span class="cm-operator">:</span> <span class="cm-number">3.7</span><span class="cm-unit">em</span>
+  <span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-atom">color</span> <span class="cm-number">0.3</span><span class="cm-tag">s</span> <span class="cm-atom">ease-in-out</span>
+  &amp;<span class="cm-variable-3">:hover</span>
+    <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+
+<span class="cm-qualifier">.hidden-panel-content</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">3.65</span><span class="cm-unit">em</span> <span class="cm-number">10</span><span class="cm-operator">%</span>
+
+<span class="cm-qualifier">.hidden-panel-nav</span>
+  <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-number">#666</span>
+  <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-atom">rgba</span><span class="cm-operator">(</span><span class="cm-number">#666</span>, <span class="cm-number">0.25</span><span class="cm-operator">)</span>
+  <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span><span class="cm-unit">em</span>
+  <span class="cm-property">padding-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span><span class="cm-unit">em</span>
+  <span class="cm-property">text-transform</span><span class="cm-operator">:</span> <span class="cm-atom">uppercase</span>
+  <span class="cm-tag">h3</span>
+    <span class="cm-property">letter-spacing</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">px</span>
+    <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-tag">ul</span>
+    <span class="cm-property">list-style</span><span class="cm-operator">:</span> <span class="cm-atom">none</span>
+    <span class="cm-property">font-weight</span><span class="cm-operator">:</span> <span class="cm-number">600</span>
+    <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+    <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-tag">li</span>
+    <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">0.25</span><span class="cm-unit">em</span> <span class="cm-number">0</span>
+
+<span class="cm-qualifier">.hidden-panel-text</span>
+  <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span>
+  <span class="cm-tag">p</span>
+    <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span><span class="cm-unit">em</span>
+    &amp;<span class="cm-variable-3">:last-child</span>
+      <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+
+<span class="cm-qualifier">.hidden-panel-credits</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">12</span><span class="cm-unit">px</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">0.75</span><span class="cm-tag">rem</span>
+  <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span>
+  <span class="cm-tag">span</span>
+    <span class="cm-property">display</span><span class="cm-operator">:</span> <span class="cm-atom">block</span>
+    <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">0.15</span><span class="cm-unit">em</span>
+
+<span class="cm-qualifier">.banner</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-number">#f5756c</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-atom">linear-gradient</span><span class="cm-operator">(</span><span class="cm-number">#f5756c</span>,<span class="cm-number">#fd5480</span><span class="cm-operator">)</span>,<span class="cm-number">#f5756c</span>
+  <span class="cm-property">box-sizing</span><span class="cm-operator">:</span> <span class="cm-atom">border-box</span>
+  <span class="cm-property">height</span><span class="cm-operator">:</span> <span class="cm-number">100</span><span class="cm-operator">%</span>
+  <span class="cm-property">left</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">em</span> <span class="cm-number">0</span>
+  <span class="cm-property">position</span><span class="cm-operator">:</span> <span class="cm-atom">absolute</span>
+  <span class="cm-property">text-align</span><span class="cm-operator">:</span> <span class="cm-atom">center</span>
+  <span class="cm-property">top</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">100</span><span class="cm-operator">%</span>
+  <span class="cm-property">z-index</span><span class="cm-operator">:</span> <span class="cm-number">1</span>
+  <span class="cm-tag">h1</span>
+    <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+    <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-string">'</span><span class="cm-string">D</span><span class="cm-string">a</span><span class="cm-string">n</span><span class="cm-string">c</span><span class="cm-string">i</span><span class="cm-string">n</span><span class="cm-string">g</span><span class="cm-string"> </span><span class="cm-string">S</span><span class="cm-string">c</span><span class="cm-string">r</span><span class="cm-string">i</span><span class="cm-string">p</span><span class="cm-string">t'</span>
+    <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">4.375</span><span class="cm-tag">rem</span>
+    <span class="cm-property">margin-bottom</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-tag">h2</span>
+    <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-number">#fff</span>
+    <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">2</span><span class="cm-tag">rem</span>
+    <span class="cm-property">font-weight</span><span class="cm-operator">:</span> <span class="cm-number">300</span>
+    <span class="cm-property">line-height</span><span class="cm-operator">:</span> <span class="cm-number">1.5</span>
+    <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">0</span> <span class="cm-keyword">auto</span>
+    <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">50</span><span class="cm-operator">%</span>
+
+<span class="cm-operator">%</span><span class="cm-tag">cf</span><span class="cm-variable-3">:before</span>, <span class="cm-operator">%</span><span class="cm-tag">cf</span><span class="cm-variable-3">:after</span>
+  <span class="cm-property">content</span><span class="cm-operator">:</span> <span class="cm-string">'</span><span class="cm-string">'</span>
+  <span class="cm-property">display</span><span class="cm-operator">:</span> <span class="cm-atom">table</span>
+
+<span class="cm-operator">%</span><span class="cm-tag">cf</span><span class="cm-variable-3">:after</span>
+  <span class="cm-property">clear</span><span class="cm-operator">:</span> <span class="cm-atom">both</span>
+</code></pre>
+<a href="https://codepen.io/Huskie/embed/wHKor?height=505&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=Huskie&amp;slug-hash=wHKor&amp;pen-title=CSS3%20side%20panel%20with%20menu&amp;name=cp_embed_14#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">var</span> <span class="cm-def">menuToggle</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'[data-js="menu-toggle"]'</span>);
+
+<span class="cm-comment">// Remove this setInterval to trigger the open/close manually through the UI</span>
+<span class="cm-keyword">var</span> <span class="cm-def">interval</span> <span class="cm-operator">=</span> <span class="cm-variable">setInterval</span>(<span class="cm-keyword">function</span>() {
+  <span class="cm-variable">menuToggle</span>.<span class="cm-property">click</span>();
+}, <span class="cm-number">2000</span>);
+
+<span class="cm-comment">// Clear the interval on any click</span>
+<span class="cm-variable">document</span>.<span class="cm-property">body</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span> () {
+   <span class="cm-variable">clearInterval</span>(<span class="cm-variable">interval</span>);
+});
+
+<span class="cm-variable">menuToggle</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span> () {
+  <span class="cm-variable">document</span>.<span class="cm-property">body</span>.<span class="cm-property">classList</span>.<span class="cm-property">toggle</span>(<span class="cm-string">'panel-open'</span>);
+  <span class="cm-variable">menuToggle</span>.<span class="cm-property">classList</span>.<span class="cm-property">toggle</span>(<span class="cm-string">'open'</span>);
+});
+
+<span class="cm-keyword">var</span> <span class="cm-def">closePanel</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'[data-js="hidden-panel-close"]'</span>);
+
+<span class="cm-variable">closePanel</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span> () {
+  <span class="cm-variable">document</span>.<span class="cm-property">body</span>.<span class="cm-property">classList</span>.<span class="cm-property">remove</span>(<span class="cm-string">'panel-open'</span>);
+  <span class="cm-variable">menuToggle</span>.<span class="cm-property">classList</span>.<span class="cm-property">remove</span>(<span class="cm-string">'open'</span>);
+});</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for CSS3 side panel with menu" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for CSS3 side panel with menu" data-src="https://cdpn.io/Huskie/fullembedgrid/wHKor?animations=run&amp;type=embed" src="https://cdpn.io/Huskie/fullembedgrid/wHKor?animations=run&amp;type=embed">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/Huskie" target="_blank" rel="noopener"><img src="https://assets.codepen.io/26843/internal/avatars/users/default.png?fit=crop&amp;format=auto&amp;height=256&amp;version=100000&amp;width=256" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/Huskie" target="_blank" rel="noopener">Darren Huskie</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/Huskie" target="_blank" rel="noopener" class="about-user-more">
+See more by @Huskie on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;html&gt;\n  &lt;head&gt;\n    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Dancing+Script&quot;&gt;\n    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto&quot;&gt;\n  &lt;/head&gt;\n    \n  &lt;body&gt;\n    \n    &lt;div class=&quot;container&quot;&gt;\n    &lt;header&gt;\n      &lt;div class=&quot;menu-toggle&quot; data-js=&quot;menu-toggle&quot;&gt;\n        &lt;span class=&quot;menu-toggle-grippy&quot;&gt;Toggle&lt;/span&gt;\n        &lt;span class=&quot;menu-toggle-label&quot;&gt;Menu&lt;/span&gt;\n      &lt;/div&gt;\n    &lt;/header&gt;\n      \n    &lt;section class=&quot;banner&quot; role=&quot;banner&quot;&gt;\n      &lt;h1&gt;Hello there&lt;/h1&gt;\n      &lt;h2&gt;This is an experimental CodePen which utilises an absolutely positioned hidden panel which can be triggered by clicking a toggle.&lt;/h2&gt;\n    &lt;/section&gt;\n    \n    &lt;div class=&quot;hidden-panel&quot;&gt;\n      \n      &lt;span class=&quot;hidden-panel-close&quot; data-js=&quot;hidden-panel-close&quot;&gt;Close&lt;/span&gt;\n      \n      &lt;div class=&quot;hidden-panel-content&quot;&gt;\n        \n        &lt;nav class=&quot;hidden-panel-nav&quot;&gt;\n          &lt;h3&gt;Quick Look&lt;/h3&gt;\n          &lt;ul&gt;\n            &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;\n            &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;\n            &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;\n            &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Work&quot;&gt;Work&lt;/a&gt;&lt;/li&gt;\n            &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;\n          &lt;/ul&gt;\n        &lt;/nav&gt;\n        \n        &lt;div class=&quot;hidden-panel-text&quot;&gt;\n          &lt;p&gt;This is an experimental CodePen which utilises an absolutely positioned hidden panel which can be triggered by clicking a toggle.&lt;/p&gt;\n        &lt;/div&gt;\n        \n        &lt;div class=&quot;hidden-panel-credits&quot;&gt;\n          &lt;span&gt;Coded by &lt;a href=&quot;https://twitter.com/darrenhuskie&quot; title=&quot;Darren Huskie&quot;&gt;Darren Huskie&lt;/a&gt;.&lt;/span&gt;\n          &lt;span&gt;Powered by &lt;a href=&quot;#&quot; title=&quot;some framework&quot;&gt;some framework&lt;/a&gt;.&lt;/span&gt;\n          &lt;span&gt;Hosted by a &lt;a href=&quot;#&quot; title=&quot;web host&quot;&gt;web host&lt;/a&gt;.&lt;/span&gt;\n        &lt;/div&gt;\n        \n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;/div&gt;\n\n  &lt;/body&gt;\n&lt;/html&gt;","css":"body {\n  color: #878787;\n  font-family: Roboto, sans-serif;\n  left: 0;\n  line-height: 1.35;\n  margin: 0;\n  overflow: hidden;\n  position: relative;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  transition: left 0.3s ease-in-out;\n}\nbody.panel-open {\n  left: -250px;\n}\n\n.container {\n  min-height: 1000px;\n}\n\na {\n  outline: 0;\n  text-decoration: none;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  padding: 0;\n}\n\nheader {\n  color: #fff;\n  padding: 3em 5%;\n  position: relative;\n  width: 90%;\n  z-index: 2;\n}\n\n.menu-toggle {\n  cursor: pointer;\n  float: right;\n  font-size: 0.875rem;\n  transition: all 0.3s ease-in-out;\n}\n.menu-toggle.open {\n  opacity: 0.5;\n}\n\n.menu-toggle-grippy {\n  border-bottom: 5px solid #fff;\n  border-top: 5px solid #fff;\n  float: left;\n  line-height: 0;\n  margin-right: 1em;\n  padding: 5px 0;\n  text-indent: -999em;\n  width: 35px;\n}\n.menu-toggle-grippy:after {\n  background: #fff;\n  content: &quot;&quot;;\n  display: block;\n  height: 5px;\n}\n\n.menu-toggle-label {\n  float: left;\n  font-weight: 700;\n  height: 25px;\n  letter-spacing: 1px;\n  line-height: 25px;\n  text-transform: uppercase;\n}\n\n.hidden-panel {\n  background: #333;\n  color: #666;\n  font-size: 0.875rem;\n  height: 100%;\n  position: absolute;\n  right: -250px;\n  top: 0;\n  width: 250px;\n}\n.hidden-panel a {\n  color: #999;\n  transition: color 0.3s ease-out;\n}\n.hidden-panel a:hover {\n  color: #fff;\n}\n\n.hidden-panel-close {\n  color: #666;\n  cursor: pointer;\n  position: absolute;\n  right: 20px;\n  top: 3.7em;\n  transition: color 0.3s ease-in-out;\n}\n.hidden-panel-close:hover {\n  color: #fff;\n}\n\n.hidden-panel-content {\n  padding: 3.65em 10%;\n}\n\n.hidden-panel-nav {\n  border-bottom: 1px solid #666;\n  border-bottom: 1px solid rgba(102, 102, 102, 0.25);\n  margin-bottom: 1.5em;\n  padding-bottom: 1.5em;\n  text-transform: uppercase;\n}\n.hidden-panel-nav h3 {\n  letter-spacing: 1px;\n  margin-bottom: 1em;\n}\n.hidden-panel-nav ul {\n  list-style: none;\n  font-weight: 600;\n  margin: 0;\n  padding: 0;\n}\n.hidden-panel-nav li {\n  padding: 0.25em 0;\n}\n\n.hidden-panel-text {\n  line-height: 1.5;\n}\n.hidden-panel-text p {\n  margin-bottom: 1.5em;\n}\n.hidden-panel-text p:last-child {\n  margin-bottom: 0;\n}\n\n.hidden-panel-credits {\n  font-size: 12px;\n  font-size: 0.75rem;\n  line-height: 1.5;\n}\n.hidden-panel-credits span {\n  display: block;\n  margin-bottom: 0.15em;\n}\n\n.banner {\n  background: #f5756c;\n  background: linear-gradient(#f5756c, #fd5480), #f5756c;\n  box-sizing: border-box;\n  height: 100%;\n  left: 0;\n  padding: 5em 0;\n  position: absolute;\n  text-align: center;\n  top: 0;\n  width: 100%;\n  z-index: 1;\n}\n.banner h1 {\n  color: #fff;\n  font-family: &quot;Dancing Script&quot;;\n  font-size: 4.375rem;\n  margin-bottom: 1em;\n}\n.banner h2 {\n  color: #fff;\n  font-size: 2rem;\n  font-weight: 300;\n  line-height: 1.5;\n  margin: 0 auto;\n  width: 50%;\n}\n\n.container:before, header:before, .menu-toggle:before, .container:after, header:after, .menu-toggle:after {\n  content: &quot;&quot;;\n  display: table;\n}\n\n.container:after, header:after, .menu-toggle:after {\n  clear: both;\n}","js":"var menuToggle = document.querySelector(&#39;[data-js=&quot;menu-toggle&quot;]&#39;);\n\n// Remove this setInterval to trigger the open/close manually through the UI\nvar interval = setInterval(function () {\n  menuToggle.click();\n}, 2000);\n\n// Clear the interval on any click\ndocument.body.addEventListener(&#39;click&#39;, function () {\n  clearInterval(interval);\n});\n\nmenuToggle.addEventListener(&#39;click&#39;, function () {\n  document.body.classList.toggle(&#39;panel-open&#39;);\n  menuToggle.classList.toggle(&#39;open&#39;);\n});\n\nvar closePanel = document.querySelector(&#39;[data-js=&quot;hidden-panel-close&quot;]&#39;);\n\nclosePanel.addEventListener(&#39;click&#39;, function () {\n  document.body.classList.remove(&#39;panel-open&#39;);\n  menuToggle.classList.remove(&#39;open&#39;);\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "sass",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "Sass",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="https://cpwebassets.codepen.io/assets/embed/embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js"></script>
+
+
+</body></html>

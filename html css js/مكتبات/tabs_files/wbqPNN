@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="662kj22k+ho58YyZgwnF1BINjez5M1Gvz0hzSOIJe9GWcsSEvhJV3BDoBDYuPr+DVtTtel2ujl7jZFdLh7qcTw==" />
+<title>Tabbed Content with CSS Grid </title>
+<link rel="dns-prefetch" href="https://fast.appcues.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/global/global-8ae8a7ec5fc13e0bbdbe4da3ba272cebf4e7ae20cf7f651e7ee8707b1cae0703.css" />
+<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/page/page-560932a61fd6d8cfdfb257cfec08ac17c06ad3a4e510098d9d03f3ee83c8cfaa.css" />
+<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/packs/css/everypage-409d3c6c.css" />
+<meta name="description" content="This pen aims to create a sustainable CSS Grid based content tabs component. Being a CSS Grid fan I naturally want the world to be governed by its awes...">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CodePen">
+<meta name="twitter:title" content="Tabbed Content with CSS Grid ">
+<meta name="twitter:description" content="This pen aims to create a sustainable CSS Grid based content tabs component. Being a CSS Grid fan I naturally want the world to be governed by its awes...">
+<meta name="twitter:image" content="https://assets.codepen.io/171072/internal/screenshots/pens/wbqPNN.default.png?fit=cover&amp;format=auto&amp;ha=false&amp;height=540&amp;quality=75&amp;v=2&amp;version=1563829890&amp;width=960">
+<meta name="twitter:creator" content="https://twitter.com/@mrjozzi">
+<meta property="og:image" content="https://assets.codepen.io/171072/internal/screenshots/pens/wbqPNN.default.png?fit=cover&amp;format=auto&amp;ha=false&amp;height=540&amp;quality=75&amp;v=2&amp;version=1563829890&amp;width=960" itemprop="thumbnailUrl">
+<meta property="og:title" content="Tabbed Content with CSS Grid ">
+<meta property="og:url" content="https://codepen.io/sunrisejoz/details/wbqPNN">
+<meta property="og:site_name" content="CodePen">
+<meta property="og:description" content="This pen aims to create a sustainable CSS Grid based content tabs component. Being a CSS Grid fan I naturally want the world to be governed by its awes...">
+<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/editor/editor-e1b279e5ddb29baefedff1ac77d54ad61b4932da6b52f29b60efdcce96b2a8ad.css" />
+<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/details/details-b4c451aa5fc4e27cdca63d2fa837cd8499b3595db2540c6f9dc1b33bf4f45260.css" />
+<link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Fsunrisejoz%2Fpen%2FwbqPNN&format=json" title="Tabbed Content with CSS Grid " />
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+<script nonce="pUAPhZMxrL0=">
+  /* Firefox needs this to prevent FOUT */
+</script>
+</head>
+<body class="details logged-out sidebar-false not-team">
+<div id="react-page"></div>
+<noscript>
+
+  <input type="checkbox" class="modal-closing-trick" id="modal-closing-trick">
+
+  <div class="overlay noscript-overlay" style="display: block;"></div>
+
+  <div class="modal modal-message group modal-warning">
+
+    <div class="modal-title">CodePen doesn't work very well without JavaScript.</div>
+
+    <p>We're all for progressive enhancement, but CodePen is a bit unique in that it's all about writing and showing front end code, including JavaScript. It's required to use most of the features of CodePen.</p>
+
+    <p>Need to know how to enable it? <a href="http://enable-javascript.com/" target="_blank" rel="noopener">Go here.</a></p>
+
+    <label class="button button-medium" for="modal-closing-trick">Close this, use anyway.</label>
+
+  </div>
+
+</noscript>
+<textarea id="init-data" style="display:none">{&quot;__browser&quot;:{&quot;device&quot;:&quot;unknown_device&quot;,&quot;mobile&quot;:false,&quot;name&quot;:&quot;microsoft edge&quot;,&quot;platform&quot;:&quot;pc&quot;,&quot;version&quot;:&quot;92&quot;},&quot;__constants&quot;:{&quot;gridIframeSandboxAttributes&quot;:&quot;allow-forms allow-modals allow-pointer-lock allow-presentation allow-same-origin allow-scripts&quot;},&quot;__CPDATA&quot;:{&quot;domain_iframe&quot;:&quot;https://cdpn.io&quot;,&quot;environment&quot;:&quot;production&quot;,&quot;host&quot;:&quot;codepen.io&quot;,&quot;iframe_allow&quot;:&quot;accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr&quot;,&quot;iframe_sandbox&quot;:&quot;allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot;},&quot;__user&quot;:{&quot;anon&quot;:true,&quot;base_url&quot;:&quot;/anon/&quot;,&quot;current_team_id&quot;:0,&quot;current_team_hashid&quot;:null,&quot;hashid&quot;:&quot;VoDkNZ&quot;,&quot;id&quot;:1,&quot;itemType&quot;:&quot;user&quot;,&quot;name&quot;:&quot;Captain Anonymous&quot;,&quot;paid&quot;:false,&quot;tier&quot;:0,&quot;username&quot;:&quot;anon&quot;,&quot;created_at&quot;:null,&quot;email_verified&quot;:null,&quot;collections_count&quot;:0,&quot;collections_private_count&quot;:0,&quot;followers_count&quot;:0,&quot;followings_count&quot;:0,&quot;pens_count&quot;:0,&quot;pens_private_count&quot;:0,&quot;projects_count&quot;:0,&quot;projects_private_count&quot;:0},&quot;__firebase&quot;:{&quot;config&quot;:{&quot;apiKey&quot;:&quot;AIzaSyBgLAe7N_MdFpuVofMkcQLGwwhUu5tuxls&quot;,&quot;authDomain&quot;:&quot;codepen-store-production.firebaseapp.com&quot;,&quot;databaseURL&quot;:&quot;https://codepen-store-production.firebaseio.com&quot;,&quot;disabled&quot;:false,&quot;projectId&quot;:&quot;codepen-store-production&quot;},&quot;token&quot;:&quot;eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImNsYWltcyI6eyJvd25lcklkIjoiVm9Ea05aIiwiYWRtaW4iOmZhbHNlfSwiZXhwIjoxNjI3NTg2NDQ2LCJpYXQiOjE2Mjc1ODI4NDYsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6IlZvRGtOWiJ9.AmsamHOv739gIDXQkRUrjflYfQLJXrKcRn1dgqLKwjfS8hO394_ufg5FCIaJiirLEFqHz1l6ZqHELOyuhEIn17FPnwn4kuTL5_lZAaFMgSOSIgZqb0V0rV-GsjhWn_9-lLXDU6FH0Ab23j1M8i_mJhUmA1Kt77kiFv0NaMInyth9v4yKnUpM6tajN0OofVSeZUdSxiH5u4MeZ8R02px0pnltIwAZvL8iFQKV1ZPLhdokLQNzm9mhZ-nySfOUhS3ePW5WXKXXa-9fpc-fMgrmSePC8ybPxdoP-wsazA2EvfGI-Pc2kuPIq-NygRjlreABPWN6S-WRQtohQafvIW9lKg&quot;},&quot;__graphql&quot;:{&quot;data&quot;:{&quot;sessionUser&quot;:{&quot;id&quot;:&quot;VoDkNZ&quot;,&quot;name&quot;:&quot;Captain Anonymous&quot;,&quot;avatar80&quot;:&quot;https://gravatar.com/avatar/b15e0cf27861794b6faa31065e8f9950?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&amp;fit=crop&amp;format=auto&amp;height=80&amp;version=0&amp;width=80&quot;,&quot;avatar512&quot;:&quot;https://gravatar.com/avatar/b15e0cf27861794b6faa31065e8f9950?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&amp;fit=crop&amp;format=auto&amp;height=512&amp;version=0&amp;width=512&quot;,&quot;currentContext&quot;:{&quot;id&quot;:&quot;VoDkNZ&quot;,&quot;baseUrl&quot;:&quot;/anon&quot;,&quot;title&quot;:&quot;Captain Anonymous&quot;,&quot;name&quot;:&quot;Captain Anonymous&quot;,&quot;avatar80&quot;:&quot;https://gravatar.com/avatar/b15e0cf27861794b6faa31065e8f9950?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&amp;fit=crop&amp;format=auto&amp;height=80&amp;version=0&amp;width=80&quot;,&quot;avatar512&quot;:&quot;https://gravatar.com/avatar/b15e0cf27861794b6faa31065e8f9950?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&amp;fit=crop&amp;format=auto&amp;height=512&amp;version=0&amp;width=512&quot;,&quot;username&quot;:&quot;anon&quot;,&quot;contextType&quot;:&quot;USER&quot;,&quot;projectLimitations&quot;:{&quot;id&quot;:&quot;VoDkNZ&quot;,&quot;projects&quot;:0,&quot;usedProjects&quot;:0,&quot;__typename&quot;:&quot;ProjectLimitations&quot;},&quot;privateByDefault&quot;:false,&quot;__typename&quot;:&quot;User&quot;},&quot;currentTeamId&quot;:null,&quot;baseUrl&quot;:&quot;/anon&quot;,&quot;username&quot;:&quot;anon&quot;,&quot;admin&quot;:false,&quot;anon&quot;:true,&quot;pro&quot;:false,&quot;verified&quot;:null,&quot;teams&quot;:[],&quot;permissions&quot;:{&quot;id&quot;:&quot;1&quot;,&quot;canCreatePrivate&quot;:false,&quot;canUploadAssets&quot;:false,&quot;__typename&quot;:&quot;UserPermissions&quot;},&quot;__typename&quot;:&quot;User&quot;}}},&quot;__pay_stripe_public&quot;:&quot;pk_NgCjQmQs7wXOFmfNC0LKMgEkmlThn&quot;,&quot;__pay_braintree_env&quot;:&quot;production&quot;}</textarea>
+<script src="https://cpwebassets.codepen.io/assets/common/browser_support-e442aebd85f2bb9dcd4a47cb43c7fc38efd5522ace0a675bf5e33a06413b5a28.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-8a4d7b5ef23dce5b556e.chunk.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/packs/js/4-2a7b939b4051eeccbb01.chunk.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/packs/js/everypage-6fe0d5526e06ec015fd5.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/common/analytics_and_notifications-afa6925cbcff840929f2b7c543587d5f9d7a461af81ee7ca80631c8e37ac42f2.js"></script>
+</body>
+</html>

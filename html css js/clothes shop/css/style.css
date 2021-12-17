@@ -1,0 +1,315 @@
+/*  #ff9500 */
+/* js background dark mode */
+.fa-sun{background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+    transition: all 0.6s ease;
+}
+
+
+
+body{background-color:#eee;
+    font-family: 'Roboto', sans-serif;
+    scroll-snap-type:proximity;
+}
+
+/* nav bar  */
+.navbar {background-color: white !important;
+    color:black;
+    border-bottom:2px solid rgb(212, 208, 208);
+    height:70px;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 22222222222222;
+}
+
+/* nav bar brand  */
+ nav .container .row  .navbar-brand {color:black;
+    font-weight: 500;
+    font-size: 28px;
+
+}
+
+nav .container .row   .navbar-brand span{color:#ff9500
+}
+
+/* icon of input  */
+
+.navbar .container .row form input .fa {color:white !important;
+    position:absolute;
+    font-size:20px;
+    right: 10px
+}
+
+/*  */
+.navbar .container .row .collapse  ul {margin-left:400px
+}
+
+.navbar .container .row .collapse  ul li a i {color:white ;
+    background-color:rgba(0, 0, 0, 0.979) ;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* icon  */
+.navbar .container .row .collapse  ul li a:hover i {
+
+    background-color: #ff9500;
+    transform: rotate(360deg);
+    transition: all 0.17s ease;
+
+} 
+/* end nav bar  */
+
+
+
+
+/* section one  */
+.one{margin-top:50px;
+    height: 700px;
+}
+
+.one .container .row{display: flex;
+    flex-flow: row ;
+    justify-content: space-between;
+}
+
+/* h5  */
+.one .container .row h5{color:#ff9500;
+    padding-top: 190px;
+    float:left;
+    font-size: 27px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight:300
+}
+
+/* h1 */
+.one .container .row h1{color:#333;
+    letter-spacing:4px;
+    font-size:  65px;
+    font-weight: 600;
+    float: left;
+
+}
+
+/* button */
+.one .container .row .text button {background-color: #333;
+    border-radius: 19px;
+    width:120px;
+    padding:7px;
+    float: left;
+    border:none;
+    outline: none;
+
+}
+
+.one .container .row .text  button:hover{background-color: #ff9500;
+    transition:all 0.7s ease;
+    outline: none;
+
+}
+
+/* button a */
+.one .container .row button a {color:white
+}
+
+/* image */
+.one .container .row  img{width: 80%;
+    margin-top: 40px;
+}
+
+
+
+
+
+/* end section one  */
+
+
+
+
+/* section two  */
+.two .container .row {margin: 100px 0px 40px 0px;
+    gap:1.5rem;
+    overflow: hidden;
+    border:1.5px solid #ff9500;
+    border-top: none;
+    border-left: none;
+}
+
+/* h1 */
+.two .container .row h1 {color:#333;
+    float: left;
+    clear:left;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+} 
+
+/* span */
+.two .container .row h1 span{font-size: 24;
+    color: #ff9500;
+}
+
+.two .container .row .headerh{border-bottom: 1px solid rgba(51, 51, 51, 0.568);
+    width:100%;
+    margin-bottom: 30px;
+}
+
+/* images div */
+.two .container .row .images {display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    position: relative;
+    overflow:hidden; 
+    height: 100%;
+    width: 100%;
+}
+
+.two .container .row .images  img{
+    transition: all 0.9s ease;
+    height:94%;
+    width:600px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+/* image */
+.two .container .row .images .view:hover img{ transform: scale(1.1);
+
+}
+
+/* text over images  */
+.two .container .row .images .mask{
+    margin:40px ;
+    display: flex;
+    flex-flow: column;
+    justify-content:start;
+    padding-right:400px;
+    padding-top: 100px;
+    text-align:left;
+}
+
+.two .container .row .images .mask span{color:#ff9500;
+    font-weight: 600;
+}
+
+.two .container .row .images .mask h1{color:rgba(51, 51, 51, 0.425)
+}
+
+.two .container .row .images .mask button{background-color: #333;
+    border-radius: 19px;
+    width:120px;
+    padding:7px;
+    color:white;
+    border:none;
+    outline:none;
+
+}
+
+.two .container .row .images .mask button:hover{background-color: #ff9500;
+    transition:all 0.7s ease;
+    outline: none;
+
+}
+
+/* end section two  */
+
+
+
+
+/* section three */
+.products .product-slider .slide{
+    overflow: hidden;
+    position: relative;
+    border:.1rem solid var(--light-color);
+    border-radius: .5rem;
+    background: var(--white-color);
+}
+
+.products .product-slider .slide .image{
+    padding:1rem;
+}
+
+.products .product-slider .slide .image img{
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .product-slider .slide .content{
+    padding:2rem;
+    border-top: .1rem solid var(--light-color);
+}
+
+.products .product-slider .slide .icons{
+    position: absolute;
+    top:0; right:-7rem;
+}
+
+.products .product-slider .slide:hover .icons{
+    right:1rem;
+}
+
+.products .product-slider .slide .icons a{
+    height:5rem;
+    width:5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background: var(--black-color);
+    color:var(--white-color);
+    display: block;
+    margin-top: 1rem;
+}
+
+.products .product-slider .slide .icons a:hover{
+    background:var(--orange);
+    color:#fff;
+}
+
+.products .product-slider .slide .content .stars i{
+    font-size: 2rem;
+    color:var(--orange);
+}
+
+.products .product-slider .slide .content .stars span{
+    font-size: 2rem;
+    color:var(--black-color);
+    font-weight: 300;
+}
+
+.products .product-slider .slide .content h3{
+    color:var(--black-color);
+    font-weight: normal;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.products .product-slider .slide .content .price{
+    color:var(--orange);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.products .product-slider .slide .content .price span{
+    color:var(--black-color);
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.products .product-slider .swiper-button-next,
+.products .product-slider .swiper-button-prev{
+    color:var(--black-color);
+}
+
+.products .gap{
+    margin-bottom: 2rem;
+}

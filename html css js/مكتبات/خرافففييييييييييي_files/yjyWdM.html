@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://cdpn.io/Lenew/fullembedgrid/yjyWdM?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Movie Card</title>
+  
+  
+  
+  
+<style>
+body{
+  overflow:hidden;
+  font-family:Arial;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+#BTN_Back{
+  opacity:0.6; /*hover*/
+  color:white;
+  font-size:30px;
+  position:relative;
+  width:140px;
+  height:50px;
+  border-radius:10px;
+  background-color:rgba(100,100,100,0.9);
+  z-index:10;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  padding-top:15px;
+  top:160px;
+}
+
+#BTN_Back:hover{
+   opacity:1;
+   cursor: pointer;
+}
+
+
+#Background img {
+  display: block;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+}
+#Background{ 
+  position:absolute;
+  padding:0;
+  margin:0;
+  top:-10%;
+  left:0;
+  width:120%;
+  height:120%;
+    
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  z-index:1;  
+  -webkit-filter: blur(15px);
+-moz-filter: blur(15px);
+-o-filter: blur(15px);
+-ms-filter: blur(15px);
+filter: blur(15px) brightness(30%);  
+left:-10%;  
+right:-10%;  
+-webkit-box-shadow: inset 0px 0px 91px 137px rgba(0,0,0,1);
+-moz-box-shadow: inset 0px 0px 91px 137px rgba(0,0,0,1);
+box-shadow: inset 0px 0px 91px 137px rgba(0,0,0,1);
+}
+
+#SelMovie {
+  position:relative;  
+  z-index:2;
+  width:820px;
+  padding:0px;
+  margin-left:auto;
+  margin-right:auto;
+  top:100px;
+  height:500px;
+  background-color:rgb(80,80,80);
+  border-radius:10px; 
+  opacity:0.4;
+
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.7);
+-moz-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.7);
+box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.7);
+}
+ 
+#ContainerHL { 
+  display:block;
+  width:800px;
+  padding:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#MainPoster { 
+  position:relative;
+  z-index:10;
+  top:170px;
+  left:30px;
+  float:left;  
+}
+#Ratings { 
+  position:relative;
+  z-index:10;
+  top:20px;
+  left:10px;   
+}
+
+#Ratings table td{
+  font-size:20px;
+ width:90px;
+  height:25px;
+  color:rgb(200,200,200);
+}
+
+
+#TitleHL {  
+  position:relative;
+  top:125px;
+  left:60px;
+  float:left;
+  overflow:hidden;  
+  font-family:Arial;
+  font-size:60px;
+  font-weight:40;
+  padding-right:30px;
+  color:rgb(200,200,10);
+  z-index:10
+}
+.stars {
+  float:left;
+}
+#UserRatingHL {  
+  display:block;
+  position:relative;
+  top:130px;
+  left:60px;
+  float:left;  
+  overflow:hidden;  
+  font-family:Arial;
+  font-size:30px;
+  font-weight:40;
+  padding-right:30px;
+  color:rgb(20,20,20);
+  z-index:10;
+  cursor:pointer;
+}
+#MovieInfoMain {
+  font-family:Arial;
+  position:absolute;  
+  z-index:3;
+  width:500px;
+  top:30px;
+  left:270px;    
+  height:450px;
+  overflow:hidden;   
+}
+
+#DetailsTopCover {
+  position:absolute;
+  top:50px;    
+  width:100%;
+  height:15px;  
+  background-color:rgb(80,80,80);
+  overflow-y:scroll; 
+  padding-top:10px;  
+  padding-right:10px;  
+  z-index:4;
+}
+#DetailsTop {
+  position:absolute;
+  top:50px;    
+  width:100%;
+  height:20px;  
+  background-color:rgb(30,30,30);
+  
+  overflow-y:scroll; 
+  padding-top:10px;  
+  padding-right:10px;
+  
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(30,30,30,1);
+-moz-box-shadow: 0px 10px 10px 0px rgba(30,30,30,1);
+box-shadow: 0px 10px 10px 0px rgba(30,30,30,1);
+  z-index:4;
+}
+
+#DetailsBottom {
+  position:absolute;
+  top:395px;    
+  width:100%;
+  height:10px;  
+  background-color:rgb(30,30,30);
+  
+  overflow-y:scroll; 
+  padding-top:10px;  
+  padding-right:10px;
+  
+  -webkit-box-shadow: 0px -10px 10px 0px rgba(30,30,30,1);
+-moz-box-shadow: 0px -10px 10px 0px rgba(30,30,30,1);
+box-shadow: 0px 10px -10px 0px rgba(30,30,30,1);
+  z-index:4;
+}
+
+#Details {
+  position:absolute;
+  top:80px;    
+  width:100%;
+  height:320px;  
+  background-color:rgb(30,30,30); 
+  overflow-y:scroll; 
+  padding-top:10px;  
+  padding-right:10px;  
+}
+
+#Details table {   
+  font-size:18px;
+  position:absolute;   
+  width:350px;
+  top:5px;
+  left:20px;  
+    
+}
+#Details table tr{
+  line-height:28px;  
+}
+#Details table .Key{     
+  position:relative;
+  Color: rgb(200,200,200);  
+}
+#Details table .Value{     
+  position:relative;
+  left:0px;
+  width:230px;  
+  color:white;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="ContainerHL">  
+   <div id="MainPoster">   
+     <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMmViOGVjZWQtZmNmNS00MWU3LWFjNGEtMDc1MjNlY2ZlNjdiXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg" height="280/">
+       <div id="Ratings">
+         <table>
+           <tbody><tr>
+             <td><b><span style="color:rgb(200,170,30);">IMDb:</span></b></td>
+             <td><b>6.9</b><span style="color:rgb(70,70,70);"> / 10</span></td>
+           </tr>
+           <tr>
+             <td><b><span style="color:rgb(200,70,60);">Rotten:</span></b></td>
+             <td><b>3.5</b><span style="color:rgb(70,70,70);"> / 5</span></td>
+           </tr>
+         </tbody></table>
+
+  </div>
+  </div>
+
+  <div id="TitleHL"><b>TAXI</b></div> 
+  <div id="UserRatingHL">
+    <div class="stars" id="s1">★</div>
+    <div class="stars" id="s2">★</div>
+    <div class="stars" id="s3">★</div>
+    <div class="stars" id="s4">★</div>
+    <div class="stars" id="s5">★</div>
+  </div>  
+</div>
+<div id="SelMovie">
+  <div id="MovieInfoMain">
+    <div id="Title"><b> </b></div>    
+    <div id="UserRating"></div>   
+    <div id="DetailsTop"></div>
+    <div id="DetailsTopCover"></div>
+    <div id="DetailsBottom"></div>
+    <div id="DetailsBottomCover"></div>
+    <div id="Details">
+     <table>
+       <tbody><tr><td class="Key">Genre</td><td class="Value">Action, Comedy</td></tr>       
+       <tr><td class="Key">Released</td><td class="Value">1998</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+         <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+       <tr><td class="Key">Director</td><td class="Value">Gérard Pirés</td></tr>
+      </tbody></table>
+    </div> 
+  
+  </div>
+</div>  
+<div id="BTN_Back">BACK</div> 
+<div id="Background">
+    <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMmViOGVjZWQtZmNmNS00MWU3LWFjNGEtMDc1MjNlY2ZlNjdiXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg">
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script id="rendered-js">
+$(document).ready(function () {
+  $("#s1").click(function () {
+    $(this).css("color", "rgba(220,180,30,1)");
+    $("#s2").css("color", "rgba(20,20,20,1)");
+    $("#s3").css("color", "rgba(20,20,20,1)");
+    $("#s4").css("color", "rgba(20,20,20,1)");
+    $("#s5").css("color", "rgba(20,20,20,1)");
+  });
+  $("#s2").click(function () {
+    $(this).css("color", "rgba(220,180,30,1)");
+    $("#s1").css("color", "rgba(220,180,30,1)");
+    $("#s3").css("color", "rgba(20,20,20,1)");
+    $("#s4").css("color", "rgba(20,20,20,1)");
+    $("#s5").css("color", "rgba(20,20,20,1)");
+  });
+  $("#s3").click(function () {
+    $(this).css("color", "rgba(220,180,30,1)");
+    $("#s1").css("color", "rgba(220,180,30,1)");
+    $("#s2").css("color", "rgba(220,180,30,1)");
+    $("#s4").css("color", "rgba(20,20,20,1)");
+    $("#s5").css("color", "rgba(20,20,20,1)");
+  });
+  $("#s4").click(function () {
+    $(this).css("color", "rgba(220,180,30,1)");
+    $("#s1").css("color", "rgba(220,180,30,1)");
+    $("#s2").css("color", "rgba(220,180,30,1)");
+    $("#s3").css("color", "rgba(220,180,30,1)");
+    $("#s5").css("color", "rgba(20,20,20,1)");
+  });
+  $("#s5").click(function () {
+    $(this).css("color", "rgba(220,180,30,1)");
+    $("#s1").css("color", "rgba(220,180,30,1)");
+    $("#s2").css("color", "rgba(220,180,30,1)");
+    $("#s3").css("color", "rgba(220,180,30,1)");
+    $("#s4").css("color", "rgba(220,180,30,1)");
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
+
+
+ 
+</body></html>

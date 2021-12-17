@@ -1,0 +1,14 @@
+/* custom css for Detail html */
+
+	summary::-webkit-details-marker {
+			display: none
+			}
+    .custom-heading-summary{font-weight: bold;color:white;padding: 10px;background-color:#0099e5;}
+    .custom-heading-article{font-weight: bold;font-size: 32px;margin: 20px;  }
+
+/* end custom css */
+
+
+.review-app-item .vendor-icon{
+	width: 100%;
+}

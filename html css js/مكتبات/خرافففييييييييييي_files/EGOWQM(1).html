@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://codepen.io/_juanvaz/embed/EGOWQM?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Movie Card UI</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="/48C+e213Wnp76obirKaH2PUdS0JvQcN/ErC1xvw0AHnKlGzz1T0AeEogn/sJi/kefsPKZMb7s8uRUR0ThR47A==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/_juanvaz/embed/EGOWQM?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/_juanvaz/embed/EGOWQM?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/_juanvaz/embed/EGOWQM?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/_juanvaz/embed/EGOWQM?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/_juanvaz/pen/EGOWQM" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"card_container"</span> <span class="cm-attribute">data-offset</span>=<span class="cm-string">"2"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"pg"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://pluspng.com/img-png/aquaman-png-aquaman-png-clipart-666.png"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"shine"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text-block"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>Aquaman <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">small</span><span class="cm-tag cm-bracket">&gt;</span>(2018)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">small</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Action | Adventure<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world.
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>Watch Trailer<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Lato:400,300,700</span>);
+<span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Rubik:400,900</span>);
+
+* {
+  <span class="cm-property">box-sizing</span>:<span class="cm-atom">border-box</span>;
+}
+<span class="cm-tag">body</span>, <span class="cm-tag">html</span> {
+  <span class="cm-property">height</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">min-height</span>:<span class="cm-number">100%</span>;
+}
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>:<span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-atom">#f6f7fc</span> <span class="cm-number">0%</span>, <span class="cm-atom">#d5e1e8</span> <span class="cm-number">40%</span>);
+  <span class="cm-property">transform-style</span>:<span class="cm-atom">preserve-3d</span>;
+  <span class="cm-property">transform</span>:<span class="cm-variable cm-callee">perspective</span>(<span class="cm-number">800px</span>);
+  <span class="cm-property">font-family</span>:<span class="cm-string">'Lato'</span>, <span class="cm-atom">Sans-serif</span>;
+}
+<span class="cm-builtin">#card_container</span> {
+  <span class="cm-property">width</span>:<span class="cm-number">700px</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">350px</span>;
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">50%</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">50%</span>;
+  <span class="cm-property">margin</span>:<span class="cm-number">-175px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">-350px</span>;
+}
+<span class="cm-builtin">#card</span> {
+  <span class="cm-property">animation</span>:<span class="cm-variable">backAn</span> <span class="cm-number">50s</span> <span class="cm-atom">infinite</span>;
+  <span class="cm-property">color</span>:<span class="cm-atom">#fff</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">30px</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">z-index</span>:<span class="cm-number">1</span>;
+  <span class="cm-property">background</span>:<span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://riverbeats.life/neworleans/wp-content/uploads/2018/07/Atlantis.png</span>) <span class="cm-number">100%</span> <span class="cm-atom">bottom</span>;
+  <span class="cm-comment">/*background:url(http://riccardotartaglia.it/img/deadpool/back.jpg) 100% bottom;*/</span>
+  <span class="cm-comment">/*box-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(156, 27, 27, 0.6);*/</span>
+  <span class="cm-property">box-shadow</span>:<span class="cm-number">0px</span> <span class="cm-number">45px</span> <span class="cm-number">100px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.4</span>), <span class="cm-atom">inset</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">1000px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">76</span>, <span class="cm-number">86</span>, <span class="cm-number">0.6</span>);
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> {
+  <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+  <span class="cm-property">z-index</span>:<span class="cm-number">2</span>;
+  <span class="cm-property">text-shadow</span>:<span class="cm-number">0</span> <span class="cm-number">3</span> <span class="cm-number">10</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.7</span>);
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">h1</span> {
+  <span class="cm-property">font-family</span>:<span class="cm-string">'Rubik'</span>, <span class="cm-atom">Sans-serif</span>;
+  <span class="cm-property">font-size</span>:<span class="cm-number">3em</span>;
+  <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">text-transform</span>:<span class="cm-atom">uppercase</span>;
+  <span class="cm-property">font-weight</span>:<span class="cm-number">700</span>;
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">h1</span> <span class="cm-tag">small</span> {
+  <span class="cm-property">font-size</span>:<span class="cm-number">.4em</span>;
+  <span class="cm-property">color</span>:<span class="cm-atom">#ccc</span>;
+  <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+  <span class="cm-property">bottom</span>:<span class="cm-number">10px</span>;
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">h3</span> {
+  <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">font-weight</span>:<span class="cm-number">700</span>;
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">p</span> {
+  <span class="cm-property">font-weight</span>:<span class="cm-number">300</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">60%</span>;
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">button</span> {
+  <span class="cm-property">transition</span>:<span class="cm-atom">all</span> <span class="cm-number">0.35s</span> <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.37</span>, <span class="cm-number">0.26</span>, <span class="cm-number">0.35</span>, <span class="cm-number">1</span>);
+  <span class="cm-property">border</span>:<span class="cm-number">4px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#fff</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">10px</span>;
+  <span class="cm-property">background</span>:<span class="cm-atom">transparent</span>;
+  <span class="cm-property">font-family</span>:<span class="cm-string">'Rubik'</span>, <span class="cm-atom">Sans-serif</span>;
+  <span class="cm-property">text-transform</span>:<span class="cm-atom">uppercase</span>;
+  <span class="cm-property">font-weight</span>:<span class="cm-number">700</span>;
+  <span class="cm-property">cursor</span>:<span class="cm-atom">pointer</span>;
+}
+<span class="cm-builtin">#card</span> <span class="cm-qualifier">.text-block</span> <span class="cm-tag">button</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-property">background</span>:<span class="cm-atom">#004c56</span>;
+}
+<span class="cm-builtin">#card_container</span> <span class="cm-qualifier">.pg</span> {
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">450px</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">40%</span>;
+  <span class="cm-property">right</span>:<span class="cm-number">-10px</span>;
+  <span class="cm-property">bottom</span>:<span class="cm-number">0px</span>;
+  <span class="cm-property">z-index</span>:<span class="cm-number">2</span>;
+}
+<span class="cm-builtin">#card_container</span> <span class="cm-qualifier">.pg</span> &gt; <span class="cm-tag">img</span>{
+  <span class="cm-property">height</span>:<span class="cm-number">450px</span>;
+}
+<span class="cm-qualifier">.shine</span> {
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">right</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">bottom</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">background</span>:<span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.4</span>) <span class="cm-number">0%</span>, <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.2</span>) <span class="cm-number">60%</span>);
+  <span class="cm-property">z-index</span>:<span class="cm-number">1</span>;
+}
+<span class="cm-tag">button</span> {
+  <span class="cm-property">color</span>:<span class="cm-atom">#fff</span>;
+}
+<span class="cm-def">@keyframes</span> <span class="cm-variable">backAn</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-size</span>:<span class="cm-number">100%</span>;
+  }
+  <span class="cm-number">50%</span> {
+    <span class="cm-property">background-size</span>:<span class="cm-number">250%</span>;
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-property">background-size</span>:<span class="cm-number">100%</span>;
+  }
+}</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Movie Card UI" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Movie Card UI" data-src="https://cdpn.io/_juanvaz/fullembedgrid/EGOWQM?animations=run&amp;type=embed" src="./EGOWQM.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/_juanvaz" target="_blank" rel="noopener"><img src="./default(6).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/_juanvaz" target="_blank" rel="noopener">Juan Vaz</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/_juanvaz" target="_blank" rel="noopener" class="about-user-more">
+See more by @_juanvaz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div id=&quot;card_container&quot; data-offset=&quot;2&quot;&gt;\n\t&lt;div class=&quot;pg&quot;&gt;\n\t\t&lt;img src=&quot;https://pluspng.com/img-png/aquaman-png-aquaman-png-clipart-666.png&quot;&gt;\n\t&lt;/div&gt;\n\t&lt;div id=&quot;card&quot;&gt;\n\t\t&lt;div class=&quot;shine&quot;&gt;&lt;/div&gt;\n\t\t&lt;div class=&quot;text-block&quot;&gt;\n\t\t\t&lt;h1&gt;Aquaman &lt;small&gt;(2018)&lt;/small&gt;&lt;/h1&gt;\n\t\t\t&lt;h3&gt;Action | Adventure&lt;/h3&gt;\n\t\t\t&lt;p&gt;\n\t\t\t\tArthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world.\n\t\t\t&lt;/p&gt;\n\t\t\t&lt;button&gt;Watch Trailer&lt;/button&gt;\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;","css":"@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);\n\n* {\n\tbox-sizing:border-box;\n}\nbody, html {\n\theight:100%;\n\tmin-height:100%;\n}\nbody {\n\tbackground:linear-gradient(#f6f7fc 0%, #d5e1e8 40%);\n\ttransform-style:preserve-3d;\n\ttransform:perspective(800px);\n\tfont-family:&#39;Lato&#39;, Sans-serif;\n}\n#card_container {\n\twidth:700px;\n\theight:350px;\n\tposition:absolute;\n\ttop:50%;\n\tleft:50%;\n\tmargin:-175px 0 0 -350px;\n}\n#card {\n\tanimation:backAn 50s infinite;\n\tcolor:#fff;\n\tpadding:30px;\n\twidth:100%;\n\theight:100%;\n\tposition:absolute;\n\tz-index:1;\n\tbackground:url(https://riverbeats.life/neworleans/wp-content/uploads/2018/07/Atlantis.png) 100% bottom;\n\t/*background:url(http://riccardotartaglia.it/img/deadpool/back.jpg) 100% bottom;*/\n\t/*box-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(156, 27, 27, 0.6);*/\n\tbox-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(0, 76, 86, 0.6);\n}\n#card .text-block {\n\tposition:relative;\n\tz-index:2;\n\ttext-shadow:0 3 10 rgba(0, 0, 0, 0.7);\n}\n#card .text-block h1 {\n\tfont-family:&#39;Rubik&#39;, Sans-serif;\n\tfont-size:3em;\n\tmargin:0;\n\ttext-transform:uppercase;\n\tfont-weight:700;\n}\n#card .text-block h1 small {\n\tfont-size:.4em;\n\tcolor:#ccc;\n\tposition:relative;\n\tbottom:10px;\n}\n#card .text-block h3 {\n\tmargin:0;\n\tfont-weight:700;\n}\n#card .text-block p {\n\tfont-weight:300;\n\twidth:60%;\n}\n#card .text-block button {\n\ttransition:all 0.35s cubic-bezier(0.37, 0.26, 0.35, 1);\n\tborder:4px solid #fff;\n\tpadding:10px;\n\tbackground:transparent;\n\tfont-family:&#39;Rubik&#39;, Sans-serif;\n\ttext-transform:uppercase;\n\tfont-weight:700;\n\tcursor:pointer;\n}\n#card .text-block button:hover {\n\tbackground:#004c56;\n}\n#card_container .pg {\n\tposition:absolute;\n\theight:450px;\n\twidth:40%;\n\tright:-10px;\n\tbottom:0px;\n\tz-index:2;\n}\n#card_container .pg &gt; img{\n\theight:450px;\n}\n.shine {\n\tposition:absolute;\n\ttop:0;\n\tleft:0;\n\tright:0;\n\tbottom:0;\n\tbackground:linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 60%);\n\tz-index:1;\n}\nbutton {\n\tcolor:#fff;\n}\n@keyframes backAn {\n\t0% {\n\t\tbackground-size:100%;\n\t}\n\t50% {\n\t\tbackground-size:250%;\n\t}\n\t100% {\n\t\tbackground-size:100%;\n\t}\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

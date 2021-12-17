@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://codepen.io/jalinb/embed/XGjmQK?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Pure CSS Card Hover Effects</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="AnaM1GU0pqaY5gELZRbUT6Awb/3eC+EXreHzavLVRfjlk5eVfsZ3FDjm7vKftGO2lgl15GEcDJAsxL53Gu61yA==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+Haml
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/jalinb/pen/XGjmQK" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="haml" id="actual-html-code" class=" cm-s-default"><span class="cm-attribute">.container-fluid</span>
+  <span class="cm-attribute">.row.cards</span>
+    <span class="cm-attribute">.card-single.card-offshore.col-md-12.col-lg-6</span>
+      <span class="cm-attribute">.row</span>
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-img.offshore-img2</span>
+          <span class="cm-attribute">#offshoreCharter.carousel.slide</span>{<span class="cm-string">"data-ride"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"carousel"</span>}
+            <span class="cm-tag">%ol</span><span class="cm-attribute">.carousel-indicators</span>
+              <span class="cm-tag">%li</span><span class="cm-attribute">.active</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#offshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"0"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#offshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#offshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2"</span>}
+            <span class="cm-attribute">.carousel-inner</span>
+              <span class="cm-attribute">.carousel-item.active</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-01.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-02.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-03.jpg');"</span>}
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-content</span>
+          <span class="cm-attribute">.card-height.d-flex.align-items-center.justify-content-center</span>
+            <span class="cm-attribute">.card-text</span>
+              <span class="cm-tag">%h2</span> Offshore Fishing Charters
+              <span class="cm-tag">%p</span> Offshore six to eight hour tours are available. These trips can consist of trolling for mahi, sailfish, kingfish, <span class="cm-error">&amp;</span> Wahoo.
+              <span class="cm-tag">%p</span> We also offer offshore bottom fishing trips for grouper, snapper, seabass, cobia, and flounder.
+              <span class="cm-tag">%button</span> Learn More
+    <span class="cm-attribute">.card-single.card-inshore.col-md-12.col-lg-6</span>
+      <span class="cm-attribute">.row</span>
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-img.order-md-1.order-lg-0</span>
+          <span class="cm-attribute">#inshoreCharter.carousel.slide</span>{<span class="cm-string">"data-ride"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"carousel"</span>}
+            <span class="cm-tag">%ol</span><span class="cm-attribute">.carousel-indicators</span>
+              <span class="cm-tag">%li</span><span class="cm-attribute">.active</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#inshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"0"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#inshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#inshoreCharter"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2"</span>}
+            <span class="cm-attribute">.carousel-inner</span>
+              <span class="cm-attribute">.carousel-item.active</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yoellow-dawg-fishing-inshore-01.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-inshore-02.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-inshore-03.jpg');"</span>}
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-content.order-md-0.order-lg-1</span>
+          <span class="cm-attribute">.card-height.d-flex.align-items-center.justify-content-center</span>
+            <span class="cm-attribute">.card-text</span>
+              <span class="cm-tag">%h2</span> Inshore Fishing Charters
+              <span class="cm-tag">%p</span> Praesent et purus mi. Morbi hendrerit magna placerat risus imperdiet pharetra. Duis mi nisi, tempus non aliquet sed, iaculis dictum justo. Donec vulputate dignissim quam, quis varius purus. In dapibus libero ligula, sit amet ultrices lectus venenatis et.
+              <span class="cm-tag">%button</span> Learn More
+    <span class="cm-attribute">.card-single.card-bird-watching.col-md-12.col-lg-6</span>
+      <span class="cm-attribute">.row</span>
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-content.order-md-1.order-lg-0</span>
+          <span class="cm-attribute">.card-height.d-flex.align-items-center.justify-content-center</span>
+            <span class="cm-attribute">.card-text</span>
+              <span class="cm-tag">%h2</span> Hook N Cook
+              <span class="cm-tag">%p</span> We specialize in the full experience by putting you on the fish and then work with local restaurants to cook your catch!
+              <span class="cm-tag">%button</span> Learn More
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-img.order-md-0.order-lg-1</span>
+          <span class="cm-attribute">#birdTour.carousel.slide</span>{<span class="cm-string">"data-ride"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"carousel"</span>}
+            <span class="cm-tag">%ol</span><span class="cm-attribute">.carousel-indicators</span>
+              <span class="cm-tag">%li</span><span class="cm-attribute">.active</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#birdTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"0"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#birdTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#birdTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2"</span>}
+            <span class="cm-attribute">.carousel-inner</span>
+              <span class="cm-attribute">.carousel-item.active</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-01.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-02.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-03.jpg');"</span>}
+    <span class="cm-attribute">.card-single.card-manatee-tour.col-md-12.col-lg-6</span>
+      <span class="cm-attribute">.row</span>
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-content</span>
+          <span class="cm-attribute">.card-height.d-flex.align-items-center.justify-content-center</span>
+            <span class="cm-attribute">.card-text</span>
+              <span class="cm-tag">%h2</span> Private Sunset Wildlife Tours
+              <span class="cm-tag">%p</span> These tours are a fun activity for families and individuals wanting a special, memorable experience. Just show up at the specified time, bring a camera, snacks and beverages ( Beer <span class="cm-error">&amp;</span> wine is permitted ). Tours run about two hours long and give customers many opportunities to see local populations and pods of dolphins. 
+              <span class="cm-tag">%button</span> Learn More
+        <span class="cm-attribute">.col-xs-12.col-sm-6.card-img</span>
+          <span class="cm-attribute">#manateeTour.carousel.slide</span>{<span class="cm-string">"data-ride"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"carousel"</span>}
+            <span class="cm-tag">%ol</span><span class="cm-attribute">.carousel-indicators</span>
+              <span class="cm-tag">%li</span><span class="cm-attribute">.active</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#manateeTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"0"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#manateeTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1"</span>}
+              <span class="cm-tag">%li</span>{<span class="cm-string">"data-target"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"#manateeTour"</span>, <span class="cm-string">"data-slide-to"</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2"</span>}
+            <span class="cm-attribute">.carousel-inner</span>
+              <span class="cm-attribute">.carousel-item.active</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-dolphin.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-manatee.jpg');"</span>}
+              <span class="cm-attribute">.carousel-item</span>{<span class="cm-atom">:style</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-bird.jpg');"</span>}
+ </code></pre>
+<a href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://fonts.googleapis.com/css?family=Anton|Open+Sans:300,400,600,700'</span>);
+
+<span class="cm-variable-2">$yellow</span>: <span class="cm-atom">#ffca28</span>;
+<span class="cm-variable-2">$grey</span>: <span class="cm-atom">#212121</span>;
+<span class="cm-variable-2">$white</span>: <span class="cm-atom">#fff</span>;
+<span class="cm-variable-2">$cardHeight</span>: <span class="cm-number">550px</span>;
+
+<span class="cm-tag">html</span>, <span class="cm-tag">body</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Open Sans'</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">24px</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">16px</span>;
+}
+
+<span class="cm-tag">h2</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Anton'</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+}
+
+<span class="cm-tag">button</span> {
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$yellow</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">7px</span> <span class="cm-number">40px</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable-2">$white</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Anton'</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">.5s</span> <span class="cm-atom">ease-in-out</span>;
+  
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable-2">$white</span>;
+    <span class="cm-property">color</span>: <span class="cm-variable-2">$grey</span>;
+  }
+}
+
+<span class="cm-qualifier">.cards</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$grey</span>;
+  
+  &amp;:<span class="cm-variable-3">hover</span> 
+    <span class="cm-qualifier">.card-single</span> {
+      <span class="cm-property">opacity</span>: <span class="cm-number">0.15</span>;
+    }
+}
+
+<span class="cm-qualifier">.cards</span> <span class="cm-qualifier">.card-single</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$grey</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">opacity</span> <span class="cm-number">.5s</span> <span class="cm-atom">ease-in-out</span>;
+  
+  &amp;:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+  }
+}
+
+<span class="cm-qualifier">.card-content</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$cardHeight</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">40px</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable-2">$white</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/stripe-pattern.png'</span>);
+  
+  <span class="cm-tag">h2</span> {
+    <span class="cm-property">color</span>: <span class="cm-variable-2">$yellow</span>;
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">20px</span>;
+  }
+}
+
+<span class="cm-qualifier">.card-text</span> {
+  <span class="cm-property">max-width</span>: <span class="cm-number">600px</span>;
+}
+
+<span class="cm-qualifier">.card-height</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+}
+
+<span class="cm-qualifier">.card-img</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+  
+  <span class="cm-qualifier">.carousel-item</span> {
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$cardHeight</span>;
+    <span class="cm-property">background-position</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">background-size</span>: <span class="cm-atom">cover</span>;
+    <span class="cm-property">background-repeat</span>: <span class="cm-atom">no-repeat</span>;
+  }
+}
+
+<span class="cm-qualifier">.carousel-indicators</span> <span class="cm-tag">li</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+}</code></pre>
+<a href="https://codepen.io/jalinb/embed/XGjmQK?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Pure CSS Card Hover Effects" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Pure CSS Card Hover Effects" data-src="https://cdpn.io/jalinb/fullembedgrid/XGjmQK?animations=run&amp;type=embed" src="./XGjmQK(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/jalinb" target="_blank" rel="noopener"><img src="./default(3).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/jalinb" target="_blank" rel="noopener">Jalin Burton</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/jalinb" target="_blank" rel="noopener" class="about-user-more">
+See more by @jalinb on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&#39;container-fluid&#39;&gt;\n  &lt;div class=&#39;row cards&#39;&gt;\n    &lt;div class=&#39;card-single card-offshore col-md-12 col-lg-6&#39;&gt;\n      &lt;div class=&#39;row&#39;&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-img offshore-img2&#39;&gt;\n          &lt;div class=&#39;carousel slide&#39; data-ride=&#39;carousel&#39; id=&#39;offshoreCharter&#39;&gt;\n            &lt;ol class=&#39;carousel-indicators&#39;&gt;\n              &lt;li class=&#39;active&#39; data-slide-to=&#39;0&#39; data-target=&#39;#offshoreCharter&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;1&#39; data-target=&#39;#offshoreCharter&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;2&#39; data-target=&#39;#offshoreCharter&#39;&gt;&lt;/li&gt;\n            &lt;/ol&gt;\n            &lt;div class=&#39;carousel-inner&#39;&gt;\n              &lt;div class=&#39;carousel-item active&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-01.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-02.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-offshore-03.jpg&#39;);&quot;&gt;&lt;/div&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-content&#39;&gt;\n          &lt;div class=&#39;card-height d-flex align-items-center justify-content-center&#39;&gt;\n            &lt;div class=&#39;card-text&#39;&gt;\n              &lt;h2&gt;Offshore Fishing Charters&lt;/h2&gt;\n              &lt;p&gt;Offshore six to eight hour tours are available. These trips can consist of trolling for mahi, sailfish, kingfish, &amp; Wahoo.&lt;/p&gt;\n              &lt;p&gt;We also offer offshore bottom fishing trips for grouper, snapper, seabass, cobia, and flounder.&lt;/p&gt;\n              &lt;button&gt;Learn More&lt;/button&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&#39;card-single card-inshore col-md-12 col-lg-6&#39;&gt;\n      &lt;div class=&#39;row&#39;&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-img order-md-1 order-lg-0&#39;&gt;\n          &lt;div class=&#39;carousel slide&#39; data-ride=&#39;carousel&#39; id=&#39;inshoreCharter&#39;&gt;\n            &lt;ol class=&#39;carousel-indicators&#39;&gt;\n              &lt;li class=&#39;active&#39; data-slide-to=&#39;0&#39; data-target=&#39;#inshoreCharter&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;1&#39; data-target=&#39;#inshoreCharter&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;2&#39; data-target=&#39;#inshoreCharter&#39;&gt;&lt;/li&gt;\n            &lt;/ol&gt;\n            &lt;div class=&#39;carousel-inner&#39;&gt;\n              &lt;div class=&#39;carousel-item active&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yoellow-dawg-fishing-inshore-01.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-inshore-02.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-inshore-03.jpg&#39;);&quot;&gt;&lt;/div&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-content order-md-0 order-lg-1&#39;&gt;\n          &lt;div class=&#39;card-height d-flex align-items-center justify-content-center&#39;&gt;\n            &lt;div class=&#39;card-text&#39;&gt;\n              &lt;h2&gt;Inshore Fishing Charters&lt;/h2&gt;\n              &lt;p&gt;Praesent et purus mi. Morbi hendrerit magna placerat risus imperdiet pharetra. Duis mi nisi, tempus non aliquet sed, iaculis dictum justo. Donec vulputate dignissim quam, quis varius purus. In dapibus libero ligula, sit amet ultrices lectus venenatis et.&lt;/p&gt;\n              &lt;button&gt;Learn More&lt;/button&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&#39;card-single card-bird-watching col-md-12 col-lg-6&#39;&gt;\n      &lt;div class=&#39;row&#39;&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-content order-md-1 order-lg-0&#39;&gt;\n          &lt;div class=&#39;card-height d-flex align-items-center justify-content-center&#39;&gt;\n            &lt;div class=&#39;card-text&#39;&gt;\n              &lt;h2&gt;Hook N Cook&lt;/h2&gt;\n              &lt;p&gt;We specialize in the full experience by putting you on the fish and then work with local restaurants to cook your catch!&lt;/p&gt;\n              &lt;button&gt;Learn More&lt;/button&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-img order-md-0 order-lg-1&#39;&gt;\n          &lt;div class=&#39;carousel slide&#39; data-ride=&#39;carousel&#39; id=&#39;birdTour&#39;&gt;\n            &lt;ol class=&#39;carousel-indicators&#39;&gt;\n              &lt;li class=&#39;active&#39; data-slide-to=&#39;0&#39; data-target=&#39;#birdTour&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;1&#39; data-target=&#39;#birdTour&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;2&#39; data-target=&#39;#birdTour&#39;&gt;&lt;/li&gt;\n            &lt;/ol&gt;\n            &lt;div class=&#39;carousel-inner&#39;&gt;\n              &lt;div class=&#39;carousel-item active&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-01.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-02.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-eat-what-you-catch-03.jpg&#39;);&quot;&gt;&lt;/div&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&#39;card-single card-manatee-tour col-md-12 col-lg-6&#39;&gt;\n      &lt;div class=&#39;row&#39;&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-content&#39;&gt;\n          &lt;div class=&#39;card-height d-flex align-items-center justify-content-center&#39;&gt;\n            &lt;div class=&#39;card-text&#39;&gt;\n              &lt;h2&gt;Private Sunset Wildlife Tours&lt;/h2&gt;\n              &lt;p&gt;These tours are a fun activity for families and individuals wanting a special, memorable experience. Just show up at the specified time, bring a camera, snacks and beverages ( Beer &amp; wine is permitted ). Tours run about two hours long and give customers many opportunities to see local populations and pods of dolphins.&lt;/p&gt;\n              &lt;button&gt;Learn More&lt;/button&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;div class=&#39;col-xs-12 col-sm-6 card-img&#39;&gt;\n          &lt;div class=&#39;carousel slide&#39; data-ride=&#39;carousel&#39; id=&#39;manateeTour&#39;&gt;\n            &lt;ol class=&#39;carousel-indicators&#39;&gt;\n              &lt;li class=&#39;active&#39; data-slide-to=&#39;0&#39; data-target=&#39;#manateeTour&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;1&#39; data-target=&#39;#manateeTour&#39;&gt;&lt;/li&gt;\n              &lt;li data-slide-to=&#39;2&#39; data-target=&#39;#manateeTour&#39;&gt;&lt;/li&gt;\n            &lt;/ol&gt;\n            &lt;div class=&#39;carousel-inner&#39;&gt;\n              &lt;div class=&#39;carousel-item active&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-dolphin.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-manatee.jpg&#39;);&quot;&gt;&lt;/div&gt;\n              &lt;div class=&#39;carousel-item&#39; style=&quot;background-image: url(&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/yellow-dawg-fishing-wildlife-bird.jpg&#39;);&quot;&gt;&lt;/div&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css?family=Anton|Open+Sans:300,400,600,700&quot;);\nhtml, body {\n  font-family: &quot;Open Sans&quot;, sans-serif;\n  font-weight: 300;\n  line-height: 24px;\n  font-size: 16px;\n}\n\nh2 {\n  font-family: &quot;Anton&quot;, sans-serif;\n  text-transform: uppercase;\n}\n\nbutton {\n  cursor: pointer;\n  background: #ffca28;\n  border: 0;\n  padding: 7px 40px;\n  color: #fff;\n  font-family: &quot;Anton&quot;, sans-serif;\n  text-transform: uppercase;\n  font-size: 20px;\n  margin-top: 20px;\n  transition: all 0.5s ease-in-out;\n}\nbutton:hover {\n  background: #fff;\n  color: #212121;\n}\n\n.cards {\n  background: #212121;\n}\n.cards:hover .card-single {\n  opacity: 0.15;\n}\n\n.cards .card-single {\n  background: #212121;\n  transition: opacity 0.5s ease-in-out;\n}\n.cards .card-single:hover {\n  opacity: 1;\n}\n\n.card-content {\n  height: 550px;\n  padding: 40px;\n  color: #fff;\n  background: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/319606/stripe-pattern.png&quot;);\n}\n.card-content h2 {\n  color: #ffca28;\n  margin-bottom: 20px;\n}\n\n.card-text {\n  max-width: 600px;\n}\n\n.card-height {\n  height: 100%;\n}\n\n.card-img {\n  padding: 0;\n}\n.card-img .carousel-item {\n  height: 550px;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n\n.carousel-indicators li {\n  height: 10px;\n  width: 10px;\n  border-radius: 50%;\n}","js":""};
+    __preprocessors = {
+      "html": "haml",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Haml",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

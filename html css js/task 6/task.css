@@ -1,0 +1,120 @@
+
+
+body{background-color: rgba(0, 0, 0, 0.87);}
+
+.navbar{background-color: rgb(85, 13, 13) !important;}
+
+.navbar a{color:white}
+
+.navbar .dropdown-menu a{color:black;
+}
+
+.navbar  button{border: 1px solid grey !important;
+color:white !important}
+body{background-color: rgb(19, 10, 10);
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Roboto Slab', serif;
+font-weight: bold;
+font-size: x-large;
+overflow-x: hidden;}
+
+
+.navbar{background-color: rgba(121, 23, 23, 0.753) !important;
+color: white;
+font-size: 15px;
+height: 65px
+
+}
+
+.navbar-brand{font-weight: bold;
+font-size: 18px;}
+
+.dropdown-menu a{font-weight: bold;
+}
+
+.dropdown-menu{background-color: rgba(124, 92, 92, 0.61);
+font-weight: bold;
+text-align: center;}
+
+.dropdown-menu :hover{background-color: rgb(56, 45, 45);
+color: white;}
+ .white-text{margin-top:60px;}
+
+ .form-control{width: 50px;}
+
+.card-deck >div  {background:  rgb(71, 5, 5);}
+
+.two{margin-top: 80px;}
+
+.card-deck{margin-top: 40px;}
+.card-deck :hover {cursor: pointer;}
+
+
+.two  .view  {transition: all 2s  ease !important;
+}
+.two .view :hover {transform: scale(2,1.2) !important;
+    
+margin-left: 3px;
+}
+
+.card {background: rgb(71, 5, 5);
+margin-top: 10px;}
+
+
+.card-body>h4{color: rgba(216, 202, 202, 0.945); text-align: left;}
+
+.card-body :hover {cursor: pointer;}
+
+.all .btn {display: none;}
+.all .card{height:240px}
+
+.all .container .row  .fa-angle-down {text-align: center;
+color: white;
+font-size: 36px;
+cursor: grab;
+}
+
+.footer .text-center .btn  {background: rgb(61, 11, 11)!important;
+    color: rgb(212, 202, 202) !important;
+    transition: all 1s ease ;}
+
+
+/*
+.all {overflow: scroll;
+scroll-behavior: smooth;
+scroll-snap-type: mandatory;
+scroll-margin-right: 20px ;
+}
+
+*/
+
+
+
+
+
+
+/*
+
+.overlay img {position:relative;
+z-index: 1;
+width: 90%;
+}
+
+.card-title {z-index:2 ;
+position: absolute;
+bottom: 70px;
+color: white ;
+font-weight: bold;
+height}
+*/
+/*
+.footer .text-center .btn:hover {background: rgb(182, 0, 0) !important;color: white !important; transform: scale(1.5,1); transform-origin: center; font-weight: bold;}
+ /*
+.films img {transition: all 1s ease;} 
+
+.films img  :hover {transform-origin: right;
+transform:scale3d(2,3,4);
+cursor: pointer;}
+*/
+

@@ -1,0 +1,30 @@
+/* background of body */
+body {background-color: rgba(0, 0, 0, 0.822);
+
+}
+/* information class div */
+.information {border: 5px solid rgb(243, 179, 59);
+    margin: auto;
+    width: 500px;
+    color: white;
+    padding: 40px;
+
+}
+
+/* h3 */
+h3 {color: white;
+    border: 3px solid rgb(243, 179, 59);
+    padding: 12px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 400px;
+
+}
+
+/* p */
+p {border-bottom: 1px solid rgb(243, 179, 59);
+    padding-bottom: 20px;
+
+}

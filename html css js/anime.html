@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" id="form">
+        <input type="text" name="" id="search" placeholder="search">
+
+    </form>
+    <div class="main" id="main"></div>
+
+
+
+
+    <script>
+        function getMovies(url) {
+            fetch("https://cdn.polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=default,Intl.~locale.en,IntersectionObserver")
+                .then(response =>response.json())
+                .then(data => {
+                    console.log(data.results);
+                    showMovies(data.results)
+                }
+                }
+ 
+
+
+            function showMovies(movies) {
+                main.innerHTML = '';
+                movies.forEach(movie => {
+                    var { poster_path, title, vote_average, overview } = movie;
+                    var movieEl = document.createElement("div");
+                    movieEl.classList.add("movie");
+
+                    // symbol `` write html code safy بون لبصيغة القديمة ام الكوتيشن
+                    //$ declare variables
+
+                    movieEl.innerHTML = `
+<div class="card">
+    <img src="${img_url + poster_path}" alt="${title}" />
+    // <div class="movie-info">
+        // <h3>${title}</h3>
+        // </div>
+    <div class="overview">
+        <h3> overview: </h3>
+        ${overview}
+    </div>
+</div>
+`
+                    main.appendChild(movieEl);
+                    movieEl.style.border = "1px solid gray"
+                    movieEl.style.display = "flex"
+                    movieEl.style.width = "300px"
+                    movieEl.style.backgroundColor = "black"
+                    movieEl.style.color = "gray"
+                    movieEl.style.boxShadow = "10px 10px 10px grey"
+                    movieEl.style.textAlign = "center"
+                    movieEl.style.fontSize = "smaller"
+                    movieEl.style.margin = "auto"
+                    movieEl.style.height = "490px"
+                    movieEl.style.marginTop = "15px"
+                });
+
+
+
+            }
+
+            getMovies(api_url);
+
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                var searchTerm = search.value
+                if (searchTerm) {
+                    getMovies(searchUrl + '&query=' + searchTerm);
+                } else {
+                    getMovies(api_url);
+                }
+
+            })
+
+    </script>
+
+</body>
+
+</html>

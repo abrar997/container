@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0186)https://codepen.io/rezakhmf/embed/yfGLx?height=485&theme-id=dark&default-tab=css%2Cresult&user=rezakhmf&slug-hash=yfGLx&pen-title=Slide%20menu%20with%20drag%20and%20swipe&name=cp_embed_4 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Slide menu with drag and swipe</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="XvnjexKq58ZYN1jn5Dh5LGqoy2s1AzfTXY/whp0HJIn2pov9IVNoxngqKFhaX+sS6fq3yTuQhAzA0ni1+B3j9A==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#css-box" role="button" class="active" aria-pressed="true">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/rezakhmf/pen/yfGLx" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-comment">&lt;!-- Navigation --&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">nav</span> <span class="cm-attribute">id</span>=<span class="cm-string">"slide-menu"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"timeline"</span><span class="cm-tag cm-bracket">&gt;</span>Timeline<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"events"</span><span class="cm-tag cm-bracket">&gt;</span>Events<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"calendar"</span><span class="cm-tag cm-bracket">&gt;</span>Calendar<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"sep settings"</span><span class="cm-tag cm-bracket">&gt;</span>Settings<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">class</span>=<span class="cm-string">"logout"</span><span class="cm-tag cm-bracket">&gt;</span>Logout<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">nav</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-comment">&lt;!-- Content panel --&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"content"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"menu-trigger"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>iOS style sliding menu with drag<span class="cm-error">&amp;swipe</span> left/right<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Here's an easy way to create an iOS style, side sliding menu.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box active" role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-string">"compass/css3"</span>;
+
+<span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Oxygen:400,700</span>);
+
+<span class="cm-comment">/* </span>
+<span class="cm-comment">  Fonts</span>
+<span class="cm-comment">*/</span>
+<span class="cm-def">@font-face</span> {
+  <span class="cm-property">font-family</span>: <span class="cm-string">'ico'</span>;
+  <span class="cm-property">src</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'data:application/octet-stream;base64,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'</span>) <span class="cm-variable cm-callee">format</span>(<span class="cm-string">'woff'</span>),
+     <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'data:application/octet-stream;base64,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sAMlsAIlRyNHI2GwAFRYLiA8IyEbsAIlsAIlRyNHI2EgsAUlsAQlRyNHI2GwBiWwBSVJsAIlYbABRWMjIFhiGyFZY7ABRWJgIy4jICA8ijgjIVktsDUssAAWILAIQyAuRyNHI2EgYLAgYGawgGIjICA8ijgtsDYsIyAuRrACJUZSWCA8WS6xJgEUKy2wNywjIC5GsAIlRlBYIDxZLrEmARQrLbA4LCMgLkawAiVGUlggPFkjIC5GsAIlRlBYIDxZLrEmARQrLbA5LLAwKyMgLkawAiVGUlggPFkusSYBFCstsDossDEriiAgPLAEI0KKOCMgLkawAiVGUlggPFkusSYBFCuwBEMusCYrLbA7LLAAFrAEJbAEJiAuRyNHI2GwBkUrIyA8IC4jOLEmARQrLbA8LLEIBCVCsAAWsAQlsAQlIC5HI0cjYSCwBCNCsAZFKyCwYFBYILBAUVizAiADIBuzAiYDGllCQiMgR7AEQ7CAYmAgsAArIIqKYSCwAkNgZCOwA0NhZFBYsAJDYRuwA0NgWbADJbCAYmGwAiVGYTgjIDwjOBshICBGI0ewACsjYTghWbEmARQrLbA9LLAwKy6xJgEUKy2wPiywMSshIyAgPLAEI0IjOLEmARQrsARDLrAmKy2wPyywABUgR7AAI0KyAAEBFRQTLrAsKi2wQCywABUgR7AAI0KyAAEBFRQTLrAsKi2wQSyxAAEUE7AtKi2wQiywLyotsEMssAAWRSMgLiBGiiNhOLEmARQrLbBELLAII0KwQystsEUssgAAPCstsEYssgABPCstsEcssgEAPCstsEgssgEBPCstsEkssgAAPSstsEossgABPSstsEsssgEAPSstsEwssgEBPSstsE0ssgAAOSstsE4ssgABOSstsE8ssgEAOSstsFAssgEBOSstsFEssgAAOystsFIssgABOystsFMssgEAOystsFQssgEBOystsFUssgAAPistsFYssgABPistsFcssgEAPistsFgssgEBPistsFkssgAAOistsFossgABOistsFsssgEAOistsFwssgEBOistsF0ssDIrLrEmARQrLbBeLLAyK7A2Ky2wXyywMiuwNystsGAssAAWsDIrsDgrLbBhLLAzKy6xJgEUKy2wYiywMyuwNistsGMssDMrsDcrLbBkLLAzK7A4Ky2wZSywNCsusSYBFCstsGYssDQrsDYrLbBnLLA0K7A3Ky2waCywNCuwOCstsGkssDUrLrEmARQrLbBqLLA1K7A2Ky2wayywNSuwNystsGwssDUrsDgrLbBtLCuwCGWwAyRQeLABFTAtAAAAS7gAyFJYsQEBjlm5CAAIAGMgsAEjRLADI3CyBCgJRVJEsgoCByqxBgFEsSQBiFFYsECIWLEGA0SxJgGIUVi4BACIWLEGAURZWVlZuAH/hbAEjbEFAEQAAA=='</span>) <span class="cm-variable cm-callee">format</span>(<span class="cm-string">'truetype'</span>);
+}
+
+
+<span class="cm-comment">/*</span>
+<span class="cm-comment">  Globals</span>
+<span class="cm-comment">*/</span>
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#556270</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#353d46</span>;
+  <span class="cm-property">font</span>: <span class="cm-number">18px</span><span class="cm-operator">/</span><span class="cm-number">27px</span> <span class="cm-string">'Oxygen'</span>, <span class="cm-atom">sans-serif</span>;
+}
+
+<span class="cm-tag">h1</span>, <span class="cm-tag">h2</span>, <span class="cm-tag">h3</span> { <span class="cm-property">color</span>: <span class="cm-atom">#FF6B6B</span>; <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">27px</span>; }
+
+<span class="cm-comment">/*</span>
+<span class="cm-comment">  Menu</span>
+<span class="cm-comment">*/</span>
+<span class="cm-tag">nav</span><span class="cm-builtin">#slide-menu</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-100px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">float</span>: <span class="cm-atom">left</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">284px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+
+  <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+
+  &gt; <span class="cm-tag">ul</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">40px</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">list-style</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0.5</span>;
+
+    <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span> <span class="cm-atom">transform</span> ;
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span> <span class="cm-atom">transform</span> ;
+
+    <span class="cm-tag">li</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#dfe5eb</span>;
+      <span class="cm-property">padding</span>: <span class="cm-number">6px</span> <span class="cm-number">0</span>;
+      <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+
+      &amp;:<span class="cm-variable-3">hover</span> { <span class="cm-property">color</span>: <span class="cm-keyword">black</span>; }
+    }
+
+    <span class="cm-tag">li</span>:<span class="cm-variable-3">before</span> {
+      <span class="cm-property">font-family</span>: <span class="cm-string">"ico"</span>;
+      <span class="cm-property">font-style</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">font-weight</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">speak</span>: <span class="cm-atom">none</span>;
+      <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+      <span class="cm-property">text-decoration</span>: <span class="cm-atom">inherit</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">1em</span>;
+      <span class="cm-property">color</span>: <span class="cm-atom">#59e9df</span>;
+      <span class="cm-property">margin-right</span>: <span class="cm-number">12px</span>;
+      <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+      <span class="cm-property">font-variant</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">font-size</span>: <span class="cm-number">0.75em</span>;
+      <span class="cm-property">text-transform</span>: <span class="cm-atom">none</span>;
+      <span class="cm-property">line-height</span>: <span class="cm-number">1em</span>;
+    }
+
+    <span class="cm-tag">li</span><span class="cm-qualifier">.sep</span> { 
+      <span class="cm-property">margin-top</span>: <span class="cm-number">7px</span>; 
+      <span class="cm-property">padding-top</span>: <span class="cm-number">14px</span>; 
+      <span class="cm-property">border-top</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">lighten</span>(<span class="cm-atom">#556270</span>, <span class="cm-number">10%</span>); 
+    }
+
+    <span class="cm-tag">li</span><span class="cm-qualifier">.timeline</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\e805'</span>; }
+    <span class="cm-tag">li</span><span class="cm-qualifier">.events</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\e802'</span>; }
+    <span class="cm-tag">li</span><span class="cm-qualifier">.calendar</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\e800'</span>; }
+    <span class="cm-tag">li</span><span class="cm-qualifier">.settings</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\e803'</span>; }
+    <span class="cm-tag">li</span><span class="cm-qualifier">.logout</span>:<span class="cm-variable-3">before</span> { <span class="cm-property">content</span>: <span class="cm-string">'\e804'</span>; }
+  }
+}
+
+<span class="cm-tag">body</span><span class="cm-qualifier">.menu-active</span> <span class="cm-tag">nav</span><span class="cm-builtin">#slide-menu</span> { <span class="cm-property">left</span>: <span class="cm-number">0px</span>; }
+<span class="cm-tag">body</span><span class="cm-qualifier">.menu-active</span> <span class="cm-tag">nav</span><span class="cm-builtin">#slide-menu</span> <span class="cm-tag">ul</span> { <span class="cm-property">left</span>: <span class="cm-number">0px</span>; <span class="cm-property">opacity</span>: <span class="cm-number">1</span>; }
+
+<span class="cm-comment">/*</span>
+<span class="cm-comment">  Content</span>
+<span class="cm-comment">*/</span>
+
+<span class="cm-tag">div</span><span class="cm-builtin">#content</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">60px</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">scroll</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#fcfeff</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">0</span>;
+
+  <span class="cm-meta">-moz-</span><span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+
+  <span class="cm-meta">-moz-</span><span class="cm-property">box-shadow</span>: <span class="cm-number">-3px</span> <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-variable cm-callee">darken</span>(<span class="cm-atom">#556270</span>, <span class="cm-number">5%</span>);
+  <span class="cm-meta">-webkit-</span><span class="cm-property">box-shadow</span>: <span class="cm-number">-3px</span> <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-variable cm-callee">darken</span>(<span class="cm-atom">#556270</span>, <span class="cm-number">5%</span>);
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">-3px</span> <span class="cm-number">0</span> <span class="cm-number">6px</span> <span class="cm-variable cm-callee">darken</span>(<span class="cm-atom">#556270</span>, <span class="cm-number">5%</span>);
+
+  <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+
+  <span class="cm-tag">div</span><span class="cm-qualifier">.menu-trigger</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">10px</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">10px</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">36px</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">36px</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#dfe5eb</span>;
+    <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">5px</span>;
+
+    <span class="cm-meta">-moz-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">300ms</span>;
+
+    &amp;:<span class="cm-variable-3">before</span> { 
+      <span class="cm-property">content</span>: <span class="cm-string">'\e801'</span>;
+      <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">36px</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">36px</span>;
+      <span class="cm-property">color</span>: <span class="cm-keyword">black</span>;
+      <span class="cm-property">font-family</span>: <span class="cm-string">"ico"</span>;
+      <span class="cm-property">font-style</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">font-size</span>: <span class="cm-number">1.2em</span>;
+      <span class="cm-property">font-weight</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">font-variant</span>: <span class="cm-atom">normal</span>;
+      <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+      <span class="cm-property">text-transform</span>: <span class="cm-atom">none</span>;
+      <span class="cm-property">line-height</span>: <span class="cm-number">36px</span>;
+    }
+
+    &amp;:<span class="cm-variable-3">hover</span> { <span class="cm-property">background</span>: <span class="cm-atom">#556270</span>; &amp;:<span class="cm-variable-3">before</span> { <span class="cm-property">color</span>: <span class="cm-atom">#fcfeff</span>; } }
+  }
+}
+
+<span class="cm-tag">body</span><span class="cm-qualifier">.menu-active</span> <span class="cm-tag">div</span><span class="cm-builtin">#content</span> { <span class="cm-property">left</span>: <span class="cm-number">284px</span>; <span class="cm-property">border-radius</span>: <span class="cm-number">7px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">7px</span>; }
+<span class="cm-tag">body</span><span class="cm-qualifier">.menu-active</span> <span class="cm-tag">div</span><span class="cm-builtin">#content</span> <span class="cm-qualifier">.menu-trigger</span> { <span class="cm-property">left</span>: <span class="cm-number">294px</span>; }</code></pre>
+<a href="https://codepen.io/rezakhmf/embed/yfGLx?height=485&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=rezakhmf&amp;slug-hash=yfGLx&amp;pen-title=Slide%20menu%20with%20drag%20and%20swipe&amp;name=cp_embed_4#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">/*</span>
+<span class="cm-comment">  Slidemenu</span>
+<span class="cm-comment">*/</span>
+(<span class="cm-keyword">function</span>() {
+  <span class="cm-keyword">var</span> <span class="cm-def">$body</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">body</span>
+  , <span class="cm-def">$menu_trigger</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$body</span>.<span class="cm-property">getElementsByClassName</span>(<span class="cm-string">'menu-trigger'</span>)[<span class="cm-number">0</span>];
+
+  <span class="cm-keyword">if</span> ( <span class="cm-keyword">typeof</span> <span class="cm-variable-2">$menu_trigger</span> <span class="cm-operator">!==</span> <span class="cm-string">'undefined'</span> ) {
+    <span class="cm-variable-2">$menu_trigger</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'click'</span>, <span class="cm-keyword">function</span>() {
+      <span class="cm-variable-2">$body</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> ( <span class="cm-variable-2">$body</span>.<span class="cm-property">className</span> <span class="cm-operator">==</span> <span class="cm-string">'menu-active'</span> )<span class="cm-operator">?</span> <span class="cm-string">''</span> : <span class="cm-string">'menu-active'</span>;
+    });
+  }
+    
+ <span class="cm-keyword">var</span> <span class="cm-def">options</span> <span class="cm-operator">=</span> {
+  <span class="cm-property">dragLockToAxis</span>: <span class="cm-atom">true</span>,
+  <span class="cm-property">dragBlockHorizontal</span>: <span class="cm-atom">true</span>,
+   <span class="cm-property">preventDefault</span> : <span class="cm-atom">true</span>
+};
+
+
+<span class="cm-variable">Hammer</span>(<span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'content'</span>)).<span class="cm-property">on</span>(<span class="cm-string">"dragleft dragright swipeleft swiperight"</span>, <span class="cm-keyword">function</span>(<span class="cm-def">ev</span>){ 
+  <span class="cm-variable-2">$body</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> ( <span class="cm-variable-2">$body</span>.<span class="cm-property">className</span> <span class="cm-operator">==</span> <span class="cm-string">'menu-active'</span> )<span class="cm-operator">?</span> <span class="cm-string">''</span> : <span class="cm-string">'menu-active'</span>;
+},<span class="cm-variable-2">options</span>);
+ 
+
+}).<span class="cm-property">call</span>(<span class="cm-keyword">this</span>);
+
+
+
+
+
+
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Slide menu with drag and swipe" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Slide menu with drag and swipe" data-src="https://cdpn.io/rezakhmf/fullembedgrid/yfGLx?animations=run&amp;type=embed" src="./yfGLx.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/rezakhmf" target="_blank" rel="noopener"><img src="./default(3).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/rezakhmf" target="_blank" rel="noopener">Reza Khan Mohammadi</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/rezakhmf" target="_blank" rel="noopener" class="about-user-more">
+See more by @rezakhmf on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.10/hammer.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.10/hammer.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;!-- Navigation --&gt;\n&lt;nav id=&quot;slide-menu&quot;&gt;\n\t&lt;ul&gt;\n\t\t&lt;li class=&quot;timeline&quot;&gt;Timeline&lt;/li&gt;\n\t\t&lt;li class=&quot;events&quot;&gt;Events&lt;/li&gt;\n\t\t&lt;li class=&quot;calendar&quot;&gt;Calendar&lt;/li&gt;\n\t\t&lt;li class=&quot;sep settings&quot;&gt;Settings&lt;/li&gt;\n\t\t&lt;li class=&quot;logout&quot;&gt;Logout&lt;/li&gt;\n\t&lt;/ul&gt;\n&lt;/nav&gt;\n&lt;!-- Content panel --&gt;\n&lt;div id=&quot;content&quot;&gt;\n\t&lt;div class=&quot;menu-trigger&quot;&gt;&lt;/div&gt;\n\t&lt;h1&gt;iOS style sliding menu with drag&amp;swipe left/right&lt;/h1&gt;\n\t&lt;p&gt;Here&#39;s an easy way to create an iOS style, side sliding menu.&lt;/p&gt;\n&lt;/div&gt;","css":"@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700);\n/* \n  Fonts\n*/\n@font-face {\n  font-family: &#39;ico&#39;;\n  src: url(&quot;data:application/octet-stream;base64,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&quot;) format(&quot;woff&quot;), url(&quot;data:application/octet-stream;base64,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sAMlsAIlRyNHI2GwAFRYLiA8IyEbsAIlsAIlRyNHI2EgsAUlsAQlRyNHI2GwBiWwBSVJsAIlYbABRWMjIFhiGyFZY7ABRWJgIy4jICA8ijgjIVktsDUssAAWILAIQyAuRyNHI2EgYLAgYGawgGIjICA8ijgtsDYsIyAuRrACJUZSWCA8WS6xJgEUKy2wNywjIC5GsAIlRlBYIDxZLrEmARQrLbA4LCMgLkawAiVGUlggPFkjIC5GsAIlRlBYIDxZLrEmARQrLbA5LLAwKyMgLkawAiVGUlggPFkusSYBFCstsDossDEriiAgPLAEI0KKOCMgLkawAiVGUlggPFkusSYBFCuwBEMusCYrLbA7LLAAFrAEJbAEJiAuRyNHI2GwBkUrIyA8IC4jOLEmARQrLbA8LLEIBCVCsAAWsAQlsAQlIC5HI0cjYSCwBCNCsAZFKyCwYFBYILBAUVizAiADIBuzAiYDGllCQiMgR7AEQ7CAYmAgsAArIIqKYSCwAkNgZCOwA0NhZFBYsAJDYRuwA0NgWbADJbCAYmGwAiVGYTgjIDwjOBshICBGI0ewACsjYTghWbEmARQrLbA9LLAwKy6xJgEUKy2wPiywMSshIyAgPLAEI0IjOLEmARQrsARDLrAmKy2wPyywABUgR7AAI0KyAAEBFRQTLrAsKi2wQCywABUgR7AAI0KyAAEBFRQTLrAsKi2wQSyxAAEUE7AtKi2wQiywLyotsEMssAAWRSMgLiBGiiNhOLEmARQrLbBELLAII0KwQystsEUssgAAPCstsEYssgABPCstsEcssgEAPCstsEgssgEBPCstsEkssgAAPSstsEossgABPSstsEsssgEAPSstsEwssgEBPSstsE0ssgAAOSstsE4ssgABOSstsE8ssgEAOSstsFAssgEBOSstsFEssgAAOystsFIssgABOystsFMssgEAOystsFQssgEBOystsFUssgAAPistsFYssgABPistsFcssgEAPistsFgssgEBPistsFkssgAAOistsFossgABOistsFsssgEAOistsFwssgEBOistsF0ssDIrLrEmARQrLbBeLLAyK7A2Ky2wXyywMiuwNystsGAssAAWsDIrsDgrLbBhLLAzKy6xJgEUKy2wYiywMyuwNistsGMssDMrsDcrLbBkLLAzK7A4Ky2wZSywNCsusSYBFCstsGYssDQrsDYrLbBnLLA0K7A3Ky2waCywNCuwOCstsGkssDUrLrEmARQrLbBqLLA1K7A2Ky2wayywNSuwNystsGwssDUrsDgrLbBtLCuwCGWwAyRQeLABFTAtAAAAS7gAyFJYsQEBjlm5CAAIAGMgsAEjRLADI3CyBCgJRVJEsgoCByqxBgFEsSQBiFFYsECIWLEGA0SxJgGIUVi4BACIWLEGAURZWVlZuAH/hbAEjbEFAEQAAA==&quot;) format(&quot;truetype&quot;);\n}\n/*\n  Globals\n*/\nbody {\n  margin: 0;\n  background: #556270;\n  color: #353d46;\n  font: 18px/27px &#39;Oxygen&#39;, sans-serif;\n}\n\nh1, h2, h3 {\n  color: #FF6B6B;\n  margin: 0 0 27px;\n}\n\n/*\n  Menu\n*/\nnav#slide-menu {\n  position: fixed;\n  top: 0;\n  left: -100px;\n  bottom: 0;\n  display: block;\n  float: left;\n  width: 100%;\n  max-width: 284px;\n  height: 100%;\n  -moz-transition: all 300ms;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\nnav#slide-menu &gt; ul {\n  display: block;\n  margin: 40px;\n  padding: 0;\n  list-style: none;\n  opacity: 0.5;\n  -moz-transition: all 300ms;\n  -webkit-transition: all 300ms transform;\n  transition: all 300ms transform;\n}\nnav#slide-menu &gt; ul li {\n  color: #dfe5eb;\n  padding: 6px 0;\n  cursor: pointer;\n}\nnav#slide-menu &gt; ul li:hover {\n  color: black;\n}\nnav#slide-menu &gt; ul li:before {\n  font-family: &quot;ico&quot;;\n  font-style: normal;\n  font-weight: normal;\n  speak: none;\n  display: inline-block;\n  text-decoration: inherit;\n  width: 1em;\n  color: #59e9df;\n  margin-right: 12px;\n  text-align: center;\n  font-variant: normal;\n  font-size: 0.75em;\n  text-transform: none;\n  line-height: 1em;\n}\nnav#slide-menu &gt; ul li.sep {\n  margin-top: 7px;\n  padding-top: 14px;\n  border-top: 1px solid #6b7b8d;\n}\nnav#slide-menu &gt; ul li.timeline:before {\n  content: &#39;\\e805&#39;;\n}\nnav#slide-menu &gt; ul li.events:before {\n  content: &#39;\\e802&#39;;\n}\nnav#slide-menu &gt; ul li.calendar:before {\n  content: &#39;\\e800&#39;;\n}\nnav#slide-menu &gt; ul li.settings:before {\n  content: &#39;\\e803&#39;;\n}\nnav#slide-menu &gt; ul li.logout:before {\n  content: &#39;\\e804&#39;;\n}\n\nbody.menu-active nav#slide-menu {\n  left: 0px;\n}\n\nbody.menu-active nav#slide-menu ul {\n  left: 0px;\n  opacity: 1;\n}\n\n/*\n  Content\n*/\ndiv#content {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  padding: 60px;\n  overflow: scroll;\n  background: #fcfeff;\n  border-radius: 0;\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -moz-box-shadow: -3px 0 6px #4a5562;\n  -webkit-box-shadow: -3px 0 6px #4a5562;\n  box-shadow: -3px 0 6px #4a5562;\n  -moz-transition: all 300ms;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\ndiv#content div.menu-trigger {\n  position: fixed;\n  top: 10px;\n  left: 10px;\n  width: 36px;\n  height: 36px;\n  background: #dfe5eb;\n  cursor: pointer;\n  border-radius: 5px;\n  -moz-transition: all 300ms;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\ndiv#content div.menu-trigger:before {\n  content: &#39;\\e801&#39;;\n  display: inline-block;\n  width: 36px;\n  height: 36px;\n  color: black;\n  font-family: &quot;ico&quot;;\n  font-style: normal;\n  font-size: 1.2em;\n  font-weight: normal;\n  font-variant: normal;\n  text-align: center;\n  text-transform: none;\n  line-height: 36px;\n}\ndiv#content div.menu-trigger:hover {\n  background: #556270;\n}\ndiv#content div.menu-trigger:hover:before {\n  color: #fcfeff;\n}\n\nbody.menu-active div#content {\n  left: 284px;\n  border-radius: 7px 0 0 7px;\n}\n\nbody.menu-active div#content .menu-trigger {\n  left: 294px;\n}","js":"/*\n  Slidemenu\n*/\n(function () {\n  var $body = document.body,\n  $menu_trigger = $body.getElementsByClassName(&#39;menu-trigger&#39;)[0];\n\n  if (typeof $menu_trigger !== &#39;undefined&#39;) {\n    $menu_trigger.addEventListener(&#39;click&#39;, function () {\n      $body.className = $body.className == &#39;menu-active&#39; ? &#39;&#39; : &#39;menu-active&#39;;\n    });\n  }\n\n  var options = {\n    dragLockToAxis: true,\n    dragBlockHorizontal: true,\n    preventDefault: true };\n\n\n\n  Hammer(document.getElementById(&#39;content&#39;)).on(&quot;dragleft dragright swipeleft swiperight&quot;, function (ev) {\n    $body.className = $body.className == &#39;menu-active&#39; ? &#39;&#39; : &#39;menu-active&#39;;\n  }, options);\n\n\n}).call(this);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

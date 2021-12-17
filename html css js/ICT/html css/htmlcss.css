@@ -1,0 +1,29 @@
+p{magin-left:15pt}
+
+/*parent*/
+#one{   background-color: blue;
+  height:400pt;
+  width: 100%;
+  background-size: cover;
+border:1pt solid #000000;
+margin-bottom:30pt;
+ padding:60pt}
+
+
+#two{ background-color:red;
+border:1pt solid green;
+height:200pt;
+width: 100%;
+margin-top:10pt;
+/*margin-collapse:after;*/
+/*this is for individual padding
+padding-left:40pt;
+padding-botton:30pt;
+padding-right:40pt;
+/*this is for shorthand padding
+padding:20pt 40pt 40pt 10pt
+this is for inherited pading the div will have the same padding as the parent box
+padding:inherit;
+*/
+
+}

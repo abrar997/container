@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - CSS Info Cards - Hover</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="jfyORkhXKF4yWblSMumjb1UPPiLz2NIbPCYGyQ5xlkut6q6Qr0cjtXfTNt7GY5YHKahmTY4WoWJ86WKKV7xpKg==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/rafaelavlucas/pen/rQWJYG" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-comment">&lt;!-- about --&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"about"</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg_links social portfolio"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://www.rafaelalucas.com"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg_links social dribbble"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://dribbble.com/rafaelalucas"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg_links social linkedin"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://www.linkedin.com/in/rafaelalucas/"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bg_links logo"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-comment">&lt;!-- end about --&gt;</span>
+   
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"content"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- card --&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"material-icons md-36"</span><span class="cm-tag cm-bracket">&gt;</span>face<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"title"</span><span class="cm-tag cm-bracket">&gt;</span>Profile<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text"</span><span class="cm-tag cm-bracket">&gt;</span>Click to see or edit your profile page.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- end card --&gt;</span>
+      <span class="cm-comment">&lt;!-- card --&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"material-icons md-36"</span><span class="cm-tag cm-bracket">&gt;</span>favorite_border<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"title"</span><span class="cm-tag cm-bracket">&gt;</span>Favourites<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text"</span><span class="cm-tag cm-bracket">&gt;</span>Check all your favourites in one place.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- end card --&gt;</span>
+      <span class="cm-comment">&lt;!-- card --&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"icon"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"material-icons md-36"</span><span class="cm-tag cm-bracket">&gt;</span>alternate_email<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"title"</span><span class="cm-tag cm-bracket">&gt;</span>Contacts<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">class</span>=<span class="cm-string">"text"</span><span class="cm-tag cm-bracket">&gt;</span>Add or change your contacts and links.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+         
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-comment">&lt;!-- end card --&gt;</span>
+   
+
+   
+   <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag cm-error">div</span><span class="cm-tag cm-bracket cm-error">&gt;</span>
+
+
+</code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+   <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+   <span class="cm-property">background-color</span>: <span class="cm-atom">#1D1D1D</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+   <span class="cm-property">font-family</span>: <span class="cm-variable">helvetica</span>;
+}
+
+<span class="cm-qualifier">.about</span> {
+   <span class="cm-variable-2">$cubic</span>: <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.64</span>, <span class="cm-number">0.01</span>, <span class="cm-number">0.07</span>, <span class="cm-number">1.65</span>);
+   <span class="cm-variable-2">$transition</span>: <span class="cm-number">0.6s</span> <span class="cm-variable-2">$cubic</span>;
+   <span class="cm-variable-2">$size</span>: <span class="cm-number">40px</span>;
+   <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+   <span class="cm-property">z-index</span>: <span class="cm-number">10</span>;
+   <span class="cm-property">bottom</span>: <span class="cm-number">10px</span>;
+   <span class="cm-property">right</span>: <span class="cm-number">10px</span>;
+   <span class="cm-property">width</span>: <span class="cm-variable-2">$size</span>;
+   <span class="cm-property">height</span>: <span class="cm-variable-2">$size</span>;
+   <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+   <span class="cm-property">justify-content</span>: <span class="cm-atom">flex-end</span>;
+   <span class="cm-property">align-items</span>: <span class="cm-atom">flex-end</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+
+   <span class="cm-qualifier">.bg_links</span> {
+      <span class="cm-property">width</span>: <span class="cm-variable-2">$size</span>;
+      <span class="cm-property">height</span>: <span class="cm-variable-2">$size</span>;
+      <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+      <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+      <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+      <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-atom">#fff</span>, <span class="cm-number">0.2</span>);
+      <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">backdrop-filter</span>: <span class="cm-variable cm-callee">blur</span>(<span class="cm-number">5px</span>);
+      <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+   }
+
+   <span class="cm-qualifier">.logo</span> {
+      <span class="cm-property">width</span>: <span class="cm-variable-2">$size</span>;
+      <span class="cm-property">height</span>: <span class="cm-variable-2">$size</span>;
+      <span class="cm-property">z-index</span>: <span class="cm-number">9</span>;
+      <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://rafaelalucas91.github.io/assets/codepen/logo_white.svg</span>);
+      <span class="cm-property">background-size</span>: <span class="cm-number">50%</span>;
+      <span class="cm-property">background-repeat</span>: <span class="cm-atom">no-repeat</span>;
+      <span class="cm-property">background-position</span>: <span class="cm-number">10px</span> <span class="cm-number">7px</span>;
+      <span class="cm-property">opacity</span>: <span class="cm-number">0.9</span>;
+      <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">1s</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>;
+      <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+      <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+   }
+
+   <span class="cm-qualifier">.social</span> {
+      <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+      <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+      <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+
+      <span class="cm-qualifier">.icon</span> {
+         <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+         <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+         <span class="cm-property">background-size</span>: <span class="cm-number">20px</span>;
+         <span class="cm-property">background-repeat</span>: <span class="cm-atom">no-repeat</span>;
+         <span class="cm-property">background-position</span>: <span class="cm-atom">center</span>;
+         <span class="cm-property">background-color</span>: <span class="cm-atom">transparent</span>;
+         <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+         <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.2s</span> <span class="cm-atom">ease</span>, <span class="cm-variable">background-color</span> <span class="cm-number">0.4s</span> <span class="cm-atom">ease</span>;
+         <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+         <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+      }
+
+      &amp;<span class="cm-qualifier">.portfolio</span> {
+         <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.8s</span> <span class="cm-atom">ease</span>;
+
+         <span class="cm-qualifier">.icon</span> {
+            <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://rafaelalucas91.github.io/assets/codepen/link.svg</span>);
+         }
+      }
+
+      &amp;<span class="cm-qualifier">.dribbble</span> {
+         <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+         <span class="cm-qualifier">.icon</span> {
+            <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://rafaelalucas91.github.io/assets/codepen/dribbble.svg</span>);
+         }
+      }
+
+      &amp;<span class="cm-qualifier">.linkedin</span> {
+         <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.8s</span> <span class="cm-atom">ease</span>;
+         <span class="cm-qualifier">.icon</span> {
+            <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://rafaelalucas91.github.io/assets/codepen/linkedin.svg</span>);
+         }
+      }
+   }
+
+   &amp;:<span class="cm-variable-3">hover</span> {
+      <span class="cm-property">width</span>: <span class="cm-number">105px</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">105px</span>;
+      <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$transition</span>;
+
+      <span class="cm-qualifier">.logo</span> {
+         <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+         <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.6s</span> <span class="cm-atom">ease</span>;
+      }
+
+      <span class="cm-qualifier">.social</span> {
+         <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+
+         <span class="cm-qualifier">.icon</span> {
+            <span class="cm-property">opacity</span>: <span class="cm-number">0.9</span>;
+         }
+
+         &amp;:<span class="cm-variable-3">hover</span> {
+            <span class="cm-property">background-size</span>: <span class="cm-number">28px</span>;
+            <span class="cm-qualifier">.icon</span> {
+               <span class="cm-property">background-size</span>: <span class="cm-number">65%</span>;
+               <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+            }
+         }
+
+         &amp;<span class="cm-qualifier">.portfolio</span> {
+            <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">bottom</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">40px</span>);
+            <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-number">0s</span> <span class="cm-variable-2">$cubic</span>;
+            <span class="cm-qualifier">.icon</span> {
+               &amp;:<span class="cm-variable-3">hover</span> {
+                  <span class="cm-property">background-color</span>: <span class="cm-atom">#698fb7</span>;
+               }
+            }
+         }
+
+         &amp;<span class="cm-qualifier">.dribbble</span> {
+            <span class="cm-property">bottom</span>: <span class="cm-number">45%</span>;
+            <span class="cm-property">right</span>: <span class="cm-number">45%</span>;
+            <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-number">0.15s</span> <span class="cm-variable-2">$cubic</span>;
+            <span class="cm-qualifier">.icon</span> {
+               &amp;:<span class="cm-variable-3">hover</span> {
+                  <span class="cm-property">background-color</span>: <span class="cm-atom">#ea4c89</span>;
+               }
+            }
+         }
+
+         &amp;<span class="cm-qualifier">.linkedin</span> {
+            <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+            <span class="cm-property">right</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> - <span class="cm-number">40px</span>);
+            <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-number">0.25s</span> <span class="cm-variable-2">$cubic</span>;
+            <span class="cm-qualifier">.icon</span> {
+               &amp;:<span class="cm-variable-3">hover</span> {
+                  <span class="cm-property">background-color</span>: <span class="cm-atom">#0077b5</span>;
+               }
+            }
+         }
+      }
+   }
+}
+
+<span class="cm-qualifier">.wrapper</span> {
+   <span class="cm-property">width</span>: <span class="cm-number">100vw</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+   <span class="cm-property">height</span>: <span class="cm-number">400px</span>;
+   <span class="cm-property">background-color</span>: <span class="cm-atom">#161616</span>;
+   <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+   <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">767px</span>) {
+   <span class="cm-qualifier">.wrapper</span> {
+      <span class="cm-property">height</span>: <span class="cm-number">700px</span>;
+   }
+}
+
+<span class="cm-qualifier">.content</span> {
+   <span class="cm-property">max-width</span>: <span class="cm-number">1024px</span>;
+   <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+   <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">4%</span>;
+   <span class="cm-property">padding-top</span>: <span class="cm-number">250px</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+   <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+   <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+}
+
+<span class="cm-def">@media</span> <span class="cm-attribute">screen</span> <span class="cm-keyword">and</span> (<span class="cm-property">max-width</span>: <span class="cm-number">767px</span>) {
+   <span class="cm-qualifier">.content</span> {
+      <span class="cm-property">padding-top</span>: <span class="cm-number">300px</span>;
+      <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+   }
+}
+
+<span class="cm-qualifier">.card</span> {
+   <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+   <span class="cm-property">max-width</span>: <span class="cm-number">300px</span>;
+   <span class="cm-property">min-width</span>: <span class="cm-number">200px</span>;
+   <span class="cm-property">height</span>: <span class="cm-number">250px</span>;
+   <span class="cm-property">background-color</span>: <span class="cm-atom">#292929</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">10px</span>;
+   <span class="cm-property">border-radius</span>: <span class="cm-number">10px</span>;
+   <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">2px</span> <span class="cm-number">10px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.24</span>);
+   <span class="cm-property">border</span>: <span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">7</span>, <span class="cm-number">7</span>, <span class="cm-number">7</span>, <span class="cm-number">0.12</span>);
+   <span class="cm-property">font-size</span>: <span class="cm-number">16px</span>;   
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+   <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+   <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+   <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+   <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-qualifier">.icon</span> {
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+   <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+   <span class="cm-property">height</span>: <span class="cm-number">80px</span>;
+   <span class="cm-property">max-width</span>:<span class="cm-number">80px</span>;
+   <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-atom">#FF7E7E</span> <span class="cm-number">0%</span>, <span class="cm-atom">#FF4848</span> <span class="cm-number">40%</span>, <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.28</span>) <span class="cm-number">60%</span>);
+   <span class="cm-property">border-radius</span>: <span class="cm-number">100%</span>;
+   <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+   <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.8s</span> <span class="cm-atom">ease</span>;
+   <span class="cm-property">background-position</span>: <span class="cm-number">0px</span>;
+   <span class="cm-property">background-size</span>: <span class="cm-number">200px</span>;
+}
+
+<span class="cm-qualifier">.material-icons</span><span class="cm-qualifier">.md-18</span> { <span class="cm-property">font-size</span>: <span class="cm-number">18px</span>; }
+<span class="cm-qualifier">.material-icons</span><span class="cm-qualifier">.md-24</span> { <span class="cm-property">font-size</span>: <span class="cm-number">24px</span>; }
+<span class="cm-qualifier">.material-icons</span><span class="cm-qualifier">.md-36</span> { <span class="cm-property">font-size</span>: <span class="cm-number">36px</span>; }
+<span class="cm-qualifier">.material-icons</span><span class="cm-qualifier">.md-48</span> { <span class="cm-property">font-size</span>: <span class="cm-number">48px</span>; }
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.title</span> {
+   <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+   <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">margin-top</span>: <span class="cm-number">30px</span>;
+   <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+   <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+   <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+   <span class="cm-property">letter-spacing</span>: <span class="cm-number">4px</span>;
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.text</span> {
+   <span class="cm-property">width</span>: <span class="cm-number">80%</span>;
+   <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+   <span class="cm-property">font-size</span>: <span class="cm-number">13px</span>;
+   <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+   <span class="cm-property">margin-top</span>: <span class="cm-number">20px</span>;
+   <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+   <span class="cm-property">font-weight</span>: <span class="cm-number">200</span>;
+   <span class="cm-property">letter-spacing</span>: <span class="cm-number">2px</span>;
+   <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+   <span class="cm-property">max-height</span>:<span class="cm-number">0</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> {
+   <span class="cm-property">height</span>: <span class="cm-number">270px</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.info</span> {
+   <span class="cm-property">height</span>: <span class="cm-number">90%</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.text</span> {
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+   <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+   <span class="cm-property">max-height</span>:<span class="cm-number">40px</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.icon</span> {
+   <span class="cm-property">background-position</span>: <span class="cm-number">-120px</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.icon</span> <span class="cm-tag">i</span> {
+   <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-atom">#FF7E7E</span>, <span class="cm-atom">#FF4848</span>);
+   <span class="cm-meta">-webkit-</span><span class="cm-property">background-clip</span>: <span class="cm-atom">text</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">text-fill-color</span>: <span class="cm-variable-3">transparent</span>;
+   <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+   <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease</span>;
+}</code></pre>
+<a href="https://codepen.io/rafaelavlucas/embed/rQWJYG?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for CSS Info Cards - Hover" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for CSS Info Cards - Hover" data-src="https://cdpn.io/rafaelavlucas/fullembedgrid/rQWJYG?animations=run&amp;type=embed" src="./rQWJYG(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/rafaelavlucas" target="_blank" rel="noopener"><img src="./default(9).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/rafaelavlucas" target="_blank" rel="noopener">Rafaela Lucas</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/rafaelavlucas" target="_blank" rel="noopener" class="about-user-more">
+See more by @rafaelavlucas on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;\n\n&lt;!-- about --&gt;\n&lt;div class=&quot;about&quot;&gt;\n   &lt;a class=&quot;bg_links social portfolio&quot; href=&quot;https://www.rafaelalucas.com&quot; target=&quot;_blank&quot;&gt;\n      &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;\n   &lt;/a&gt;\n   &lt;a class=&quot;bg_links social dribbble&quot; href=&quot;https://dribbble.com/rafaelalucas&quot; target=&quot;_blank&quot;&gt;\n      &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;\n   &lt;/a&gt;\n   &lt;a class=&quot;bg_links social linkedin&quot; href=&quot;https://www.linkedin.com/in/rafaelalucas/&quot; target=&quot;_blank&quot;&gt;\n      &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;\n   &lt;/a&gt;\n   &lt;a class=&quot;bg_links logo&quot;&gt;&lt;/a&gt;\n&lt;/div&gt;\n&lt;!-- end about --&gt;\n   \n   &lt;div class=&quot;content&quot;&gt;\n      &lt;!-- card --&gt;\n      &lt;div class=&quot;card&quot;&gt;\n         \n            &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;material-icons md-36&quot;&gt;face&lt;/i&gt;&lt;/div&gt;\n            &lt;p class=&quot;title&quot;&gt;Profile&lt;/p&gt;\n            &lt;p class=&quot;text&quot;&gt;Click to see or edit your profile page.&lt;/p&gt;\n         \n      &lt;/div&gt;\n      &lt;!-- end card --&gt;\n      &lt;!-- card --&gt;\n      &lt;div class=&quot;card&quot;&gt;\n         \n            &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;material-icons md-36&quot;&gt;favorite_border&lt;/i&gt;&lt;/div&gt;\n            &lt;p class=&quot;title&quot;&gt;Favourites&lt;/p&gt;\n            &lt;p class=&quot;text&quot;&gt;Check all your favourites in one place.&lt;/p&gt;\n         \n      &lt;/div&gt;\n      &lt;!-- end card --&gt;\n      &lt;!-- card --&gt;\n      &lt;div class=&quot;card&quot;&gt;\n         \n            &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;material-icons md-36&quot;&gt;alternate_email&lt;/i&gt;&lt;/div&gt;\n            &lt;p class=&quot;title&quot;&gt;Contacts&lt;/p&gt;\n            &lt;p class=&quot;text&quot;&gt;Add or change your contacts and links.&lt;/p&gt;\n         \n      &lt;/div&gt;\n      &lt;!-- end card --&gt;\n   \n\n   \n   &lt;/div&gt;\n&lt;/div&gt;","css":"body {\n  width: 100vw;\n  background-color: #1D1D1D;\n  margin: 0;\n  font-family: helvetica;\n}\n\n.about {\n  position: fixed;\n  z-index: 10;\n  bottom: 10px;\n  right: 10px;\n  width: 40px;\n  height: 40px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: flex-end;\n  transition: all 0.2s ease;\n}\n.about .bg_links {\n  width: 40px;\n  height: 40px;\n  border-radius: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: rgba(255, 255, 255, 0.2);\n  border-radius: 100%;\n  backdrop-filter: blur(5px);\n  position: absolute;\n}\n.about .logo {\n  width: 40px;\n  height: 40px;\n  z-index: 9;\n  background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);\n  background-size: 50%;\n  background-repeat: no-repeat;\n  background-position: 10px 7px;\n  opacity: 0.9;\n  transition: all 1s 0.2s ease;\n  bottom: 0;\n  right: 0;\n}\n.about .social {\n  opacity: 0;\n  right: 0;\n  bottom: 0;\n}\n.about .social .icon {\n  width: 100%;\n  height: 100%;\n  background-size: 20px;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-color: transparent;\n  display: flex;\n  transition: all 0.2s ease, background-color 0.4s ease;\n  opacity: 0;\n  border-radius: 100%;\n}\n.about .social.portfolio {\n  transition: all 0.8s ease;\n}\n.about .social.portfolio .icon {\n  background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);\n}\n.about .social.dribbble {\n  transition: all 0.3s ease;\n}\n.about .social.dribbble .icon {\n  background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);\n}\n.about .social.linkedin {\n  transition: all 0.8s ease;\n}\n.about .social.linkedin .icon {\n  background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);\n}\n.about:hover {\n  width: 105px;\n  height: 105px;\n  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);\n}\n.about:hover .logo {\n  opacity: 1;\n  transition: all 0.6s ease;\n}\n.about:hover .social {\n  opacity: 1;\n}\n.about:hover .social .icon {\n  opacity: 0.9;\n}\n.about:hover .social:hover {\n  background-size: 28px;\n}\n.about:hover .social:hover .icon {\n  background-size: 65%;\n  opacity: 1;\n}\n.about:hover .social.portfolio {\n  right: 0;\n  bottom: calc(100% - 40px);\n  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);\n}\n.about:hover .social.portfolio .icon:hover {\n  background-color: #698fb7;\n}\n.about:hover .social.dribbble {\n  bottom: 45%;\n  right: 45%;\n  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);\n}\n.about:hover .social.dribbble .icon:hover {\n  background-color: #ea4c89;\n}\n.about:hover .social.linkedin {\n  bottom: 0;\n  right: calc(100% - 40px);\n  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);\n}\n.about:hover .social.linkedin .icon:hover {\n  background-color: #0077b5;\n}\n\n.wrapper {\n  width: 100vw;\n  margin: 0 auto;\n  height: 400px;\n  background-color: #161616;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  transition: all 0.3s ease;\n}\n\n@media screen and (max-width: 767px) {\n  .wrapper {\n    height: 700px;\n  }\n}\n.content {\n  max-width: 1024px;\n  width: 100%;\n  padding: 0 4%;\n  padding-top: 250px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n@media screen and (max-width: 767px) {\n  .content {\n    padding-top: 300px;\n    flex-direction: column;\n  }\n}\n.card {\n  width: 100%;\n  max-width: 300px;\n  min-width: 200px;\n  height: 250px;\n  background-color: #292929;\n  margin: 10px;\n  border-radius: 10px;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);\n  border: 2px solid rgba(7, 7, 7, 0.12);\n  font-size: 16px;\n  transition: all 0.3s ease;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\n.icon {\n  margin: 0 auto;\n  width: 100%;\n  height: 80px;\n  max-width: 80px;\n  background: linear-gradient(90deg, #FF7E7E 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);\n  border-radius: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: white;\n  transition: all 0.8s ease;\n  background-position: 0px;\n  background-size: 200px;\n}\n\n.material-icons.md-18 {\n  font-size: 18px;\n}\n\n.material-icons.md-24 {\n  font-size: 24px;\n}\n\n.material-icons.md-36 {\n  font-size: 36px;\n}\n\n.material-icons.md-48 {\n  font-size: 48px;\n}\n\n.card .title {\n  width: 100%;\n  margin: 0;\n  text-align: center;\n  margin-top: 30px;\n  color: white;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 4px;\n}\n\n.card .text {\n  width: 80%;\n  margin: 0 auto;\n  font-size: 13px;\n  text-align: center;\n  margin-top: 20px;\n  color: white;\n  font-weight: 200;\n  letter-spacing: 2px;\n  opacity: 0;\n  max-height: 0;\n  transition: all 0.3s ease;\n}\n\n.card:hover {\n  height: 270px;\n}\n\n.card:hover .info {\n  height: 90%;\n}\n\n.card:hover .text {\n  transition: all 0.3s ease;\n  opacity: 1;\n  max-height: 40px;\n}\n\n.card:hover .icon {\n  background-position: -120px;\n  transition: all 0.3s ease;\n}\n\n.card:hover .icon i {\n  background: linear-gradient(90deg, #FF7E7E, #FF4848);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  opacity: 1;\n  transition: all 0.3s ease;\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

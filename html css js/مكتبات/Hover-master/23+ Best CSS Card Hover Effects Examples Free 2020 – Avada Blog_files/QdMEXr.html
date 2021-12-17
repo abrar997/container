@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://codepen.io/jorgesanes10/embed/QdMEXr?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - EC card hover</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="IzPe1aLIRJ5sIzAN13o9Ws2Yj7z+b40qrpK1nuMsmDezjIyZzAmVolRx0/GSZQ/u3tW1x2t4a+abyca/X9vAfw==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/jorgesanes10/embed/QdMEXr?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/jorgesanes10/embed/QdMEXr?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/jorgesanes10/embed/QdMEXr?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/jorgesanes10/embed/QdMEXr?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/jorgesanes10/pen/QdMEXr" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">link</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://fonts.googleapis.com/css?family=Open+Sans"</span> <span class="cm-attribute">rel</span>=<span class="cm-string">"stylesheet"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card education"</span><span class="cm-tag cm-bracket">&gt;</span>
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"overlay"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"circle"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"71px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"76px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"29 14 71 76"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">xmlns:xlink</span>=<span class="cm-string">"http://www.w3.org/1999/xlink"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>Created with Sketch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">fill-rule</span>=<span class="cm-string">"evenodd"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(30.000000, 14.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-8"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#D98A19"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-7"</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-6"</span><span class="cm-tag cm-bracket">&gt;</span>
+                    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0,0 L0,75.9204805 L69.1511499,75.9204805 L0,0 Z M14.0563973,32.2825679 L42.9457663,63.9991501 L14.2315268,63.9991501 L14.0563973,32.2825679 Z"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-20"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(0.000000, 14.114286)"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"#FFFFFF"</span> <span class="cm-attribute">stroke-linecap</span>=<span class="cm-string">"square"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,54.9642857 L4.70316223,54.9642857"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,50.4404762 L4.70316223,50.4404762"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,45.9166667 L4.70316223,45.9166667"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,41.3928571 L2.93999114,41.3928571"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,36.8690476 L4.70316223,36.8690476"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,32.3452381 L4.70316223,32.3452381"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,27.8214286 L4.70316223,27.8214286"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,23.297619 L2.93999114,23.297619"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,18.7738095 L4.70316223,18.7738095"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,14.25 L4.70316223,14.25"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,9.72619048 L4.70316223,9.72619048"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,5.20238095 L2.93999114,5.20238095"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0.419998734,0.678571429 L4.70316223,0.678571429"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Line"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Education<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+
+
+
+
+
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card credentialing"</span><span class="cm-tag cm-bracket">&gt;</span>
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"overlay"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"circle"</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"64px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"72px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"27 21 64 72"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">xmlns:xlink</span>=<span class="cm-string">"http://www.w3.org/1999/xlink"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>Created with Sketch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"path-1"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"60.9784821 18.4748913 60.9784821 0.0299638385 0.538377293 0.0299638385 0.538377293 18.4748913"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-12"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">fill-rule</span>=<span class="cm-string">"evenodd"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(27.000000, 21.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-5"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-3"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(2.262327, 21.615176)"</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">mask</span> <span class="cm-attribute">id</span>=<span class="cm-string">"mask-2"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"white"</span><span class="cm-tag cm-bracket">&gt;</span>
+                    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">use</span> <span class="cm-attribute">xlink:href</span>=<span class="cm-string">"#path-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">use</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">mask</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Clip-2"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M7.17774177,18.4748913 L54.3387782,18.4748913 C57.9910226,18.4748913 60.9789911,15.7266455 60.9789911,12.3681986 L60.9789911,6.13665655 C60.9789911,2.77820965 57.9910226,0.0299638385 54.3387782,0.0299638385 L7.17774177,0.0299638385 C3.52634582,0.0299638385 0.538377293,2.77820965 0.538377293,6.13665655 L0.538377293,12.3681986 C0.538377293,15.7266455 3.52634582,18.4748913 7.17774177,18.4748913"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#59A785"</span> <span class="cm-attribute">mask</span>=<span class="cm-string">"url(#mask-2)"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-4"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#FFFFFF"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(31.785111, 30.877531) rotate(-2.000000) translate(-31.785111, -30.877531) "</span> <span class="cm-attribute">points</span>=<span class="cm-string">"62.0618351 55.9613216 7.2111488 60.3692832 1.50838775 5.79374073 56.3582257 1.38577917"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ellipse</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Oval-3"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#25D48A"</span> <span class="cm-attribute">opacity</span>=<span class="cm-string">"0.216243004"</span> <span class="cm-attribute">cx</span>=<span class="cm-string">"30.0584472"</span> <span class="cm-attribute">cy</span>=<span class="cm-string">"21.7657707"</span> <span class="cm-attribute">rx</span>=<span class="cm-string">"9.95169733"</span> <span class="cm-attribute">ry</span>=<span class="cm-string">"9.17325562"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ellipse</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Group-4"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(16.959615, 6.479082)"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#54C796"</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-6"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"10.7955395 21.7823628 0.11873799 11.3001058 4.25482787 7.73131106 11.0226557 14.3753897 27.414824 1.77635684e-15 31.3261391 3.77891399"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M4.82347935,67.4368303 L61.2182039,67.4368303 C62.3304205,67.4368303 63.2407243,66.5995595 63.2407243,65.5765753 L63.2407243,31.3865871 C63.2407243,30.3636029 62.3304205,29.5263321 61.2182039,29.5263321 L4.82347935,29.5263321 C3.71126278,29.5263321 2.80095891,30.3636029 2.80095891,31.3865871 L2.80095891,65.5765753 C2.80095891,66.5995595 3.71126278,67.4368303 4.82347935,67.4368303"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-8"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#59B08B"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M33.3338063,67.4368303 L61.2181191,67.4368303 C62.3303356,67.4368303 63.2406395,66.5995595 63.2406395,65.5765753 L63.2406395,31.3865871 C63.2406395,30.3636029 62.3303356,29.5263321 61.2181191,29.5263321 L33.3338063,29.5263321 C32.2215897,29.5263321 31.3112859,30.3636029 31.3112859,31.3865871 L31.3112859,65.5765753 C31.3112859,66.5995595 32.2215897,67.4368303 33.3338063,67.4368303"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-10"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#4FC391"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M29.4284029,33.2640869 C29.4284029,34.2202068 30.2712569,34.9954393 31.3107768,34.9954393 C32.3502968,34.9954393 33.1931508,34.2202068 33.1931508,33.2640869 C33.1931508,32.3079669 32.3502968,31.5327345 31.3107768,31.5327345 C30.2712569,31.5327345 29.4284029,32.3079669 29.4284029,33.2640869"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-15"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#FEFEFE"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M8.45417501,71.5549073 L57.5876779,71.5549073 C60.6969637,71.5549073 63.2412334,69.2147627 63.2412334,66.3549328 L63.2412334,66.3549328 C63.2412334,63.4951029 60.6969637,61.1549584 57.5876779,61.1549584 L8.45417501,61.1549584 C5.34488919,61.1549584 2.80061956,63.4951029 2.80061956,66.3549328 L2.80061956,66.3549328 C2.80061956,69.2147627 5.34488919,71.5549073 8.45417501,71.5549073"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-12"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#5BD6A2"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Credentialing<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+
+
+
+
+
+
+
+
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card wallet"</span><span class="cm-tag cm-bracket">&gt;</span>
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"overlay"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"circle"</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"78px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"60px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"23 29 78 60"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">xmlns:xlink</span>=<span class="cm-string">"http://www.w3.org/1999/xlink"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>Created with Sketch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"icon"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">fill-rule</span>=<span class="cm-string">"evenodd"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(23.000000, 29.500000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">rect</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Rectangle-3"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#AC8BE9"</span> <span class="cm-attribute">x</span>=<span class="cm-string">"67.8357511"</span> <span class="cm-attribute">y</span>=<span class="cm-string">"26.0333433"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"9.40495664"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"21.8788565"</span> <span class="cm-attribute">rx</span>=<span class="cm-string">"4.70247832"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">rect</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">rect</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Rectangle-3"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#6A5297"</span> <span class="cm-attribute">x</span>=<span class="cm-string">"67.8357511"</span> <span class="cm-attribute">y</span>=<span class="cm-string">"38.776399"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"9.40495664"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"10.962961"</span> <span class="cm-attribute">rx</span>=<span class="cm-string">"4.70247832"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">rect</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">polygon</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Rectangle-2"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#6A5297"</span> <span class="cm-attribute">points</span>=<span class="cm-string">"57.3086772 0 67.1649301 26.3776902 14.4413177 45.0699507 4.58506484 18.6922605"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">polygon</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M0,19.6104296 C0,16.2921718 2.68622235,13.6021923 5.99495032,13.6021923 L67.6438591,13.6021923 C70.9547788,13.6021923 73.6388095,16.2865506 73.6388095,19.6104296 L73.6388095,52.6639057 C73.6388095,55.9821635 70.9525871,58.672143 67.6438591,58.672143 L5.99495032,58.672143 C2.68403068,58.672143 0,55.9877847 0,52.6639057 L0,19.6104296 Z"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Rectangle"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#8B6FC0"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M47.5173769,27.0835169 C45.0052827,24.5377699 40.9347162,24.5377699 38.422622,27.0835169 L36.9065677,28.6198808 L35.3905134,27.0835169 C32.8799903,24.5377699 28.8078527,24.5377699 26.2957585,27.0835169 C23.7852354,29.6292639 23.7852354,33.7559532 26.2957585,36.3001081 L36.9065677,47.0530632 L47.5173769,36.3001081 C50.029471,33.7559532 50.029471,29.6292639 47.5173769,27.0835169"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-12"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#F6F1FF"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">rect</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Rectangle-4"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#AC8BE9"</span> <span class="cm-attribute">x</span>=<span class="cm-string">"58.0305835"</span> <span class="cm-attribute">y</span>=<span class="cm-string">"26.1162588"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"15.6082259"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"12.863158"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">rect</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ellipse</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Oval"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#FFFFFF"</span> <span class="cm-attribute">cx</span>=<span class="cm-string">"65.8346965"</span> <span class="cm-attribute">cy</span>=<span class="cm-string">"33.0919007"</span> <span class="cm-attribute">rx</span>=<span class="cm-string">"2.20116007"</span> <span class="cm-attribute">ry</span>=<span class="cm-string">"2.23319575"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ellipse</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Wallet<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+
+
+
+
+
+
+
+
+
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card human-resources"</span><span class="cm-tag cm-bracket">&gt;</span>
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"overlay"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"circle"</span><span class="cm-tag cm-bracket">&gt;</span>
+     
+    
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"66px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"77px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"1855 26 66 77"</span> <span class="cm-attribute">version</span>=<span class="cm-string">"1.1"</span> <span class="cm-attribute">xmlns</span>=<span class="cm-string">"http://www.w3.org/2000/svg"</span> <span class="cm-attribute">xmlns:xlink</span>=<span class="cm-string">"http://www.w3.org/1999/xlink"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-comment">&lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>Created with Sketch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">desc</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">defs</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">g</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Page-1"</span> <span class="cm-attribute">stroke</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">stroke-width</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"none"</span> <span class="cm-attribute">fill-rule</span>=<span class="cm-string">"evenodd"</span> <span class="cm-attribute">transform</span>=<span class="cm-string">"translate(1855.000000, 26.000000)"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M4.28872448,42.7464904 C4.28872448,39.3309774 5.4159227,33.7621426 6.40576697,30.4912557 C10.5920767,32.1098991 14.3021264,35.1207513 18.69596,35.1207513 C30.993618,35.1207513 42.5761396,28.7162991 49.9992251,17.9014817 C56.8027248,23.8881252 60.8188351,33.0463165 60.8188351,42.7464904 C60.8188351,60.817447 47.6104607,76.6693426 32.5537798,76.6693426 C17.4970989,76.6693426 4.28872448,60.817447 4.28872448,42.7464904"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-8"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#AFCEFF"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M64.3368879,31.1832696 L62.8424171,46.6027478 L60.6432609,46.7824348 L59.8340669,34.6791304 L47.6573402,25.3339478 C44.2906753,34.068487 34.3459503,40.2903304 24.4684093,40.2903304 C17.7559812,40.2903304 10.046244,37.4168 5.80469412,32.8004522 L5.80469412,34.6791304 L5.80469412,46.6027478 L4.28932167,46.6027478 L1.30187314,27.8802435 C1.30187314,20.9790957 3.52342407,15.5432 7.27229127,11.3578087 C13.132229,4.79558261 21.8124018,0.0492173913 30.5672235,0.342852174 C37.4603019,0.569286957 42.6678084,2.72991304 50.8299179,0.342852174 C51.4629405,1.44434783 51.8615656,3.00455652 51.5868577,5.22507826 C51.4629405,6.88316522 51.2106273,7.52302609 50.8299179,8.45067826 C58.685967,14.1977391 64.3368879,20.7073739 64.3368879,31.1832696"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-10"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#3B6CB7"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M58.9405197,54.5582052 C62.0742801,54.8270052 65.3603242,52.60064 65.6350321,49.5386574 C65.772386,48.009127 65.2617876,46.5570226 64.3182257,45.4584487 C63.3761567,44.3613357 62.0205329,43.6162922 60.4529062,43.4818922 L58.9405197,54.5582052 Z"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-13"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#568ADC"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M6.32350389,54.675367 C3.18227865,54.8492104 0.484467804,52.4957496 0.306803449,49.4264626 C0.217224782,47.8925496 0.775598471,46.4579757 1.75200594,45.3886191 C2.7284134,44.3192626 4.10792487,43.6165843 5.67853749,43.530393 L6.32350389,54.675367 Z"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Fill-15"</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#568ADC"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">path</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">g</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Human Resources<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#f2f4f8</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">space-around</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">flex-wrap</span>: <span class="cm-atom">wrap</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Open Sans"</span>;
+}
+
+<span class="cm-qualifier">.education</span> {
+  <span class="cm-variable-2">--bg-color</span>: <span class="cm-atom">#ffd861</span>;
+  <span class="cm-variable-2">--bg-color-light</span>: <span class="cm-atom">#ffeeba</span>;
+  <span class="cm-variable-2">--text-color-hover</span>: <span class="cm-atom">#4C5656</span>;
+  <span class="cm-variable-2">--box-shadow-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">215</span>, <span class="cm-number">97</span>, <span class="cm-number">0.48</span>);
+}
+
+<span class="cm-qualifier">.credentialing</span> {
+  <span class="cm-variable-2">--bg-color</span>: <span class="cm-atom">#B8F9D3</span>;
+  <span class="cm-variable-2">--bg-color-light</span>: <span class="cm-atom">#e2fced</span>;
+  <span class="cm-variable-2">--text-color-hover</span>: <span class="cm-atom">#4C5656</span>;
+  <span class="cm-variable-2">--box-shadow-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">184</span>, <span class="cm-number">249</span>, <span class="cm-number">211</span>, <span class="cm-number">0.48</span>);
+}
+
+<span class="cm-qualifier">.wallet</span> {
+  <span class="cm-variable-2">--bg-color</span>: <span class="cm-atom">#CEB2FC</span>;
+  <span class="cm-variable-2">--bg-color-light</span>: <span class="cm-atom">#F0E7FF</span>;
+  <span class="cm-variable-2">--text-color-hover</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-variable-2">--box-shadow-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">206</span>, <span class="cm-number">178</span>, <span class="cm-number">252</span>, <span class="cm-number">0.48</span>);
+}
+
+<span class="cm-qualifier">.human-resources</span> {
+  <span class="cm-variable-2">--bg-color</span>: <span class="cm-atom">#DCE9FF</span>;
+  <span class="cm-variable-2">--bg-color-light</span>: <span class="cm-atom">#f1f7ff</span>;
+  <span class="cm-variable-2">--text-color-hover</span>: <span class="cm-atom">#4C5656</span>;
+  <span class="cm-variable-2">--box-shadow-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">220</span>, <span class="cm-number">233</span>, <span class="cm-number">255</span>, <span class="cm-number">0.48</span>);
+}
+
+<span class="cm-qualifier">.card</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">220px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">321px</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">border-top-right-radius</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">14px</span> <span class="cm-number">26px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0.04</span>);
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-5px</span>) <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">1.005</span>) <span class="cm-variable cm-callee">translateZ</span>(<span class="cm-number">0</span>);
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">24px</span> <span class="cm-number">36px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0.11</span>),
+    <span class="cm-number">0</span> <span class="cm-number">24px</span> <span class="cm-number">46px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--box-shadow-color</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.overlay</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">4</span>) <span class="cm-variable cm-callee">translateZ</span>(<span class="cm-number">0</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.circle</span> {
+  <span class="cm-property">border-color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color-light</span>);
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.circle</span>:<span class="cm-variable-3">after</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color-light</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-tag">p</span> {
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--text-color-hover</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">active</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">1</span>) <span class="cm-variable cm-callee">translateZ</span>(<span class="cm-number">0</span>);
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">15px</span> <span class="cm-number">24px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0.11</span>),
+    <span class="cm-number">0</span> <span class="cm-number">15px</span> <span class="cm-number">24px</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--box-shadow-color</span>);
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-tag">p</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">17px</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#4C5656</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">30px</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">1000</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">color</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+}
+
+<span class="cm-qualifier">.circle</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">131px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">131px</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color</span>);
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">1</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+}
+
+<span class="cm-qualifier">.circle</span>:<span class="cm-variable-3">after</span> {
+  <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">118px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">118px</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color</span>);
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">7px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">7px</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">opacity</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+}
+
+<span class="cm-qualifier">.circle</span> <span class="cm-tag">svg</span> {
+  <span class="cm-property">z-index</span>: <span class="cm-number">10000</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateZ</span>(<span class="cm-number">0</span>);
+}
+
+<span class="cm-qualifier">.overlay</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">118px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>; 
+  <span class="cm-property">height</span>: <span class="cm-number">118px</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--bg-color</span>);
+  <span class="cm-property">top</span>: <span class="cm-number">70px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">50px</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-number">0.3s</span> <span class="cm-atom">ease-out</span>;
+}</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for EC card hover" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for EC card hover" data-src="https://cdpn.io/jorgesanes10/fullembedgrid/QdMEXr?animations=run&amp;type=embed" src="./QdMEXr(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/jorgesanes10" target="_blank" rel="noopener"><img src="./aa69151f1cbe2b1de094163fe0c968ef.jpeg" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/jorgesanes10" target="_blank" rel="noopener">Jorge Sanes</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/jorgesanes10" target="_blank" rel="noopener" class="about-user-more">
+See more by @jorgesanes10 on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans&quot; rel=&quot;stylesheet&quot;&gt;\n\n&lt;a href=&quot;#&quot; class=&quot;card education&quot;&gt;\n     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;\n  &lt;div class=&quot;circle&quot;&gt;\n\n&lt;svg width=&quot;71px&quot; height=&quot;76px&quot; viewBox=&quot;29 14 71 76&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n    &lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;\n    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;\n    &lt;defs&gt;&lt;/defs&gt;\n    &lt;g id=&quot;Group&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(30.000000, 14.000000)&quot;&gt;\n        &lt;g id=&quot;Group-8&quot; fill=&quot;#D98A19&quot;&gt;\n            &lt;g id=&quot;Group-7&quot;&gt;\n                &lt;g id=&quot;Group-6&quot;&gt;\n                    &lt;path d=&quot;M0,0 L0,75.9204805 L69.1511499,75.9204805 L0,0 Z M14.0563973,32.2825679 L42.9457663,63.9991501 L14.2315268,63.9991501 L14.0563973,32.2825679 Z&quot; id=&quot;Fill-1&quot;&gt;&lt;/path&gt;\n                &lt;/g&gt;\n            &lt;/g&gt;\n        &lt;/g&gt;\n        &lt;g id=&quot;Group-20&quot; transform=&quot;translate(0.000000, 14.114286)&quot; stroke=&quot;#FFFFFF&quot; stroke-linecap=&quot;square&quot;&gt;\n            &lt;path d=&quot;M0.419998734,54.9642857 L4.70316223,54.9642857&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,50.4404762 L4.70316223,50.4404762&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,45.9166667 L4.70316223,45.9166667&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,41.3928571 L2.93999114,41.3928571&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,36.8690476 L4.70316223,36.8690476&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,32.3452381 L4.70316223,32.3452381&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,27.8214286 L4.70316223,27.8214286&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,23.297619 L2.93999114,23.297619&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,18.7738095 L4.70316223,18.7738095&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,14.25 L4.70316223,14.25&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,9.72619048 L4.70316223,9.72619048&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,5.20238095 L2.93999114,5.20238095&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M0.419998734,0.678571429 L4.70316223,0.678571429&quot; id=&quot;Line&quot;&gt;&lt;/path&gt;\n        &lt;/g&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;\n  &lt;/div&gt;\n  &lt;p&gt;Education&lt;/p&gt;\n&lt;/a&gt;\n\n\n\n\n\n\n&lt;a href=&quot;#&quot; class=&quot;card credentialing&quot;&gt;\n     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;\n  &lt;div class=&quot;circle&quot;&gt;\n    \n&lt;svg width=&quot;64px&quot; height=&quot;72px&quot; viewBox=&quot;27 21 64 72&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n    &lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;\n    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;\n    &lt;defs&gt;\n        &lt;polygon id=&quot;path-1&quot; points=&quot;60.9784821 18.4748913 60.9784821 0.0299638385 0.538377293 0.0299638385 0.538377293 18.4748913&quot;&gt;&lt;/polygon&gt;\n    &lt;/defs&gt;\n    &lt;g id=&quot;Group-12&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(27.000000, 21.000000)&quot;&gt;\n        &lt;g id=&quot;Group-5&quot;&gt;\n            &lt;g id=&quot;Group-3&quot; transform=&quot;translate(2.262327, 21.615176)&quot;&gt;\n                &lt;mask id=&quot;mask-2&quot; fill=&quot;white&quot;&gt;\n                    &lt;use xlink:href=&quot;#path-1&quot;&gt;&lt;/use&gt;\n                &lt;/mask&gt;\n                &lt;g id=&quot;Clip-2&quot;&gt;&lt;/g&gt;\n                &lt;path d=&quot;M7.17774177,18.4748913 L54.3387782,18.4748913 C57.9910226,18.4748913 60.9789911,15.7266455 60.9789911,12.3681986 L60.9789911,6.13665655 C60.9789911,2.77820965 57.9910226,0.0299638385 54.3387782,0.0299638385 L7.17774177,0.0299638385 C3.52634582,0.0299638385 0.538377293,2.77820965 0.538377293,6.13665655 L0.538377293,12.3681986 C0.538377293,15.7266455 3.52634582,18.4748913 7.17774177,18.4748913&quot; id=&quot;Fill-1&quot; fill=&quot;#59A785&quot; mask=&quot;url(#mask-2)&quot;&gt;&lt;/path&gt;\n            &lt;/g&gt;\n            &lt;polygon id=&quot;Fill-4&quot; fill=&quot;#FFFFFF&quot; transform=&quot;translate(31.785111, 30.877531) rotate(-2.000000) translate(-31.785111, -30.877531) &quot; points=&quot;62.0618351 55.9613216 7.2111488 60.3692832 1.50838775 5.79374073 56.3582257 1.38577917&quot;&gt;&lt;/polygon&gt;\n            &lt;ellipse id=&quot;Oval-3&quot; fill=&quot;#25D48A&quot; opacity=&quot;0.216243004&quot; cx=&quot;30.0584472&quot; cy=&quot;21.7657707&quot; rx=&quot;9.95169733&quot; ry=&quot;9.17325562&quot;&gt;&lt;/ellipse&gt;\n            &lt;g id=&quot;Group-4&quot; transform=&quot;translate(16.959615, 6.479082)&quot; fill=&quot;#54C796&quot;&gt;\n                &lt;polygon id=&quot;Fill-6&quot; points=&quot;10.7955395 21.7823628 0.11873799 11.3001058 4.25482787 7.73131106 11.0226557 14.3753897 27.414824 1.77635684e-15 31.3261391 3.77891399&quot;&gt;&lt;/polygon&gt;\n            &lt;/g&gt;\n            &lt;path d=&quot;M4.82347935,67.4368303 L61.2182039,67.4368303 C62.3304205,67.4368303 63.2407243,66.5995595 63.2407243,65.5765753 L63.2407243,31.3865871 C63.2407243,30.3636029 62.3304205,29.5263321 61.2182039,29.5263321 L4.82347935,29.5263321 C3.71126278,29.5263321 2.80095891,30.3636029 2.80095891,31.3865871 L2.80095891,65.5765753 C2.80095891,66.5995595 3.71126278,67.4368303 4.82347935,67.4368303&quot; id=&quot;Fill-8&quot; fill=&quot;#59B08B&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M33.3338063,67.4368303 L61.2181191,67.4368303 C62.3303356,67.4368303 63.2406395,66.5995595 63.2406395,65.5765753 L63.2406395,31.3865871 C63.2406395,30.3636029 62.3303356,29.5263321 61.2181191,29.5263321 L33.3338063,29.5263321 C32.2215897,29.5263321 31.3112859,30.3636029 31.3112859,31.3865871 L31.3112859,65.5765753 C31.3112859,66.5995595 32.2215897,67.4368303 33.3338063,67.4368303&quot; id=&quot;Fill-10&quot; fill=&quot;#4FC391&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M29.4284029,33.2640869 C29.4284029,34.2202068 30.2712569,34.9954393 31.3107768,34.9954393 C32.3502968,34.9954393 33.1931508,34.2202068 33.1931508,33.2640869 C33.1931508,32.3079669 32.3502968,31.5327345 31.3107768,31.5327345 C30.2712569,31.5327345 29.4284029,32.3079669 29.4284029,33.2640869&quot; id=&quot;Fill-15&quot; fill=&quot;#FEFEFE&quot;&gt;&lt;/path&gt;\n            &lt;path d=&quot;M8.45417501,71.5549073 L57.5876779,71.5549073 C60.6969637,71.5549073 63.2412334,69.2147627 63.2412334,66.3549328 L63.2412334,66.3549328 C63.2412334,63.4951029 60.6969637,61.1549584 57.5876779,61.1549584 L8.45417501,61.1549584 C5.34488919,61.1549584 2.80061956,63.4951029 2.80061956,66.3549328 L2.80061956,66.3549328 C2.80061956,69.2147627 5.34488919,71.5549073 8.45417501,71.5549073&quot; id=&quot;Fill-12&quot; fill=&quot;#5BD6A2&quot;&gt;&lt;/path&gt;\n        &lt;/g&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;\n\n  &lt;/div&gt;\n  &lt;p&gt;Credentialing&lt;/p&gt;\n&lt;/a&gt;\n\n\n\n\n\n\n\n\n\n&lt;a href=&quot;#&quot; class=&quot;card wallet&quot;&gt;\n     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;\n  &lt;div class=&quot;circle&quot;&gt;\n    \n    \n&lt;svg width=&quot;78px&quot; height=&quot;60px&quot; viewBox=&quot;23 29 78 60&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n    &lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;\n    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;\n    &lt;defs&gt;&lt;/defs&gt;\n    &lt;g id=&quot;icon&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(23.000000, 29.500000)&quot;&gt;\n        &lt;rect id=&quot;Rectangle-3&quot; fill=&quot;#AC8BE9&quot; x=&quot;67.8357511&quot; y=&quot;26.0333433&quot; width=&quot;9.40495664&quot; height=&quot;21.8788565&quot; rx=&quot;4.70247832&quot;&gt;&lt;/rect&gt;\n        &lt;rect id=&quot;Rectangle-3&quot; fill=&quot;#6A5297&quot; x=&quot;67.8357511&quot; y=&quot;38.776399&quot; width=&quot;9.40495664&quot; height=&quot;10.962961&quot; rx=&quot;4.70247832&quot;&gt;&lt;/rect&gt;\n        &lt;polygon id=&quot;Rectangle-2&quot; fill=&quot;#6A5297&quot; points=&quot;57.3086772 0 67.1649301 26.3776902 14.4413177 45.0699507 4.58506484 18.6922605&quot;&gt;&lt;/polygon&gt;\n        &lt;path d=&quot;M0,19.6104296 C0,16.2921718 2.68622235,13.6021923 5.99495032,13.6021923 L67.6438591,13.6021923 C70.9547788,13.6021923 73.6388095,16.2865506 73.6388095,19.6104296 L73.6388095,52.6639057 C73.6388095,55.9821635 70.9525871,58.672143 67.6438591,58.672143 L5.99495032,58.672143 C2.68403068,58.672143 0,55.9877847 0,52.6639057 L0,19.6104296 Z&quot; id=&quot;Rectangle&quot; fill=&quot;#8B6FC0&quot;&gt;&lt;/path&gt;\n        &lt;path d=&quot;M47.5173769,27.0835169 C45.0052827,24.5377699 40.9347162,24.5377699 38.422622,27.0835169 L36.9065677,28.6198808 L35.3905134,27.0835169 C32.8799903,24.5377699 28.8078527,24.5377699 26.2957585,27.0835169 C23.7852354,29.6292639 23.7852354,33.7559532 26.2957585,36.3001081 L36.9065677,47.0530632 L47.5173769,36.3001081 C50.029471,33.7559532 50.029471,29.6292639 47.5173769,27.0835169&quot; id=&quot;Fill-12&quot; fill=&quot;#F6F1FF&quot;&gt;&lt;/path&gt;\n        &lt;rect id=&quot;Rectangle-4&quot; fill=&quot;#AC8BE9&quot; x=&quot;58.0305835&quot; y=&quot;26.1162588&quot; width=&quot;15.6082259&quot; height=&quot;12.863158&quot;&gt;&lt;/rect&gt;\n        &lt;ellipse id=&quot;Oval&quot; fill=&quot;#FFFFFF&quot; cx=&quot;65.8346965&quot; cy=&quot;33.0919007&quot; rx=&quot;2.20116007&quot; ry=&quot;2.23319575&quot;&gt;&lt;/ellipse&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;\n\n  &lt;/div&gt;\n  &lt;p&gt;Wallet&lt;/p&gt;\n&lt;/a&gt;\n\n\n\n\n\n\n\n\n\n\n&lt;a href=&quot;#&quot; class=&quot;card human-resources&quot;&gt;\n     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;\n  &lt;div class=&quot;circle&quot;&gt;\n     \n    \n&lt;svg width=&quot;66px&quot; height=&quot;77px&quot; viewBox=&quot;1855 26 66 77&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n    &lt;!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch --&gt;\n    &lt;desc&gt;Created with Sketch.&lt;/desc&gt;\n    &lt;defs&gt;&lt;/defs&gt;\n    &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(1855.000000, 26.000000)&quot;&gt;\n        &lt;path d=&quot;M4.28872448,42.7464904 C4.28872448,39.3309774 5.4159227,33.7621426 6.40576697,30.4912557 C10.5920767,32.1098991 14.3021264,35.1207513 18.69596,35.1207513 C30.993618,35.1207513 42.5761396,28.7162991 49.9992251,17.9014817 C56.8027248,23.8881252 60.8188351,33.0463165 60.8188351,42.7464904 C60.8188351,60.817447 47.6104607,76.6693426 32.5537798,76.6693426 C17.4970989,76.6693426 4.28872448,60.817447 4.28872448,42.7464904&quot; id=&quot;Fill-8&quot; fill=&quot;#AFCEFF&quot;&gt;&lt;/path&gt;\n        &lt;path d=&quot;M64.3368879,31.1832696 L62.8424171,46.6027478 L60.6432609,46.7824348 L59.8340669,34.6791304 L47.6573402,25.3339478 C44.2906753,34.068487 34.3459503,40.2903304 24.4684093,40.2903304 C17.7559812,40.2903304 10.046244,37.4168 5.80469412,32.8004522 L5.80469412,34.6791304 L5.80469412,46.6027478 L4.28932167,46.6027478 L1.30187314,27.8802435 C1.30187314,20.9790957 3.52342407,15.5432 7.27229127,11.3578087 C13.132229,4.79558261 21.8124018,0.0492173913 30.5672235,0.342852174 C37.4603019,0.569286957 42.6678084,2.72991304 50.8299179,0.342852174 C51.4629405,1.44434783 51.8615656,3.00455652 51.5868577,5.22507826 C51.4629405,6.88316522 51.2106273,7.52302609 50.8299179,8.45067826 C58.685967,14.1977391 64.3368879,20.7073739 64.3368879,31.1832696&quot; id=&quot;Fill-10&quot; fill=&quot;#3B6CB7&quot;&gt;&lt;/path&gt;\n        &lt;path d=&quot;M58.9405197,54.5582052 C62.0742801,54.8270052 65.3603242,52.60064 65.6350321,49.5386574 C65.772386,48.009127 65.2617876,46.5570226 64.3182257,45.4584487 C63.3761567,44.3613357 62.0205329,43.6162922 60.4529062,43.4818922 L58.9405197,54.5582052 Z&quot; id=&quot;Fill-13&quot; fill=&quot;#568ADC&quot;&gt;&lt;/path&gt;\n        &lt;path d=&quot;M6.32350389,54.675367 C3.18227865,54.8492104 0.484467804,52.4957496 0.306803449,49.4264626 C0.217224782,47.8925496 0.775598471,46.4579757 1.75200594,45.3886191 C2.7284134,44.3192626 4.10792487,43.6165843 5.67853749,43.530393 L6.32350389,54.675367 Z&quot; id=&quot;Fill-15&quot; fill=&quot;#568ADC&quot;&gt;&lt;/path&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;\n\n  &lt;/div&gt;\n  &lt;p&gt;Human Resources&lt;/p&gt;\n&lt;/a&gt;","css":"body {\n  background: #f2f4f8;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n  height: 100vh;\n  font-family: &quot;Open Sans&quot;;\n}\n\n.education {\n  --bg-color: #ffd861;\n  --bg-color-light: #ffeeba;\n  --text-color-hover: #4C5656;\n  --box-shadow-color: rgba(255, 215, 97, 0.48);\n}\n\n.credentialing {\n  --bg-color: #B8F9D3;\n  --bg-color-light: #e2fced;\n  --text-color-hover: #4C5656;\n  --box-shadow-color: rgba(184, 249, 211, 0.48);\n}\n\n.wallet {\n  --bg-color: #CEB2FC;\n  --bg-color-light: #F0E7FF;\n  --text-color-hover: #fff;\n  --box-shadow-color: rgba(206, 178, 252, 0.48);\n}\n\n.human-resources {\n  --bg-color: #DCE9FF;\n  --bg-color-light: #f1f7ff;\n  --text-color-hover: #4C5656;\n  --box-shadow-color: rgba(220, 233, 255, 0.48);\n}\n\n.card {\n  width: 220px;\n  height: 321px;\n  background: #fff;\n  border-top-right-radius: 10px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  box-shadow: 0 14px 26px rgba(0,0,0,0.04);\n  transition: all 0.3s ease-out;\n  text-decoration: none;\n}\n\n.card:hover {\n  transform: translateY(-5px) scale(1.005) translateZ(0);\n  box-shadow: 0 24px 36px rgba(0,0,0,0.11),\n    0 24px 46px var(--box-shadow-color);\n}\n\n.card:hover .overlay {\n  transform: scale(4) translateZ(0);\n}\n\n.card:hover .circle {\n  border-color: var(--bg-color-light);\n  background: var(--bg-color);\n}\n\n.card:hover .circle:after {\n  background: var(--bg-color-light);\n}\n\n.card:hover p {\n  color: var(--text-color-hover);\n}\n\n.card:active {\n  transform: scale(1) translateZ(0);\n  box-shadow: 0 15px 24px rgba(0,0,0,0.11),\n    0 15px 24px var(--box-shadow-color);\n}\n\n.card p {\n  font-size: 17px;\n  color: #4C5656;\n  margin-top: 30px;\n  z-index: 1000;\n  transition: color 0.3s ease-out;\n}\n\n.circle {\n  width: 131px;\n  height: 131px;\n  border-radius: 50%;\n  background: #fff;\n  border: 2px solid var(--bg-color);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  z-index: 1;\n  transition: all 0.3s ease-out;\n}\n\n.circle:after {\n  content: &quot;&quot;;\n  width: 118px;\n  height: 118px;\n  display: block;\n  position: absolute;\n  background: var(--bg-color);\n  border-radius: 50%;\n  top: 7px;\n  left: 7px;\n  transition: opacity 0.3s ease-out;\n}\n\n.circle svg {\n  z-index: 10000;\n  transform: translateZ(0);\n}\n\n.overlay {\n  width: 118px;\n  position: absolute; \n  height: 118px;\n  border-radius: 50%;\n  background: var(--bg-color);\n  top: 70px;\n  left: 50px;\n  z-index: 0;\n  transition: transform 0.3s ease-out;\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

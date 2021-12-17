@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://codepen.io/joyguy89/embed/QgomaL?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Movie Card</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="GfbrtHAVIempP/E0l4kVpWmCoTOQGK5Qb1sNX5qwJ2Ji3l829v0Iyhmn27XFlSvlJR7GWRwfi2UGAconck1+Hw==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#js-box" role="button" aria-pressed="false">
+Babel
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/joyguy89/pen/QgomaL" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"app"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+ 
+}
+
+<span class="cm-qualifier">.card</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">320px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">20px</span> <span class="cm-atom">auto</span>;
+  
+  <span class="cm-qualifier">.trailer_link_disp</span>{
+    <span class="cm-comment">//overflow: hidden;</span>
+      <span class="cm-property">margin</span>: <span class="cm-number">20px</span> <span class="cm-atom">auto</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">270px</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">270px</span>;
+      <span class="cm-property">border-radius</span>: <span class="cm-number">5px</span>;
+     <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg'</span>);
+    <span class="cm-property">background-position</span>: <span class="cm-atom">center</span>; 
+     <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">30px</span> <span class="cm-number">70px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">.19</span>), <span class="cm-number">0</span> <span class="cm-number">17px</span> <span class="cm-number">50px</span> <span class="cm-number">0</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">.19</span>);
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  }
+  
+  <span class="cm-qualifier">.trailer_link_disp</span>:<span class="cm-variable-3">hover</span>{
+      <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.5</span>), <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.5</span>)), <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg'</span>);
+    <span class="cm-property">background-position</span>: <span class="cm-atom">center</span>; 
+        <span class="cm-qualifier">.wrapper</span> { 
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">1.2</span>); 
+    }
+  }
+  
+  <span class="cm-qualifier">.details</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">12px</span>;
+    
+    <span class="cm-qualifier">.img_container</span> {
+      <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">60px</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">55px</span>;
+      <span class="cm-property">margin-left</span>: <span class="cm-number">24px</span>;
+      <span class="cm-property">border-radius</span>: <span class="cm-number">3px</span>;
+      <span class="cm-property">display</span>:  <span class="cm-atom">inline-block</span>;
+      
+      <span class="cm-tag">img</span> {
+        <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">85px</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">-20px</span>;
+        <span class="cm-property">left</span>: <span class="cm-number">-15px</span>;
+      }
+      
+    }
+    
+    <span class="cm-qualifier">.middle</span> {
+      <span class="cm-property">display</span>:  <span class="cm-atom">inline-block</span>;
+      <span class="cm-property">padding</span>: <span class="cm-number">5px</span> <span class="cm-number">15px</span>;
+      <span class="cm-property">vertical-align</span>: <span class="cm-atom">top</span>;
+      <span class="cm-tag">span</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      }
+    }
+    
+    <span class="cm-qualifier">.right</span> {
+      <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+      <span class="cm-property">padding</span>: <span class="cm-number">5px</span> <span class="cm-number">15px</span>;
+      <span class="cm-property">vertical-align</span>: <span class="cm-atom">top</span>;
+      <span class="cm-tag">span</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      }
+    }
+    
+  }
+  
+  <span class="cm-qualifier">.btn</span> {
+    <span class="cm-property">border-radius</span>: <span class="cm-number">100px</span>;
+  }
+  
+  <span class="cm-qualifier">.tab-container</span>{
+    <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+    
+    <span class="cm-qualifier">.tab-block</span> {
+      <span class="cm-property">margin-left</span>: <span class="cm-number">40px</span>;
+
+      <span class="cm-tag">a</span> {
+       <span class="cm-property">width</span>: <span class="cm-number">70px</span>;
+       <span class="cm-property">margin</span>: <span class="cm-number">15px</span>;
+      }
+
+      <span class="cm-tag">span</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">20px</span>;
+        <span class="cm-property">height</span>: <span class="cm-number">2px</span>;
+        <span class="cm-property">margin-top</span>: <span class="cm-number">10px</span> <span class="cm-keyword">!important</span>;
+        <span class="cm-property">background</span>: <span class="cm-atom">#5764c6</span>;
+        <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+      }
+    }
+  }
+}</code></pre>
+<a href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="jsx" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">tabs</span> <span class="cm-operator">=</span> [
+  {
+    <span class="cm-property">name</span>: <span class="cm-string">'Overview'</span>
+  },
+  {
+    <span class="cm-property">name</span>: <span class="cm-string">'Cast'</span>
+  },
+  {
+    <span class="cm-property">name</span>: <span class="cm-string">'Related'</span>
+  }
+]
+
+<span class="cm-keyword">const</span> <span class="cm-def">PlayIcon</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-keyword">return</span> (
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">svg</span> <span class="cm-attribute">width</span>=<span class="cm-string">"55px"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"55px"</span> <span class="cm-attribute">viewBox</span>=<span class="cm-string">"0 0 24 24"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">path</span> <span class="cm-attribute">fill</span>=<span class="cm-string">"#ffffff"</span> <span class="cm-attribute">d</span>=<span class="cm-string">"M10,16.5V7.5L16,12M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">svg</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  )
+}
+
+<span class="cm-keyword">class</span> <span class="cm-def">MovieCard</span> <span class="cm-keyword">extends</span> <span class="cm-variable">React</span>.<span class="cm-property">Component</span> {
+  <span class="cm-property">constructor</span>(){
+    <span class="cm-keyword">super</span>()
+    <span class="cm-keyword">this</span>.<span class="cm-property">state</span> <span class="cm-operator">=</span> {
+      <span class="cm-property">tabSelected</span>: <span class="cm-string">'2'</span>
+    }
+  }
+  
+  <span class="cm-property">handleClassAtr</span> (<span class="cm-def">e</span>) {
+    <span class="cm-keyword">this</span>.<span class="cm-property">setState</span>({ <span class="cm-property">tabSelected</span>: <span class="cm-variable-2">e</span>.<span class="cm-property">target</span>.<span class="cm-property">name</span> })
+  }
+  
+  <span class="cm-property">render</span> (){
+    
+    <span class="cm-keyword">return</span>(
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+       
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"trailer_link_disp"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"wrapper"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">PlayIcon</span><span class="cm-tag cm-bracket">/&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"details"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"img_container"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg"</span><span class="cm-tag cm-bracket">/&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"middle"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Gaurdian's of The Galaxy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>131 min<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"right"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>Score<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>8.4<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"tab-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">className</span>=<span class="cm-string">"tab tab-block"</span><span class="cm-tag cm-bracket">&gt;</span>
+        {
+          <span class="cm-variable">tabs</span>.<span class="cm-property">map</span>( ( <span class="cm-def">tab</span> , <span class="cm-def">index</span>) <span class="cm-operator">=&gt;</span> {
+            <span class="cm-keyword">let</span> <span class="cm-def">activeClass</span> <span class="cm-operator">=</span> <span class="cm-variable-2">index</span>.<span class="cm-property">toString</span>() <span class="cm-operator">===</span> <span class="cm-keyword">this</span>.<span class="cm-property">state</span>.<span class="cm-property">tabSelected</span> <span class="cm-operator">?</span> <span class="cm-string">'active'</span> : <span class="cm-string">''</span>
+            <span class="cm-keyword">return</span>(
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>  
+              <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">className</span>={ <span class="cm-string">'custom_tab'</span> <span class="cm-operator">+</span> <span class="cm-string">' '</span> <span class="cm-operator">+</span> <span class="cm-variable">activeClass</span> } 
+                  <span class="cm-attribute">index</span>={ <span class="cm-variable">index</span> } 
+                  <span class="cm-attribute">onClick</span>={ <span class="cm-keyword">this</span>.<span class="cm-property">handleClassAtr</span>.<span class="cm-property">bind</span>(<span class="cm-keyword">this</span>) }<span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>={ <span class="cm-string">'#'</span> <span class="cm-operator">+</span> <span class="cm-variable">tab</span>.<span class="cm-property">name</span> } <span class="cm-attribute">name</span>={ <span class="cm-variable">index</span> }<span class="cm-tag cm-bracket">&gt;</span>{ <span class="cm-variable">tab</span>.<span class="cm-property">name</span> }<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+          )})
+        }
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+               
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">className</span>=<span class="cm-string">"card-footer"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">className</span>=<span class="cm-string">"btn col-9 centered"</span><span class="cm-tag cm-bracket">&gt;</span>Add to Watchlist<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+       
+     <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    )
+  }
+}
+
+<span class="cm-variable">ReactDOM</span>.<span class="cm-property">render</span>(<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">MovieCard</span> <span class="cm-tag cm-bracket">/&gt;</span>, <span class="cm-variable">document</span>.<span class="cm-variable">getElementById</span>(<span class="cm-string">'app'</span>))</code></pre>
+<a href="https://codepen.io/joyguy89/embed/QgomaL?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-js-compiled-button" class="action-button bottom right view-compiled-button" data-type="js">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Movie Card" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Movie Card" data-src="https://cdpn.io/joyguy89/fullembedgrid/QgomaL?animations=run&amp;type=embed" src="./QgomaL.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/joyguy89" target="_blank" rel="noopener"><img src="./default(5).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/joyguy89" target="_blank" rel="noopener">Ryan Joyner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/joyguy89" target="_blank" rel="noopener" class="about-user-more">
+See more by @joyguy89 on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.14/spectre.min.css" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.14/spectre.min.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;","css":".card {\n  width: 320px;\n  margin: 20px auto;\n}\n.card .trailer_link_disp {\n  margin: 20px auto;\n  height: 270px;\n  width: 270px;\n  border-radius: 5px;\n  background: url(&quot;https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg&quot;);\n  background-position: center;\n  box-shadow: 0 30px 70px 0 rgba(0, 0, 0, 0.19), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.card .trailer_link_disp:hover {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg&quot;);\n  background-position: center;\n}\n.card .trailer_link_disp:hover .wrapper {\n  transform: scale(1.2);\n}\n.card .details {\n  font-size: 12px;\n}\n.card .details .img_container {\n  overflow: hidden;\n  height: 60px;\n  width: 55px;\n  margin-left: 24px;\n  border-radius: 3px;\n  display: inline-block;\n}\n.card .details .img_container img {\n  position: relative;\n  width: 85px;\n  top: -20px;\n  left: -15px;\n}\n.card .details .middle {\n  display: inline-block;\n  padding: 5px 15px;\n  vertical-align: top;\n}\n.card .details .middle span {\n  display: block;\n}\n.card .details .right {\n  display: inline-block;\n  padding: 5px 15px;\n  vertical-align: top;\n}\n.card .details .right span {\n  display: block;\n}\n.card .btn {\n  border-radius: 100px;\n}\n.card .tab-container {\n  margin: auto;\n}\n.card .tab-container .tab-block {\n  margin-left: 40px;\n}\n.card .tab-container .tab-block a {\n  width: 70px;\n  margin: 15px;\n}\n.card .tab-container .tab-block span {\n  display: block;\n  width: 20px;\n  height: 2px;\n  margin-top: 10px !important;\n  background: #5764c6;\n  margin: auto;\n}","js":"const tabs = [\n{\n  name: &#39;Overview&#39; },\n\n{\n  name: &#39;Cast&#39; },\n\n{\n  name: &#39;Related&#39; }];\n\n\n\nconst PlayIcon = () =&gt; {\n  return /*#__PURE__*/(\n    React.createElement(&quot;div&quot;, null, /*#__PURE__*/\n    React.createElement(&quot;svg&quot;, { width: &quot;55px&quot;, height: &quot;55px&quot;, viewBox: &quot;0 0 24 24&quot; }, /*#__PURE__*/\n    React.createElement(&quot;path&quot;, { fill: &quot;#ffffff&quot;, d: &quot;M10,16.5V7.5L16,12M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z&quot; }))));\n\n\n\n};\n\nclass MovieCard extends React.Component {\n  constructor() {\n    super();\n    this.state = {\n      tabSelected: &#39;2&#39; };\n\n  }\n\n  handleClassAtr(e) {\n    this.setState({ tabSelected: e.target.name });\n  }\n\n  render() {\n\n    return /*#__PURE__*/(\n      React.createElement(&quot;div&quot;, { className: &quot;card&quot; }, /*#__PURE__*/\n\n      React.createElement(&quot;div&quot;, { className: &quot;trailer_link_disp&quot; }, /*#__PURE__*/\n      React.createElement(&quot;div&quot;, { className: &quot;wrapper&quot; }, /*#__PURE__*/React.createElement(PlayIcon, null))), /*#__PURE__*/\n\n\n      React.createElement(&quot;div&quot;, { className: &quot;details&quot; }, /*#__PURE__*/\n      React.createElement(&quot;div&quot;, { className: &quot;img_container&quot; }, /*#__PURE__*/\n      React.createElement(&quot;img&quot;, { src: &quot;https://image.tmdb.org/t/p/w300_and_h450_bestv2/gaHepzSTMkGwsSKAqiBgroSCf07.jpg&quot; })), /*#__PURE__*/\n\n\n      React.createElement(&quot;div&quot;, { className: &quot;middle&quot; }, /*#__PURE__*/\n      React.createElement(&quot;span&quot;, null, &quot;Gaurdian&#39;s of The Galaxy&quot;), /*#__PURE__*/\n      React.createElement(&quot;span&quot;, null, &quot;131 min&quot;)), /*#__PURE__*/\n\n\n      React.createElement(&quot;div&quot;, { className: &quot;right&quot; }, /*#__PURE__*/\n      React.createElement(&quot;span&quot;, null, &quot;Score&quot;), /*#__PURE__*/\n      React.createElement(&quot;span&quot;, null, &quot;8.4&quot;))), /*#__PURE__*/\n\n\n\n      React.createElement(&quot;div&quot;, { className: &quot;tab-container&quot; }, /*#__PURE__*/\n      React.createElement(&quot;ul&quot;, { className: &quot;tab tab-block&quot; },\n\n      tabs.map((tab, index) =&gt; {\n        let activeClass = index.toString() === this.state.tabSelected ? &#39;active&#39; : &#39;&#39;;\n        return /*#__PURE__*/(\n          React.createElement(&quot;div&quot;, null, /*#__PURE__*/\n          React.createElement(&quot;li&quot;, { className: &#39;custom_tab&#39; + &#39; &#39; + activeClass,\n            index: index,\n            onClick: this.handleClassAtr.bind(this) }, /*#__PURE__*/\n          React.createElement(&quot;a&quot;, { href: &#39;#&#39; + tab.name, name: index }, tab.name), /*#__PURE__*/\n          React.createElement(&quot;span&quot;, null))));\n\n\n      }))), /*#__PURE__*/\n\n\n\n\n      React.createElement(&quot;div&quot;, { className: &quot;card-footer&quot; }, /*#__PURE__*/\n      React.createElement(&quot;button&quot;, { className: &quot;btn col-9 centered&quot; }, &quot;Add to Watchlist&quot;))));\n\n\n\n\n  }}\n\n\nReactDOM.render( /*#__PURE__*/React.createElement(MovieCard, null), document.getElementById(&#39;app&#39;));"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "babel"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "Babel"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

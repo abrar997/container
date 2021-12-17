@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://cdpn.io/G_4s/fullembedgrid/QGvoPv?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - CSS only Sliding menu (Hamburger menu)</title>
+  <link href="./css(1)" rel="stylesheet">
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+/**
+┌─┐┌─┐┌─┐┌─┐  ┌┬┐┌─┐┌─┐┬┌─┐┌┐┌
+├─┘├─┤│ ┬├┤    ││├┤ └─┐││ ┬│││
+┴  ┴ ┴└─┘└─┘  ─┴┘└─┘└─┘┴└─┘┘└┘
+**/
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #6D8EA0;     /** FUNCTIONAL CSS MORE DOWN**/
+  height: 100%;
+  font-family: 'Delius Unicase', cursive;
+  text-align: center;
+  color: #45565E;
+}
+
+.container {
+  display: block;
+  width: 350px;
+  height: 182px;
+  margin: 0 auto;
+  background: #4C6370;
+  overflow: hidden;
+}
+
+section {
+  display: inline-block;
+  width: 100%;
+}
+
+a {
+  color: #40798C;
+  background-color: #0B2027;
+  padding: 0.3em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/**
+┌─┐┌─┐┌─┐  ┬ ┬┌─┐┌┬┐┌┐ ┬ ┬┬─┐┌─┐┌─┐┬─┐  ┌┬┐┌─┐┌┐┌┬ ┬
+│  └─┐└─┐  ├─┤├─┤│││├┴┐│ │├┬┘│ ┬├┤ ├┬┘  │││├┤ ││││ │
+└─┘└─┘└─┘  ┴ ┴┴ ┴┴ ┴└─┘└─┘┴└─└─┘└─┘┴└─  ┴ ┴└─┘┘└┘└─┘
+**/
+/** always use classes and id's,[Type=checkbox] is slow css **/
+
+.checkbox-container {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background: #182825;
+}
+
+.checkbox-trigger {
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.hamburger-menu, .hamburger-menu::before, .hamburger-menu::after {
+    display: block;
+    position: absolute;
+    background: white;
+    width: 40px;
+    height: 4px;
+    margin: 1.3em 3em;
+    transition: background 0.3s;
+}
+
+.hamburger-menu::before, .hamburger-menu::after {
+    content: '';
+    position: absolute;
+    margin: -0.7em 0 0;
+    transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+
+.hamburger-menu::after {
+   margin-top: 0.7em; 
+}
+
+.hamburger-menu {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 1.45em;
+  margin-right: 0.35em;
+  margin-left: 0.35em;
+  margin-bottom: 1.45em;
+  transition: width 0.3s ease;
+}
+
+.checkbox-trigger:checked {
+  left: 202px;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu {
+  width: 2em;
+  
+  transition: width 0.7s ease 0.7s;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
+  width: 1.2em;
+  transform: rotate(-35deg);
+  margin-top: -0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
+  width: 1.2em;
+  transform: rotate(35deg);
+  margin-top: 0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content ul {
+  width: 200px;
+  height: 200px;
+  transition: width 0.7s ease 0.3s, height 0.3s ease;
+}
+
+.menu-content {
+  display: flex;
+  background: #182825;
+  color: white;
+  float: left;
+}
+
+.menu-content ul {
+  display: block;
+  padding-left: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease 0.7s, width 0.7s ease;
+}
+
+.menu-content ul li {
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  cursor: pointer;
+  transition: color 0.5s, background 0.5s;
+}
+
+.menu-content ul li:hover {
+  color: #0CD6AD;
+  background: #1E332F;
+}
+
+/**
+┌─┐┌─┐┌─┐┌┬┐┌─┐┬─┐
+├┤ │ ││ │ │ ├┤ ├┬┘
+└  └─┘└─┘ ┴ └─┘┴└─
+**/
+                                         /** footer **/
+#footer {
+  line-height: 2em;
+  font-size: 0.9em;
+  display: inline-block;
+  min-width: 2em;
+  margin: 0 auto;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <section>
+  <h2>CSS only Sliding menu (Hamburger menu)</h2>
+  <h2>Demo:</h2>
+    <span class="container">
+      <span class="checkbox-container">
+        <input class="checkbox-trigger" type="checkbox">
+        <span class="menu-content">
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          <span class="hamburger-menu"></span>
+        </span>
+      </span>
+    </span>
+  <h2>Compatibility:</h2>
+  <p>firefox and chrome that support css3.</p>
+  <p>internet explorer: edge as far as i know</p>
+</section>
+<span id="footer">Created by Maxime Huylebroeck (G_4s) <br> hit me up on twitter i'm <a href="https://twitter.com/TheRealG_4s">@TheRealG_4s</a></span>
+  
+  
+  
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js.download"></script>
+
+
+
+ 
+</body></html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!-- saved from url=(0187)https://codepen.io/fluxus/embed/gPWxXJ?height=493&theme-id=dark&default-tab=css%2Cresult&user=fluxus&slug-hash=gPWxXJ&pen-title=Fullscreen%20flexbox%20overlay%20navigation&name=cp_embed_3 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Fullscreen flexbox overlay navigation</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="74x8Mr5vU4FDrnmFYKp8Vfqfin8p83O++LtGQZFPhpoh2fRB8J0h4oK+ikHx5di6hv5nel5II0raRK12VZwj2g==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body results-active split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/fluxus/embed/gPWxXJ?height=493&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=fluxus&amp;slug-hash=gPWxXJ&amp;pen-title=Fullscreen%20flexbox%20overlay%20navigation&amp;name=cp_embed_3#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/fluxus/embed/gPWxXJ?height=493&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=fluxus&amp;slug-hash=gPWxXJ&amp;pen-title=Fullscreen%20flexbox%20overlay%20navigation&amp;name=cp_embed_3#css-box" role="button" class="active" aria-pressed="true">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/fluxus/embed/gPWxXJ?height=493&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=fluxus&amp;slug-hash=gPWxXJ&amp;pen-title=Fullscreen%20flexbox%20overlay%20navigation&amp;name=cp_embed_3#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/fluxus/embed/gPWxXJ?height=493&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=fluxus&amp;slug-hash=gPWxXJ&amp;pen-title=Fullscreen%20flexbox%20overlay%20navigation&amp;name=cp_embed_3#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/fluxus/embed/gPWxXJ?height=493&amp;theme-id=dark&amp;default-tab=css%2Cresult&amp;user=fluxus&amp;slug-hash=gPWxXJ&amp;pen-title=Fullscreen%20flexbox%20overlay%20navigation&amp;name=cp_embed_3#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/fluxus/pen/gPWxXJ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"overlay-navigation"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">nav</span> <span class="cm-attribute">role</span>=<span class="cm-string">"navigation"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-content</span>=<span class="cm-string">"The beginning"</span><span class="cm-tag cm-bracket">&gt;</span>Home<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-content</span>=<span class="cm-string">"Curious?"</span><span class="cm-tag cm-bracket">&gt;</span>About<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-content</span>=<span class="cm-string">"I got game"</span><span class="cm-tag cm-bracket">&gt;</span>Skills<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-content</span>=<span class="cm-string">"Only the finest"</span><span class="cm-tag cm-bracket">&gt;</span>Works<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span> <span class="cm-attribute">data-content</span>=<span class="cm-string">"Don't hesitate"</span><span class="cm-tag cm-bracket">&gt;</span>Contact<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">nav</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"home"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://codepen.io/fluxus/pen/gPWvZm"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>Click for a slightly nicer Velocity.js version<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"open-overlay"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bar-top"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bar-middle"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bar-bottom"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box active" role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic</span>);
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>
+}
+
+<span class="cm-qualifier">.home</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://images.unsplash.com/photo-1446771326090-d910bfaf00f6?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=9216e1a8598a8530ce329b41a8f3725d</span>);
+  <span class="cm-property">background-size</span>: <span class="cm-atom">cover</span>;
+  <span class="cm-property">background-position</span>: <span class="cm-atom">center</span> <span class="cm-atom">center</span>;
+}
+
+
+<span class="cm-comment">/* ====================================</span>
+<span class="cm-comment">Navigation </span>
+<span class="cm-comment">==================================== */</span>
+
+<span class="cm-qualifier">.overlay-navigation</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">99</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">hsla</span>(<span class="cm-number">0</span>, <span class="cm-number">0%</span>, <span class="cm-number">0%</span>, <span class="cm-number">0.8</span>);
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>);
+}
+
+<span class="cm-qualifier">.overlay-slide-down</span> {
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">.4s</span> <span class="cm-atom">ease-in-out</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>)
+}
+
+<span class="cm-qualifier">.overlay-slide-up</span> {
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">.8s</span> <span class="cm-atom">ease-in-out</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>)
+}
+
+<span class="cm-tag">nav</span>,
+<span class="cm-tag">nav</span> <span class="cm-tag">ul</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">ul</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">list-style</span>: <span class="cm-atom">none</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">ul</span> <span class="cm-tag">li</span> {
+  <span class="cm-property">flex-basis</span>: <span class="cm-number">20%</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>);
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">46%</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Work sans'</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.9rem</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">before</span> {
+  <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">70px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">2px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">100</span>;
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">-100%</span>);
+  <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">.2s</span> <span class="cm-atom">linear</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">after</span> {
+  <span class="cm-property">content</span>: <span class="cm-variable cm-callee">attr</span>(<span class="cm-variable">data-content</span>);
+  <span class="cm-property">font-size</span>: <span class="cm-number">0.7rem</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-number">.2s</span> <span class="cm-atom">linear</span>;
+  <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">100</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">margin-right</span>: <span class="cm-atom">auto</span>;
+  <span class="cm-property">margin-left</span>: <span class="cm-atom">auto</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-50px</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Open sans'</span>, <span class="cm-atom">serif</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  <span class="cm-property">font-style</span>: <span class="cm-atom">italic</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span>:<span class="cm-variable-3">before</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">0</span>);
+  <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span>:<span class="cm-variable-3">after</span> {
+  <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">15px</span>);
+  <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+}
+
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">1</span>){<span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>}
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">2</span>){<span class="cm-property">background-color</span>: <span class="cm-atom">#EA495F</span>}
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">3</span>){<span class="cm-property">background-color</span>: <span class="cm-atom">#F4837D</span>}
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">4</span>){<span class="cm-property">background-color</span>: <span class="cm-atom">#FDCEA9</span>}
+<span class="cm-tag">nav</span> <span class="cm-tag">li</span>:<span class="cm-variable cm-callee">nth-of-type</span>(<span class="cm-number">5</span>){<span class="cm-property">background-color</span>: <span class="cm-atom">#99B998</span>}
+
+<span class="cm-qualifier">.slide-in-nav-item</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item</span> <span class="cm-number">0.4s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.2s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-1</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item</span> <span class="cm-number">0.4s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.4s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-2</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item</span> <span class="cm-number">0.4s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.6s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-3</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item</span> <span class="cm-number">0.4s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.8s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-4</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item</span> <span class="cm-number">0.4s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">1s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-reverse</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item-reverse</span> <span class="cm-number">.3s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.5s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-1-reverse</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item-reverse</span> <span class="cm-number">.3s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.4s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-2-reverse</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item-reverse</span> <span class="cm-number">.3s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.3s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-3-reverse</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item-reverse</span> <span class="cm-number">.3s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-number">.2s</span> <span class="cm-atom">both</span>;
+}
+
+<span class="cm-qualifier">.slide-in-nav-item-delay-4-reverse</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">slide-in-nav-item-reverse</span> <span class="cm-number">.3s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>;
+}
+
+
+<span class="cm-comment">/* ====================================</span>
+<span class="cm-comment">Burger king</span>
+<span class="cm-comment">==================================== */</span>
+
+<span class="cm-qualifier">.open-overlay</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">5rem</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">3.2rem</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">100</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">34px</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+}
+
+<span class="cm-qualifier">.open-overlay</span> <span class="cm-tag">span</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">1px</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">8px</span>;
+}
+
+<span class="cm-qualifier">.animate-top-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-top-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+<span class="cm-qualifier">.animate-bottom-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-bottom-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+<span class="cm-qualifier">.animate-middle-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-middle-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+<span class="cm-qualifier">.animate-out-top-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-out-top-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+<span class="cm-qualifier">.animate-out-bottom-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-out-bottom-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+<span class="cm-qualifier">.animate-out-middle-bar</span> {
+  <span class="cm-property">animation</span>: <span class="cm-variable">animate-out-middle-bar</span> <span class="cm-number">.6s</span> <span class="cm-atom">linear</span> <span class="cm-number">1</span> <span class="cm-atom">both</span>
+}
+
+
+<span class="cm-comment">/* ====================================</span>
+<span class="cm-comment">Animation keyframes</span>
+<span class="cm-comment">==================================== */</span>
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">slide-in-nav-item</span> {
+  <span class="cm-tag">from</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>)
+  }
+  <span class="cm-tag">to</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>)
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">slide-in-nav-item-reverse</span> {
+  <span class="cm-tag">from</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>)
+  }
+  <span class="cm-tag">to</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-100%</span>)
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-top-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+  <span class="cm-number">50%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">9px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">9px</span>)
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">5px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">5px</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>;
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-bottom-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+  <span class="cm-number">50%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-9px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-9px</span>)
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-5px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-5px</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>;
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-middle-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>;
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-out-top-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>
+  }
+  <span class="cm-number">50%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">9px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">9px</span>)
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">5px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">5px</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#FFF</span>;
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-out-bottom-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>
+  }
+  <span class="cm-number">50%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-9px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-9px</span>)
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-5px</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-5px</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>;
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-meta">-webkit-</span><span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">0</span>);
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#FFF</span>;
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">animate-out-middle-bar</span> {
+  <span class="cm-number">0%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>
+  }
+  <span class="cm-number">80%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#29363B</span>;
+  }
+  <span class="cm-number">100%</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  }
+}
+<span class="cm-qualifier">.home</span> <span class="cm-tag">a</span>{
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Work Sans"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">12px</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">10</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">50px</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">50px</span>;
+  <span class="cm-property">padding-bottom</span>: <span class="cm-number">3px</span>;
+  <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#fff</span>;
+}
+<span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">640px</span>) {
+  <span class="cm-tag">nav</span> <span class="cm-tag">ul</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">11px</span>;
+  }
+  <span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">after</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">0.6rem</span>;
+  }
+  <span class="cm-qualifier">.open-overlay</span> {
+    <span class="cm-property">right</span>: <span class="cm-number">1rem</span>;
+  }
+  <span class="cm-tag">nav</span> <span class="cm-tag">li</span> <span class="cm-tag">a</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">15px</span>;
+  }
+}</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-variable">$</span>(<span class="cm-string">'.open-overlay'</span>).<span class="cm-property">click</span>(<span class="cm-keyword">function</span>() {
+  <span class="cm-keyword">var</span> <span class="cm-def">overlay_navigation</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'.overlay-navigation'</span>),
+    <span class="cm-def">nav_item_1</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'nav li:nth-of-type(1)'</span>),
+    <span class="cm-def">nav_item_2</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'nav li:nth-of-type(2)'</span>),
+    <span class="cm-def">nav_item_3</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'nav li:nth-of-type(3)'</span>),
+    <span class="cm-def">nav_item_4</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'nav li:nth-of-type(4)'</span>),
+    <span class="cm-def">nav_item_5</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'nav li:nth-of-type(5)'</span>),
+    <span class="cm-def">top_bar</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'.bar-top'</span>),
+    <span class="cm-def">middle_bar</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'.bar-middle'</span>),
+    <span class="cm-def">bottom_bar</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">'.bar-bottom'</span>);
+
+  <span class="cm-variable-2">overlay_navigation</span>.<span class="cm-property">toggleClass</span>(<span class="cm-string">'overlay-active'</span>);
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">overlay_navigation</span>.<span class="cm-property">hasClass</span>(<span class="cm-string">'overlay-active'</span>)) {
+
+    <span class="cm-variable-2">top_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-out-top-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-top-bar'</span>);
+    <span class="cm-variable-2">middle_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-out-middle-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-middle-bar'</span>);
+    <span class="cm-variable-2">bottom_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-out-bottom-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-bottom-bar'</span>);
+    <span class="cm-variable-2">overlay_navigation</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'overlay-slide-up'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'overlay-slide-down'</span>)
+    <span class="cm-variable-2">nav_item_1</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-reverse'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item'</span>);
+    <span class="cm-variable-2">nav_item_2</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-1-reverse'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-1'</span>);
+    <span class="cm-variable-2">nav_item_3</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-2-reverse'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-2'</span>);
+    <span class="cm-variable-2">nav_item_4</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-3-reverse'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-3'</span>);
+    <span class="cm-variable-2">nav_item_5</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-4-reverse'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-4'</span>);
+  } <span class="cm-keyword">else</span> {
+    <span class="cm-variable-2">top_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-top-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-out-top-bar'</span>);
+    <span class="cm-variable-2">middle_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-middle-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-out-middle-bar'</span>);
+    <span class="cm-variable-2">bottom_bar</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'animate-bottom-bar'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'animate-out-bottom-bar'</span>);
+    <span class="cm-variable-2">overlay_navigation</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'overlay-slide-down'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'overlay-slide-up'</span>)
+    <span class="cm-variable-2">nav_item_1</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-reverse'</span>);
+    <span class="cm-variable-2">nav_item_2</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-1'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-1-reverse'</span>);
+    <span class="cm-variable-2">nav_item_3</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-2'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-2-reverse'</span>);
+    <span class="cm-variable-2">nav_item_4</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-3'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-3-reverse'</span>);
+    <span class="cm-variable-2">nav_item_5</span>.<span class="cm-property">removeClass</span>(<span class="cm-string">'slide-in-nav-item-delay-4'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'slide-in-nav-item-delay-4-reverse'</span>);
+  }
+})</code></pre>
+</div>
+<div id="result-box" class="code-box zoom-1 active" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Fullscreen flexbox overlay navigation" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Fullscreen flexbox overlay navigation" data-src="https://cdpn.io/fluxus/fullembedgrid/gPWxXJ?animations=run&amp;type=embed" src="./gPWxXJ.html" __idm_id__="705809409">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/fluxus" target="_blank" rel="noopener"><img src="./default(2).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/fluxus" target="_blank" rel="noopener">Mirko Zorić</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/fluxus" target="_blank" rel="noopener" class="about-user-more">
+See more by @fluxus on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;overlay-navigation&quot;&gt;\n  &lt;nav role=&quot;navigation&quot;&gt;\n    &lt;ul&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot; data-content=&quot;The beginning&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot; data-content=&quot;Curious?&quot;&gt;About&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot; data-content=&quot;I got game&quot;&gt;Skills&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot; data-content=&quot;Only the finest&quot;&gt;Works&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot; data-content=&quot;Don&#39;t hesitate&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/nav&gt;\n&lt;/div&gt;\n\n&lt;section class=&quot;home&quot;&gt;\n  &lt;a href=&quot;https://codepen.io/fluxus/pen/gPWvZm&quot; target=&quot;_blank&quot;&gt;Click for a slightly nicer Velocity.js version&lt;/a&gt;\n  &lt;div class=&quot;open-overlay&quot;&gt;\n    &lt;span class=&quot;bar-top&quot;&gt;&lt;/span&gt;\n    &lt;span class=&quot;bar-middle&quot;&gt;&lt;/span&gt;\n    &lt;span class=&quot;bar-bottom&quot;&gt;&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/section&gt;","css":"@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);\nbody {\n  background-color: #fff\n}\n\n.home {\n  width: 100%;\n  height: 100vh;\n  position: relative;\n  background-image: url(https://images.unsplash.com/photo-1446771326090-d910bfaf00f6?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=9216e1a8598a8530ce329b41a8f3725d);\n  background-size: cover;\n  background-position: center center;\n}\n\n\n/* ====================================\nNavigation \n==================================== */\n\n.overlay-navigation {\n  position: fixed;\n  z-index: 99;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: hsla(0, 0%, 0%, 0.8);\n  transform: translateY(-100%);\n}\n\n.overlay-slide-down {\n  transition: all .4s ease-in-out;\n  transform: translateY(0)\n}\n\n.overlay-slide-up {\n  transition: all .8s ease-in-out;\n  transform: translateY(-100%)\n}\n\nnav,\nnav ul {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\nnav ul {\n  display: flex;\n  list-style: none;\n}\n\nnav ul li {\n  flex-basis: 20%;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  overflow: hidden;\n  transform: translateY(-100%);\n}\n\nnav li a {\n  position: relative;\n  top: 46%;\n  color: #fff;\n  text-transform: uppercase;\n  font-family: &#39;Work sans&#39;, sans-serif;\n  font-weight: 300;\n  letter-spacing: 4px;\n  text-decoration: none;\n  display: block;\n  text-align: center;\n  font-size: 0.9rem;\n}\n\nnav li a:before {\n  content: &#39;&#39;;\n  width: 70px;\n  height: 2px;\n  background-color: #fff;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  z-index: 100;\n  transform: translateX(-100%);\n  opacity: 0;\n  transition: all .2s linear;\n}\n\nnav li a:after {\n  content: attr(data-content);\n  font-size: 0.7rem;\n  transition: all .2s linear;\n  opacity: 0;\n  position: absolute;\n  z-index: 100;\n  color: #fff;\n  display: block;\n  margin-right: auto;\n  margin-left: auto;\n  left: 0;\n  right: 0;\n  bottom: -50px;\n  text-transform: none;\n  font-family: &#39;Open sans&#39;, serif;\n  font-weight: 300;\n  font-style: italic;\n  letter-spacing: 0;\n}\n\nnav li a:hover:before {\n  transform: translateX(0);\n  opacity: 1;\n}\n\nnav li a:hover:after {\n  transform: translateY(15px);\n  opacity: 1;\n}\n\nnav li:nth-of-type(1){background-color: #29363B}\nnav li:nth-of-type(2){background-color: #EA495F}\nnav li:nth-of-type(3){background-color: #F4837D}\nnav li:nth-of-type(4){background-color: #FDCEA9}\nnav li:nth-of-type(5){background-color: #99B998}\n\n.slide-in-nav-item {\n  -webkit-animation: slide-in-nav-item 0.4s linear 1 .2s both;\n          animation: slide-in-nav-item 0.4s linear 1 .2s both;\n}\n\n.slide-in-nav-item-delay-1 {\n  -webkit-animation: slide-in-nav-item 0.4s linear 1 .4s both;\n          animation: slide-in-nav-item 0.4s linear 1 .4s both;\n}\n\n.slide-in-nav-item-delay-2 {\n  -webkit-animation: slide-in-nav-item 0.4s linear 1 .6s both;\n          animation: slide-in-nav-item 0.4s linear 1 .6s both;\n}\n\n.slide-in-nav-item-delay-3 {\n  -webkit-animation: slide-in-nav-item 0.4s linear 1 .8s both;\n          animation: slide-in-nav-item 0.4s linear 1 .8s both;\n}\n\n.slide-in-nav-item-delay-4 {\n  -webkit-animation: slide-in-nav-item 0.4s linear 1 1s both;\n          animation: slide-in-nav-item 0.4s linear 1 1s both;\n}\n\n.slide-in-nav-item-reverse {\n  -webkit-animation: slide-in-nav-item-reverse .3s linear 1 .5s both;\n          animation: slide-in-nav-item-reverse .3s linear 1 .5s both;\n}\n\n.slide-in-nav-item-delay-1-reverse {\n  -webkit-animation: slide-in-nav-item-reverse .3s linear 1 .4s both;\n          animation: slide-in-nav-item-reverse .3s linear 1 .4s both;\n}\n\n.slide-in-nav-item-delay-2-reverse {\n  -webkit-animation: slide-in-nav-item-reverse .3s linear 1 .3s both;\n          animation: slide-in-nav-item-reverse .3s linear 1 .3s both;\n}\n\n.slide-in-nav-item-delay-3-reverse {\n  -webkit-animation: slide-in-nav-item-reverse .3s linear 1 .2s both;\n          animation: slide-in-nav-item-reverse .3s linear 1 .2s both;\n}\n\n.slide-in-nav-item-delay-4-reverse {\n  -webkit-animation: slide-in-nav-item-reverse .3s linear 1 both;\n          animation: slide-in-nav-item-reverse .3s linear 1 both;\n}\n\n\n/* ====================================\nBurger king\n==================================== */\n\n.open-overlay {\n  position: absolute;\n  right: 5rem;\n  top: 3.2rem;\n  z-index: 100;\n  width: 34px;\n  display: block;\n  cursor: pointer;\n}\n\n.open-overlay span {\n  display: block;\n  height: 1px;\n  background-color: #fff;\n  cursor: pointer;\n  margin-top: 8px;\n}\n\n.animate-top-bar {\n  -webkit-animation: animate-top-bar .6s linear 1 both;\n          animation: animate-top-bar .6s linear 1 both\n}\n\n.animate-bottom-bar {\n  -webkit-animation: animate-bottom-bar .6s linear 1 both;\n          animation: animate-bottom-bar .6s linear 1 both\n}\n\n.animate-middle-bar {\n  -webkit-animation: animate-middle-bar .6s linear 1 both;\n          animation: animate-middle-bar .6s linear 1 both\n}\n\n.animate-out-top-bar {\n  -webkit-animation: animate-out-top-bar .6s linear 1 both;\n          animation: animate-out-top-bar .6s linear 1 both\n}\n\n.animate-out-bottom-bar {\n  -webkit-animation: animate-out-bottom-bar .6s linear 1 both;\n          animation: animate-out-bottom-bar .6s linear 1 both\n}\n\n.animate-out-middle-bar {\n  -webkit-animation: animate-out-middle-bar .6s linear 1 both;\n          animation: animate-out-middle-bar .6s linear 1 both\n}\n\n\n/* ====================================\nAnimation keyframes\n==================================== */\n\n@-webkit-keyframes slide-in-nav-item {\n  from {\n    transform: translateY(-100%)\n  }\n  to {\n    transform: translateY(0)\n  }\n}\n\n@keyframes slide-in-nav-item {\n  from {\n    transform: translateY(-100%)\n  }\n  to {\n    transform: translateY(0)\n  }\n}\n\n@-webkit-keyframes slide-in-nav-item-reverse {\n  from {\n    transform: translateY(0)\n  }\n  to {\n    transform: translateY(-100%)\n  }\n}\n\n@keyframes slide-in-nav-item-reverse {\n  from {\n    transform: translateY(0)\n  }\n  to {\n    transform: translateY(-100%)\n  }\n}\n\n@-webkit-keyframes animate-top-bar {\n  0% {\n    background-color: #fff;\n  }\n  50% {\n    transform: translateY(9px)\n  }\n  80% {\n    transform: translateY(5px);\n    background-color: #fff\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #29363B;\n  }\n}\n\n@keyframes animate-top-bar {\n  0% {\n    background-color: #fff;\n  }\n  50% {\n    transform: translateY(9px)\n  }\n  80% {\n    transform: translateY(5px);\n    background-color: #fff\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #29363B;\n  }\n}\n\n@-webkit-keyframes animate-bottom-bar {\n  0% {\n    background-color: #fff;\n  }\n  50% {\n    transform: translateY(-9px)\n  }\n  80% {\n    transform: translateY(-5px);\n    background-color: #fff;\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #29363B;\n  }\n}\n\n@keyframes animate-bottom-bar {\n  0% {\n    background-color: #fff;\n  }\n  50% {\n    transform: translateY(-9px)\n  }\n  80% {\n    transform: translateY(-5px);\n    background-color: #fff;\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #29363B;\n  }\n}\n\n@-webkit-keyframes animate-middle-bar {\n  0% {\n    background-color: #fff;\n  }\n  80% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #29363B;\n  }\n}\n\n@keyframes animate-middle-bar {\n  0% {\n    background-color: #fff;\n  }\n  80% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #29363B;\n  }\n}\n\n@-webkit-keyframes animate-out-top-bar {\n  0% {\n    background-color: #29363B\n  }\n  50% {\n    transform: translateY(9px)\n  }\n  80% {\n    transform: translateY(5px);\n    background-color: #29363B\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #FFF;\n  }\n}\n\n@keyframes animate-out-top-bar {\n  0% {\n    background-color: #29363B\n  }\n  50% {\n    transform: translateY(9px)\n  }\n  80% {\n    transform: translateY(5px);\n    background-color: #29363B\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #FFF;\n  }\n}\n\n@-webkit-keyframes animate-out-bottom-bar {\n  0% {\n    background-color: #29363B\n  }\n  50% {\n    transform: translateY(-9px)\n  }\n  80% {\n    transform: translateY(-5px);\n    background-color: #29363B;\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #FFF;\n  }\n}\n\n@keyframes animate-out-bottom-bar {\n  0% {\n    background-color: #29363B\n  }\n  50% {\n    transform: translateY(-9px)\n  }\n  80% {\n    transform: translateY(-5px);\n    background-color: #29363B;\n  }\n  100% {\n    transform: translateY(0);\n    background-color: #FFF;\n  }\n}\n\n@-webkit-keyframes animate-out-middle-bar {\n  0% {\n    background-color: #29363B\n  }\n  80% {\n    background-color: #29363B;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n\n@keyframes animate-out-middle-bar {\n  0% {\n    background-color: #29363B\n  }\n  80% {\n    background-color: #29363B;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n.home a{\n  font-family: &quot;Work Sans&quot;, sans-serif;\n  color: #fff;\n  font-weight: 300;\n  font-size: 12px;\n  text-transform: uppercase;\n  text-decoration: none;\n  position: absolute;\n  z-index: 10;\n  top:50px;\n  left:50px;\n  padding-bottom: 3px;\n  border-bottom: 1px solid #fff;\n}\n@media (max-width: 640px) {\n  nav ul li a {\n    font-size: 11px;\n  }\n  nav li a:after {\n    font-size: 0.6rem;\n  }\n  .open-overlay {\n    right: 1rem;\n  }\n  nav li a:before {\n    width: 15px;\n  }\n}","js":"$(&#39;.open-overlay&#39;).click(function () {\n  var overlay_navigation = $(&#39;.overlay-navigation&#39;),\n  nav_item_1 = $(&#39;nav li:nth-of-type(1)&#39;),\n  nav_item_2 = $(&#39;nav li:nth-of-type(2)&#39;),\n  nav_item_3 = $(&#39;nav li:nth-of-type(3)&#39;),\n  nav_item_4 = $(&#39;nav li:nth-of-type(4)&#39;),\n  nav_item_5 = $(&#39;nav li:nth-of-type(5)&#39;),\n  top_bar = $(&#39;.bar-top&#39;),\n  middle_bar = $(&#39;.bar-middle&#39;),\n  bottom_bar = $(&#39;.bar-bottom&#39;);\n\n  overlay_navigation.toggleClass(&#39;overlay-active&#39;);\n  if (overlay_navigation.hasClass(&#39;overlay-active&#39;)) {\n\n    top_bar.removeClass(&#39;animate-out-top-bar&#39;).addClass(&#39;animate-top-bar&#39;);\n    middle_bar.removeClass(&#39;animate-out-middle-bar&#39;).addClass(&#39;animate-middle-bar&#39;);\n    bottom_bar.removeClass(&#39;animate-out-bottom-bar&#39;).addClass(&#39;animate-bottom-bar&#39;);\n    overlay_navigation.removeClass(&#39;overlay-slide-up&#39;).addClass(&#39;overlay-slide-down&#39;);\n    nav_item_1.removeClass(&#39;slide-in-nav-item-reverse&#39;).addClass(&#39;slide-in-nav-item&#39;);\n    nav_item_2.removeClass(&#39;slide-in-nav-item-delay-1-reverse&#39;).addClass(&#39;slide-in-nav-item-delay-1&#39;);\n    nav_item_3.removeClass(&#39;slide-in-nav-item-delay-2-reverse&#39;).addClass(&#39;slide-in-nav-item-delay-2&#39;);\n    nav_item_4.removeClass(&#39;slide-in-nav-item-delay-3-reverse&#39;).addClass(&#39;slide-in-nav-item-delay-3&#39;);\n    nav_item_5.removeClass(&#39;slide-in-nav-item-delay-4-reverse&#39;).addClass(&#39;slide-in-nav-item-delay-4&#39;);\n  } else {\n    top_bar.removeClass(&#39;animate-top-bar&#39;).addClass(&#39;animate-out-top-bar&#39;);\n    middle_bar.removeClass(&#39;animate-middle-bar&#39;).addClass(&#39;animate-out-middle-bar&#39;);\n    bottom_bar.removeClass(&#39;animate-bottom-bar&#39;).addClass(&#39;animate-out-bottom-bar&#39;);\n    overlay_navigation.removeClass(&#39;overlay-slide-down&#39;).addClass(&#39;overlay-slide-up&#39;);\n    nav_item_1.removeClass(&#39;slide-in-nav-item&#39;).addClass(&#39;slide-in-nav-item-reverse&#39;);\n    nav_item_2.removeClass(&#39;slide-in-nav-item-delay-1&#39;).addClass(&#39;slide-in-nav-item-delay-1-reverse&#39;);\n    nav_item_3.removeClass(&#39;slide-in-nav-item-delay-2&#39;).addClass(&#39;slide-in-nav-item-delay-2-reverse&#39;);\n    nav_item_4.removeClass(&#39;slide-in-nav-item-delay-3&#39;).addClass(&#39;slide-in-nav-item-delay-3-reverse&#39;);\n    nav_item_5.removeClass(&#39;slide-in-nav-item-delay-4&#39;).addClass(&#39;slide-in-nav-item-delay-4-reverse&#39;);\n  }\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

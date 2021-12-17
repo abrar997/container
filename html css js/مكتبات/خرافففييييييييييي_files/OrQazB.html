@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://cdpn.io/kingsfull123/fullembedgrid/OrQazB?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - React movie card</title>
+  <link rel="stylesheet" href="./font-awesome.min(1).css">
+<link href="./css" rel="stylesheet">
+<link href="./css(1)" rel="stylesheet">
+  
+  
+  
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.movies__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 95%;
+  padding-top: 30px;
+  justify-content: space-around;
+  color: #ddd;
+}
+
+.movie {
+  margin: 5px;
+  padding: 20px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-blend-mode: color;
+  max-width: 270px;
+  height: 400.1px;
+  box-shadow: 10px 10px 10px #111;
+  transition: background-color 0.25s linear;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+}
+.movie:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.movie:hover .movie__title,
+.movie:hover .movie__description,
+.movie:hover .movie__infos div,
+.movie:hover .movie__rating,
+.movie:hover .movie__imdb-button {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.movie__title {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0, opacity 0.3s linear;
+  text-transform: uppercase;
+}
+
+.movie__description {
+  max-height: 200px;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.05s, opacity 0.3s linear;
+}
+
+.movie__infos {
+  display: grid;
+  grid-gap: 10px 0;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.info__head {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.movie__duration {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.15s, opacity 0.3s linear;
+}
+
+.movie__director {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.2s, opacity 0.3s linear;
+}
+
+.movie__year {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.25s, opacity 0.3s linear;
+}
+
+.movie__cast {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.3s, opacity 0.3s linear;
+  font-size: 0.9em;
+}
+
+.movie__imdb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: flex-end;
+  padding: 0 10px;
+}
+
+.movie__rating {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.35s, opacity 0.3s linear;
+}
+
+.fa-star {
+  width: 9px;
+  font-size: 1.2em;
+  display: inline-block;
+  overflow: hidden;
+}
+.fa-star.checked {
+  color: yellow;
+}
+
+.movie__imdb-button {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #EBBA33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.4s, opacity 0.3s linear;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="app"><div data-reactroot="" class="movies__container"><div class="movie" style="background-image: url(&quot;http://media.comicbook.com/2017/10/thor-movie-poster-marvel-cinematic-universe-1038890.jpg&quot;);"><h2 class="movie__title">Thor</h2><span class="movie__description">The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</span><div class="movie__infos"><div class="movie__duration"><span class="info__head">Duration</span><!-- react-text: 8 -->124<!-- /react-text --></div><div class="movie__director"><span class="info__head">Director</span><!-- react-text: 11 -->Kenneth Branagh<!-- /react-text --></div><div class="movie__year"><span class="info__head">Year</span><!-- react-text: 14 -->2011<!-- /react-text --></div><div class="movie__cast"><span class="info__head">Cast</span><p>Chris Hemsworth</p><p>Anthony Hopkins</p><p>Natalie Portman</p></div></div><div class="movie__imdb"><div class="movie__rating"><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i></div><a href="https://www.imdb.com/title/tt0800369/" class="movie__imdb-button" target="blank"> IMDb </a></div></div><div class="movie" style="background-image: url(&quot;https://ae01.alicdn.com/kf/HTB1xKI9PFXXXXXAXVXXq6xXFXXXG/Dropship-The-Shawshank-Redemption-Nostalgia-classic-movie-kraft-paper-bar-poster-Retro-Poster-decorative-painting.jpg&quot;);"><h2 class="movie__title">The Shawshank Redemption</h2><span class="movie__description">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</span><div class="movie__infos"><div class="movie__duration"><span class="info__head">Duration</span><!-- react-text: 39 -->142<!-- /react-text --></div><div class="movie__director"><span class="info__head">Director</span><!-- react-text: 42 -->Frank Darabont<!-- /react-text --></div><div class="movie__year"><span class="info__head">Year</span><!-- react-text: 45 -->1994<!-- /react-text --></div><div class="movie__cast"><span class="info__head">Cast</span><p>Tim Robbins</p><p>Morgan Freeman</p><p>Bob Gunton</p></div></div><div class="movie__imdb"><div class="movie__rating"><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i></div><a href="https://www.imdb.com/title/tt0111161/" class="movie__imdb-button" target="blank"> IMDb </a></div></div><div class="movie" style="background-image: url(&quot;https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,677,1000_AL_.jpg&quot;);"><h2 class="movie__title">The Silence of the Lambs</h2><span class="movie__description">A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.</span><div class="movie__infos"><div class="movie__duration"><span class="info__head">Duration</span><!-- react-text: 70 -->118<!-- /react-text --></div><div class="movie__director"><span class="info__head">Director</span><!-- react-text: 73 -->Jonathan Demme<!-- /react-text --></div><div class="movie__year"><span class="info__head">Year</span><!-- react-text: 76 -->1991<!-- /react-text --></div><div class="movie__cast"><span class="info__head">Cast</span><p>Jodie Foster</p><p>Anthony Hopkins</p><p>Lawrence A. Bonney</p></div></div><div class="movie__imdb"><div class="movie__rating"><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i></div><a href="https://www.imdb.com/title/tt0102926/" class="movie__imdb-button" target="blank"> IMDb </a></div></div><div class="movie" style="background-image: url(&quot;https://m.media-amazon.com/images/M/MV5BOGJjNzZmMmUtMjljNC00ZjU5LWJiODQtZmEzZTU0MjBlNzgxL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,675,1000_AL_.jpg&quot;);"><h2 class="movie__title">Spirited Away</h2><span class="movie__description">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</span><div class="movie__infos"><div class="movie__duration"><span class="info__head">Duration</span><!-- react-text: 101 -->125<!-- /react-text --></div><div class="movie__director"><span class="info__head">Director</span><!-- react-text: 104 -->Hayao Miyazaki<!-- /react-text --></div><div class="movie__year"><span class="info__head">Year</span><!-- react-text: 107 -->2001<!-- /react-text --></div><div class="movie__cast"><span class="info__head">Cast</span><p>Daveigh Chase</p><p>Suzanne Pleshette</p><p>Miyu Irino</p></div></div><div class="movie__imdb"><div class="movie__rating"><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i></div><a href="https://www.imdb.com/title/tt0245429/" class="movie__imdb-button" target="blank"> IMDb </a></div></div><div class="movie" style="background-image: url(&quot;https://m.media-amazon.com/images/M/MV5BNThlOTFhOGEtZjE2NC00MzMzLThkYWItZjlkNWNlMDAzMGZkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,732,1000_AL_.jpg&quot;);"><h2 class="movie__title">Starship Troopers</h2><span class="movie__description">Humans in a fascistic, militaristic future do battle with giant alien bugs in a fight for survival.</span><div class="movie__infos"><div class="movie__duration"><span class="info__head">Duration</span><!-- react-text: 132 -->129<!-- /react-text --></div><div class="movie__director"><span class="info__head">Director</span><!-- react-text: 135 -->Paul Verhoeven<!-- /react-text --></div><div class="movie__year"><span class="info__head">Year</span><!-- react-text: 138 -->1997<!-- /react-text --></div><div class="movie__cast"><span class="info__head">Cast</span><p>Casper Van Dien</p><p>Denise Richards</p><p>Dina Meyer</p></div></div><div class="movie__imdb"><div class="movie__rating"><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star checked" style="direction: rtl;"></i><i class="fa fa-star checked" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i><i class="fa fa-star" style="direction: ltr;"></i><i class="fa fa-star" style="direction: rtl;"></i></div><a href="https://www.imdb.com/title/tttt0120201/" class="movie__imdb-button" target="blank"> IMDb </a></div></div></div></div>
+    <script src="./stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js.download"></script>
+
+  <script src="./react.min.js.download"></script>
+<script src="./react-dom.min.js.download"></script>
+      <script id="rendered-js">
+const Rating = ({ rating }) => {
+  let stars = [];
+  for (let i = 1; i < 11; i++) {if (window.CP.shouldStopExecution(0)) break;
+    let klass = "fa fa-star";
+    if (rating >= i && rating !== null) {
+      klass = "fa fa-star checked";
+    }
+    stars.push( /*#__PURE__*/
+    React.createElement("i", {
+      style: { direction: i % 2 === 0 ? "rtl" : "ltr" },
+      className: klass }));
+
+
+  }window.CP.exitedLoop(0);
+  return /*#__PURE__*/(
+    React.createElement("div", { className: "movie__rating" },
+    stars));
+
+
+};
+
+
+
+const MovieInfo = ({ name, value }) => /*#__PURE__*/
+React.createElement("div", { className: `movie__${name}` }, /*#__PURE__*/
+React.createElement("span", { className: "info__head" },
+name.replace(/\b\w/g, l => l.toUpperCase())),
+
+value);
+
+
+
+
+const Movie = ({ infos }) => {
+  const cast = infos.cast.map((actor) => /*#__PURE__*/
+  React.createElement("p", { key: actor }, actor));
+
+  return /*#__PURE__*/(
+    React.createElement("div", { className: "movie", style: { backgroundImage: `url(${infos.poster})` } }, /*#__PURE__*/
+
+    React.createElement("h2", { className: "movie__title" }, infos.title), /*#__PURE__*/
+
+    React.createElement("span", { className: "movie__description" }, infos.description), /*#__PURE__*/
+
+    React.createElement("div", { className: "movie__infos" }, /*#__PURE__*/
+    React.createElement(MovieInfo, { name: "duration", value: infos.duration }), /*#__PURE__*/
+    React.createElement(MovieInfo, { name: "director", value: infos.director }), /*#__PURE__*/
+    React.createElement(MovieInfo, { name: "year", value: infos.year }), /*#__PURE__*/
+    React.createElement(MovieInfo, { name: "cast", value: cast })), /*#__PURE__*/
+
+
+    React.createElement("div", { className: "movie__imdb" }, /*#__PURE__*/
+    React.createElement(Rating, { rating: Math.round(infos.rating) }), /*#__PURE__*/
+    React.createElement("a", { href: infos.imdbLink, className: "movie__imdb-button", target: "blank" }, " IMDb "))));
+
+
+
+
+};
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const moviesList = this.props.infos.map((movie, i) => /*#__PURE__*/
+    React.createElement(Movie, { key: i, infos: movie }));
+
+    return /*#__PURE__*/(
+      React.createElement("div", { className: "movies__container" },
+      moviesList));
+
+
+  }}
+
+
+
+
+const infos = [
+{
+  title: 'Thor',
+  description: 'The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.',
+  duration: '124',
+  year: '2011',
+  director: 'Kenneth Branagh',
+  cast: ['Chris Hemsworth', 'Anthony Hopkins', 'Natalie Portman'],
+  rating: 8.7,
+  imdbLink: 'https://www.imdb.com/title/tt0800369/',
+  poster: 'http://media.comicbook.com/2017/10/thor-movie-poster-marvel-cinematic-universe-1038890.jpg' },
+
+{
+  title: 'The Shawshank Redemption',
+  description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
+  duration: '142',
+  year: '1994',
+  director: 'Frank Darabont',
+  cast: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+  rating: 9.3,
+  imdbLink: 'https://www.imdb.com/title/tt0111161/',
+  poster: "https://ae01.alicdn.com/kf/HTB1xKI9PFXXXXXAXVXXq6xXFXXXG/Dropship-The-Shawshank-Redemption-Nostalgia-classic-movie-kraft-paper-bar-poster-Retro-Poster-decorative-painting.jpg" },
+
+{
+  title: 'The Silence of the Lambs',
+  description: 'A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.',
+  duration: '118',
+  year: '1991',
+  director: 'Jonathan Demme',
+  cast: ['Jodie Foster', 'Anthony Hopkins', 'Lawrence A. Bonney'],
+  rating: 8.6,
+  imdbLink: 'https://www.imdb.com/title/tt0102926/',
+  poster: "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,677,1000_AL_.jpg" },
+
+{
+  title: 'Spirited Away',
+  description: "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+  duration: '125',
+  year: '2001',
+  director: 'Hayao Miyazaki',
+  cast: ['Daveigh Chase', 'Suzanne Pleshette', 'Miyu Irino'],
+  rating: 8.6,
+  imdbLink: 'https://www.imdb.com/title/tt0245429/',
+  poster: "https://m.media-amazon.com/images/M/MV5BOGJjNzZmMmUtMjljNC00ZjU5LWJiODQtZmEzZTU0MjBlNzgxL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,675,1000_AL_.jpg" },
+
+{
+  title: 'Starship Troopers',
+  description: "Humans in a fascistic, militaristic future do battle with giant alien bugs in a fight for survival.",
+  duration: '129',
+  year: '1997',
+  director: 'Paul Verhoeven',
+  cast: ['Casper Van Dien', 'Denise Richards', 'Dina Meyer'],
+  rating: 7.2,
+  imdbLink: 'https://www.imdb.com/title/tttt0120201/',
+  poster: "https://m.media-amazon.com/images/M/MV5BNThlOTFhOGEtZjE2NC00MzMzLThkYWItZjlkNWNlMDAzMGZkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,732,1000_AL_.jpg" }];
+
+
+
+ReactDOM.render( /*#__PURE__*/React.createElement(App, { infos: infos }), document.getElementById('app'));
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js.download"></script>
+
+
+
+ 
+</body></html>

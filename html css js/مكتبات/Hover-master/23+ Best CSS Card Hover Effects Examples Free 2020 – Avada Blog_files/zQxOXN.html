@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://codepen.io/sbgoswami/embed/zQxOXN?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - 3D flip card Hover Effect using CSS</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="sXWm9S5bVliEpjkyOaq3eWvXBOulcofrRemfde40cklgASpu6HAQ6dpMfAzZZY7OHzRagE10eFt5q5dVZS0PZw==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body results-active single-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/sbgoswami/embed/zQxOXN?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/sbgoswami/embed/zQxOXN?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/sbgoswami/embed/zQxOXN?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/sbgoswami/embed/zQxOXN?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/sbgoswami/pen/zQxOXN" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/iron_man.jpg"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Iron Man<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/thor_card.jpg"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Thor<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr) is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of mankind and also hallowing and fertility. Besides Old Norse Þórr, extensions of the god occur in Old English as Þunor and in Old High German as Donar (runic þonar ᚦᛟᚾᚨᚱ).<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/ant_man.png"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Ant Man<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Ant-Man is the name of several fictional superheroes appearing in books published by Marvel Comics. Created by Stan Lee, Larry Lieber and Jack Kirby, Ant-Man's first appearance was in Tales to Astonish #35 (September 1962).<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/Dr_Strange.jpg"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Dr. Strange<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Doctor Stephen Strange is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist Steve Ditko and writer Stan Lee,[1] the character first appeared in Strange Tales #110 (cover-dated July 1963). Doctor Strange serves as the Sorcerer Supreme.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/captain_america.jpg"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Captain America<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Captain America is a fictional superhero appearing in American comic books published by Marvel Comics. Created by cartoonists Joe Simon and Jack Kirby, the character first appeared in Captain America Comics #1 (cover dated March 1941) from Timely Comics, a predecessor of Marvel Comics.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"img-container"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://santoshg.com/codepen/black_widow.jpg"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">/&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"card-details"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>black widow<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Black Widow appears in a relaunched ongoing series by writer Nathan Edmondson and artist Phil Noto. The first issue debuted in January 2014. In October 2015, it was announced that Mark Waid and Chris Samnee would be launching a new Black Widow series for 2016 as part of Marvel's post-Secret Wars relaunch.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span>{
+  <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">background</span>:<span class="cm-atom">#f2f2f2</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">'Acme'</span>;
+}
+
+<span class="cm-qualifier">.container</span>{
+  <span class="cm-property">max-width</span>:<span class="cm-number">1000px</span>;
+  <span class="cm-property">margin</span>:<span class="cm-number">100px</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">display</span>:<span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-wrap</span>:<span class="cm-atom">wrap</span>;
+  <span class="cm-property">justify-content</span>:<span class="cm-atom">space-around</span>;
+}
+
+<span class="cm-qualifier">.card</span>{
+  <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+  <span class="cm-property">margin</span>:<span class="cm-number">20px</span> <span class="cm-number">0</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">300px</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">400px</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">transform-style</span>:<span class="cm-atom">preserve-3d</span>;
+  <span class="cm-property">transform</span>:<span class="cm-variable cm-callee">perspective</span>(<span class="cm-number">2000px</span>);
+  <span class="cm-property">transition</span>:<span class="cm-number">1s</span>;
+  <span class="cm-property">box-shadow</span>:<span class="cm-atom">inset</span> <span class="cm-number">100px</span> <span class="cm-number">0</span> <span class="cm-number">50px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0.5</span>);
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span>{
+  <span class="cm-property">z-index</span>:<span class="cm-number">1111</span>;
+  <span class="cm-property">transform</span>:<span class="cm-variable cm-callee">perspective</span>(<span class="cm-number">2000px</span>) <span class="cm-variable cm-callee">rotate</span>(<span class="cm-number">-10deg</span>);
+  <span class="cm-property">box-shadow</span>:<span class="cm-atom">inset</span> <span class="cm-number">20px</span> <span class="cm-number">0</span> <span class="cm-number">50px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0.5</span>);
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.img-container</span>{
+  <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">border</span>:<span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#000</span>;
+  <span class="cm-property">box-sizing</span>:<span class="cm-atom">border-box</span>;
+  <span class="cm-property">transform-origin</span>:<span class="cm-atom">left</span>;
+  <span class="cm-property">z-index</span>:<span class="cm-number">1</span>;
+  <span class="cm-property">transition</span>:<span class="cm-number">1s</span>;
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.img-container</span> <span class="cm-tag">img</span>{
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">100%</span>;
+  <span class="cm-property">object-fit</span>:<span class="cm-atom">cover</span>;
+}
+
+<span class="cm-qualifier">.card</span>:<span class="cm-variable-3">hover</span> <span class="cm-qualifier">.img-container</span>{
+  <span class="cm-property">transform</span>:<span class="cm-variable cm-callee">rotateY</span>(<span class="cm-number">-135deg</span>);
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.card-details</span>{
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">box-sizing</span>:<span class="cm-atom">border-box</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">20px</span>;
+  <span class="cm-property">color</span>:<span class="cm-atom">#000</span>;
+}
+
+ <span class="cm-qualifier">.card</span> <span class="cm-qualifier">.card-details</span> <span class="cm-tag">h2</span>{
+  <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">0.5em</span> <span class="cm-number">0</span>;
+  <span class="cm-property">text-transform</span>:<span class="cm-atom">uppercase</span>;
+  <span class="cm-property">font-size</span>:<span class="cm-number">2em</span>;
+  <span class="cm-property">color</span>:<span class="cm-atom">#ed363a</span>;
+}
+
+<span class="cm-qualifier">.card</span> <span class="cm-qualifier">.card-details</span> <span class="cm-tag">p</span>{
+  <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">line-height</span>:<span class="cm-number">25px</span>;
+  <span class="cm-property">font-size</span>:<span class="cm-number">1.1em</span>;
+}</code></pre>
+</div>
+<div id="result-box" class="code-box zoom-1 active" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for 3D flip card Hover Effect using CSS" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for 3D flip card Hover Effect using CSS" data-src="https://cdpn.io/sbgoswami/fullembedgrid/zQxOXN?animations=run&amp;type=embed" src="./zQxOXN(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/sbgoswami" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/sbgoswami" target="_blank" rel="noopener">Santosh Goswami</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/sbgoswami" target="_blank" rel="noopener" class="about-user-more">
+See more by @sbgoswami on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;container&quot;&gt;\n  &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/iron_man.jpg&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;Iron Man&lt;/h2&gt;\n      &lt;p&gt;Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. &lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n   &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/thor_card.jpg&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;Thor&lt;/h2&gt;\n      &lt;p&gt;In Germanic mythology, Thor (/θɔːr/; from Old Norse: Þórr) is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of mankind and also hallowing and fertility. Besides Old Norse Þórr, extensions of the god occur in Old English as Þunor and in Old High German as Donar (runic þonar ᚦᛟᚾᚨᚱ).&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n   &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/ant_man.png&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;Ant Man&lt;/h2&gt;\n      &lt;p&gt;Ant-Man is the name of several fictional superheroes appearing in books published by Marvel Comics. Created by Stan Lee, Larry Lieber and Jack Kirby, Ant-Man&#39;s first appearance was in Tales to Astonish #35 (September 1962).&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n   &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/Dr_Strange.jpg&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;Dr. Strange&lt;/h2&gt;\n      &lt;p&gt;Doctor Stephen Strange is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist Steve Ditko and writer Stan Lee,[1] the character first appeared in Strange Tales #110 (cover-dated July 1963). Doctor Strange serves as the Sorcerer Supreme.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n   &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/captain_america.jpg&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;Captain America&lt;/h2&gt;\n      &lt;p&gt;Captain America is a fictional superhero appearing in American comic books published by Marvel Comics. Created by cartoonists Joe Simon and Jack Kirby, the character first appeared in Captain America Comics #1 (cover dated March 1941) from Timely Comics, a predecessor of Marvel Comics.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n   &lt;div class=&quot;card&quot;&gt;\n    &lt;div class=&quot;img-container&quot;&gt;\n      &lt;img src=&quot;http://santoshg.com/codepen/black_widow.jpg&quot; alt=&quot;&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;card-details&quot;&gt;\n      &lt;h2&gt;black widow&lt;/h2&gt;\n      &lt;p&gt;Black Widow appears in a relaunched ongoing series by writer Nathan Edmondson and artist Phil Noto. The first issue debuted in January 2014. In October 2015, it was announced that Mark Waid and Chris Samnee would be launching a new Black Widow series for 2016 as part of Marvel&#39;s post-Secret Wars relaunch.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n  &lt;/div&gt;","css":"body{\n  margin:0;\n  padding:0;\n  background:#f2f2f2;\n  font-family: &#39;Acme&#39;;\n}\n\n.container{\n  max-width:1000px;\n  margin:100px auto;\n  display:flex;\n  flex-wrap:wrap;\n  justify-content:space-around;\n}\n\n.card{\n  position:relative;\n  margin:20px 0;\n  width:300px;\n  height:400px;\n  background: #fff;\n  transform-style:preserve-3d;\n  transform:perspective(2000px);\n  transition:1s;\n  box-shadow:inset 100px 0 50px rgba(0,0,0,0.5);\n}\n\n.card:hover{\n  z-index:1111;\n  transform:perspective(2000px) rotate(-10deg);\n  box-shadow:inset 20px 0 50px rgba(0,0,0,0.5);\n}\n\n.card .img-container{\n  position:relative;\n  width:100%;\n  height:100%;\n  border:1px solid #000;\n  box-sizing:border-box;\n  transform-origin:left;\n  z-index:1;\n  transition:1s;\n}\n\n.card .img-container img{\n  position:absolute;\n  left:0;\n  top:0;\n  height:100%;\n  width:100%;\n  object-fit:cover;\n}\n\n.card:hover .img-container{\n  transform:rotateY(-135deg);\n}\n\n.card .card-details{\n  position:absolute;\n  left:0;\n  top:0;\n  box-sizing:border-box;\n  padding:20px;\n  color:#000;\n}\n\n .card .card-details h2{\n  margin:0;\n  padding:0.5em 0;\n  text-transform:uppercase;\n  font-size:2em;\n  color:#ed363a;\n}\n\n.card .card-details p{\n  margin:0;\n  padding:0;\n  line-height:25px;\n  font-size:1.1em;\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>

@@ -1,0 +1,34 @@
+body{background-color: rgba(0, 0, 0, 0.877);}
+
+.yourInfo{
+margin: auto;
+width: 400px;
+display: flex;
+flex-flow: column;
+padding: 30px;
+height: 500px;
+}
+.yourInfo input{padding: 12px;
+margin-top: 10px;
+outline: none;
+
+
+}
+.yourInfo label{color: white;
+    margin-top: 10px;
+text-transform: capitalize;
+}
+
+.TEST{border:5px solid rgb(255, 136, 0);
+margin: auto;
+width: 500px;
+margin-top: 60px;
+}
+
+.yourInfo input[type="submit"]{margin-top: 40px;
+padding: 14px;
+background-color: rgba(0, 0, 0, 0.767);
+color: white;
+border: 2px solid rgb(255, 136, 0);
+cursor: pointer;
+}

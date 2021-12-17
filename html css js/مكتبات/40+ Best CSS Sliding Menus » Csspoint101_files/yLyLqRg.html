@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://cdpn.io/CloudFrank/fullembedgrid/yLyLqRg?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - CSS Side navigation &amp; Hamburger Menu</title>
+  
+  
+  
+  
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+#ajerez {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 9999;
+}
+#ajerez img {
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #7482A5;
+  transition: border-radius 0.2s ease-in-out;
+}
+#ajerez img:hover {
+  border-radius: 30%;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: #C8DAE6;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.menu-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-top: 100px;
+}
+
+.menu {
+  position: relative;
+  width: 36px;
+  height: 6px;
+  background-color: #7482A5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  margin: 5px;
+  color: #7482A5;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.menu label {
+  cursor: pointer;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  line-height: 30px;
+  top: -12px;
+  left: 48px;
+}
+.menu:hover > ul.nav-links, .menu.open > ul.nav-links {
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  width: 180px;
+  transform: translateX(15px);
+  pointer-events: auto;
+}
+.menu:after, .menu:before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 6px;
+  background-color: #7482A5;
+  transition: all 0.25s ease-in-out;
+}
+.menu:after {
+  top: 12px;
+}
+.menu:before {
+  top: -12px;
+}
+.menu:hover, .menu.open {
+  background-color: transparent;
+}
+.menu:hover::after, .menu:hover::before, .menu.open::after, .menu.open::before {
+  transition: all 0.3s ease-in-out;
+  width: 18px;
+}
+.menu:hover::after, .menu.open::after {
+  transform: translate(3px, -7px) rotate(405deg);
+}
+.menu:hover::before, .menu.open::before {
+  transform: translate(12px, 17px) rotate(-405deg);
+}
+.menu ul.nav-links {
+  margin: 0;
+  padding: 36px 0 0 0;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.menu ul.nav-links li {
+  width: 100%;
+  padding: 4px 8px;
+  list-style-type: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+  border-left: 2px solid #7482A5;
+}
+.menu ul.nav-links li:hover, .menu ul.nav-links li.active {
+  color: white;
+  border-left: 2px solid white;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  var consoleWarn = window.console.warn;
+  function warn(){ consoleWarn.apply(console, arguments); }
+  window.open = function(){ warn("window.open is disabled."); };
+  window.print   = function(){ warn("window.print is disabled."); };
+  window.alert   = function(){ warn("window.alert is disabled."); };
+  window.confirm = function(){ warn("window.confirm is disabled."); };
+  window.prompt  = function(){ warn("window.prompt is disabled."); };
+  window.Notification = function() { warn("HTML5 notifications are disabled."); };
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <!-- Open on hover menú -->
+<div class="menu-wrapper">
+    <div class="menu">
+        <label>MENU</label>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li class="active">Blog</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+<!-- Visible menu -->
+<div class="menu-wrapper">
+    <div class="menu open">
+        <label>MENU</label>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li class="active">Portfolio</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<!-- Link to my website -->
+<a id="ajerez" href="http://www.ajerez.es/en/" target="_blank"><img src="https://i.imgur.com/AI4BS2I.png"></a>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+  
+      <script id="rendered-js">
+/* CSS Menu
+ * A pen by Alberto Jerez
+ * www.ajerez.es
+ */
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
+
+
+ 
+</body></html>

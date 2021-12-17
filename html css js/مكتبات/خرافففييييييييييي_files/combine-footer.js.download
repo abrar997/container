@@ -1,0 +1,1585 @@
+
+!function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"],e):e("object"==typeof exports&&"function"==typeof require?require("jquery"):jQuery)}(function(e){"use strict";function t(n,o){var i=e.noop,s=this,a={ajaxSettings:{},autoSelectFirst:!1,appendTo:document.body,serviceUrl:null,lookup:null,onSelect:null,width:"auto",minChars:1,maxHeight:300,deferRequestBy:0,params:{},formatResult:t.formatResult,delimiter:null,zIndex:9999,type:"GET",noCache:!1,onSearchStart:i,onSearchComplete:i,onSearchError:i,preserveInput:!1,containerClass:"autocomplete-suggestions",tabDisabled:!1,dataType:"text",currentRequest:null,triggerSelectOnValidInput:!0,preventBadQueries:!0,lookupFilter:function(e,t,n){return-1!==e.value.toLowerCase().indexOf(n)},paramName:"query",transformResult:function(t){return"string"==typeof t?e.parseJSON(t):t},showNoSuggestionNotice:!1,noSuggestionNotice:"No results",orientation:"bottom",forceFixPosition:!1};s.element=n,s.el=e(n),s.suggestions=[],s.badQueries=[],s.selectedIndex=-1,s.currentValue=s.element.value,s.intervalId=0,s.cachedResponse={},s.onChangeInterval=null,s.onChange=null,s.isLocal=!1,s.suggestionsContainer=null,s.noSuggestionsContainer=null,s.options=e.extend({},a,o),s.classes={selected:"autocomplete-selected",suggestion:"autocomplete-suggestion"},s.hint=null,s.hintValue="",s.selection=null,s.initialize(),s.setOptions(o)}var n=function(){return{escapeRegExChars:function(e){return e.replace(/[|\\{}()[\]^$+*?.]/g,"\\$&")},createNode:function(e){var t=document.createElement("div");return t.className=e,t.style.position="absolute",t.style.display="none",t}}}(),o={ESC:27,TAB:9,RETURN:13,LEFT:37,UP:38,RIGHT:39,DOWN:40};t.utils=n,e.Autocomplete=t,t.formatResult=function(e,t){if(!t)return e.value;var o="("+n.escapeRegExChars(t)+")";return e.value.replace(new RegExp(o,"gi"),"<strong>$1</strong>").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/&lt;(\/?strong)&gt;/g,"<$1>")},t.prototype={killerFn:null,initialize:function(){var n,o=this,i="."+o.classes.suggestion,s=o.classes.selected,a=o.options;o.element.setAttribute("autocomplete","off"),o.killerFn=function(t){e(t.target).closest("."+o.options.containerClass).length||(o.killSuggestions(),o.disableKillerFn())},o.noSuggestionsContainer=e('<div class="autocomplete-no-suggestion"></div>').html(this.options.noSuggestionNotice).get(0),o.suggestionsContainer=t.utils.createNode(a.containerClass),n=e(o.suggestionsContainer),n.appendTo(a.appendTo),"auto"!==a.width&&n.width(a.width),n.on("mouseover.autocomplete",i,function(){o.activate(e(this).data("index"))}),n.on("mouseout.autocomplete",function(){o.selectedIndex=-1,n.children("."+s).removeClass(s)}),n.on("click.autocomplete",i,function(){return o.select(e(this).data("index")),!1}),o.fixPositionCapture=function(){o.visible&&o.fixPosition()},e(window).on("resize.autocomplete",o.fixPositionCapture),o.el.on("keydown.autocomplete",function(e){o.onKeyPress(e)}),o.el.on("keyup.autocomplete",function(e){o.onKeyUp(e)}),o.el.on("blur.autocomplete",function(){o.onBlur()}),o.el.on("focus.autocomplete",function(){o.onFocus()}),o.el.on("change.autocomplete",function(e){o.onKeyUp(e)}),o.el.on("input.autocomplete",function(e){o.onKeyUp(e)})},onFocus:function(){var e=this;e.fixPosition(),e.el.val().length>=e.options.minChars&&e.onValueChange()},onBlur:function(){this.enableKillerFn()},abortAjax:function(){var e=this;e.currentRequest&&(e.currentRequest.abort(),e.currentRequest=null)},setOptions:function(t){var n=this,o=n.options;e.extend(o,t),n.isLocal=e.isArray(o.lookup),n.isLocal&&(o.lookup=n.verifySuggestionsFormat(o.lookup)),o.orientation=n.validateOrientation(o.orientation,"bottom"),e(n.suggestionsContainer).css({"max-height":o.maxHeight+"px",width:o.width+"px","z-index":o.zIndex})},clearCache:function(){this.cachedResponse={},this.badQueries=[]},clear:function(){this.clearCache(),this.currentValue="",this.suggestions=[]},disable:function(){var e=this;e.disabled=!0,clearInterval(e.onChangeInterval),e.abortAjax()},enable:function(){this.disabled=!1},fixPosition:function(){var t=this,n=e(t.suggestionsContainer),o=n.parent().get(0);if(o===document.body||t.options.forceFixPosition){var i=t.options.orientation,s=n.outerHeight(),a=t.el.outerHeight(),l=t.el.offset(),r={top:l.top,left:l.left};if("auto"===i){var u=e(window).height(),c=e(window).scrollTop(),g=-c+l.top-s,d=c+u-(l.top+a+s);i=Math.max(g,d)===g?"top":"bottom"}if("top"===i?r.top+=-s:r.top+=a,o!==document.body){var p,h=n.css("opacity");t.visible||n.css("opacity",0).show(),p=n.offsetParent().offset(),r.top-=p.top,r.left-=p.left,t.visible||n.css("opacity",h).hide()}"auto"===t.options.width&&(r.width=t.el.outerWidth()-2+"px"),n.css(r)}},enableKillerFn:function(){var t=this;e(document).on("click.autocomplete",t.killerFn)},disableKillerFn:function(){var t=this;e(document).off("click.autocomplete",t.killerFn)},killSuggestions:function(){var e=this;e.stopKillSuggestions(),e.intervalId=window.setInterval(function(){e.visible&&(e.el.val(e.currentValue),e.hide()),e.stopKillSuggestions()},50)},stopKillSuggestions:function(){window.clearInterval(this.intervalId)},isCursorAtEnd:function(){var e,t=this,n=t.el.val().length,o=t.element.selectionStart;return"number"==typeof o?o===n:document.selection?(e=document.selection.createRange(),e.moveStart("character",-n),n===e.text.length):!0},onKeyPress:function(e){var t=this;if(!t.disabled&&!t.visible&&e.which===o.DOWN&&t.currentValue)return void t.suggest();if(!t.disabled&&t.visible){switch(e.which){case o.ESC:t.el.val(t.currentValue),t.hide();break;case o.RIGHT:if(t.hint&&t.options.onHint&&t.isCursorAtEnd()){t.selectHint();break}return;case o.TAB:if(t.hint&&t.options.onHint)return void t.selectHint();if(-1===t.selectedIndex)return void t.hide();if(t.select(t.selectedIndex),t.options.tabDisabled===!1)return;break;case o.RETURN:if(-1===t.selectedIndex)return void t.hide();t.select(t.selectedIndex);break;case o.UP:t.moveUp();break;case o.DOWN:t.moveDown();break;default:return}e.stopImmediatePropagation(),e.preventDefault()}},onKeyUp:function(e){var t=this;if(!t.disabled){switch(e.which){case o.UP:case o.DOWN:return}clearInterval(t.onChangeInterval),t.currentValue!==t.el.val()&&(t.findBestHint(),t.options.deferRequestBy>0?t.onChangeInterval=setInterval(function(){t.onValueChange()},t.options.deferRequestBy):t.onValueChange())}},onValueChange:function(){var t=this,n=t.options,o=t.el.val(),i=t.getQuery(o);return t.selection&&t.currentValue!==i&&(t.selection=null,(n.onInvalidateSelection||e.noop).call(t.element)),clearInterval(t.onChangeInterval),t.currentValue=o,t.selectedIndex=-1,n.triggerSelectOnValidInput&&t.isExactMatch(i)?void t.select(0):void(i.length<n.minChars?t.hide():t.getSuggestions(i))},isExactMatch:function(e){var t=this.suggestions;return 1===t.length&&t[0].value.toLowerCase()===e.toLowerCase()},getQuery:function(t){var n,o=this.options.delimiter;return o?(n=t.split(o),e.trim(n[n.length-1])):t},getSuggestionsLocal:function(t){var n,o=this,i=o.options,s=t.toLowerCase(),a=i.lookupFilter,l=parseInt(i.lookupLimit,10);return n={suggestions:e.grep(i.lookup,function(e){return a(e,t,s)})},l&&n.suggestions.length>l&&(n.suggestions=n.suggestions.slice(0,l)),n},getSuggestions:function(t){var n,o,i,s,a=this,l=a.options,r=l.serviceUrl;if(l.params[l.paramName]=t,o=l.ignoreParams?null:l.params,l.onSearchStart.call(a.element,l.params)!==!1){if(e.isFunction(l.lookup))return void l.lookup(t,function(e){a.suggestions=e.suggestions,a.suggest(),l.onSearchComplete.call(a.element,t,e.suggestions)});a.isLocal?n=a.getSuggestionsLocal(t):(e.isFunction(r)&&(r=r.call(a.element,t)),i=r+"?"+e.param(o||{}),n=a.cachedResponse[i]),n&&e.isArray(n.suggestions)?(a.suggestions=n.suggestions,a.suggest(),l.onSearchComplete.call(a.element,t,n.suggestions)):a.isBadQuery(t)?l.onSearchComplete.call(a.element,t,[]):(a.abortAjax(),s={url:r,data:o,type:l.type,dataType:l.dataType},e.extend(s,l.ajaxSettings),a.currentRequest=e.ajax(s).done(function(e){var n;a.currentRequest=null,n=l.transformResult(e,t),a.processResponse(n,t,i),l.onSearchComplete.call(a.element,t,n.suggestions)}).fail(function(e,n,o){l.onSearchError.call(a.element,t,e,n,o)}))}},isBadQuery:function(e){if(!this.options.preventBadQueries)return!1;for(var t=this.badQueries,n=t.length;n--;)if(0===e.indexOf(t[n]))return!0;return!1},hide:function(){var t=this,n=e(t.suggestionsContainer);e.isFunction(t.options.onHide)&&t.visible&&t.options.onHide.call(t.element,n),t.visible=!1,t.selectedIndex=-1,clearInterval(t.onChangeInterval),e(t.suggestionsContainer).hide(),t.signalHint(null)},suggest:function(){if(!this.suggestions.length)return void(this.options.showNoSuggestionNotice?this.noSuggestions():this.hide());var t,n=this,o=n.options,i=o.groupBy,s=o.formatResult,a=n.getQuery(n.currentValue),l=n.classes.suggestion,r=n.classes.selected,u=e(n.suggestionsContainer),c=e(n.noSuggestionsContainer),g=o.beforeRender,d="",p=function(e,n){var o=e.data[i];return t===o?"":(t=o,'<div class="autocomplete-group"><strong>'+t+"</strong></div>")};return o.triggerSelectOnValidInput&&n.isExactMatch(a)?void n.select(0):(e.each(n.suggestions,function(e,t){i&&(d+=p(t,a,e)),d+='<div class="'+l+'" data-index="'+e+'">'+s(t,a,e)+"</div>"}),this.adjustContainerWidth(),c.detach(),u.html(d),e.isFunction(g)&&g.call(n.element,u,n.suggestions),n.fixPosition(),u.show(),o.autoSelectFirst&&(n.selectedIndex=0,u.scrollTop(0),u.children("."+l).first().addClass(r)),n.visible=!0,void n.findBestHint())},noSuggestions:function(){var t=this,n=e(t.suggestionsContainer),o=e(t.noSuggestionsContainer);this.adjustContainerWidth(),o.detach(),n.empty(),n.append(o),t.fixPosition(),n.show(),t.visible=!0},adjustContainerWidth:function(){var t,n=this,o=n.options,i=e(n.suggestionsContainer);"auto"===o.width&&(t=n.el.outerWidth()-2,i.width(t>0?t:300))},findBestHint:function(){var t=this,n=t.el.val().toLowerCase(),o=null;n&&(e.each(t.suggestions,function(e,t){var i=0===t.value.toLowerCase().indexOf(n);return i&&(o=t),!i}),t.signalHint(o))},signalHint:function(t){var n="",o=this;t&&(n=o.currentValue+t.value.substr(o.currentValue.length)),o.hintValue!==n&&(o.hintValue=n,o.hint=t,(this.options.onHint||e.noop)(n))},verifySuggestionsFormat:function(t){return t.length&&"string"==typeof t[0]?e.map(t,function(e){return{value:e,data:null}}):t},validateOrientation:function(t,n){return t=e.trim(t||"").toLowerCase(),-1===e.inArray(t,["auto","bottom","top"])&&(t=n),t},processResponse:function(e,t,n){var o=this,i=o.options;e.suggestions=o.verifySuggestionsFormat(e.suggestions),i.noCache||(o.cachedResponse[n]=e,i.preventBadQueries&&!e.suggestions.length&&o.badQueries.push(t)),t===o.getQuery(o.currentValue)&&(o.suggestions=e.suggestions,o.suggest())},activate:function(t){var n,o=this,i=o.classes.selected,s=e(o.suggestionsContainer),a=s.find("."+o.classes.suggestion);return s.find("."+i).removeClass(i),o.selectedIndex=t,-1!==o.selectedIndex&&a.length>o.selectedIndex?(n=a.get(o.selectedIndex),e(n).addClass(i),n):null},selectHint:function(){var t=this,n=e.inArray(t.hint,t.suggestions);t.select(n)},select:function(e){var t=this;t.hide(),t.onSelect(e)},moveUp:function(){var t=this;if(-1!==t.selectedIndex)return 0===t.selectedIndex?(e(t.suggestionsContainer).children().first().removeClass(t.classes.selected),t.selectedIndex=-1,t.el.val(t.currentValue),void t.findBestHint()):void t.adjustScroll(t.selectedIndex-1)},moveDown:function(){var e=this;e.selectedIndex!==e.suggestions.length-1&&e.adjustScroll(e.selectedIndex+1)},adjustScroll:function(t){var n=this,o=n.activate(t);if(o){var i,s,a,l=e(o).outerHeight();i=o.offsetTop,s=e(n.suggestionsContainer).scrollTop(),a=s+n.options.maxHeight-l,s>i?e(n.suggestionsContainer).scrollTop(i):i>a&&e(n.suggestionsContainer).scrollTop(i-n.options.maxHeight+l),n.options.preserveInput||n.el.val(n.getValue(n.suggestions[t].value)),n.signalHint(null)}},onSelect:function(t){var n=this,o=n.options.onSelect,i=n.suggestions[t];n.currentValue=n.getValue(i.value),n.currentValue===n.el.val()||n.options.preserveInput||n.el.val(n.currentValue),n.signalHint(null),n.suggestions=[],n.selection=i,e.isFunction(o)&&o.call(n.element,i)},getValue:function(e){var t,n,o=this,i=o.options.delimiter;return i?(t=o.currentValue,n=t.split(i),1===n.length?e:t.substr(0,t.length-n[n.length-1].length)+e):e},dispose:function(){var t=this;t.el.off(".autocomplete").removeData("autocomplete"),t.disableKillerFn(),e(window).off("resize.autocomplete",t.fixPositionCapture),e(t.suggestionsContainer).remove()}},e.fn.autocomplete=e.fn.devbridgeAutocomplete=function(n,o){var i="autocomplete";return arguments.length?this.each(function(){var s=e(this),a=s.data(i);"string"==typeof n?a&&"function"==typeof a[n]&&a[n](o):(a&&a.dispose&&a.dispose(),a=new t(this,n),s.data(i,a))}):this.first().data(i)}});
+(function ($) {
+    $(function () {
+
+        var window_width = $(window).width();
+
+        // convert rgb to hex value string
+        function rgb2hex(rgb) {
+            if (/^#[0-9A-F]{6}$/i.test(rgb)) {
+                return rgb;
+            }
+
+            rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+            if (rgb === null) {
+                return "N/A";
+            }
+
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+
+            return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+        }
+
+        $('.dynamic-color .col').each(function () {
+            $(this).children().each(function () {
+                var color = $(this).css('background-color'),
+                    classes = $(this).attr('class');
+                $(this).html(rgb2hex(color) + " " + classes);
+                if (classes.indexOf("darken") >= 0 || $(this).hasClass('black')) {
+                    $(this).css('color', 'rgba(255,255,255,.9');
+                }
+            });
+        });
+
+
+        // Floating-Fixed table of contents
+        setTimeout(function () {
+            var tocWrapperHeight = 500; // Max height of ads.
+            var tocHeight = $('.toc-wrapper .table-of-contents').length ? $('.toc-wrapper .table-of-contents').height() : 0;
+            var socialHeight = 100; // Height of unloaded social media in footer.
+            var footerOffset = $('footer').first().length ? $('footer').first().offset().top : 0;
+            var bottomOffset = footerOffset - socialHeight - tocHeight - tocWrapperHeight;
+
+            if ($('nav').length) {
+                $('.toc-wrapper').pushpin({
+                    top: $('nav').height(),
+                    bottom: bottomOffset
+                });
+            }
+            else if ($('#index-banner').length) {
+                $('.toc-wrapper').pushpin({
+                    top: $('#index-banner').height(),
+                    bottom: bottomOffset
+                });
+            }
+            else {
+                $('.toc-wrapper').pushpin({
+                    top: 0,
+                    bottom: bottomOffset
+                });
+            }
+        }, 100);
+
+
+        // Github Latest Commit
+        // if ($('.github-commit').length) { // Checks if widget div exists (Index only)
+        //   $.ajax({
+        //     url: "https://api.github.com/repos/dogfalo/materialize/commits/master",
+        //     dataType: "json",
+        //     success: function (data) {
+        //       var sha = data.sha,
+        //           date = jQuery.timeago(data.commit.author.date);
+        //       if (window_width < 1120) {
+        //         sha = sha.substring(0,7);
+        //       }
+        //       $('.github-commit').find('.date').html(date);
+        //       $('.github-commit').find('.sha').html(sha).attr('href', data.html_url);
+        //     }
+        //   });
+        // }
+
+        // Toggle Flow Text
+        var toggleFlowTextButton = $('#flow-toggle');
+        toggleFlowTextButton.click(function () {
+            $('#flow-text-demo').children('p').each(function () {
+                $(this).toggleClass('flow-text');
+            });
+        });
+
+//    Toggle Containers on page
+        var toggleContainersButton = $('#container-toggle-button');
+        toggleContainersButton.click(function () {
+            $('body .browser-window .container, .had-container').each(function () {
+                $(this).toggleClass('had-container');
+                $(this).toggleClass('container');
+                if ($(this).hasClass('container')) {
+                    toggleContainersButton.text("Turn off Containers");
+                }
+                else {
+                    toggleContainersButton.text("Turn on Containers");
+                }
+            });
+        });
+
+        // Detect touch screen and enable scrollbar if necessary
+        function is_touch_device() {
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        if (is_touch_device()) {
+            $('#nav-mobile').css({overflow: 'auto'});
+        }
+
+        // Set checkbox on forms.html to indeterminate
+        var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
+        if (indeterminateCheckbox !== null)
+            indeterminateCheckbox.indeterminate = true;
+
+
+        // Plugin initialization
+        $('.carousel.carousel-slider').carousel({full_width: true});
+        $('.carousel').carousel();
+        $('.slider').slider({full_width: true});
+        $('.parallax').parallax();
+        $('.scrollspy').scrollSpy();
+        $('.button-collapse').sideNav({'edge': 'left'});
+        $('.datepicker').pickadate({selectYears: 20});
+        $('select').not('.disabled').material_select();
+        $(".dropdown-button").dropdown();
+        //Add responsive image class to all images in #page-content div
+        $("#page-content img").addClass("responsive-img");
+
+        $('input#input_text, textarea#review_content').characterCounter();
+
+
+        $("div.lazy").lazyload({
+            effect: "fadeIn"
+        });
+        $("img.lazy").lazyload({
+            effect: "fadeIn"
+        });
+
+
+        $("#review-form").submit(function () {
+
+            event.preventDefault();
+
+            var data = $('form#review-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'https://store.mageplaza.com/mageplaza/review/ajaxSubmit',
+                data: data,
+                dataType: "json",
+                success: function (response) {
+                    if (response.alert == 'success') {
+                        Materialize.toast(response.msg, 3000, 'green');
+                        $('#review-form')[0].reset();
+                    } else {
+                        Materialize.toast(response.msg, 3000, 'red');
+                    }
+                }
+            });
+
+        });
+
+
+        $("#subscribe-form").submit(function () {
+
+            event.preventDefault();
+
+            var data = $('form#subscribe-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'https://store.mageplaza.com/mageplaza/subscribe/ajaxSubscribe',
+                data: data,
+                dataType: "json",
+                success: function (response) {
+                    if (response.alert == 'success') {
+                        Materialize.toast(response.msg, 3000, 'green');
+                        // $('#subscribe-form')[0].reset();
+                    } else {
+                        Materialize.toast(response.msg, 3000, 'red');
+                    }
+                }
+            });
+
+        });
+
+        $("#notifyme-form").submit(function () {
+
+            event.preventDefault();
+
+            $('#notify-error-msg').html(''); //clean up msg
+
+            var data = $('form#notifyme-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'https://services.mageplaza.com/email/notifyme.php',
+                data: data,
+                dataType: "json",
+                success: function (response) {
+                    if (response.status == '200') {
+                        $('#notify-me-modal').modal('close');
+                        Materialize.toast(response.msg, 3000, 'green');
+                    } else {
+
+                        $('#notify-error-msg').html(response.msg);
+
+                        Materialize.toast(response.msg, 3000, 'red');
+                    }
+                }
+            });
+
+        });
+
+
+        jQuery('#kb-content > h2:eq(0)').before(jQuery('#top-ads'));
+        // jQuery('#m2md-content > h2:eq(0)').before(jQuery('#m2md-series'));
+        jQuery('#m2md-series').appendTo('#m2md-content > p:eq(1)');
+
+        $('.modal-trigger').leanModal();
+        $('.materialboxed').materialbox();
+        $('.collapsible').collapsible({
+            accordion: false
+        });
+        $('ul.tabs').tabs();
+
+        if ($('#review-section .card-content li').size() == 0) {
+            $('#review-section').hide();
+        }
+
+        $("#toTop").scrollTop(300);
+
+        $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrain_width: true, // Does not change width of dropdown to that of the activator
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: true, // Displays dropdown below the button
+                alignment: 'left' // Displays dropdown with edge aligned to the left of button
+            }
+        );
+
+        // Fly nav
+        // show/hide nav
+        function mpFlyNav() {
+            if ($('.mp-offset-flynav').offset()) { //check the flynav is exist
+                if ($(window).scrollTop() > $('.mp-offset-flynav').offset().top) {
+                    $('.mp-fly-nav').fadeIn(500);
+                } else {
+                    $('.mp-fly-nav').fadeOut(500);
+                }
+            }
+
+        }
+
+        mpFlyNav();
+        $(window).scroll(function () {
+            mpFlyNav();
+        });
+
+        // collapse nav button
+        // $(".button-collapse").sideNav();
+
+
+        // JS cookie produce
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var affCode = getParameterByName('u');
+
+        if (affCode) {
+            Cookies.set('mprc', affCode, {expires: 7});
+        }
+
+        //check is product page && has cookie mprc
+        if ($('#mprc').val() && Cookies.get('mprc')) {
+            $('#mprc').val(Cookies.get('mprc')); //add refer code to submit form
+        }
+
+        /* -------------------------------------------------- START LIVESITE development --------------------------------------------------*/
+
+        getRatingPoint();
+        reviewListTree("#review-section li", "#review-section .load-more", 5);
+        reviewListTree(".simple-release-note .collection", ".simple-release-note .load-more", 3);
+        screenshotSlider();
+
+        // show rating point
+        function getRatingPoint() {
+            var rating,
+                ratingPoint
+            ;
+            rating = $(".rating-css-light-stars").attr('title');
+            ratingPoint = (rating / 20).toFixed(1);
+            $("#review-stars span").text(ratingPoint);
+
+            $( '.review-rate-box' ).raterater( {
+                allowChange: true,
+                starWidth: 10,
+                spaceWidth: 1,
+                numStars: 5,
+                isStatic: true,
+            } );
+
+        }
+
+        // show more,back review list
+        function reviewListTree(selector, load, recordNum) {
+            var reviewCount;
+            reviewCount = $(selector).length;
+            $(selector).slice(0, recordNum).show();
+            if (reviewCount <= recordNum) {
+                $(load).hide();
+            } else {
+                // $(".back-to-top").hide('fast');
+                $(load).on('click', function () {
+                    if ($(this).hasClass("load-more")) {
+                        $(selector + ":hidden").slideDown('fast');
+                        $(this).removeClass('load-more').addClass('back-to-top');
+                        $(this).text('Collapse');
+                    } else {
+                        $(selector).slice(recordNum, reviewCount).slideUp('fast');
+                        $(this).removeClass('back-to-top').addClass('load-more');
+                        $(this).text('Load More');
+                    }
+                });
+            }
+        }
+
+        //init screenshots slider view
+        function screenshotSlider() {
+            $("#screenshots-carousel a").fancybox();
+            $("#screenshots-carousel").owlCarousel({
+                nav: true,
+                navText: ["<span class='nav-button nav-prev'></span>", "<span class='nav-button nav-next'></span>"],
+                autoplay: false,
+                center: false,
+                lazyLoad: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {items: 1},
+                    360: {items: 2},
+                    540: {items: 3},
+                    720: {items: 4},
+                    900: {items: 5}
+                }
+            });
+        }
+
+
+        //init mageplaza rating submit form
+        $(".mageplaza-rating-stars").stars({
+            color: '#e7711b',
+            value: 5,
+            click: function (i) {
+                $("#review-form").find("input[id=rating-star]").val(i);
+            }
+        });
+
+
+        //start CART JS
+        getCartItemNum();
+
+        //open cart action
+        $(".nav-wrapper #cart").on("click", function () {
+            var products = [];
+            if (JSON.parse(localStorage.getItem("products"))) {
+                products = JSON.parse(localStorage.getItem("products"));
+            }
+            if ($(".cart-items li")) {
+                $(".cart-items li").remove();
+                $(".shopping-cart-footer").remove();
+            }
+            if ($(".cart-items p")) {
+                $(".cart-items p").remove();
+            }
+            addProductsAction(products);
+            $(".shopping-cart").toggle();
+
+            //remove items from cart
+            $(".cart-items li i").each(function () {
+                $(this).on("click", function () {
+                    var position;
+                    var priceSelector = $(".shopping-cart-footer .price");
+                    var currentItemNum = parseInt($("#item-num").text());
+                    var qty = parseInt($(this).first().parent().parent().find(".item-qty").attr("title"));
+                    var price = parseInt($(this).first().parent().parent().find(".item-price").attr("title"));
+                    var totalPrice = qty * price;
+                    var originPrice = parseInt(priceSelector.attr("title"));
+                    if ((originPrice - totalPrice) === 0) {
+                        $(".shopping-cart-footer").remove();
+                        $(".shopping-cart").toggle();
+                        $("#item-num").hide();
+                        $("#item-num-mobile").hide();
+                    } else {
+                        priceSelector.attr("title", (originPrice - totalPrice));
+                        priceSelector.text("$" + (originPrice - totalPrice));
+                    }
+
+                    $(this).parent().parent().parent().remove();
+
+                    var selectedSku = $(this).attr('id');
+
+                    for (var i = 0; i < products.length; i++) {
+                        if (selectedSku === products[i].sku) {
+                            position = i;
+
+                            $("#item-num").text(currentItemNum - products[i].qty);
+                            $("#item-num-mobile").text(currentItemNum - products[i].qty);
+                            break;
+                        }
+                    }
+                    if (position !== -1) {
+                        products.splice(position, 1);
+                    }
+                    localStorage.removeItem("products");
+                    localStorage.setItem("products", JSON.stringify(products));
+
+                });
+            });
+
+            //remove all product from storage when clicking checkout button
+            $(".shopping-cart-submit a").on("click", function () {
+                localStorage.removeItem("products");
+            });
+
+        });
+
+        //close cart when click outside
+        $('body').click(function (e) {
+
+            if (!$(e.target).closest('.shopping-cart').length && !$(e.target).closest('a#cart').length && !$(e.target).hasClass('remove-item')) {
+                $('.shopping-cart').hide();
+            }
+        });
+
+        //get cart item number function
+        function getCartItemNum() {
+            var products = [],
+                itemNumSelector = $("#item-num"),
+                itemNumMobileSelector = $("#item-num-mobile")
+            ;
+
+            if (localStorage) {
+                if (JSON.parse(localStorage.getItem("products"))) {
+                    products = JSON.parse(localStorage.getItem("products"));
+                }
+            }
+            var addedProduct = 0;
+
+            if (products.length) {
+                for (var i = 0; i < products.length; i++) {
+                    addedProduct += products[i].qty;
+                }
+                itemNumMobileSelector.show();
+                itemNumSelector.show();
+            } else {
+                itemNumMobileSelector.hide();
+                itemNumSelector.hide();
+            }
+            itemNumSelector.text(addedProduct);
+            itemNumMobileSelector.text(addedProduct);
+        }
+
+        //generate cart html
+        function addProductsAction(products) {
+            var totalPrice = 0;
+            var currentHref;
+            var url = "";
+
+            if (products.length) {
+                for (var i = 0; i < products.length; i++) {
+
+                    $(".cart-items").add('<li class="clearfix">\n' +
+                        '                    <img src="' + products[i].logo + '"/>\n' +
+                        '                    <div class="item-info">\n' +
+                        '                        <span class="item-name">' + products[i].name + '<i id="' + products[i].sku + '" class="material-icons remove-item">clear</i></span>\n' +
+                        '                        <span class="item-qty" title="' + products[i].qty + '">' + products[i].qty + ' X </span>\n' +
+                        '                        <span class="item-price" title ="' + products[i].price + '">$' + products[i].price + '</span>\n' +
+                        '\n' +
+                        '                    </div>\n' +
+                        '                </li>').appendTo($(".cart-items"));
+
+                    totalPrice += (products[i].qty) * (products[i].price);
+                    url += "sku[" + products[i].sku + "]=" + products[i].qty + "&";
+
+                }
+                $('<div class="shopping-cart-footer clearfix">\n' +
+                    '            <div class="shopping-cart-total">\n' +
+                    '                <span class="total-price-cart">Total:</span>\n' +
+                    '                <span class="price" title="' + totalPrice + '">$' + totalPrice + '</span>\n' +
+                    '            </div>\n' +
+                    '            <div class="shopping-cart-submit center-align">\n' +
+                    '                <a href="https://store.mageplaza.com/securecheckout/index/" class="waves-effect waves-light btn green">Checkout</a>\n' +
+                    '            </div>\n' +
+                    '        </div>').appendTo($(".shopping-cart-content"));
+                currentHref = $(".shopping-cart-submit a").attr("href");
+
+                var additionalUrl = "adds?" + url + "submit=Checkout+now&mprc=default";
+                $(".shopping-cart-submit a").attr("href", currentHref + additionalUrl);
+            } else {
+                $('<p>There are no items in your cart.</p>').appendTo($(".cart-items"));
+            }
+        }// END Cart JS
+
+
+        /*start of Add to Cart and Check out Now JS*/
+        var totalPrice,
+            installationPrice,
+            selector
+        ;
+        var standardSku = $("#checkout-form .sku").attr("value"),
+            proSku = $("#checkout-form-pro .sku").attr("value"),
+            standardName = $("#checkout-form .product-name").attr("value"),
+            proName = $("#checkout-form-pro .product-name").attr("value"),
+            originSku,
+            originName
+        ;
+
+        //reset all product option when clicking add to cart button
+        $(".extension-meta-container #add-cart-standard, #add-cart-standard ").on('click', function () {
+            //reset records
+            selector = $("#checkout-form");
+            resetAllOptionRecords(selector, standardSku, standardName);
+            //price calculator
+            getInstallationPrice(selector);
+        });
+
+        //reset all product option when clicking add to cart button
+        $(".extension-meta-container #add-cart-pro").on('click', function () {
+            //reset records
+            selector = $("#checkout-form-pro");
+            resetAllOptionRecords(selector, proSku, proName);
+            //price calculator
+            getInstallationPrice(selector);
+        });
+
+        function resetAllOptionRecords(selector, skuName, productName) {
+            selector.find(".ce").prop("checked", true);
+            selector.find(".installation-plus").prop("checked", false);
+            selector.find(".item-qty").val(1);
+            selector.find(".grand-total").text('$' + selector.find(".ce").attr("title"));
+            selector.find(".sku").attr("value", skuName);
+            selector.find(".product-name").attr("value", productName);
+            originSku = selector.find(".sku").attr("value");
+            originName = selector.find(".product-name").attr("value");
+            installationPrice = 0;
+            selector.find("input[type=radio]").change(function () {
+                editionSkuChange();
+                priceCalculator(installationPrice, selector.find("input[type=number]").val());
+            });
+            //price change by qty
+            selector.find("input[type=number]").change(function () {
+                priceCalculator(getInstallationPrice(selector), $(this).val())
+            });
+        }
+
+        //sku installation change function
+        function editionSkuChange() {
+
+            if (selector.find("input[type=radio]:checked").attr("value") === "0") {
+                selector.find(".sku").attr("value", originSku + "-ee");
+                selector.find(".product-name").attr("value", originName + " EE");
+            } else {
+                selector.find(".sku").attr("value", originSku);
+                selector.find(".product-name").attr("value", originName);
+            }
+        }
+
+        //price calculator function ( origin price * qty )
+        function priceCalculator(installationPrice, qty) {
+
+            totalPrice = selector.find("input[type=radio]:checked").attr("title");
+            totalPrice = (parseInt(totalPrice) + installationPrice) * qty;
+            selector.find(".grand-total").text('$' + totalPrice);
+        }
+
+        //get the installation price while checking the installation check-box
+        function getInstallationPrice(selector) {
+
+            if (selector.find("input[type=checkbox]").is(":checked")) {
+                installationPrice = 50;
+            } else {
+                installationPrice = 0;
+            }
+            selector.find("input[type=checkbox]").change(function () {
+                if ($(this).is(":checked")) {
+                    installationPrice = 50;
+                    priceCalculator(installationPrice, selector.find("input[type=number]").val());
+                } else {
+                    installationPrice = 0;
+                    priceCalculator(installationPrice, selector.find("input[type=number]").val());
+                }
+            });
+            return installationPrice;
+        }
+
+        //remove items from storage while added to store
+        $("#check-out-now a").on('click', function () {
+            localStorage.removeItem("products");
+        });
+        //perform action for the add to cart button
+        $("#checkout-form .add-to-cart").on('click', function () {
+            //store add to cart product information
+            getAddToCartProductInfo($("#checkout-form"));
+            //get add to cart product params
+            getAddToCartUrl($("#checkout-form"));
+            // auto close modal
+            autoCloseModalCountdown();
+            totalPrice = null;
+        });
+
+        //perform action for the add to cart button
+        $("#checkout-form-pro .add-to-cart").on('click', function () {
+            //store add to cart product information
+            getAddToCartProductInfo($("#checkout-form-pro"));
+            //get add to cart product params
+            getAddToCartUrl($("#checkout-form-pro"));
+            // auto close modal
+            autoCloseModalCountdown();
+            totalPrice = null;
+        });
+
+        //set time out auto close popup modal
+        function autoCloseModalCountdown() {
+            var timeLeft = 5;
+            $("#countdown").text(timeLeft);
+            var loadedTime = setInterval(function () {
+                timeLeft--;
+                $("#countdown").text(timeLeft);
+                if (timeLeft <= 0) {
+                    clearInterval(loadedTime);
+                    $('#add-to-cart-new').closeModal();
+                }
+            }, 1000);
+        }
+
+        //get add to cart product params
+        function getAddToCartUrl(selector) {
+            var currentHref;
+            var itemNum;
+            var totalItems = parseInt($("#item-num").text());
+            var products = JSON.parse(localStorage.getItem("products"));
+            var url = "";
+            var itemNumSelector = $("#item-num");
+            var itemNumMobileSelector = $("#item-num-mobile");
+            if (products != null) {
+                for (var i = 0; i < products.length; i++) {
+                    url += "sku[" + products[i].sku + "]=" + products[i].qty + "&";
+                }
+            }
+
+            var additionalUrl = "adds?" + url + "submit=Checkout+now&mprc=default";
+            //show item num on cart
+            itemNum = parseInt(selector.find("input[type=number]").val());
+            totalItems += itemNum;
+
+            //check if there are installation products
+            if (selector.find("input[type=checkbox]").is(":checked")) {
+                itemNum = parseInt(selector.find("input[type=number]").val());
+                totalItems += itemNum;
+            }
+            itemNumSelector.show();
+            itemNumMobileSelector.show();
+            itemNumSelector.text(totalItems);
+            itemNumMobileSelector.text(totalItems);
+            //add checkout-now URL
+            currentHref = $("#add-to-cart-new #check-out-now a").attr("href");
+
+            $("#add-to-cart-new #check-out-now a").attr("href", currentHref + additionalUrl);
+        }
+
+        //store the product info to local-storage function
+        function getAddToCartProductInfo(selector) {
+            if (localStorage) {
+                var productPrice;
+                var products = [];
+                var isInstallation = false;
+                var price;
+
+                if (JSON.parse(localStorage.getItem("products"))) {
+                    products = JSON.parse(localStorage.getItem("products"));
+                }
+                productPrice = (totalPrice != null) ? totalPrice : selector.find(".ce").attr("title");
+
+                //check installation service
+                if (selector.find("input[type=checkbox]").is(":checked")) {
+                    price = (productPrice / selector.find("input[type=number]").val()) - selector.find("input[type=checkbox]").attr("title");
+                    isInstallation = true;
+                } else {
+                    price = productPrice / selector.find("input[type=number]").val();
+                    isInstallation = false;
+                }
+                products = getExtensionsInfo(products, price);
+                products = getInstallationServiceInfo(products, isInstallation);
+                localStorage.setItem("products", JSON.stringify(products));
+                $("#add-to-cart-new h3").text(selector.find(".product-name").attr("value"));
+            }
+        }
+
+        //store the extensions information
+        function getExtensionsInfo(products, price) {
+            var isDuplicated = false;
+            //check extensions product duplicate
+            for (var id in products) {
+                if (products[id].sku === selector.find(".sku").attr("value")) {
+                    products[id].qty = products[id].qty + parseInt(selector.find("input[type=number]").val());
+                    isDuplicated = true;
+                    break;
+                } else {
+                    isDuplicated = false;
+                }
+            }
+
+            if (isDuplicated === false) {
+                products.push({
+                    sku: selector.find(".sku").attr("value"),
+                    name: selector.find(".product-name").attr("value"),
+                    logo: selector.find(".product-logo").attr("value"),
+                    qty: parseInt(selector.find("input[type=number]").val()),
+                    price: price
+                });
+            }
+            return products;
+        }
+
+        //store the installation service information
+        function getInstallationServiceInfo(products, isInstallation) {
+            var isInstallationDuplicated = false;
+            //check installation service product duplicate
+            for (var id in products) {
+                if (isInstallation === true) {
+                    if (products[id].sku === "installation-service") {
+                        products[id].qty = products[id].qty + parseInt(selector.find("input[type=number]").val());
+                        isInstallationDuplicated = true;
+                        break;
+                    } else {
+                        isInstallationDuplicated = false;
+                    }
+                }
+            }
+
+            if (isInstallationDuplicated === false && isInstallation === true) {
+                products.push({
+                    sku: "installation-service",
+                    name: "Installation Service",
+                    logo: selector.find(".installation-logo").attr("value") + '/assets/img/extensions/installation-service.png',
+                    qty: parseInt(selector.find("input[type=number]").val()),
+                    price: 50
+                });
+            }
+            return products;
+        }
+
+        // end of Add to cart and Check out now JS
+
+        /* -------------------------------------------------- End of LIVESITE development --------------------------------------------------*/
+
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
+
+
+
+
+
+
+
+
+var searchplus_products = [
+
+  { value: "Add a New Product", p: "", i: "", u: "/wordpress/docs/add-new-product.html", d: "" },
+  
+  { value: "Add advanced HTML by using HTML editor", p: "", i: "", u: "/wordpress/docs/add-advanced-html-by-using-html-editor.html", d: "" },
+  
+  { value: "Autosave your posts", p: "", i: "", u: "/wordpress/docs/autosave-your-posts.html", d: "" },
+  
+  { value: "Fix 404 Not Found error", p: "", i: "", u: "/wordpress/docs/fix-404-not-found-error.html", d: "" },
+  
+  { value: "Post the source code in code", p: "", i: "", u: "/wordpress/docs/post-the source-code-in-code.html", d: "" },
+  
+  { value: "Some Things To Know About HTML", p: "", i: "", u: "/wordpress/docs/some-things-to-know-about-html.html", d: "" },
+  
+  { value: "Insert and customize the more tag on a post", p: "", i: "", u: "/wordpress/docs/insert-customize-more-tag-on-post.html", d: "" },
+  
+  { value: "Copy a page on Wordpress", p: "", i: "", u: "/wordpress/docs/copy-a-page.html", d: "" },
+  
+  { value: "Modify pages screen", p: "", i: "", u: "/wordpress/docs/modify-pages-screen.html", d: "" },
+  
+  { value: "Hide a pages", p: "", i: "", u: "/wordpress/docs/hide-a-pages.html", d: "" },
+  
+  { value: "Generate excerpts", p: "", i: "", u: "/wordpress/docs/generate-excerpts.html", d: "" },
+  
+  { value: "Set page attributes", p: "", i: "", u: "/wordpress/docs/set-page-attributes.html", d: "" },
+  
+  { value: "Insert and manage tags on a post", p: "", i: "", u: "/wordpress/docs/insert-manage-tags-on-post.html", d: "" },
+  
+  { value: "Configure a featured image for a post or page", p: "", i: "", u: "/wordpress/docs/configure-featured-image-for-post-page.html", d: "" },
+  
+  { value: "Distinguish categories and tags", p: "", i: "", u: "/wordpress/docs/distinguish-categories-tags.html", d: "" },
+  
+  { value: "Use simple payments", p: "", i: "", u: "/wordpress/docs/use-simple-payments.html", d: "" },
+  
+  { value: "Generate a page jump", p: "", i: "", u: "/wordpress/docs/generate-a-page-jump.html", d: "" },
+  
+  { value: "Identify slugs in posts and pages", p: "", i: "", u: "/wordpress/docs/identify-slugs-in-posts-and-pages.html", d: "" },
+  
+  { value: "Split the content in posts and pages", p: "", i: "", u: "/wordpress/docs/split-the-content-in-posts-and-pages.html", d: "" },
+  
+  { value: "Configure press this on your site", p: "", i: "", u: "/wordpress/docs/configure-press-this-on-your-site.html", d: "" },
+  
+  { value: "Custom content types", p: "", i: "", u: "/wordpress/docs/custom-content-types.html", d: "" },
+  
+  { value: "Detect and troubleshoot caused by HTML", p: "", i: "", u: "/wordpress/docs/detect-troubleshoot-caused-by-html.html", d: "" },
+  
+  { value: "Recoginze post formats", p: "", i: "", u: "/wordpress/docs/recognize-post-formats.html", d: "" },
+  
+  { value: "Remove posts and pages", p: "", i: "", u: "/wordpress/docs/remove-posts-and-pages.html", d: "" },
+  
+  { value: "Use Markdown on your posts, page, and comments", p: "", i: "", u: "/wordpress/docs/use-markdown-on-post-page-comments.html", d: "" },
+  
+  { value: "Use Microsoft Word", p: "", i: "", u: "/wordpress/docs/use-microsoft-word-with-wordpress.html", d: "" },
+  
+  { value: "Check your spelling, grammar and style using Proofreading technology", p: "", i: "", u: "/wordpress/docs/check-spelling-grammar-style-using-proofreading-technology.html", d: "" },
+  
+  { value: "Generate and edit post and page revisions", p: "", i: "", u: "/wordpress/docs/generate-edit-post-page-revisions.html", d: "" },
+  
+  { value: "Generate and edit post and page screen", p: "", i: "", u: "/wordpress/docs/generate-edit-post-page-screen.html", d: "" },
+  
+  { value: "Request feedback from someone", p: "", i: "", u: "/wordpress/docs/request-feedback-from-someone.html", d: "" },
+  
+  { value: "Schedule a page", p: "", i: "", u: "/wordpress/docs/schedule-a-page.html", d: "" },
+  
+  { value: "Schedule a post", p: "", i: "", u: "/wordpress/docs/schedule-post.html", d: "" },
+  
+  { value: "Arrange your posts chronologically", p: "", i: "", u: "/wordpress/docs/arrange-posts-chronologically.html", d: "" },
+  
+  { value: "Translate your site", p: "", i: "", u: "/wordpress/docs/translate-your-site.html", d: "" },
+  
+  { value: "Move a post, page, or comment to the trash folder", p: "", i: "", u: "/wordpress/docs/move-post-page-comment-trash-folder.html", d: "" },
+  
+  { value: "Display Calendar Widget", p: "", i: "", u: "/wordpress/docs/display-calendar-widget.html", d: "" },
+  
+  { value: "Display Categories Widget", p: "", i: "", u: "/wordpress/docs/display-categories-widget.html", d: "" },
+  
+  { value: "Get featured on Discover", p: "", i: "", u: "/wordpress/docs/get-featured-on-discover.html", d: "" },
+  
+  { value: "Insert a contact form in your posts or pages", p: "", i: "", u: "/wordpress/docs/insert-contact-form-in-posts-pages.html", d: "" },
+  
+  { value: "How to update your title and tagline", p: "", i: "", u: "/wordpress/docs/update-your-title-and-tagline.html", d: "" },
+  
+  { value: "How to upload audio to your site", p: "", i: "", u: "/wordpress/docs/how-to-upload-audio-to-your-site.html", d: "" },
+  
+  { value: "Use the graphic emoji", p: "", i: "", u: "/wordpress/docs/use-graphic-emoji.html", d: "" },
+  
+  { value: "Use visual editor", p: "", i: "", u: "/wordpress/docs/use-visual-editor.html", d: "" },
+  
+  { value: "Insert a block on WordPress Editor", p: "", i: "", u: "/wordpress/docs/insert-block-on-wordpress-editor.html", d: "" },
+  
+  { value: "How to use the Google Translate Widget", p: "", i: "", u: "/wordpress/docs/how-to-insert-the-google-translate-widget-to-your-site.html", d: "" },
+  
+  { value: "Something to know about Cookie & Privacy Banner Widget", p: "", i: "", u: "/wordpress/docs/something-know-about-cookie-privacy-banner-widget.html", d: "" },
+  
+  { value: "Copy a post on WordPress", p: "", i: "", u: "/wordpress/docs/copy-a-post.html", d: "" },
+  
+  { value: "Distinguish posts and pages", p: "", i: "", u: "/wordpress/docs/distinguish-posts-pages.html", d: "" },
+  
+  { value: "Enable/Disable a post by voice", p: "", i: "", u: "/wordpress/docs/enable-disable-post-by-voice.html", d: "" },
+  
+  { value: "Generate a post by email address", p: "", i: "", u: "/wordpress/docs/generate-post-by-email-address.html", d: "" },
+  
+  { value: "Modify your blog’s posts", p: "", i: "", u: "/wordpress/docs/modify-blog-posts.html", d: "" },
+  
+  { value: "Set a static homepage on WordPress", p: "", i: "", u: "/wordpress/docs/set-static-homepage.html", d: "" },
+  
+  { value: "Generate a landing page", p: "", i: "", u: "/wordpress/docs/generate-landing-page.html", d: "" },
+  
+  { value: "Insert a photo gallery", p: "", i: "", u: "/wordpress/docs/insert-photo-gallery.html", d: "" },
+  
+  { value: "Insert a new category", p: "", i: "", u: "/wordpress/docs/insert-new-category.html", d: "" },
+  
+  { value: "Show My Community widget", p: "", i: "", u: "/wordpress/docs/show-my-community-widget.html", d: "" },
+  
+  { value: "Display Milestone Widget", p: "", i: "", u: "/wordpress/docs/display-milestone-widget.html", d: "" },
+  
+  { value: "Show My Community widget", p: "", i: "", u: "/wordpress/docs/show-my-community-widget.html", d: "" },
+  
+  { value: "Add Recent Posts widget", p: "", i: "", u: "/wordpress/docs/add-recent-posts-widget.html", d: "" },
+  
+  { value: "Display Category Cloud Widget", p: "", i: "", u: "/wordpress/docs/display-category-cloud-widget.html", d: "" },
+  
+  { value: "Display contact info widget", p: "", i: "", u: "/wordpress/docs/display-contact-info-widget.html", d: "" },
+  
+  { value: "Insert testimonials to your website", p: "", i: "", u: "/wordpress/docs/insert-testimonials-your-website.html", d: "" },
+  
+  { value: "Add RSS Links widget on your post", p: "", i: "", u: "/wordpress/docs/add-rss-links-widget-on-post.html", d: "" },
+  
+  { value: "Generate our own widget", p: "", i: "", u: "/wordpress/docs/generate-our-own-widget.html", d: "" },
+  
+  { value: "Add Recent Comments widget", p: "", i: "", u: "/wordpress/docs/add-recent-comments-widget.html", d: "" },
+  
+  { value: "Add Navigation Menu widget", p: "", i: "", u: "/wordpress/docs/add-navigation-menu-widget.html", d: "" },
+  
+  { value: "Display Pages widget", p: "", i: "", u: "/wordpress/docs/display-pages-widget.html", d: "" },
+  
+  { value: "Add Posts I Like widget", p: "", i: "", u: "/wordpress/docs/add-posts-i-like-widget.html", d: "" },
+  
+  { value: "Display WordPress posts", p: "", i: "", u: "/wordpress/docs/display-wordpress-posts.html", d: "" },
+  
+  { value: "Insert a Custom HTML widget to your sidebar or footer", p: "", i: "", u: "/wordpress/docs/insert-custom-HTML-widget-your-sidebar-footer.html", d: "" },
+  
+  { value: "Insert an events calendar and list in your sidebar", p: "", i: "", u: "/wordpress/docs/insert-an-events-calendar-and-list-in-your-sidebar.html", d: "" },
+  
+  { value: "Insert OpenTable widget", p: "", i: "", u: "/wordpress/docs/insert-opentable-widget.html", d: "" },
+  
+  { value: "Insert the Tlk.io widget to your sidebar", p: "", i: "", u: "/wordpress/docs/insert-tlk-io-widget-to-sidebar.html", d: "" },
+  
+  { value: "Install social media icons widget", p: "", i: "", u: "/wordpress/docs/install-social-media-icons-widget.html", d: "" },
+  
+  { value: "Add a Search widget", p: "", i: "", u: "/wordpress/docs/add-a-search-widget.html", d: "" },
+  
+  { value: "Update your account email address", p: "", i: "", u: "/wordpress/docs/update-account-email-address.html", d: "" },
+  
+  { value: "Use user mentions", p: "", i: "", u: "/wordpress/docs/use-user-mentions.html", d: "" },
+  
+  { value: "Change user roles", p: "", i: "", u: "/wordpress/docs/change-user-roles.html", d: "" },
+  
+  { value: "Show Tag Cloud widget", p: "", i: "", u: "/wordpress/docs/show-tag-cloud-widget.html", d: "" },
+  
+  { value: "Add an email through other providers", p: "", i: "", u: "/wordpress/docs/add-email-through-other-providers.html", d: "" },
+  
+  { value: "Capture a screenshot on Linux", p: "", i: "", u: "/wordpress/docs/capture-a-screenshot-on-linux.html", d: "" },
+  
+  { value: "Capture a screenshot on Mac", p: "", i: "", u: "/wordpress/docs/capture-a-screenshot-on-mac.html", d: "" },
+  
+  { value: "Capture a screenshot on Window", p: "", i: "", u: "/wordpress/docs/capture-a-screenshot-on-window.html", d: "" },
+  
+  { value: "Change Username or Display Name in G Suite", p: "", i: "", u: "/wordpress/docs/change-username-display-name-in-g-suite.html", d: "" },
+  
+  { value: "Display Instagram widget on your sidebar", p: "", i: "", u: "/wordpress/docs/display-instagram-widget.html", d: "" },
+  
+  { value: "Display Top Posts & Pages Widget", p: "", i: "", u: "/wordpress/docs/display-top-posts-pages-widget.html", d: "" },
+  
+  { value: "Display Twitter Timeline Widget on a post", p: "", i: "", u: "/wordpress/docs/display-twitter-timeline-widget-on-a-post.html", d: "" },
+  
+  { value: "Display Upcoming Events widget on a post", p: "", i: "", u: "/wordpress/docs/display-upcoming-events-widget-on-a-post.html", d: "" },
+  
+  { value: "Get Paypal button code", p: "", i: "", u: "/wordpress/docs/get-paypal-button-code.html", d: "" },
+  
+  { value: "Insert a logo on your site", p: "", i: "", u: "/wordpress/docs/insert-logo-on-your-site.html", d: "" },
+  
+  { value: "Insert Video widget to your post", p: "", i: "", u: "/wordpress/docs/insert-video-widget-to-your-post.html", d: "" },
+  
+  { value: "Use widgets effectively", p: "", i: "", u: "/wordpress/docs/use-widgets-effectively.html", d: "" },
+  
+  { value: "View your site's activity", p: "", i: "", u: "/wordpress/docs/view-your-site-activity.html", d: "" },
+  
+  { value: "Add an email through GoDaddy email hosting", p: "", i: "", u: "/wordpress/docs/add-email-through-godaddy-email-hosting.html", d: "" },
+  
+  { value: "Add an email through Office 365", p: "", i: "", u: "/wordpress/docs/add-email-through-office-365.html", d: "" },
+  
+  { value: "Add an email through Zoho Mail on WordPress", p: "", i: "", u: "/wordpress/docs/add-email-through-zoho-mail.html", d: "" },
+  
+  { value: "Insert text widget to your sidebar", p: "", i: "", u: "/wordpress/docs/insert-text-widget.html", d: "" },
+  
+  { value: "Add Storage Space to your site", p: "", i: "", u: "/wordpress/docs/add-storage-space-to-site.html", d: "" },
+  
+  { value: "Change Credit Card details", p: "", i: "", u: "/wordpress/docs/change-credit-card-details.html", d: "" },
+  
+  { value: "View and track your billing history", p: "", i: "", u: "/wordpress/docs/view-track-billing-history.html", d: "" },
+  
+  { value: "The difference between the Business plan and other plans", p: "", i: "", u: "/wordpress/docs/the-difference-between-business-plan-and-other-plans.html", d: "" },
+  
+  { value: "Add Custom CSS", p: "", i: "", u: "/wordpress/docs/add-custom-css.html", d: "" },
+  
+  { value: "Add custom colors to your site", p: "", i: "", u: "/wordpress/docs/add-custom-colors-your-site.html", d: "" },
+  
+  { value: "Activate email forwarding", p: "", i: "", u: "/wordpress/docs/activate-email-forwarding.html", d: "" },
+  
+  { value: "Set up Google Analytics", p: "", i: "", u: "/wordpress/docs/set-up-google-analytics.html", d: "" },
+  
+  { value: "Add a domain mapping", p: "", i: "", u: "/wordpress/docs/add-a-domain-mapping.html", d: "" },
+  
+  { value: "Change your site fonts", p: "", i: "", u: "/wordpress/docs/change-your-site-fonts.html", d: "" },
+  
+  { value: "Embed a Gumroad product", p: "", i: "", u: "/wordpress/docs/embed-gumroad-product.html", d: "" },
+  
+  { value: "Some things to know about domains", p: "", i: "", u: "/wordpress/docs/some-things-know-about-domains.html", d: "" },
+  
+  { value: "Cancel a domain", p: "", i: "", u: "/wordpress/docs/cancel-domain.html", d: "" },
+  
+  { value: "Register a new domain", p: "", i: "", u: "/wordpress/docs/register-new-domain.html", d: "" },
+  
+  { value: "Register a domain without generating a site", p: "", i: "", u: "/wordpress/docs/register-new-domain-without-generating-site.html", d: "" },
+  
+  { value: "Custom DNS works", p: "", i: "", u: "/wordpress/docs/custom-dns-works.html", d: "" },
+  
+  { value: "Enable Jetpack Search on your site", p: "", i: "", u: "/wordpress/docs/enable-jetpack-search-on-your-site.html", d: "" },
+  
+  { value: "Update contact information for a domain", p: "", i: "", u: "/wordpress/docs/update-contact-information-for-domain.html", d: "" },
+  
+  { value: "Use Jetpack on your site", p: "", i: "", u: "/wordpress/docs/use-jetpack-on-your-site.html", d: "" },
+  
+  { value: "When does a domain expire", p: "", i: "", u: "/wordpress/docs/when-does-domain-expire.html", d: "" },
+  
+  { value: "Add an email with an Existing G Suite Account", p: "", i: "", u: "/wordpress/docs/add-email-with-existing-g-suite-account.html", d: "" },
+  
+  { value: "Add G Suite to your site", p: "", i: "", u: "/wordpress/docs/add-g-suite-to-your-site.html", d: "" },
+  
+  { value: "Change the display name", p: "", i: "", u: "/wordpress/docs/change-display-name.html", d: "" },
+  
+  { value: "Edit your profile", p: "", i: "", u: "/wordpress/docs/edit-profile.html", d: "" },
+  
+  { value: "Map a subdomain", p: "", i: "", u: "/wordpress/docs/map-a-subdomain.html", d: "" },
+  
+  { value: "Connect Twitter with Publicize", p: "", i: "", u: "/wordpress/docs/connect-twitter-with-publicize.html", d: "" },
+  
+  { value: "Embed an Instagram Feed", p: "", i: "", u: "/wordpress/docs/embed-an-instagram-feed.html", d: "" },
+  
+  { value: "Insert a Twitter timeline to your site", p: "", i: "", u: "/wordpress/docs/insert-a-twitter-timeline-to-your-site.html", d: "" },
+  
+  { value: "Upload a video to any page or blog post on your site", p: "", i: "", u: "/wordpress/docs/upload-video-any-page-blog-post-your-site.html", d: "" },
+  
+  { value: "Connect Facebook with Publicize", p: "", i: "", u: "/wordpress/docs/connect-facebook-with-publicize.html", d: "" },
+  
+  { value: "Embed a Tweet", p: "", i: "", u: "/wordpress/docs/embed-a-tweet-on-wordpress.html", d: "" },
+  
+  { value: "Embed an Instagram photo", p: "", i: "", u: "/wordpress/docs/embed-an-instagram-photo.html", d: "" },
+  
+  { value: "Insert sharing buttons", p: "", i: "", u: "/wordpress/docs/insert-sharing-buttons.html", d: "" },
+  
+  { value: "Install a plugin", p: "", i: "", u: "/wordpress/docs/how-to-install-plugin.html", d: "" },
+  
+  { value: "Insert a custom background", p: "", i: "", u: "/wordpress/docs/insert-custom-background.html", d: "" },
+  
+  { value: "Insert a custom header image", p: "", i: "", u: "/wordpress/docs/insert-custom-header-image.html", d: "" },
+  
+  { value: "Insert a site icon", p: "", i: "", u: "/wordpress/docs/insert-site-icon.html", d: "" },
+  
+  { value: "Embed a JotForm on a post or blog", p: "", i: "", u: "/wordpress/docs/embed-a-jotform-on-a-post-or-blog.html", d: "" },
+  
+  { value: "Embed Wufoo with a shortcode", p: "", i: "", u: "/wordpress/docs/embed-wufoo-with-a-shortcode.html", d: "" },
+  
+  { value: "Engage with the WordPress Community", p: "", i: "", u: "/wordpress/docs/engage-with-the-wordpress-community.html", d: "" },
+  
+  { value: "Export the content to another blog or platform", p: "", i: "", u: "/wordpress/docs/export-the-content-to-another-blog-or-platform.html", d: "" },
+  
+  { value: "Generate a new poll", p: "", i: "", u: "/wordpress/docs/generate-a-new-poll.html", d: "" },
+  
+  { value: "Import your content from Medium", p: "", i: "", u: "/wordpress/docs/import-your-content-from-medium.html", d: "" },
+  
+  { value: "Optimize your site by using SEO tools", p: "", i: "", u: "/wordpress/docs/optimize-your-site-by-using-seo-tools.html", d: "" },
+  
+  { value: "Customize content options", p: "", i: "", u: "/wordpress/docs/customize-content-options.html", d: "" },
+  
+  { value: "Configure a social links menu", p: "", i: "", u: "/wordpress/docs/configure-social-links-menu.html", d: "" },
+  
+  { value: "Embed a Facebook update", p: "", i: "", u: "/wordpress/docs/embed-facebook-update.html", d: "" },
+  
+  { value: "Change your website theme on WordPress for Android", p: "", i: "", u: "/wordpress/docs/how-change-your-webite-theme-wordpress-android.html", d: "" },
+  
+  { value: "Moderate comments on WordPress for Android", p: "", i: "", u: "/wordpress/docs/moderate-comments-wordpress-for-android.html", d: "" },
+  
+  { value: "Modify your menu settings on WordPress for Android", p: "", i: "", u: "/wordpress/docs/modify-menu-settings-wordpress-android.html", d: "" },
+  
+  { value: "Change your site theme on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/change-site-theme-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Embed an Instagram photo on WordPress for Android", p: "", i: "", u: "/wordpress/docs/embed-instagram-photo-wordpress-android.html", d: "" },
+  
+  { value: "Generate a post on WordPress for Android", p: "", i: "", u: "/wordpress/docs/generate-post-wordpress-android.html", d: "" },
+  
+  { value: "Generate a page on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/generate-page-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Insert media to a page or post", p: "", i: "", u: "/wordpress/docs/insert-media-to-page-post.html", d: "" },
+  
+  { value: "Moderate comments on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/moderate-comments-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Modify your site settings on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/modify-site-settings-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "View your stats on WordPress for Android", p: "", i: "", u: "/wordpress/docs/view-your-stats-wordpress-android.html", d: "" },
+  
+  { value: "Generate a page on WordPress for Android", p: "", i: "", u: "/wordpress/docs/generate-page-wordpress-android.html", d: "" },
+  
+  { value: "Transfer a site to another WordPress account", p: "", i: "", u: "/wordpress/docs/transfer-site-wordpress-account.html", d: "" },
+  
+  { value: "Create chapters in a post on WordPress", p: "", i: "", u: "/wordpress/docs/create-chapters-in-post.html", d: "" },
+  
+  { value: "Import from Tumblr to WordPress", p: "", i: "", u: "/wordpress/devdocs/import-from-tumblr-to-wordpress.html", d: "" },
+  
+  { value: "Embed a Google Calendar", p: "", i: "", u: "/wordpress/docs/embed-a-google-calendar.html", d: "" },
+  
+  { value: "Embed a Google Map", p: "", i: "", u: "/wordpress/docs/embed-a-google-map.html", d: "" },
+  
+  { value: "Embed an Excel document", p: "", i: "", u: "/wordpress/docs/embed-an-excel-document.html", d: "" },
+  
+  { value: "Embed Bandsintown Tour Dates", p: "", i: "", u: "/wordpress/docs/embed-bandsintown-tour-dates.html", d: "" },
+  
+  { value: "Embed Shopify products on your site", p: "", i: "", u: "/wordpress/docs/embed-shopify-products-on-your-site.html", d: "" },
+  
+  { value: "Embed Spotify with a URL", p: "", i: "", u: "/wordpress/docs/embed-spotify-with-a-url.html", d: "" },
+  
+  { value: "Embed the playlist into your sidebar", p: "", i: "", u: "/wordpress/docs/embed-the-playlist-into-your-sidebar.html", d: "" },
+  
+  { value: "Insert a new product", p: "", i: "", u: "/wordpress/docs/how-insert-new-product.html", d: "" },
+  
+  { value: "Insert a Webhook", p: "", i: "", u: "/wordpress/docs/insert-webhook.html", d: "" },
+  
+  { value: "Like a post on your site", p: "", i: "", u: "/wordpress/docs/like-a-post-on-your-site.html", d: "" },
+  
+  { value: "Set up email messages", p: "", i: "", u: "/wordpress/docs/set-up-email-messages.html", d: "" },
+  
+  { value: "Embed Carto on your site", p: "", i: "", u: "/wordpress/docs/embed-carto-on-your-site.html", d: "" },
+  
+  { value: "Insert promotion", p: "", i: "", u: "/wordpress/docs/insert-promotion.html", d: "" },
+  
+  { value: "Set up promotion on your site", p: "", i: "", u: "/wordpress/docs/set-up-promotion-your-site.html", d: "" },
+  
+  { value: "Submit a review on the product page", p: "", i: "", u: "/wordpress/docs/submit-review-on-product-page.html", d: "" },
+  
+  { value: "Insert social media buttons to your sidebar or footer", p: "", i: "", u: "/wordpress/docs/insert-social-media-buttons-to-your-sidebar-or-footer.html", d: "" },
+  
+  { value: "Like a comment", p: "", i: "", u: "/wordpress/docs/how-like-comment.html", d: "" },
+  
+  { value: "Configure your sharing settings on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/configure-sharing-settings-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Embed an Instagram photo on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/embed-instagram-photo-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Generate a post on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/generate-post-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "Modify menu settings on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/modify-menu-settings-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "View your stats on WordPress for iOS", p: "", i: "", u: "/wordpress/docs/how-to-view-stats-on-wordpress-for-ios.html", d: "" },
+  
+  { value: "4 Factors to consider about Copyright Act", p: "", i: "", u: "/wordpress/docs/4-factors-to-consider-about-copyright-act.html", d: "" },
+  
+  { value: "Avoid content theft", p: "", i: "", u: "/wordpress/docs/avoid-content-theft.html", d: "" },
+  
+  { value: "Delete multiple images from media library", p: "", i: "", u: "/wordpress/docs/delete-multiple-images-from-media-library.html", d: "" },
+  
+  { value: "Determine Copyright Infringement", p: "", i: "", u: "/wordpress/docs/determine-copyright-infringement.html", d: "" },
+  
+  { value: "Do the DMCA process", p: "", i: "", u: "/wordpress/docs/do-the-dmca-process.html", d: "" },
+  
+  { value: "Embed CodePen on your site", p: "", i: "", u: "/wordpress/docs/embed-codepen-on-your-site.html", d: "" },
+  
+  { value: "Insert Amazon Affiliate Links to your WordPress site", p: "", i: "", u: "/wordpress/docs/insert-amazon-affiliate-links.html", d: "" },
+  
+  { value: "Manage a Password Manager", p: "", i: "", u: "/wordpress/docs/manage-a-password-manager.html", d: "" },
+  
+  { value: "Reduce the image size with free and open source software", p: "", i: "", u: "/wordpress/docs/reduce-the-image-size.html", d: "" },
+  
+  { value: "Remove your site permanently", p: "", i: "", u: "/wordpress/docs/remove-your-site-permanently.html", d: "" },
+  
+  { value: "Reset your password", p: "", i: "", u: "/wordpress/docs/reset-your-password.html", d: "" },
+  
+  { value: "Use Postbot on your WordPress site", p: "", i: "", u: "/wordpress/docs/use-postbot-on-your-wordpress-site.html", d: "" },
+  
+  { value: "Embed your content from Pinterest", p: "", i: "", u: "/wordpress/docs/embed-content-from-pinterest.html", d: "" },
+  
+  { value: "Enable comment likes", p: "", i: "", u: "/wordpress/docs/enable-comment-likes.html", d: "" },
+  
+  { value: "Embed Houzz on your site", p: "", i: "", u: "/wordpress/docs/how-embed-houzz-your-site.html", d: "" },
+  
+  { value: "Embed Issuu on your site", p: "", i: "", u: "/wordpress/docs/embed-issuu-your-site.html", d: "" },
+  
+  { value: "Change your site address", p: "", i: "", u: "/wordpress/docs/change-your-site-address.html", d: "" },
+  
+  { value: "Embed a SoundCloud track", p: "", i: "", u: "/wordpress/docs/embed-soundcloud-track.html", d: "" },
+  
+  { value: "Insert a location to your pages and posts", p: "", i: "", u: "/wordpress/docs/insert-location-your-pages-posts.html", d: "" },
+  
+  { value: "Link your domain to your WordPress blog", p: "", i: "", u: "/wordpress/docs/link-your-domain-to-your-wordpress-blog.html", d: "" },
+  
+  { value: "Some things to know about Twitter API", p: "", i: "", u: "/wordpress/docs/some-things-to-know-about-twitter-api.html", d: "" },
+  
+  { value: "What are the most outstanding benefits of Feeds", p: "", i: "", u: "/wordpress/docs/what-are-the-most-outstanding-benefits-of-feeds.html", d: "" },
+  
+  { value: "Enable Email Post Changes", p: "", i: "", u: "/wordpress/docs/enable-email-notifications-for-post-changes.html", d: "" },
+  
+  { value: "Find Footer Credit options", p: "", i: "", u: "/wordpress/docs/how-to-find-footer-credit-options-on-wordpress.html", d: "" },
+  
+  { value: "Upload documents from a URL", p: "", i: "", u: "/wordpress/docs/upload-documents-from-url.html", d: "" },
+  
+  { value: "Upload documents from your computer", p: "", i: "", u: "/wordpress/docs/upload-documents-from-computer.html", d: "" },
+  
+  { value: "Verify your Domain with Google", p: "", i: "", u: "/wordpress/docs/verify-your-domain-with-google.html", d: "" },
+  
+  { value: "Enable or disable comments on future posts", p: "", i: "", u: "/wordpress/docs/enable-or-disable-comments-on-future-posts.html", d: "" },
+  
+  { value: "Set up two-step authentication with Google authenticator", p: "", i: "", u: "/wordpress/docs/set-up-two-step-authentication-with-google.html", d: "" },
+  
+  { value: "Enable or disable comments on published posts", p: "", i: "", u: "/wordpress/docs/enable-or-disable-comments-on-published-posts.html", d: "" },
+  
+  { value: "Input category pages", p: "", i: "", u: "/wordpress/docs/input-category-page.html", d: "" },
+  
+  { value: "Send a Trackback", p: "", i: "", u: "/wordpress/docs/send-a-trackback.html", d: "" },
+  
+  { value: "Upload an avatar in Wordpress", p: "", i: "", u: "/wordpress/docs/guideline-for-uploading-an-avatar.html", d: "" },
+  
+  { value: "Delete an avatar in Wordpress", p: "", i: "", u: "/wordpress/docs/delete-an-avatar.html", d: "" },
+  
+  { value: "Get a premium theme in Wordpress", p: "", i: "", u: "/wordpress/docs/get-a-premium-theme-is-acquired.html", d: "" },
+  
+  { value: "Disable browser pop-up blockers on Google Chrome", p: "", i: "", u: "/wordpress/docs/disable-browser-pop-up-blockers-google-chrome.html", d: "" },
+  
+  { value: "Change name servers on your site", p: "", i: "", u: "/wordpress/docs/change-name-servers-on-your-site.html", d: "" },
+  
+  { value: "Import  from Squarespace", p: "", i: "", u: "/wordpress/docs/import-from-squarespace.html", d: "" },
+  
+  { value: "Import from Xanga", p: "", i: "", u: "/wordpress/docs/import-from-xanga.html", d: "" },
+  
+  { value: "Manage purchases on WordPress", p: "", i: "", u: "/wordpress/docs/manage-purchases-on-wordpress.html", d: "" },
+  
+  { value: "upload and setup custom themes in Wordpress", p: "", i: "", u: "/wordpress/docs/uploading-and-setuping-custom-themes.html", d: "" },
+  
+  { value: "Use the Media Library", p: "", i: "", u: "/wordpress/docs/the-media-library-is-used.html", d: "" },
+  
+  { value: "Add images in Wordpress", p: "", i: "", u: "/wordpress/docs/steps-to-add-images-in-wordpress.html", d: "" },
+  
+  { value: "Input links in Wordpress", p: "", i: "", u: "/wordpress/docs/the-guideline-for-inputing-links.html", d: "" },
+  
+  { value: "Apply a page template in Wordpress", p: "", i: "", u: "/wordpress/docs/apply-a-page-template.html", d: "" },
+  
+  { value: "How to embed Ebooks on your site", p: "", i: "", u: "/wordpress/docs/embed-ebooks-on-your-site.html", d: "" },
+  
+  { value: "Import links from another system into your WordPress blogroll", p: "", i: "", u: "/wordpress/docs/import-links-another-system-WordPress-blogroll.html", d: "" },
+  
+  { value: "Modify a blogroll link", p: "", i: "", u: "/wordpress/docs/modify-a-blogroll-link.html", d: "" },
+  
+  { value: "Schedule posts in Wordpress", p: "", i: "", u: "/wordpress/docs/the-direction-in-scheduling-posts.html", d: "" },
+  
+  { value: "Format posts in Wordpress", p: "", i: "", u: "/wordpress/docs/the-way-to-format-your-wordpress-posts.html", d: "" },
+  
+  { value: "Delete a follower in Wordpress", p: "", i: "", u: "/wordpress/docs/ways-to-delete-a-follower.html", d: "" },
+  
+  { value: "How to disconnect Jetpack sites", p: "", i: "", u: "/wordpress/docs/disconnect-jetpack-sites.html", d: "" },
+  
+  { value: "Manage link categories", p: "", i: "", u: "/wordpress/docs/how-manage-link-categories.html", d: "" },
+  
+  { value: "Short link from the new post or page editor", p: "", i: "", u: "/wordpress/docs/short-link-from-the-new-post-page-editor.html", d: "" },
+  
+  { value: "Change your language settings", p: "", i: "", u: "/wordpress/docs/change-language-settings.html", d: "" },
+  
+  { value: "Configure your blog in 5 steps", p: "", i: "", u: "/wordpress/docs/configure-your-blog-in-5-steps.html", d: "" },
+  
+  { value: "Short link from Action Bar", p: "", i: "", u: "/wordpress/docs/short-link-from-action-bar.html", d: "" },
+  
+  { value: "Short link from the WP admin post or page editor", p: "", i: "", u: "/wordpress/docs/short-link-from-the-wp-admin-post-page-editor.html", d: "" },
+  
+  { value: "Embed Ebooks in a WordPress blog", p: "", i: "", u: "/wordpress/docs/embed-ebooks-in-a-wordpress-blog.html", d: "" },
+  
+  { value: "Find the transaction number if you paid with your Paypal account", p: "", i: "", u: "/wordpress/docs/find-the-transaction-number-paid-with-paypal.html", d: "" },
+  
+  { value: "Generate and manage Reader lists on Wordpress blogs", p: "", i: "", u: "/wordpress/docs/generate-and-manage-reader-lists.html", d: "" },
+  
+  { value: "Install Akismet on your site", p: "", i: "", u: "/wordpress/docs/install-akismet-on-your-site.html", d: "" },
+  
+  { value: "Install VaultPress on your site", p: "", i: "", u: "/wordpress/docs/install-vaultpress-on-your-site.html", d: "" },
+  
+  { value: "Embed a slideshow from SlideShare", p: "", i: "", u: "/wordpress/docs/embed-a-slideshow-from-slideshare.html", d: "" },
+  
+  { value: "Generate a multiligual website", p: "", i: "", u: "/wordpress/docs/generate-multilingual-website.html", d: "" },
+  
+  { value: "Insert a Doc file", p: "", i: "", u: "/wordpress/docs/instruction-for-inserting-a-doc-file.html", d: "" },
+  
+  { value: "Embed a PowerPoint presentation", p: "", i: "", u: "/wordpress/docs/embed-powerpoint-presentation.html", d: "" },
+  
+  { value: "Change your site address to one that you already own", p: "", i: "", u: "/wordpress/docs/change-site-address-to-one-you-already-own.html", d: "" },
+  
+  { value: "Disable browser pop-up blockers on Mozilla Firefox", p: "", i: "", u: "/wordpress/docs/disable-browser-pop-up-blockers-mozilla-firefox.html", d: "" },
+  
+  { value: "View and manage comments on posts", p: "", i: "", u: "/wordpress/docs/view-and-manage-comments.html", d: "" },
+  
+  { value: "How to embed a Slideshow", p: "", i: "", u: "/wordpress/docs/embed-a-slideshow.html", d: "" },
+  
+  { value: "How to insert the Tlk.io Widget", p: "", i: "", u: "/wordpress/docs/insert-the-tlk-io-widget.html", d: "" },
+  
+  { value: "Attach a document to your blog", p: "", i: "", u: "/wordpress/docs/attach-a-document-to-your-blog.html", d: "" },
+  
+  { value: "Embed a recipe on your site", p: "", i: "", u: "/wordpress/docs/embed-recipe-on-site.html", d: "" },
+  
+  { value: "Embed a Scribd", p: "", i: "", u: "/wordpress/docs/embed-a-scribd.html", d: "" },
+  
+  { value: "Embed a Word document", p: "", i: "", u: "/wordpress/docs/embed-word-document.html", d: "" },
+  
+  { value: "How to embed TED Talks", p: "", i: "", u: "/wordpress/docs/embed-ted-talks.html", d: "" },
+  
+  { value: "Embed a sheet from Google Docs", p: "", i: "", u: "/wordpress/docs/embedding-a-sheet-from-google-docs.html", d: "" },
+  
+  { value: "disable browser pop-up blockers on Internet Explorer", p: "", i: "", u: "/wordpress/docs/disable-browser-pop-up-blockers-internet-explorer.html", d: "" },
+  
+  { value: "Disable browser pop-up blockers on Safari", p: "", i: "", u: "/wordpress/docs/disable-browser-pop-up-blockers-safari.html", d: "" },
+  
+  { value: "How to clean your cache in Safari", p: "", i: "", u: "/wordpress/docs/how-to-clean-your-cache-in-safari.html", d: "" },
+  
+  { value: "How to insert Twitter Tweet button", p: "", i: "", u: "/wordpress/docs/insert-tweet-button.html", d: "" },
+  
+  { value: "How to use the shortcode", p: "", i: "", u: "/wordpress/docs/how-to-use-the-shortcode.html", d: "" },
+  
+  { value: "How to change the username", p: "", i: "", u: "/wordpress/docs/change-the-username.html", d: "" },
+  
+  { value: "Input ratings into posts & pages", p: "", i: "", u: "/wordpress/docs/input-ratings-into-posts-and-pages.html", d: "" },
+  
+  { value: "How to move a domain using custom a records", p: "", i: "", u: "/wordpress/docs/move-a-domain-using-custom-a-records.html", d: "" },
+  
+  { value: "Embed slides in to blog", p: "", i: "", u: "/wordpress/docs/embedding-slides-into-your-blog.html", d: "" },
+  
+  { value: "Embed Bandcamp with a shortcode", p: "", i: "", u: "/wordpress/docs/embedding-bandcamp-with-a-shortcode.html", d: "" },
+  
+  { value: "How to change your account password", p: "", i: "", u: "/wordpress/docs/change-your-account-password.html", d: "" },
+  
+  { value: "How to invite people to your site", p: "", i: "", u: "/wordpress/docs/invite-people-to-your-site.html", d: "" },
+  
+  { value: "Transfer ownership to another account", p: "", i: "", u: "/wordpress/docs/the-instruction-for-transfering-ownership-to-another-account.html", d: "" },
+  
+  { value: "How to embed a SoundCloud track", p: "", i: "", u: "/wordpress/docs/embed-a-soundcloud-track.html", d: "" },
+  
+  { value: "Embed Lytro to your blog", p: "", i: "", u: "/wordpress/docs/embed-lytro-with-a-shortcode.html", d: "" },
+  
+  { value: "Embed Gumroad to your blog", p: "", i: "", u: "/wordpress/docs/embedding-gumroad-to-your-blog.html", d: "" },
+  
+  { value: "Embed a custom map to Blog", p: "", i: "", u: "/wordpress/docs/insert-a-custom-map-to-your-blog.html", d: "" },
+  
+  { value: "How to close your WordPress account permanently", p: "", i: "", u: "/wordpress/docs/close-your-wordpress-account-permanently.html", d: "" },
+  
+  { value: "How to protect your site and your data", p: "", i: "", u: "/wordpress/docs/protect-your-site-and-your-data.html", d: "" },
+  
+  { value: "Embed an image with an embed code", p: "", i: "", u: "/wordpress/docs/embedding-an-image-with-an-embed-code-to-blog.html", d: "" },
+  
+  { value: "Embed Mesh into WordPress posts and pages", p: "", i: "", u: "/wordpress/docs/embed-mesh-into-wordpress-posts-pages.html", d: "" },
+  
+  { value: "How to connect your account to Google", p: "", i: "", u: "/wordpress/docs/connect-account-to-google.html", d: "" },
+  
+  { value: "Set up a Music website or blog", p: "", i: "", u: "/wordpress/docs/set-up-music-website-blog.html", d: "" },
+  
+  { value: "Embed a Google Form", p: "", i: "", u: "/wordpress/docs/embed-a-google-form.html", d: "" },
+  
+  { value: "How to make a business website", p: "", i: "", u: "/wordpress/docs/make-a-business-website.html", d: "" },
+  
+  { value: "Insert an iCalendar link", p: "", i: "", u: "/wordpress/docs/insert-an-icalendar-link.html", d: "" },
+  
+  { value: "Use the Free Photo Library on your site", p: "", i: "", u: "/wordpress/docs/use-the-free-photo-library-on-your-site.html", d: "" },
+  
+  { value: "Insert a new link", p: "", i: "", u: "/wordpress/docs/inserting-a-new-link.html", d: "" },
+  
+  { value: "Change your post and page visibility", p: "", i: "", u: "/wordpress/docs/changing-your-post-and-page-visibility.html", d: "" },
+  
+  { value: "Export your content from blogger", p: "", i: "", u: "/wordpress/docs/export-your-content-from-blogger.html", d: "" },
+  
+  { value: "Import your content from blogger", p: "", i: "", u: "/wordpress/docs/import-your-content-from-blogger.html", d: "" },
+  
+  { value: "Connect a domain to your new blog", p: "", i: "", u: "/wordpress/docs/connecting-a-domain-to-your-new-blog.html", d: "" },
+  
+  { value: "Customize a new blog", p: "", i: "", u: "/wordpress/docs/customizing-a-new-blog.html", d: "" },
+  
+  { value: "Configure a blog in five steps", p: "", i: "", u: "/wordpress/docs/configure-a-blog-in-five-steps.html", d: "" },
+  
+  { value: "Configure a website in five steps", p: "", i: "", u: "/wordpress/docs/configure-a-website-in-five-steps.html", d: "" },
+  
+  { value: "Link to other Soical Networks", p: "", i: "", u: "/wordpress/docs/link-to-other-social-networks.html", d: "" },
+  
+  { value: "Insert a poll to your sidebar", p: "", i: "", u: "/wordpress/docs/insert-a-poll-to-your-sidebar.html", d: "" },
+  
+  { value: "Transfer a domain to another registrar", p: "", i: "", u: "/wordpress/docs/transfer-domain-to-another-registrar.html", d: "" },
+  
+  { value: "Embed Gist on your store on WordPress", p: "", i: "", u: "/wordpress/docs/embed-gist-on-store.html", d: "" },
+  
+  { value: "Display Blogs I Follow Widget", p: "", i: "", u: "/wordpress/docs/display-blog-i-follow-widget.html", d: "" },
+  
+  { value: "Display Follow Blog widget", p: "", i: "", u: "/wordpress/docs/display-follow-blog-widget.html", d: "" },
+  
+  { value: "Insert an audio widget to your sidebar or footer", p: "", i: "", u: "/wordpress/docs/insert-an-audio-widget-to-your-sidebar-or-footer.html", d: "" },
+  
+  { value: "Insert an image widget", p: "", i: "", u: "/wordpress/docs/insert-an-image-widget.html", d: "" },
+  
+  { value: "Insert a gallery widget", p: "", i: "", u: "/wordpress/docs/insert-a-gallery-widget.html", d: "" },
+  
+  { value: "Insert Goodreads widget", p: "", i: "", u: "/wordpress/docs/insert-goodreads-widget.html", d: "" },
+  
+  { value: "display Flickr widget", p: "", i: "", u: "/wordpress/docs/display-flickr-widget.html", d: "" },
+  
+  { value: "Insert Internet Defense League widget", p: "", i: "", u: "/wordpress/docs/insert-internet-defense-league-widget.html", d: "" },
+  
+  { value: "Display Links widget", p: "", i: "", u: "/wordpress/docs/display-links-widget.html", d: "" },
+  
+  { value: "Connect an image to a document", p: "", i: "", u: "/wordpress/docs/connect-image-document.html", d: "" },
+  
+  { value: "How to enable Wordpress notifications in your browser", p: "", i: "", u: "/wordpress/docs/enable-wordpress-notifications-in-browser.html", d: "" },
+  
+  { value: "Upload documents from WP Admin Media Library", p: "", i: "", u: "/wordpress/docs/upload-documents-wp-admin-media-library.html", d: "" },
+  
+
+  { value: "AdSense Ready", p: "45", i: "", u: "/wordpress/adsense-ready-themes/", d: "" },
+  
+  { value: "Affiliate Marketing", p: "45", i: "", u: "/wordpress/affiliate-marketing-themes/", d: "" },
+  
+  { value: "App Showcase", p: "45", i: "", u: "/wordpress/app-showcase-themes/", d: "" },
+  
+  { value: "Architect", p: "45", i: "", u: "/wordpress/architect-themes/", d: "" },
+  
+  { value: "bbPress", p: "45", i: "", u: "/wordpress/bbpress-themes/", d: "" },
+  
+  { value: "Blog", p: "45", i: "", u: "/wordpress/blog-themes/", d: "" },
+  
+  { value: "Bootstrap", p: "45", i: "", u: "/wordpress/bootstrap-themes/", d: "" },
+  
+  { value: "Business", p: "45", i: "", u: "/wordpress/business-themes/", d: "" },
+  
+  { value: "Church", p: "45", i: "", u: "/wordpress/church-themes/", d: "" },
+  
+  { value: "Clean", p: "45", i: "", u: "/wordpress/clean-themes/", d: "" },
+  
+  { value: "Coming Soon", p: "45", i: "", u: "/wordpress/coming-soon-themes/", d: "" },
+  
+  { value: "company", p: "45", i: "", u: "/wordpress/company-themes/", d: "" },
+  
+  { value: "Construction", p: "45", i: "", u: "/wordpress/construction-themes/", d: "" },
+  
+  { value: "cook", p: "45", i: "", u: "/wordpress/cook-themes/", d: "" },
+  
+  { value: "coupon", p: "45", i: "", u: "/wordpress/coupon-themes/", d: "" },
+  
+  { value: "Creative", p: "45", i: "", u: "/wordpress/creative-themes/", d: "" },
+  
+  { value: "Directory", p: "45", i: "", u: "/wordpress/directory-themes/", d: "" },
+  
+  { value: "Dropshipping", p: "45", i: "", u: "/wordpress/dropshipping-themes/", d: "" },
+  
+  { value: "Eco & Green", p: "45", i: "", u: "/wordpress/eco-green-themes/", d: "" },
+  
+  { value: "eCommerce", p: "45", i: "", u: "/wordpress/ecommerce-themes/", d: "" },
+  
+  { value: "Education", p: "45", i: "", u: "/wordpress/education-themes/", d: "" },
+  
+  { value: "Fashion", p: "45", i: "", u: "/wordpress/fashion-themes/", d: "" },
+  
+  { value: "Fast Loading", p: "45", i: "", u: "/wordpress/fast-loading-themes/", d: "" },
+  
+  { value: "Feminine", p: "45", i: "", u: "/wordpress/feminine-themes/", d: "" },
+  
+  { value: "Fitness & Gym", p: "45", i: "", u: "/wordpress/fitness-themes/", d: "" },
+  
+  { value: "Flat Design", p: "45", i: "", u: "/wordpress/flat-design-themes/", d: "" },
+  
+  { value: "FullScreen", p: "45", i: "", u: "/wordpress/fullscreen-themes/", d: "" },
+  
+  { value: "Genesis Child Themes", p: "45", i: "", u: "/wordpress/genesis-child-themes/", d: "" },
+  
+  { value: "Health & Medical", p: "45", i: "", u: "/wordpress/health-themes/", d: "" },
+  
+  { value: "Hosting", p: "45", i: "", u: "/wordpress/hosting-themes/", d: "" },
+  
+  { value: "Hotel Booking", p: "45", i: "", u: "/wordpress/hotel-booking-themes/", d: "" },
+  
+  { value: "HQ Themes", p: "45", i: "", u: "/wordpress/hq-themes/", d: "" },
+  
+  { value: "Job Board", p: "45", i: "", u: "/wordpress/job-board-themes/", d: "" },
+  
+  { value: "Knowledge Base", p: "45", i: "", u: "/wordpress/knowledge-base-themes/", d: "" },
+  
+  { value: "Landing Page", p: "45", i: "", u: "/wordpress/landing-page-themes/", d: "" },
+  
+  { value: "Lawyer", p: "45", i: "", u: "/wordpress/lawyer-themes/", d: "" },
+  
+  { value: "Lead Building Optimize", p: "45", i: "", u: "/wordpress/lead-building-optimize-themes/", d: "" },
+  
+  { value: "Magazine", p: "45", i: "", u: "/wordpress/magazine-themes/", d: "" },
+  
+  { value: "Masonry Grid", p: "45", i: "", u: "/wordpress/masonry-grid-themes/", d: "" },
+  
+  { value: "Material Design", p: "45", i: "", u: "/wordpress/material-design-themes/", d: "" },
+  
+  { value: "Most Popular", p: "45", i: "", u: "/wordpress/most-popular-themes/", d: "" },
+  
+  { value: "Multi-purpose", p: "45", i: "", u: "/wordpress/multi-purpose-themes/", d: "" },
+  
+  { value: "Music", p: "45", i: "", u: "/wordpress/music-themes/", d: "" },
+  
+  { value: "news", p: "45", i: "", u: "/wordpress/news-themes/", d: "" },
+  
+  { value: "Nightclub", p: "45", i: "", u: "/wordpress/nightclub-themes/", d: "" },
+  
+  { value: "One Page", p: "45", i: "", u: "/wordpress/one-page-themes/", d: "" },
+  
+  { value: "Parallax", p: "45", i: "", u: "/wordpress/parallax-themes/", d: "" },
+  
+  { value: "Photography", p: "45", i: "", u: "/wordpress/photography-themes/", d: "" },
+  
+  { value: "Real Estate", p: "45", i: "", u: "/wordpress/real-estate-themes/", d: "" },
+  
+  { value: "Restaurant", p: "45", i: "", u: "/wordpress/restaurant-themes/", d: "" },
+  
+  { value: "Resume and vCard", p: "45", i: "", u: "/wordpress/resume-themes/", d: "" },
+  
+  { value: "review", p: "45", i: "", u: "/wordpress/review-themes/", d: "" },
+  
+  { value: "SEO Friendly", p: "45", i: "", u: "/wordpress/seo-friendly-themes/", d: "" },
+  
+  { value: "Simple", p: "45", i: "", u: "/wordpress/simple-themes/", d: "" },
+  
+  { value: "SPA & Hair Salon", p: "45", i: "", u: "/wordpress/spa-themes/", d: "" },
+  
+  { value: "Tech Startups", p: "45", i: "", u: "/wordpress/tech-startups-themes/", d: "" },
+  
+  { value: "3-column", p: "45", i: "", u: "/wordpress/3-column-themes/", d: "" },
+  
+  { value: "Travel", p: "45", i: "", u: "/wordpress/travel-themes/", d: "" },
+  
+  { value: "vape", p: "45", i: "", u: "/wordpress/vape-themes/", d: "" },
+  
+  { value: "Woocommerce", p: "45", i: "", u: "/wordpress/woocommerce-themes/", d: "" },
+  
+];
+
+jQuery( "#search" ).autocomplete({
+      lookup: searchplus_products ,
+      lookupLimit: 10,
+      minChars: 0,
+      showNoSuggestionNotice: true,
+      noSuggestionNotice: 'No results',
+      maxHeight: 10000,
+      autoSelectFirst: false,
+
+      formatResult: function (suggestion) {
+        return '<a class="sp-list" href="' + suggestion.u + '"><div class="suggestion-right"><div class="product-line product-name">' + suggestion.value + '</div><div class="product-des"><p>' + suggestion.d + '</p></div></div></a>';
+
+      },
+      onSearchComplete: function (query, suggestions){
+
+      },
+      onSelect: function (suggestion) {
+        window.location.href = suggestion.u;
+      }
+
+});
+
+jQuery( "#search-docs" ).autocomplete({
+      lookup: searchplus_products ,
+      lookupLimit: 10,
+      minChars: 0,
+      showNoSuggestionNotice: true,
+      noSuggestionNotice: 'No results',
+      maxHeight: 10000,
+      autoSelectFirst: false,
+      onSearchComplete: function (query, suggestions){
+
+      },
+      onSelect: function (suggestion) {
+        window.location.href = suggestion.u;
+      }
+
+});
+
+
+function afterSearchComplete(){
+  var secondSearch = $(".autocomplete-suggestions").eq(1);
+  secondSearch.css({
+    borderTop: '1px solid #e0e0e0',
+    margin: '0 -1px',
+    minWidth: 'auto'
+  });
+  currentWidth = secondSearch.width();
+  newWidth = currentWidth + 5;
+  secondSearch.css('width', newWidth);
+}
+
+
+$('.carousel.carousel-slider').carousel({fullWidth: false});

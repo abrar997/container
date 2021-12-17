@@ -1,0 +1,44 @@
+
+#a{font-family:cursive;
+  color:#663366 ;
+  font-size:50px;
+text-align:left;
+padding-left:20px;
+text-align: center;
+  text-shadow: 2px 2px 8px #090226 
+
+}
+#q{font-family:cursive;
+font-size:15pt;
+color:#34495E ;
+text-decoration: none;
+box-shadow:3px 2px #E2DFF3 
+;
+text-transform: capitalize;
+ text-shadow: 2px 2px 8px #ccc;
+
+
+ }
+
+ 
+a{text-decoration: none;
+}
+
+body{margin:0;
+  padding:0;
+  background-color: #ccc;
+  width:100%
+;text-align: center;
+max-width:100%}
+
+
+
+.mySlides{width:800px;
+height:500px;
+}
+.w3-containerinput{}
+
+
+ {box-sizing: border-box;}
+iframe{border:1px solid black;
+border-radius:30px;}

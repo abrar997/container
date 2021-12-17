@@ -1,0 +1,79 @@
+body{background-color:rgb(243, 232, 217)}
+
+header,nav{background:rgb(228, 64, 64);
+height: 60px}
+nav a{margin-right: 25px;
+}
+header h1{float: left;
+padding-left:20px;
+font-size:22px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: rgb(221, 219, 212);
+text-transform: lowercase;
+font-weight:none;
+font-style:italic;
+cursor: pointer;}
+
+nav a,li{list-style-type: none;
+display: flex;
+flex-flow:row-reverse;
+float: right;
+font-size: 20px;
+text-decoration: none;
+color: rgb(221, 219, 212);
+padding:10px 15px 0px 0px;
+
+}
+nav li:hover{color: rgb(102, 73, 37);
+text-decoration: underline;}
+
+.who{width: 600px;
+    height: 700px;
+margin-top:40px;
+    margin-left: 30%;
+border: 1px solid orange;
+border-radius: 3px;
+box-shadow: 10px 20px 10px rgb(167, 128, 114);}
+
+.who img{width:200px;
+height: 210px;
+padding-left: 20px;
+padding-top: 10px;
+animation: abrar 20s ease 1s infinite backwards ;
+transition: all 1s ease;
+position: relative;}
+
+@keyframes abrar{
+0%{ left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  50%  { left:360px; top:0px;}
+
+  100% {left: 0px;top: 0px;}
+}
+
+.who h1{text-align: center;
+color: orangered;font-family: Arial,Helvetica,sans-serif;
+   font-size: 35px;
+}
+
+
+.who p{color: rgb(70, 20, 11);
+text-align: center;
+font-size:18px;
+font-family:cursive;
+}
+
+.icons{color: rgb(228, 181, 173);
+font-size: 35px;
+margin-top: 40px;
+margin-left: 40%;
+margin-right: 43%;
+text-align: center;
+box-shadow: 2px 2px 3px brown}
+.icons a{color: rgb(235, 109, 86);}
+footer{padding: 10px;}
+
+
+
+
+

@@ -1,0 +1,88 @@
+/*header {background: url("c1.jpg") no-repeat scroll center;
+   height:550px;
+   float:center;
+   background-size: 100% 200%;
+;
+
+}
+*/
+body{background:url("beans.jpg") 
+;
+}
+
+header h1{color:white;
+font-style: italic;
+float:center;
+margin:100px 120px;
+font-size: 40px;
+text-decoration: wavy;
+
+}
+h1{text-align: center;
+   font-size: 30px;
+
+
+}
+
+.final{
+   margin-bottom:50px;
+   margin-left:180px;
+   height: 300px;
+  
+   border: 1px solid rgb(240, 240, 240);
+   background-color: rgba(243, 238, 220, 0.603)
+  ; width:80%;
+   
+}
+img{width:200px;
+height:120px;
+}
+
+section{display:inline-block;
+   text-align: center;
+   border: 1px solid rgb(250, 239, 230);
+
+}
+video{float:center;
+margin-top: 20px;
+width: 80%;
+height: 400px;
+border: 2px solid rgb(240, 240, 240);
+ margin-right: 30px;}
+
+
+.cold{background-color: rgba(243, 238, 220, 0.603);
+width: 1200px;}
+.cold img{width:250px;
+height: 150px;}
+
+
+
+p{font-size: 20px ;
+font-weight: none;
+font-style: italic;
+color: cornsilk;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

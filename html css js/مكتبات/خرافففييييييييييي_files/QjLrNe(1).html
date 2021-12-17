@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&theme-id=0&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Movie Card Interactive UI With Pure CSS3 Animation Rating</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="0y1UjzeAEtH58hn/Alt5ZkEZ5jaBgGpQBXYGYLp7asMecIyNxXTdkCkz/F3va2N2DspiV6+V/bAKTMSUeahp/w==">
+<link rel="stylesheet" media="all" href="./embed-18b19a76af339b59ea953ea1186c8f37ab98142d372752954eb2130728c6b9d1.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-a5a757de70a8d57373f9bc7c87208806adaa2b69d0f2c3e9fcce79a6f9babd65.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+Haml
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#js-box" role="button" aria-pressed="false">
+JS
+ </a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/rmcdonalddesigns/pen/QjLrNe" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="haml" id="actual-html-code" class=" cm-s-default"><span class="cm-attribute">.card</span>
+  <span class="cm-attribute">.card_left</span>
+    <span class="cm-tag">%img</span>{<span class="cm-atom">:src</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/h8fnwL1.png'</span>}
+  <span class="cm-attribute">.card_right</span>
+    <span class="cm-tag">%h1</span> KILL  BILL:  VOL.  1
+    <span class="cm-attribute">.card_right__details</span>
+      <span class="cm-tag">%ul</span>
+        <span class="cm-tag">%li</span> 2003
+        <span class="cm-tag">%li</span> 111 min
+        <span class="cm-tag">%li</span> Action
+      <span class="cm-attribute">.card_right__rating</span>
+        <span class="cm-attribute">.card_right__rating__stars</span>
+          <span class="cm-tag">%fieldset</span><span class="cm-attribute">.rating</span>
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star10</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"10"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star10"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"10 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star9half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"9 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star9half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"9.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star9</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"9"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star9"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"9 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star8half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"8 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star8half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"8.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star8</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"8"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star8"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"8 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star7half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"7 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star7half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"7.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star7</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"7"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star7"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"7 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star6half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"6 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star6half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"6.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star6</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"6"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star6"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"6 star"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star5half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"5 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star5half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"5.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star5</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"5"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star5"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star4half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"4 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star4half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"4.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star4</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"4"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star4"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"4 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star3half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"3 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star3half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"3.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star3</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"3"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star3"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"3 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star2half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star2half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star2</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star2"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"2 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star1half</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1 and a half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star1half"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1.5 stars"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#star1</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.full</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"star1"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"1 star"</span>}
+            <span class="cm-tag">%input</span><span class="cm-attribute">#starhalf</span>{<span class="cm-atom">:name</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"rating"</span>, <span class="cm-atom">:type</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"radio"</span>, <span class="cm-atom">:value</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"half"</span>}/
+            <span class="cm-tag">%label</span><span class="cm-attribute">.half</span>{<span class="cm-atom">:for</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"starhalf"</span>, <span class="cm-atom">:title</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"0.5 stars"</span>}
+      <span class="cm-attribute">.card_right__review</span>
+        <span class="cm-tag">%p</span> The lead character, called 'The Bride,' was a member <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> of the Deadly Viper Assassination Squad, led by her <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> lover 'Bill.' Upon realizing she was pregnant with Bill's<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> child, 'The Bride' decided to escape her life as a killer.<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> She fled to Texas, met a young man, who, on the day<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> of their wedding rehearsal was gunned down by....
+        <span class="cm-tag">%a</span>{<span class="cm-atom">:href</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl"</span>, <span class="cm-atom">:target</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"_blank"</span>} Read more
+      <span class="cm-attribute">.card_right__button</span>
+        <span class="cm-tag">%a</span>{<span class="cm-atom">:href</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"https://www.youtube.com/watch?v=ot6C1ZKyiME"</span>, <span class="cm-atom">:target</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">"_blank"</span>} WATCH TRAILER</code></pre>
+<a href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Montserrat:400,700</span>);
+<span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css</span>);
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>:<span class="cm-atom">#e2e2e2</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">98%</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">100vh</span>;
+<span class="cm-qualifier">.card</span> {
+  <span class="cm-property">width</span>:<span class="cm-number">800px</span>;
+  <span class="cm-property">height</span>:<span class="cm-number">400px</span>;
+  <span class="cm-property">background</span>:<span class="cm-atom">transparent</span>;
+  <span class="cm-property">position</span>:<span class="cm-atom">absolute</span>;
+  <span class="cm-property">left</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">right</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">margin</span>:<span class="cm-atom">auto</span>;
+  <span class="cm-property">top</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">bottom</span>:<span class="cm-number">0</span>;
+  <span class="cm-property">border-radius</span>:<span class="cm-number">10px</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">border-radius</span>:<span class="cm-number">10px</span>;
+  <span class="cm-meta">-moz-</span><span class="cm-property">border-radius</span>:<span class="cm-number">10px</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">20px</span> <span class="cm-number">30px</span> <span class="cm-number">3px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.55</span>);
+  &amp;<span class="cm-tag">_left</span> {
+    <span class="cm-property">width</span>:<span class="cm-number">40%</span>;
+    <span class="cm-property">height</span>:<span class="cm-number">400px</span>;
+    <span class="cm-property">float</span>:<span class="cm-atom">left</span>;
+    <span class="cm-property">overflow</span>:<span class="cm-atom">hidden</span>;
+    <span class="cm-property">background</span>:<span class="cm-atom">transparent</span>;
+    <span class="cm-tag">img</span> {
+      <span class="cm-property">width</span>:<span class="cm-number">100%</span>;
+      <span class="cm-property">height</span>:<span class="cm-atom">auto</span>;
+      <span class="cm-property">border-radius</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+      <span class="cm-meta">-webkit-</span><span class="cm-property">border-radius</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+      <span class="cm-meta">-moz-</span><span class="cm-property">border-radius</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+      <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+    }
+  }
+  &amp;<span class="cm-tag">_right</span> {
+    <span class="cm-property">width</span>:<span class="cm-number">60%</span>;
+    <span class="cm-property">float</span>:<span class="cm-atom">left</span>;
+    <span class="cm-property">background</span>:<span class="cm-atom">#000000</span>;
+    <span class="cm-property">height</span>:<span class="cm-number">400px</span>;
+    <span class="cm-property">border-radius</span>:<span class="cm-number">0</span> <span class="cm-number">10px</span> <span class="cm-number">10px</span> <span class="cm-number">0</span>;
+    <span class="cm-meta">-webkit-</span><span class="cm-property">border-radius</span>:<span class="cm-number">0</span> <span class="cm-number">10px</span> <span class="cm-number">10px</span> <span class="cm-number">0</span>;
+    <span class="cm-meta">-moz-</span><span class="cm-property">border-radius</span>:<span class="cm-number">0</span> <span class="cm-number">10px</span> <span class="cm-number">10px</span> <span class="cm-number">0</span>;
+   <span class="cm-tag">h1</span> {
+    <span class="cm-property">color</span>:<span class="cm-keyword">white</span>;
+    <span class="cm-property">font-family</span>: <span class="cm-string">'Montserrat'</span>, <span class="cm-atom">sans-serif</span>;
+    <span class="cm-property">font-weight</span>:<span class="cm-number">400</span>;
+    <span class="cm-property">text-align</span>:<span class="cm-atom">left</span>;
+    <span class="cm-property">font-size</span>:<span class="cm-number">40px</span>;
+    <span class="cm-property">margin</span>:<span class="cm-number">30px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+    <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">40px</span>;
+    <span class="cm-property">letter-spacing</span>:<span class="cm-number">1px</span>;
+   }
+    &amp;<span class="cm-tag">__details</span> {
+      <span class="cm-tag">ul</span> {
+        <span class="cm-property">list-style-type</span>:<span class="cm-atom">none</span>;
+        <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">40px</span>;
+        <span class="cm-property">margin</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+        <span class="cm-tag">li</span> {
+          <span class="cm-property">display</span>:<span class="cm-atom">inline</span>;
+          <span class="cm-property">color</span>:<span class="cm-atom">#e3e3e3</span>;
+          <span class="cm-property">font-family</span>: <span class="cm-string">'Montserrat'</span>, <span class="cm-atom">sans-serif</span>;
+          <span class="cm-property">font-weight</span>:<span class="cm-number">400</span>;
+          <span class="cm-property">font-size</span>:<span class="cm-number">14px</span>;
+          <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">40px</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+        }
+      }
+    }
+    &amp;<span class="cm-tag">__rating</span> {
+      &amp;<span class="cm-tag">__stars</span> {
+        <span class="cm-property">position</span>:<span class="cm-atom">relative</span>;
+        <span class="cm-property">right</span>:<span class="cm-number">160px</span>;
+        <span class="cm-property">margin</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">10px</span> <span class="cm-number">0</span>;
+          <span class="cm-tag">fieldset</span>, <span class="cm-tag">label</span> { <span class="cm-property">margin</span>: <span class="cm-number">0</span>; <span class="cm-property">padding</span>: <span class="cm-number">0</span>; }
+<span class="cm-qualifier">.rating</span> { 
+  <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+}
+
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">input</span> { <span class="cm-property">display</span>: <span class="cm-atom">none</span>; } 
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">label</span>:<span class="cm-variable-3">before</span> { 
+  <span class="cm-property">margin</span>: <span class="cm-number">5px</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.25em</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+  <span class="cm-property">content</span>: <span class="cm-string">"\f005"</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-variable">FontAwesome</span>;
+}
+
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-qualifier">.half</span>:<span class="cm-variable-3">before</span> { 
+  <span class="cm-property">content</span>: <span class="cm-string">"\f089"</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+}
+
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">label</span> { 
+  <span class="cm-property">color</span>: <span class="cm-atom">#ddd</span>;
+  <span class="cm-property">float</span>:<span class="cm-atom">right</span>;
+}
+
+<span class="cm-comment">/***** CSS Magic to Highlight Stars on Hover *****/</span>
+
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">input</span>:<span class="cm-variable-3">checked</span> ~ <span class="cm-tag">label</span>, <span class="cm-comment">/* show gold star when clicked */</span>
+<span class="cm-qualifier">.rating</span>:<span class="cm-variable cm-callee">not</span>(:<span class="cm-variable">checked</span>) &gt; <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span>, <span class="cm-comment">/* hover current star */</span>
+<span class="cm-qualifier">.rating</span>:<span class="cm-variable cm-callee">not</span>(:<span class="cm-variable">checked</span>) &gt; <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span> ~ <span class="cm-tag">label</span> { <span class="cm-property">color</span>: <span class="cm-atom">#FFD700</span>;  } <span class="cm-comment">/* hover previous stars in list */</span>
+
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">input</span>:<span class="cm-variable-3">checked</span> + <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span>, <span class="cm-comment">/* hover current star when changing rating */</span>
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">input</span>:<span class="cm-variable-3">checked</span> ~ <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span> ~ <span class="cm-tag">input</span>:<span class="cm-variable-3">checked</span> ~ <span class="cm-tag">label</span>, <span class="cm-comment">/* lighten current selection */</span>
+<span class="cm-qualifier">.rating</span> &gt; <span class="cm-tag">input</span>:<span class="cm-variable-3">checked</span> ~ <span class="cm-tag">label</span>:<span class="cm-variable-3">hover</span> ~ <span class="cm-tag">label</span> { <span class="cm-property">color</span>: <span class="cm-atom">#FFED85</span>;  }      
+      }
+    }
+    &amp;<span class="cm-tag">__review</span> {
+      <span class="cm-tag">p</span> {
+        <span class="cm-property">color</span>:<span class="cm-keyword">white</span>;
+        <span class="cm-property">font-family</span>: <span class="cm-string">'Montserrat'</span>, <span class="cm-atom">sans-serif</span>;
+        <span class="cm-property">font-size</span>:<span class="cm-number">12px</span>;
+        <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">40px</span> <span class="cm-number">0</span> <span class="cm-number">40px</span>;
+        <span class="cm-property">letter-spacing</span>:<span class="cm-number">1px</span>;
+        <span class="cm-property">margin</span>:<span class="cm-number">10px</span> <span class="cm-number">0</span> <span class="cm-number">10px</span> <span class="cm-number">0</span>;
+        <span class="cm-property">line-height</span>:<span class="cm-number">20px</span>;
+      }
+      <span class="cm-tag">a</span> {
+        <span class="cm-property">text-decoration</span>:<span class="cm-atom">none</span>;
+        <span class="cm-property">font-family</span>: <span class="cm-string">'Montserrat'</span>, <span class="cm-atom">sans-serif</span>;
+        <span class="cm-property">font-size</span>:<span class="cm-number">14px</span>;
+        <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">40px</span>;
+        <span class="cm-property">color</span>:<span class="cm-atom">#ffda00</span>;
+        <span class="cm-property">margin</span>:<span class="cm-number">0</span>;
+      }
+    }
+&amp;<span class="cm-tag">__button</span> {
+      <span class="cm-tag">a</span> {
+        <span class="cm-property">color</span>:<span class="cm-atom">#ffda00</span>;
+        <span class="cm-property">text-decoration</span>:<span class="cm-atom">none</span>;
+        <span class="cm-property">font-family</span>: <span class="cm-string">'Montserrat'</span>, <span class="cm-atom">sans-serif</span>;
+        <span class="cm-property">border</span>:<span class="cm-number">2px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#ffda00</span>;
+        <span class="cm-property">padding</span>:<span class="cm-number">10px</span> <span class="cm-number">10px</span> <span class="cm-number">10px</span> <span class="cm-number">40px</span>;
+        <span class="cm-property">font-size</span>:<span class="cm-number">12px</span>;
+        <span class="cm-property">background</span>:<span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/COMdoWZ.png</span>);
+        <span class="cm-property">background-size</span>:<span class="cm-number">12px</span> <span class="cm-number">12px</span>;
+        <span class="cm-property">background-repeat</span>:<span class="cm-atom">no-repeat</span>;
+            <span class="cm-property">background-position</span>: <span class="cm-number">7%</span> <span class="cm-number">50%</span>;
+        <span class="cm-property">border-radius</span>:<span class="cm-number">5px</span>;
+          <span class="cm-meta">-webkit-</span><span class="cm-property">transition-property</span>: <span class="cm-atom">all</span>;
+          <span class="cm-property">transition-property</span>: <span class="cm-atom">all</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition-duration</span>: <span class="cm-number">.5s</span>;
+          <span class="cm-property">transition-duration</span>: <span class="cm-number">.5s</span>;
+      }
+      <span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span> {
+            <span class="cm-property">color</span>: <span class="cm-atom">#000000</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#ffda00</span>;
+        <span class="cm-property">background-image</span>:<span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/rFQ5dHA.png</span>);
+          <span class="cm-property">background-size</span>:<span class="cm-number">12px</span> <span class="cm-number">12px</span>;
+        <span class="cm-property">background-repeat</span>:<span class="cm-atom">no-repeat</span>;
+            <span class="cm-property">background-position</span>: <span class="cm-number">10%</span> <span class="cm-number">50%</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition-property</span>: <span class="cm-atom">all</span>;
+          <span class="cm-property">transition-property</span>: <span class="cm-atom">all</span>;
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition-duration</span>: <span class="cm-number">.5s</span>;
+          <span class="cm-property">transition-duration</span>: <span class="cm-number">.5s</span>;
+      }
+        <span class="cm-property">padding</span>:<span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">40px</span>;
+        <span class="cm-property">margin</span>:<span class="cm-number">30px</span> <span class="cm-number">0</span> <span class="cm-number">0</span> <span class="cm-number">0</span>;
+    }
+}
+}
+}</code></pre>
+<a href="https://codepen.io/rmcdonalddesigns/embed/QjLrNe?height=316&amp;theme-id=0&amp;default-tab=result#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">/* No Thanks! */</span></code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Movie Card Interactive UI With Pure CSS3 Animation Rating" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Movie Card Interactive UI With Pure CSS3 Animation Rating" data-src="https://cdpn.io/rmcdonalddesigns/fullembedgrid/QjLrNe?animations=run&amp;type=embed" src="./QjLrNe.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/rmcdonalddesigns" target="_blank" rel="noopener"><img src="./default(11).png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/rmcdonalddesigns" target="_blank" rel="noopener">Reece McDonald</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/rmcdonalddesigns" target="_blank" rel="noopener" class="about-user-more">
+See more by @rmcdonalddesigns on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&#39;card&#39;&gt;\n  &lt;div class=&#39;card_left&#39;&gt;\n    &lt;img src=&#39;https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/h8fnwL1.png&#39;&gt;\n  &lt;/div&gt;\n  &lt;div class=&#39;card_right&#39;&gt;\n    &lt;h1&gt;KILL  BILL:  VOL.  1&lt;/h1&gt;\n    &lt;div class=&#39;card_right__details&#39;&gt;\n      &lt;ul&gt;\n        &lt;li&gt;2003&lt;/li&gt;\n        &lt;li&gt;111 min&lt;/li&gt;\n        &lt;li&gt;Action&lt;/li&gt;\n      &lt;/ul&gt;\n      &lt;div class=&#39;card_right__rating&#39;&gt;\n        &lt;div class=&#39;card_right__rating__stars&#39;&gt;\n          &lt;fieldset class=&#39;rating&#39;&gt;\n            &lt;input id=&#39;star10&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;10&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star10&#39; title=&#39;10 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star9half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;9 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star9half&#39; title=&#39;9.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star9&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;9&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star9&#39; title=&#39;9 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star8half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;8 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star8half&#39; title=&#39;8.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star8&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;8&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star8&#39; title=&#39;8 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star7half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;7 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star7half&#39; title=&#39;7.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star7&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;7&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star7&#39; title=&#39;7 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star6half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;6 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star6half&#39; title=&#39;6.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star6&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;6&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star6&#39; title=&#39;6 star&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star5half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;5 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star5half&#39; title=&#39;5.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star5&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;5&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star5&#39; title=&#39;5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star4half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;4 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star4half&#39; title=&#39;4.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star4&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;4&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star4&#39; title=&#39;4 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star3half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;3 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star3half&#39; title=&#39;3.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star3&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;3&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star3&#39; title=&#39;3 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star2half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;2 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star2half&#39; title=&#39;2.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star2&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;2&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star2&#39; title=&#39;2 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star1half&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;1 and a half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;star1half&#39; title=&#39;1.5 stars&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;star1&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;1&#39;&gt;\n            &lt;label class=&#39;full&#39; for=&#39;star1&#39; title=&#39;1 star&#39;&gt;&lt;/label&gt;\n            &lt;input id=&#39;starhalf&#39; name=&#39;rating&#39; type=&#39;radio&#39; value=&#39;half&#39;&gt;\n            &lt;label class=&#39;half&#39; for=&#39;starhalf&#39; title=&#39;0.5 stars&#39;&gt;&lt;/label&gt;\n          &lt;/fieldset&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&#39;card_right__review&#39;&gt;\n        &lt;p&gt;The lead character, called &#39;The Bride,&#39; was a member &lt;br/&gt; of the Deadly Viper Assassination Squad, led by her &lt;br/&gt; lover &#39;Bill.&#39; Upon realizing she was pregnant with Bill&#39;s&lt;br/&gt; child, &#39;The Bride&#39; decided to escape her life as a killer.&lt;br/&gt; She fled to Texas, met a young man, who, on the day&lt;br/&gt; of their wedding rehearsal was gunned down by....&lt;/p&gt;\n        &lt;a href=&#39;http://www.imdb.com/title/tt0266697/plotsummary?ref_=tt_stry_pl&#39; target=&#39;_blank&#39;&gt;Read more&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=&#39;card_right__button&#39;&gt;\n        &lt;a href=&#39;https://www.youtube.com/watch?v=ot6C1ZKyiME&#39; target=&#39;_blank&#39;&gt;WATCH TRAILER&lt;/a&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"@charset &quot;UTF-8&quot;;\n@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);\n@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);\nbody {\n  background: #e2e2e2;\n  width: 98%;\n  height: 100vh;\n}\nbody .card {\n  width: 800px;\n  height: 400px;\n  background: transparent;\n  position: absolute;\n  left: 0;\n  right: 0;\n  margin: auto;\n  top: 0;\n  bottom: 0;\n  border-radius: 10px;\n  -webkit-border-radius: 10px;\n  -moz-border-radius: 10px;\n  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);\n}\nbody .card_left {\n  width: 40%;\n  height: 400px;\n  float: left;\n  overflow: hidden;\n  background: transparent;\n}\nbody .card_left img {\n  width: 100%;\n  height: auto;\n  border-radius: 10px 0 0 10px;\n  -webkit-border-radius: 10px 0 0 10px;\n  -moz-border-radius: 10px 0 0 10px;\n  position: relative;\n}\nbody .card_right {\n  width: 60%;\n  float: left;\n  background: #000000;\n  height: 400px;\n  border-radius: 0 10px 10px 0;\n  -webkit-border-radius: 0 10px 10px 0;\n  -moz-border-radius: 0 10px 10px 0;\n}\nbody .card_right h1 {\n  color: white;\n  font-family: &quot;Montserrat&quot;, sans-serif;\n  font-weight: 400;\n  text-align: left;\n  font-size: 40px;\n  margin: 30px 0 0 0;\n  padding: 0 0 0 40px;\n  letter-spacing: 1px;\n}\nbody .card_right__details ul {\n  list-style-type: none;\n  padding: 0 0 0 40px;\n  margin: 10px 0 0 0;\n}\nbody .card_right__details ul li {\n  display: inline;\n  color: #e3e3e3;\n  font-family: &quot;Montserrat&quot;, sans-serif;\n  font-weight: 400;\n  font-size: 14px;\n  padding: 0 40px 0 0;\n}\nbody .card_right__rating__stars {\n  position: relative;\n  right: 160px;\n  margin: 10px 0 10px 0;\n  /***** CSS Magic to Highlight Stars on Hover *****/\n  /* hover previous stars in list */\n}\nbody .card_right__rating__stars fieldset, body .card_right__rating__stars label {\n  margin: 0;\n  padding: 0;\n}\nbody .card_right__rating__stars .rating {\n  border: none;\n}\nbody .card_right__rating__stars .rating &gt; input {\n  display: none;\n}\nbody .card_right__rating__stars .rating &gt; label:before {\n  margin: 5px;\n  font-size: 1.25em;\n  display: inline-block;\n  content: &quot;&quot;;\n  font-family: FontAwesome;\n}\nbody .card_right__rating__stars .rating &gt; .half:before {\n  content: &quot;&quot;;\n  position: absolute;\n}\nbody .card_right__rating__stars .rating &gt; label {\n  color: #ddd;\n  float: right;\n}\nbody .card_right__rating__stars .rating &gt; input:checked ~ label,\nbody .card_right__rating__stars .rating:not(:checked) &gt; label:hover,\nbody .card_right__rating__stars .rating:not(:checked) &gt; label:hover ~ label {\n  color: #FFD700;\n}\nbody .card_right__rating__stars .rating &gt; input:checked + label:hover,\nbody .card_right__rating__stars .rating &gt; input:checked ~ label:hover,\nbody .card_right__rating__stars .rating &gt; label:hover ~ input:checked ~ label,\nbody .card_right__rating__stars .rating &gt; input:checked ~ label:hover ~ label {\n  color: #FFED85;\n}\nbody .card_right__review p {\n  color: white;\n  font-family: &quot;Montserrat&quot;, sans-serif;\n  font-size: 12px;\n  padding: 0 40px 0 40px;\n  letter-spacing: 1px;\n  margin: 10px 0 10px 0;\n  line-height: 20px;\n}\nbody .card_right__review a {\n  text-decoration: none;\n  font-family: &quot;Montserrat&quot;, sans-serif;\n  font-size: 14px;\n  padding: 0 0 0 40px;\n  color: #ffda00;\n  margin: 0;\n}\nbody .card_right__button {\n  padding: 0 0 0 40px;\n  margin: 30px 0 0 0;\n}\nbody .card_right__button a {\n  color: #ffda00;\n  text-decoration: none;\n  font-family: &quot;Montserrat&quot;, sans-serif;\n  border: 2px solid #ffda00;\n  padding: 10px 10px 10px 40px;\n  font-size: 12px;\n  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/COMdoWZ.png);\n  background-size: 12px 12px;\n  background-repeat: no-repeat;\n  background-position: 7% 50%;\n  border-radius: 5px;\n  transition-property: all;\n  transition-duration: 0.5s;\n}\nbody .card_right__button a:hover {\n  color: #000000;\n  background-color: #ffda00;\n  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/rFQ5dHA.png);\n  background-size: 12px 12px;\n  background-repeat: no-repeat;\n  background-position: 10% 50%;\n  cursor: pointer;\n  transition-property: all;\n  transition-duration: 0.5s;\n}","js":"/* No Thanks! */"};
+    __preprocessors = {
+      "html": "haml",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Haml",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-b0782d505bcecbe52b6e80fa7accfeb37eadcf49c482388469aacfd9aec72be4.js.download"></script>
+
+
+</body></html>
